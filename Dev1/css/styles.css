@@ -1,0 +1,330 @@
+html, body{
+	width: 100%;
+	height:100%;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	font-family: Baskerville, serif;
+	font-size: 14pt;
+	color: #161616;
+}
+
+.progressContainer {
+	z-index: 5;
+	position: fixed;
+	top: 85vh;
+	height: 10vh;
+	width: 20px;
+	margin: 10px;
+}
+
+.progressCircle {
+	height: 10px;
+ 	width: 10px;
+ 	margin: 5px;
+  	border-radius: 50%;
+  	background-color: #c6c6c6;
+}
+
+.scroll-container {
+	z-index: 0;
+	width: 100%;
+	height:100%;
+	overflow:hidden;
+}
+
+#helper{
+	/*display:none;*/
+	position:absolute;
+	left:0;
+	top:0;
+	height:700%;
+	width:2%;
+}
+
+.marker{
+	width:100%; /* 100% of helper */
+	height:20%; /* 1.25% of helper for 80 sections */
+	/*border: 2px solid black;*/
+	font-family: arial;
+	font-weight: bold;
+}
+
+.title {
+	z-index: 1;
+	position: fixed;
+	background-color: #161616;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+}
+
+h1 {
+	width: 100vw;
+	position: fixed;
+	margin: auto;
+	color: white;
+	font-size: 10vh;
+	top: 40vh;
+	text-align: center;
+	transition: 0s;
+}
+
+.blurtext {
+	color: transparent;
+	text-shadow: #ffffff 0 0 30px;
+	transition: 0s;
+}
+
+.section {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	background-color: #ededed;
+}
+
+.sectionTextContainer {
+	z-index: 3;
+	position: relative;
+	left: 20vw;
+	width: 40vw;
+	top: 30vh;
+}
+
+.sectionHeader {
+	color: #161616;
+	font-style: italic;
+}
+
+.sectionText {
+	color: #161616;
+	left: 20vw;
+}
+
+.blurtext2 {
+	color: transparent;
+	text-shadow: #282828 0 0 10px;
+	transition: 0s;
+}
+
+.declaration {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+}
+
+.preamble {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+}
+
+.box{
+	position: fixed;
+	transition: 1s;
+}
+
+
+.width1 {
+	width: 20%;
+}
+
+.width2 {
+	width: 40%;
+}
+
+.width3 {
+	width: 60%;
+}
+
+.height1 {
+	height: 10%;
+}
+
+.height2 {
+	height: 30%;
+}
+
+.height3 {
+	height: 50%;
+}
+
+.color1 {
+	background-color: #63bbff;
+}
+
+.color2 {
+	background-color: #fff83d;
+}
+
+.color3 {
+	background-color: #ff3d46;
+}
+
+.top1{
+	top: 20%;
+}
+
+.top2{
+	top: 40%;
+}
+
+.top3{
+	top: 60%;
+}
+
+.left1{
+	left: 20%;
+}
+
+.left2{
+	left: 40%;
+}
+
+.left3{
+	left: 60%;
+}
+
+
+
+.effect1 {
+	transform: skewX(45deg);
+	transition: 1s;
+}
+
+.effect2 {
+	transform: skewY(45deg);
+	transition: 1s;
+}
+
+.effect3 {
+	transform: scaleX(2);
+	transition: 1s;
+}
+
+.effect4 {
+	transform: scaleY(2);
+	transition: 1s;
+}
+
+.imgContainer {
+	position: fixed;
+	width: 30vw;
+	height: 30vw;
+	transition: 1s;
+	/*background-color: blue;*/
+}
+
+.image1 {
+	background-image: url(../images/1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.image2 {
+	background-image: url(../images/2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.image3 {
+	background-image: url(../images/3.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.image4 {
+	background-image: url(../images/4.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.image5 {
+	background-image: url(../images/5.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.image6 {
+	background-image: url(../images/6.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.image7 {
+	background-image: url(../images/7.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.image8 {
+	background-image: url(../images/8.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.image9 {
+	background-image: url(../images/9.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.body {
+	color: black;
+	position: fixed;
+	line-height: 1.4em;
+}
+
+.font1 {
+	font-family: 'Noto Serif SC', serif;
+}
+
+.font2{
+	font-family: 'Crimson Text', serif;
+}
+
+.font3 {
+	font-family: 'Ramaraja', serif;
+}
+
+.font4 {
+	font-family: 'Cantata One', serif;
+}
+
+.font5 {
+	font-family: 'Roboto', sans-serif;
+}
+
+.font6 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.font7 {
+	font-family: 'Archivo Narrow', sans-serif;
+}
+
+.font8 {
+	font-family: 'Gaegu', cursive;
+}
+
+.font9 {
+	font-family: 'Caveat', cursive;
+}
+
+
+.font10 {
+	font-family: 'Source Code Pro', monospace;
+}
+
+.textWeight1 {
+	font-weight: 400;
+}
+
+
+.textWeight2 {
+	font-weight: 700;
+}
+
+
+
