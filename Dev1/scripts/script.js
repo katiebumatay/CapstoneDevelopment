@@ -119,6 +119,22 @@ $(document).ready(function() {
         $(this).toggleClass("blurtext2");
     });
 
+    $(".dec1, .dec2, .dec3, .dec4, .dec5, .dec6, .dec7, .dec8, .dec9, .dec10, .dec11, .dec12, .dec13, .dec14").mouseover(function(){
+        $(this).toggleClass("blurtext2");
+    });
+
+    $(".dec1, .dec2, .dec3, .dec4, .dec5, .dec6, .dec7, .dec8, .dec9, .dec10, .dec11, .dec12, .dec13, .dec14").mouseout(function(){
+        $(this).toggleClass("blurtext2");
+    });
+
+    $(".const1, .const2, .const3, .const4, .const5, .const6, .const7, .const8").mouseover(function(){
+        $(this).toggleClass("blurtext2");
+    });
+
+    $(".const1, .const2, .const3, .const4, .const5, .const6, .const7, .const8").mouseout(function(){
+        $(this).toggleClass("blurtext2");
+    });
+
 
     // boxHeight();
     // boxWidth();
