@@ -71,50 +71,26 @@ function phraseLeft() {
 
 $(document).ready(function() {
 
-    var clicked = false;
+    // var clicked = false;
+
+    // $(".phrase").click(function(){
+    //     if (clicked == false) {
+    //         clicked = true;
+    //         console.log("phrase clicked, clicked = " + clicked);
+    //         return;
+    //     }
+    //     else if (clicked == true) {
+    //         clicked = false;
+    //         console.log("phrase clicked, clicked = " + clicked);
+    //         return;
+    //     }
+    // });
 
     $(".phrase").click(function(){
-        if (clicked == false) {
-            clicked = true;
-            // console.log("phrase clicked, clicked = " + clicked);
-
-            // $("h1").hover(function(){
-            //     $(this).toggleClass("blurtext");
-            // });
-
-            // $(".sectionHeader").hover(function(){
-            //     $(this).toggleClass("blurtext2");
-            // });
-
-            // $(".pledge1, .pledge2, .pledge3, .pledge4, .pledge5, .pledge6, .pledge7, .pledge8").hover(function(){
-            //     $(this).toggleClass("blurtext2");
-            // });
-
-            // $(".dec1, .dec2, .dec3, .dec4, .dec5, .dec6, .dec7, .dec8, .dec9, .dec10, .dec11, .dec12, .dec13").hover(function(){
-            //     $(this).toggleClass("blurtext2");
-            // });
-
-            // $(".const1, .const2, .const3, .const4, .const5, .const6, .const7, .const8").hover(function(){
-            //     $(this).toggleClass("blurtext2");
-            // });
-
-            // /********* make variables **********/
-
-            // $(".phrase").hover(function(){
-            //     imgTop(); imgLeft(); imgSize(); phraseTop(); phraseLeft(); phraseSize();
-            //     $(".imgContainer, .phraseHeadingContainer").toggleClass("show");
-            // });
-        }
-        else if (clicked == true) {
-            clicked = false;
-            console.log("phrase clicked, clicked = " + clicked);
-        }
     });
 
 
-    if (clicked == false) {
-
-        console.log("enter if statements to hover functions");
+    // if (clicked == false) {
 
         $("h1").hover(function(){
             $(this).toggleClass("blurtext");
@@ -142,8 +118,11 @@ $(document).ready(function() {
             imgTop(); imgLeft(); imgSize(); phraseTop(); phraseLeft(); phraseSize();
             $(".imgContainer, .phraseHeadingContainer").toggleClass("show");
         });
-    }
+    // }
 
+    // if (clicked == true) {
+    //     console.log("clicked is true if statement");
+    // }
     // boxHeight();
     // boxWidth();
     // boxColor();

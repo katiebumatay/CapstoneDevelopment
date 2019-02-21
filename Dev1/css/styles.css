@@ -9,6 +9,10 @@ html, body{
 	color: #161616;
 }
 
+.overlay {
+
+}
+
 .imgContainer {
 	z-index: -5;
 	position: fixed;
