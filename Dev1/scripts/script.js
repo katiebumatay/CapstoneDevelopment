@@ -116,27 +116,27 @@ $(document).ready(function() {
             $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
         });
 
-        $(".phrase").mouseleave(function(){
-            $(".imgContainer").removeClass (function (index, className) {
-                return (className.match (/(^|\s)topEven\S+/g) || []).join(' ');
-            });
-            $(".imgContainer").removeClass (function (index, className) {
-                return (className.match (/(^|\s)leftEven\S+/g) || []).join(' ');
-            });
-            $(".imgContainer").removeClass (function (index, className) {
-                return (className.match (/(^|\s)imgSize\S+/g) || []).join(' ');
-            });
-            $(".phraseHeadingContainer").removeClass (function (index, className) {
-                return (className.match (/(^|\s)topOdd\S+/g) || []).join(' ');
-            });
-            $(".phraseHeadingContainer").removeClass (function (index, className) {
-                return (className.match (/(^|\s)leftOdd\S+/g) || []).join(' ');
-            });
-            $(".phraseHeading").removeClass (function (index, className) {
-                return (className.match (/(^|\s)phraseSize\S+/g) || []).join(' ');
-            });
-            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
-        });
+        // $(".phrase").mouseleave(function(){
+        //     // $(".imgContainer").removeClass (function (index, className) {
+        //     //     return (className.match (/(^|\s)topEven\S+/g) || []).join(' ');
+        //     // });
+        //     // $(".imgContainer").removeClass (function (index, className) {
+        //     //     return (className.match (/(^|\s)leftEven\S+/g) || []).join(' ');
+        //     // });
+        //     // $(".imgContainer").removeClass (function (index, className) {
+        //     //     return (className.match (/(^|\s)imgSize\S+/g) || []).join(' ');
+        //     // });
+        //     // $(".phraseHeadingContainer").removeClass (function (index, className) {
+        //     //     return (className.match (/(^|\s)topOdd\S+/g) || []).join(' ');
+        //     // });
+        //     // $(".phraseHeadingContainer").removeClass (function (index, className) {
+        //     //     return (className.match (/(^|\s)leftOdd\S+/g) || []).join(' ');
+        //     // });
+        //     // $(".phraseHeading").removeClass (function (index, className) {
+        //     //     return (className.match (/(^|\s)phraseSize\S+/g) || []).join(' ');
+        //     // });
+        //     $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+        // });
 
         $(".phrase").click(function(){
             $(".sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
