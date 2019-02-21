@@ -86,9 +86,6 @@ $(document).ready(function() {
     //     }
     // });
 
-    $(".phrase").click(function(){
-    });
-
 
     // if (clicked == false) {
 
@@ -114,10 +111,46 @@ $(document).ready(function() {
 
         /********* make variables **********/
 
-        $(".phrase").hover(function(){
+        $(".phrase").mouseenter(function(){
             imgTop(); imgLeft(); imgSize(); phraseTop(); phraseLeft(); phraseSize();
-            $(".imgContainer, .phraseHeadingContainer").toggleClass("show");
+            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
         });
+
+        $(".phrase").mouseleave(function(){
+            $(".imgContainer").removeClass (function (index, className) {
+                return (className.match (/(^|\s)topEven\S+/g) || []).join(' ');
+            });
+            $(".imgContainer").removeClass (function (index, className) {
+                return (className.match (/(^|\s)leftEven\S+/g) || []).join(' ');
+            });
+            $(".imgContainer").removeClass (function (index, className) {
+                return (className.match (/(^|\s)imgSize\S+/g) || []).join(' ');
+            });
+            $(".phraseHeadingContainer").removeClass (function (index, className) {
+                return (className.match (/(^|\s)topOdd\S+/g) || []).join(' ');
+            });
+            $(".phraseHeadingContainer").removeClass (function (index, className) {
+                return (className.match (/(^|\s)leftOdd\S+/g) || []).join(' ');
+            });
+            $(".phraseHeading").removeClass (function (index, className) {
+                return (className.match (/(^|\s)phraseSize\S+/g) || []).join(' ');
+            });
+            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+        });
+
+        $(".phrase").click(function(){
+            $(".sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
+            $(".exitOverlay").addClass("show");
+            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer, .exitOverlay").addClass("variablesToFront");
+        });
+
+        $(".exitOverlay").click(function(){
+            $(".sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
+            $(".exitOverlay").removeClass("show");
+            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer, .exitOverlay").removeClass("variablesToFront");
+        });
+
+
     // }
 
     // if (clicked == true) {

@@ -9,8 +9,22 @@ html, body{
 	color: #161616;
 }
 
-.overlay {
+.exitOverlay {
+	position: fixed;
+	z-index: -5;
+	opacity: 0;
+	padding: 20px;
+	top: 0;
+	left: 0;
+}
 
+.variablesOverlay {
+	position: fixed;
+	z-index: -5;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
 }
 
 .imgContainer {
@@ -25,8 +39,8 @@ html, body{
 }
 
 .phraseHeadingContainer {
-	margin: 0;
 	z-index: -5;
+	margin: 0;
 	position: fixed;
 	color: #161616;
 /*	width: 100vw;
@@ -50,6 +64,10 @@ html, body{
 .show {
 	z-index: 0;
 	opacity: 1;
+}
+
+.variablesToFront {
+	z-index: 10;
 }
 
 .progressContainer {
@@ -129,21 +147,32 @@ h1 {
 }
 
 .sectionTextContainer {
+	opacity: 1;
 	z-index: 5;
 	position: fixed;
 	left: 20vw;
 	width: 40vw;
 	top: 30vh;
+	transition: 1s;
 }
 
 .sectionHeader {
+	opacity: 1;
 	color: #161616;
 	font-style: italic;
+	transition: 1s;
 }
 
 .sectionText {
+	opacity: 1;
 	color: #161616;
 	left: 20vw;
+	transition: 1s;
+}
+
+.hideSectionText {
+	opacity: 0;
+	transition: 1s;
 }
 
 .blurtext2 {
