@@ -1,53 +1,4 @@
-// function boxHeight() {
-//     var h = Math.floor(Math.random() * 3) + 1;
-//     var heightClass = "height" + h
-//     $(".box").addClass(heightClass);
-// };
 
-
-// function boxWidth() {
-//     var w = Math.floor(Math.random() * 3) + 1;
-//     var widthClass = "width" + w
-//     $(".box").addClass(widthClass);
-// };
-
-
-// function boxColor() {
-//     var c = Math.floor(Math.random() * 3) + 1;
-//     var colorClass = "color" + c
-//     $(".box").addClass(colorClass);
-// };
-
-// function boxTop() {
-//     var t = Math.floor(Math.random() * 3) + 1;
-//     var topClass = "top" + t
-//     $(".box").addClass(topClass);
-// };
-
-
-// function boxLeft() {
-//     var l = Math.floor(Math.random() * 3) + 1;
-//     var leftClass = "left" + l
-//     $(".box").addClass(leftClass);
-// };
-
-// function boxTransform() {
-//     var tr = Math.floor(Math.random() * 4) + 1;
-//     var transformClass;
-//     if (tr == 1) {
-//         transformClass = "skewX"
-//     }
-//     if (tr == 2) {
-//         transformClass = "skewY"
-//     }
-//     if (tr == 3) {
-//         transformClass = "stretchX"
-//     }
-//     if (tr == 3) {
-//         transformClass = "stretchY"
-//     }
-//     $(".box").addClass(transformClass);
-// };
 
 // function loadImage() {
 //     var imageNum = Math.floor(Math.random() * 9) + 1;
@@ -55,17 +6,43 @@
 //     $(".imgContainer").addClass(imgClass);
 // };
 
-// function imgTop() {
-//     var t = Math.floor(Math.random() * 3) + 1;
-//     var topClass = "top" + t
-//     $(".imgContainer").addClass(topClass);
-// };
+function imgTop() {
+    var t = Math.floor(Math.random() * 4) + 1;
+    var topClass = "topEven" + t;
+    $(".imgContainer").toggleClass(topClass);
+};
 
-// function imgLeft() {
-//     var l = Math.floor(Math.random() * 3) + 1;
-//     var leftClass = "left" + l
-//     $(".imgContainer").addClass(leftClass);
-// };
+function imgLeft() {
+    var l = Math.floor(Math.random() * 4) + 1;
+    var leftClass = "leftEven" + l;
+    $(".imgContainer").toggleClass(leftClass);
+};
+
+function imgSize() {
+    var s = Math.floor(Math.random() * 3) + 1;
+    var sizeClass = "imgSize" + s;
+    $(".imgContainer").toggleClass(sizeClass);
+};
+
+function phraseSize() {
+    var s = Math.floor(Math.random() * 3) + 1;
+    var sizeClass = "phraseSize" + s;
+    $(".phraseHeading").toggleClass(sizeClass);
+};
+
+function phraseTop() {
+    var t = Math.floor(Math.random() * 4) + 1;
+    var topClass = "topOdd" + t;
+    $(".phraseHeadingContainer").toggleClass(topClass);
+};
+
+function phraseLeft() {
+    var l = Math.floor(Math.random() * 4) + 1;
+    var leftClass = "leftOdd" + l;
+    $(".phraseHeadingContainer").toggleClass(leftClass);
+};
+
+
 
 // function bodyTop() {
 //     var t = Math.floor(Math.random() * 3) + 1;
@@ -94,33 +71,78 @@
 
 $(document).ready(function() {
 
-
-    $("h1").hover(function(){
-        $(this).toggleClass("blurtext");
-    });
-
-    $(".sectionHeader").hover(function(){
-        $(this).toggleClass("blurtext2");
-    });
-
-    $(".pledge1, .pledge2, .pledge3, .pledge4, .pledge5, .pledge6, .pledge7, .pledge8").hover(function(){
-        $(this).toggleClass("blurtext2");
-    });
-
-    $(".dec1, .dec2, .dec3, .dec4, .dec5, .dec6, .dec7, .dec8, .dec9, .dec10, .dec11, .dec12, .dec13").hover(function(){
-        $(this).toggleClass("blurtext2");
-    });
-
-    $(".const1, .const2, .const3, .const4, .const5, .const6, .const7, .const8").hover(function(){
-        $(this).toggleClass("blurtext2");
-    });
-
-    /********* make variables **********/
+    var clicked = false;
 
     $(".phrase").click(function(){
-        $(".imgContainer, .phraseHeadingContainer").toggleClass("show");
+        if (clicked == false) {
+            clicked = true;
+            // console.log("phrase clicked, clicked = " + clicked);
+
+            // $("h1").hover(function(){
+            //     $(this).toggleClass("blurtext");
+            // });
+
+            // $(".sectionHeader").hover(function(){
+            //     $(this).toggleClass("blurtext2");
+            // });
+
+            // $(".pledge1, .pledge2, .pledge3, .pledge4, .pledge5, .pledge6, .pledge7, .pledge8").hover(function(){
+            //     $(this).toggleClass("blurtext2");
+            // });
+
+            // $(".dec1, .dec2, .dec3, .dec4, .dec5, .dec6, .dec7, .dec8, .dec9, .dec10, .dec11, .dec12, .dec13").hover(function(){
+            //     $(this).toggleClass("blurtext2");
+            // });
+
+            // $(".const1, .const2, .const3, .const4, .const5, .const6, .const7, .const8").hover(function(){
+            //     $(this).toggleClass("blurtext2");
+            // });
+
+            // /********* make variables **********/
+
+            // $(".phrase").hover(function(){
+            //     imgTop(); imgLeft(); imgSize(); phraseTop(); phraseLeft(); phraseSize();
+            //     $(".imgContainer, .phraseHeadingContainer").toggleClass("show");
+            // });
+        }
+        else if (clicked == true) {
+            clicked = false;
+            console.log("phrase clicked, clicked = " + clicked);
+        }
     });
 
+
+    if (clicked == false) {
+
+        console.log("enter if statements to hover functions");
+
+        $("h1").hover(function(){
+            $(this).toggleClass("blurtext");
+        });
+
+        $(".sectionHeader").hover(function(){
+            $(this).toggleClass("blurtext2");
+        });
+
+        $(".pledge1, .pledge2, .pledge3, .pledge4, .pledge5, .pledge6, .pledge7, .pledge8").hover(function(){
+            $(this).toggleClass("blurtext2");
+        });
+
+        $(".dec1, .dec2, .dec3, .dec4, .dec5, .dec6, .dec7, .dec8, .dec9, .dec10, .dec11, .dec12, .dec13").hover(function(){
+            $(this).toggleClass("blurtext2");
+        });
+
+        $(".const1, .const2, .const3, .const4, .const5, .const6, .const7, .const8").hover(function(){
+            $(this).toggleClass("blurtext2");
+        });
+
+        /********* make variables **********/
+
+        $(".phrase").hover(function(){
+            imgTop(); imgLeft(); imgSize(); phraseTop(); phraseLeft(); phraseSize();
+            $(".imgContainer, .phraseHeadingContainer").toggleClass("show");
+        });
+    }
 
     // boxHeight();
     // boxWidth();
