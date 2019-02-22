@@ -42,6 +42,28 @@ function phraseLeft() {
     $(".phraseHeadingContainer").toggleClass(leftClass);
 };
 
+function clearVariables(){
+    $(".imgContainer").removeClass (function (index, className) {
+        return (className.match (/(^|\s)topEven\S+/g) || []).join(' ');
+    });
+    $(".imgContainer").removeClass (function (index, className) {
+        return (className.match (/(^|\s)leftEven\S+/g) || []).join(' ');
+    });
+    $(".imgContainer").removeClass (function (index, className) {
+        return (className.match (/(^|\s)imgSize\S+/g) || []).join(' ');
+    });
+    $(".phraseHeadingContainer").removeClass (function (index, className) {
+        return (className.match (/(^|\s)topOdd\S+/g) || []).join(' ');
+    });
+    $(".phraseHeadingContainer").removeClass (function (index, className) {
+        return (className.match (/(^|\s)leftOdd\S+/g) || []).join(' ');
+    });
+    $(".phraseHeading").removeClass (function (index, className) {
+        return (className.match (/(^|\s)phraseSize\S+/g) || []).join(' ');
+    });
+}
+
+
 
 
 // function bodyTop() {
@@ -117,37 +139,20 @@ $(document).ready(function() {
         });
 
         // $(".phrase").mouseleave(function(){
-        //     // $(".imgContainer").removeClass (function (index, className) {
-        //     //     return (className.match (/(^|\s)topEven\S+/g) || []).join(' ');
-        //     // });
-        //     // $(".imgContainer").removeClass (function (index, className) {
-        //     //     return (className.match (/(^|\s)leftEven\S+/g) || []).join(' ');
-        //     // });
-        //     // $(".imgContainer").removeClass (function (index, className) {
-        //     //     return (className.match (/(^|\s)imgSize\S+/g) || []).join(' ');
-        //     // });
-        //     // $(".phraseHeadingContainer").removeClass (function (index, className) {
-        //     //     return (className.match (/(^|\s)topOdd\S+/g) || []).join(' ');
-        //     // });
-        //     // $(".phraseHeadingContainer").removeClass (function (index, className) {
-        //     //     return (className.match (/(^|\s)leftOdd\S+/g) || []).join(' ');
-        //     // });
-        //     // $(".phraseHeading").removeClass (function (index, className) {
-        //     //     return (className.match (/(^|\s)phraseSize\S+/g) || []).join(' ');
-        //     // });
+        //     clearVariables();
         //     $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
         // });
 
         $(".phrase").click(function(){
             $(".sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
             $(".exitOverlay").addClass("show");
-            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer, .exitOverlay").addClass("variablesToFront");
+            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer, .exitOverlay").addClass("show, variablesToFront");
         });
 
         $(".exitOverlay").click(function(){
             $(".sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
             $(".exitOverlay").removeClass("show");
-            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer, .exitOverlay").removeClass("variablesToFront");
+            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer, .exitOverlay").removeClass("show, variablesToFront");
         });
 
 
