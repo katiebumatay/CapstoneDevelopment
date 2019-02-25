@@ -95,6 +95,12 @@ $(document).ready(function() {
 
     var clicked = false;
 
+    var thisPhrase;
+
+    $(".phrase").mouseenter(function(){
+        thisPhrase = $(this).text();     
+    });
+
     // $(".phrase").click(function(){
     //     if (clicked == false) {
     //         clicked = true;
@@ -207,7 +213,7 @@ $(document).ready(function() {
             // $(".imgContainer").addClass(topClass leftClass sizeClass);
             $(".imgContainer").addClass(imgTopClass).addClass(imgLeftClass).addClass(imgSizeClass).addClass(bgColorClass);
             $(".phraseHeadingContainer").addClass(phraseTopClass).addClass(phraseLeftClass);
-            $(".phraseHeading").addClass(phraseSizeClass).addClass(textColorClass).addClass(phraseFontClass);
+            $(".phraseHeading").text(thisPhrase).addClass(phraseSizeClass).addClass(textColorClass).addClass(phraseFontClass);
             $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
 
             console.log("mouseenter phrase");
