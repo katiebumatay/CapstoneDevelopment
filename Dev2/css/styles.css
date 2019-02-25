@@ -200,18 +200,18 @@ h1 {
 }
 
 .imgSize1 {
-	height: 30vh;
-	width: 30vw;
+	height: 40vh;
+	width: 40vw;
 }
 
 .imgSize2 {
-	height: 50vh;
-	width: 50vw;
+	height: 60vh;
+	width: 60vw;
 }
 
 .imgSize3 {
-	height: 70vh;
-	width: 70vw;
+	height: 80vh;
+	width: 80vw;
 }
 
 .phraseSize1 {
@@ -226,68 +226,68 @@ h1 {
 	font-size: 9em;
 }
 
-.topEven1{
+.imgTop1{
 	top: 0%;
 }
 
-.topEven2{
+.imgTop2{
 	top: 20%;
 }
 
-.topEven3{
+.imgTop3{
 	top: 40%;
 }
 
-.topEven4{
+.imgTop4{
 	top: 60%;
 }
 
-.topOdd1{
+.phraseTop1{
 	top: 10%;
 }
 
-.topOdd2{
+.phraseTop2{
 	top: 30%;
 }
 
-.topOdd3{
+.phraseTop3{
 	top: 50%;
 }
 
-.topOdd4{
+.phraseTop4{
 	top: 70%;
 }
 
 
-.leftEven1{
+.imgLeft1{
 	left: 0%;
 }
 
-.leftEven2{
+.imgLeft2{
 	left: 20%;
 }
 
-.leftEven3{
+.imgLeft3{
 	left: 40%;
 }
 
-.leftEven4{
+.imgLeft4{
 	left: 60%;
 }
 
-.leftOdd1{
+.phraseLeft1{
 	left: 10%;
 }
 
-.leftOdd2{
+.phraseLeft2{
 	left: 30%;
 }
 
-.leftOdd3{
+.phraseLeft3{
 	left: 50%;
 }
 
-.leftOdd4{
+.phraseLeft4{
 	left: 70%;
 }
 /*

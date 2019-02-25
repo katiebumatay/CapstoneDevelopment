@@ -6,62 +6,62 @@
 //     $(".imgContainer").addClass(imgClass);
 // };
 
-function imgTop() {
-    var t = Math.floor(Math.random() * 4) + 1;
-    var topClass = "topEven" + t;
-    $(".imgContainer").toggleClass(topClass);
-};
+// function imgTop() {
+//     var t = Math.floor(Math.random() * 4) + 1;
+//     var topClass = "topEven" + t;
+//     $(".imgContainer").toggleClass(topClass);
+// };
 
-function imgLeft() {
-    var l = Math.floor(Math.random() * 4) + 1;
-    var leftClass = "leftEven" + l;
-    $(".imgContainer").toggleClass(leftClass);
-};
+// function imgLeft() {
+//     var l = Math.floor(Math.random() * 4) + 1;
+//     var leftClass = "leftEven" + l;
+//     $(".imgContainer").toggleClass(leftClass);
+// };
 
-function imgSize() {
-    var s = Math.floor(Math.random() * 3) + 1;
-    var sizeClass = "imgSize" + s;
-    $(".imgContainer").toggleClass(sizeClass);
-};
+// function imgSize() {
+//     var s = Math.floor(Math.random() * 3) + 1;
+//     var sizeClass = "imgSize" + s;
+//     $(".imgContainer").toggleClass(sizeClass);
+// };
 
-function phraseSize() {
-    var s = Math.floor(Math.random() * 3) + 1;
-    var sizeClass = "phraseSize" + s;
-    $(".phraseHeading").toggleClass(sizeClass);
-};
+// function phraseSize() {
+//     var s = Math.floor(Math.random() * 3) + 1;
+//     var sizeClass = "phraseSize" + s;
+//     $(".phraseHeading").toggleClass(sizeClass);
+// };
 
-function phraseTop() {
-    var t = Math.floor(Math.random() * 4) + 1;
-    var topClass = "topOdd" + t;
-    $(".phraseHeadingContainer").toggleClass(topClass);
-};
+// function phraseTop() {
+//     var t = Math.floor(Math.random() * 4) + 1;
+//     var topClass = "topOdd" + t;
+//     $(".phraseHeadingContainer").toggleClass(topClass);
+// };
 
-function phraseLeft() {
-    var l = Math.floor(Math.random() * 4) + 1;
-    var leftClass = "leftOdd" + l;
-    $(".phraseHeadingContainer").toggleClass(leftClass);
-};
+// function phraseLeft() {
+//     var l = Math.floor(Math.random() * 4) + 1;
+//     var leftClass = "leftOdd" + l;
+//     $(".phraseHeadingContainer").toggleClass(leftClass);
+// };
 
-function clearVariables(){
-    $(".imgContainer").removeClass (function (index, className) {
-        return (className.match (/(^|\s)topEven\S+/g) || []).join(' ');
-    });
-    $(".imgContainer").removeClass (function (index, className) {
-        return (className.match (/(^|\s)leftEven\S+/g) || []).join(' ');
-    });
-    $(".imgContainer").removeClass (function (index, className) {
-        return (className.match (/(^|\s)imgSize\S+/g) || []).join(' ');
-    });
-    $(".phraseHeadingContainer").removeClass (function (index, className) {
-        return (className.match (/(^|\s)topOdd\S+/g) || []).join(' ');
-    });
-    $(".phraseHeadingContainer").removeClass (function (index, className) {
-        return (className.match (/(^|\s)leftOdd\S+/g) || []).join(' ');
-    });
-    $(".phraseHeading").removeClass (function (index, className) {
-        return (className.match (/(^|\s)phraseSize\S+/g) || []).join(' ');
-    });
-}
+// function clearVariables(){
+//     $(".imgContainer").removeClass (function (index, className) {
+//         return (className.match (/(^|\s)topEven\S+/g) || []).join(' ');
+//     });
+//     $(".imgContainer").removeClass (function (index, className) {
+//         return (className.match (/(^|\s)leftEven\S+/g) || []).join(' ');
+//     });
+//     $(".imgContainer").removeClass (function (index, className) {
+//         return (className.match (/(^|\s)imgSize\S+/g) || []).join(' ');
+//     });
+//     $(".phraseHeadingContainer").removeClass (function (index, className) {
+//         return (className.match (/(^|\s)topOdd\S+/g) || []).join(' ');
+//     });
+//     $(".phraseHeadingContainer").removeClass (function (index, className) {
+//         return (className.match (/(^|\s)leftOdd\S+/g) || []).join(' ');
+//     });
+//     $(".phraseHeading").removeClass (function (index, className) {
+//         return (className.match (/(^|\s)phraseSize\S+/g) || []).join(' ');
+//     });
+// }
 
 
 
@@ -93,7 +93,7 @@ function clearVariables(){
 
 $(document).ready(function() {
 
-    // var clicked = false;
+    var clicked = false;
 
     // $(".phrase").click(function(){
     //     if (clicked == false) {
@@ -152,52 +152,85 @@ $(document).ready(function() {
         //     $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
         // });
 
-        var t; var topClass;
-        var l; var leftClass;
-        var s; var sizeClass;
+        var iT; var imgTopClass;
+        var iL; var imgLeftClass;
+        var iS; var imgSizeClass;
+
+        var pT; var phraseTopClass;
+        var pL; var phraseLeftClass;
+        var pS; var phraseSizeClass;
 
         $(".phrase").mouseenter(function(){
             //imgTop(); imgLeft(); imgSize(); 
-            phraseTop(); phraseLeft(); phraseSize();
+            // phraseTop(); phraseLeft(); phraseSize();
 
-            t = Math.floor(Math.random() * 4) + 1;
-            topClass = "topEven" + t;
+            iT = Math.floor(Math.random() * 4) + 1;
+            imgTopClass = "imgTop" + iT;
             // $(".imgContainer").addClass(topClass);
 
-            l = Math.floor(Math.random() * 4) + 1;
-            leftClass = "leftEven" + l;
+            iL = Math.floor(Math.random() * 4) + 1;
+            imgLeftClass = "imgLeft" + iL;
             // $(".imgContainer").addClass(leftClass);
 
-            s = Math.floor(Math.random() * 3) + 1;
-            sizeClass = "imgSize" + s;
+            iS = Math.floor(Math.random() * 3) + 1;
+            imgSizeClass = "imgSize" + iS;
             // $(".imgContainer").addClass(sizeClass);
+
+            pT = Math.floor(Math.random() * 4) + 1;
+            phraseTopClass = "phraseTop" + pT;
+
+            pL = Math.floor(Math.random() * 4) + 1;
+            phraseLeftClass = "phraseLeft" + pL;
+
+            pS = Math.floor(Math.random() * 3) + 1;
+            phraseSizeClass = "phraseSize" + pS;
+
             // $(".imgContainer").addClass(topClass leftClass sizeClass);
-            $(".imgContainer").addClass(topClass).addClass(leftClass).addClass(sizeClass);
+            $(".imgContainer").addClass(imgTopClass).addClass(imgLeftClass).addClass(imgSizeClass);
+            $(".phraseHeadingContainer").addClass(phraseTopClass).addClass(phraseLeftClass);
+            $(".phraseHeading").addClass(phraseSizeClass);
             $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
 
-            console.log("mouseenter");
-            console.log(topClass, leftClass, sizeClass);
+            console.log("mouseenter phrase");
         });
 
         $(".phrase").mouseleave(function(){
-            // clearVariables();
             // $(".imgContainer").removeClass(topClass leftClass sizeClass);
-            $(".imgContainer").removeClass(topClass).removeClass(leftClass).removeClass(sizeClass);
-            // $(".imgContainer").toggleClass(leftClass);
-            // $(".imgContainer").toggleClass(sizeClass);
-            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+            if (clicked == false) {
+                $(".imgContainer").removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(imgSizeClass);
+                $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
+                $(".phraseHeading").removeClass(phraseSizeClass);
+                $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+            }
+            // $(".imgContainer").removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(imgSizeClass);
+            // $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
+            // $(".phraseHeading").removeClass(phraseSizeClass);
+            // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
 
-            console.log("mouseleave");
-            console.log(topClass, leftClass, sizeClass);
+            console.log("mouseleave phrase");
+
         });
 
         $(".phrase").click(function(){
+
+            clicked = true;
+
+            // $(".imgContainer").addClass(imgTopClass).addClass(imgLeftClass).addClass(imgSizeClass);
+            // $(".phraseHeadingContainer").addClass(phraseTopClass).addClass(phraseLeftClass);
+            // $(".phraseHeading").addClass(phraseSizeClass);
+
             $(".sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
             $(".exitOverlay").addClass("show");
             $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").addClass("show, variablesToFront");
+
+            console.log("click phrase");
         });
 
         $(".exitOverlay").click(function(){
+
+            clicked = false;
+
+
             $(".sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
             $(".exitOverlay").removeClass("show");
             $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show, variablesToFront");
