@@ -160,6 +160,7 @@ $(document).ready(function() {
         var pL; var phraseLeftClass;
         var pS; var phraseSizeClass;
         var pC; var phraseColorClass;
+        var pF; var phraseFontClass;
 
         var c; var ld; var bgColorClass; var textColorClass;
 
@@ -184,6 +185,9 @@ $(document).ready(function() {
             pS = Math.floor(Math.random() * 3) + 1;
             phraseSizeClass = "phraseSize" + pS;
 
+            pF = Math.floor(Math.random() * 9) + 1;
+            phraseFontClass = "font" + pF;
+
 
             c = Math.floor(Math.random() * 2) + 1;
             bgColorClass = "bgColor" + c;
@@ -203,7 +207,7 @@ $(document).ready(function() {
             // $(".imgContainer").addClass(topClass leftClass sizeClass);
             $(".imgContainer").addClass(imgTopClass).addClass(imgLeftClass).addClass(imgSizeClass).addClass(bgColorClass);
             $(".phraseHeadingContainer").addClass(phraseTopClass).addClass(phraseLeftClass);
-            $(".phraseHeading").addClass(phraseSizeClass).addClass(textColorClass);
+            $(".phraseHeading").addClass(phraseSizeClass).addClass(textColorClass).addClass(phraseFontClass);
             $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
 
             console.log("mouseenter phrase");
@@ -214,7 +218,7 @@ $(document).ready(function() {
             if (clicked == false) {
                 $(".imgContainer").removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(imgSizeClass).removeClass(bgColorClass);
                 $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
-                $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass);
+                $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
                 $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
             }
             // $(".imgContainer").removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(imgSizeClass);

@@ -7,6 +7,7 @@ html, body{
 	font-family: Baskerville, serif;
 	font-size: 14pt;
 	color: #161616;
+	line-height: 1.3em;
 }
 
 .variablesOverlay {
@@ -216,14 +217,17 @@ h1 {
 
 .phraseSize1 {
 	font-size: 3em;
+	line-height: 1em;
 }
 
 .phraseSize2 {
 	font-size: 6em;
+	line-height: 1em;
 }
 
 .phraseSize3 {
 	font-size: 9em;
+	line-height: 1em;
 }
 
 .imgTop1{
@@ -322,6 +326,43 @@ h1 {
 .textColor2-2 {
 	color: #8c1010;
 }
+
+.font1 {
+	font-family: 'Chonburi', cursive;
+}
+
+.font2 {
+	font-family: 'Alfa Slab One', cursive;
+}
+
+.font3 {
+	font-family: 'Yatra One', cursive;
+}
+
+.font4 {
+	font-family: 'Libre Baskerville', serif;
+}
+
+.font5 {
+	font-family: 'Amiri', serif;
+}
+
+.font6 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.font7 {
+	font-family: 'Heebo', sans-serif;
+}
+
+.font8 {
+	font-family: 'Archivo Narrow', sans-serif;
+}
+
+.font9 {
+	font-family: 'Share Tech Mono', monospace;
+}
+
 /*
 
 .image1 {
