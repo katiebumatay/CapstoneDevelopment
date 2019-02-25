@@ -80,17 +80,12 @@ $(document).ready(function() {
     });
 
     $(".phrase").mouseleave(function(){
-        // $(".imgContainer").removeClass(topClass leftClass sizeClass);
         if (clicked == false) {
             $(".imgContainer").removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(imgSizeClass).removeClass(bgColorClass);
             $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
             $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
             $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
         }
-        // $(".imgContainer").removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(imgSizeClass);
-        // $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
-        // $(".phraseHeading").removeClass(phraseSizeClass);
-        // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
 
         console.log("mouseleave phrase");
 
