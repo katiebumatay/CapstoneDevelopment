@@ -10,6 +10,10 @@ html, body{
 	line-height: 1.3em;
 }
 
+.stopScroll {
+	overflow: hidden;
+}
+
 .variablesOverlay {
 	opacity: 0;
 	position: fixed;
@@ -217,17 +221,17 @@ h1 {
 
 .phraseSize1 {
 	font-size: 3em;
-	line-height: 1em;
+	line-height: 1.1em;
 }
 
 .phraseSize2 {
 	font-size: 6em;
-	line-height: 1em;
+	line-height: 1.1em;
 }
 
 .phraseSize3 {
 	font-size: 9em;
-	line-height: 1em;
+	line-height: 1.1em;
 }
 
 .imgTop1{
