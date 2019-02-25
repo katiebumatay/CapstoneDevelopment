@@ -290,6 +290,38 @@ h1 {
 .phraseLeft4{
 	left: 70%;
 }
+
+.bgColor1-1 {
+	background-color: #68a2ff;
+}
+
+.textColor1-1 {
+	color: #68a2ff;
+}
+
+.bgColor1-2 {
+	background-color: #2a5baa;
+}
+
+.textColor1-2 {
+	color: #2a5baa;
+}
+
+.bgColor2-1 {
+	background-color: #cc2222;
+}
+
+.textColor2-1 {
+	color: #cc2222;
+}
+
+.bgColor2-2 {
+	background-color: #8c1010;
+}
+
+.textColor2-2 {
+	color: #8c1010;
+}
 /*
 
 .image1 {
