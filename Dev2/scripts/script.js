@@ -133,44 +133,74 @@ $(document).ready(function() {
 
         /********* make variables **********/
 
-        $(".phrase").hover(function(){
-            phraseTop(); phraseLeft(); phraseSize();
+        // $(".phrase").hover(function(){
+        //     imgTop(); imgLeft(); imgSize();
+        //     phraseTop(); phraseLeft(); phraseSize();
             
-            var t = Math.floor(Math.random() * 4) + 1;
-            var topClass = "topEven" + t;
-            $(".imgContainer").toggleClass(topClass);
+        //     // var t = Math.floor(Math.random() * 4) + 1;
+        //     // var topClass = "topEven" + t;
+        //     // $(".imgContainer").toggleClass(topClass);
 
-            var l = Math.floor(Math.random() * 4) + 1;
-            var leftClass = "leftEven" + l;
-            $(".imgContainer").toggleClass(leftClass);
+        //     // var l = Math.floor(Math.random() * 4) + 1;
+        //     // var leftClass = "leftEven" + l;
+        //     // $(".imgContainer").toggleClass(leftClass);
 
-            var s = Math.floor(Math.random() * 3) + 1;
-            var sizeClass = "imgSize" + s;
-            $(".imgContainer").toggleClass(sizeClass);
+        //     // var s = Math.floor(Math.random() * 3) + 1;
+        //     // var sizeClass = "imgSize" + s;
+        //     // $(".imgContainer").toggleClass(sizeClass);
 
-            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
-        });
-
-        // $(".phrase").mouseenter(function(){
-        //     imgTop(); imgLeft(); imgSize(); phraseTop(); phraseLeft(); phraseSize();
         //     $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
         // });
 
-        // $(".phrase").mouseleave(function(){
-        //     clearVariables();
-        //     // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
-        // });
+        var t; var topClass;
+        var l; var leftClass;
+        var s; var sizeClass;
+
+        $(".phrase").mouseenter(function(){
+            //imgTop(); imgLeft(); imgSize(); 
+            phraseTop(); phraseLeft(); phraseSize();
+
+            t = Math.floor(Math.random() * 4) + 1;
+            topClass = "topEven" + t;
+            // $(".imgContainer").addClass(topClass);
+
+            l = Math.floor(Math.random() * 4) + 1;
+            leftClass = "leftEven" + l;
+            // $(".imgContainer").addClass(leftClass);
+
+            s = Math.floor(Math.random() * 3) + 1;
+            sizeClass = "imgSize" + s;
+            // $(".imgContainer").addClass(sizeClass);
+            // $(".imgContainer").addClass(topClass leftClass sizeClass);
+            $(".imgContainer").addClass(topClass).addClass(leftClass).addClass(sizeClass);
+            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+
+            console.log("mouseenter");
+            console.log(topClass, leftClass, sizeClass);
+        });
+
+        $(".phrase").mouseleave(function(){
+            // clearVariables();
+            // $(".imgContainer").removeClass(topClass leftClass sizeClass);
+            $(".imgContainer").removeClass(topClass).removeClass(leftClass).removeClass(sizeClass);
+            // $(".imgContainer").toggleClass(leftClass);
+            // $(".imgContainer").toggleClass(sizeClass);
+            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+
+            console.log("mouseleave");
+            console.log(topClass, leftClass, sizeClass);
+        });
 
         $(".phrase").click(function(){
             $(".sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
             $(".exitOverlay").addClass("show");
-            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer, .exitOverlay").addClass("show, variablesToFront");
+            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").addClass("show, variablesToFront");
         });
 
         $(".exitOverlay").click(function(){
             $(".sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
             $(".exitOverlay").removeClass("show");
-            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer, .exitOverlay").removeClass("show, variablesToFront");
+            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show, variablesToFront");
         });
 
 
