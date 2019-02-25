@@ -221,7 +221,7 @@ $(document).ready(function() {
 
             $(".sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
             $(".exitOverlay").addClass("show");
-            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").addClass("show, variablesToFront");
+            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
 
             console.log("click phrase");
         });
@@ -233,7 +233,7 @@ $(document).ready(function() {
 
             $(".sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
             $(".exitOverlay").removeClass("show");
-            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show, variablesToFront");
+            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
         });
 
 
