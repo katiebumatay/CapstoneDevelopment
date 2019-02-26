@@ -74,7 +74,7 @@ function phraseTop() {
 };
 
 function phraseLeft() {
-    pL = Math.floor(Math.random() * 4) + 1;
+    pL = Math.floor(Math.random() * 3) + 1;
     phraseLeftClass = "phraseLeft" + pL;
     return phraseLeftClass;
 };
@@ -191,9 +191,10 @@ $(document).ready(function() {
         $(".imgContainer").addClass(imgWidth()).addClass(imgHeight()).addClass(imgTop()).addClass(imgLeft()).addClass(bgColor());
         $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
         $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont());
-        $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+        // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+        $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
 
-        console.log("mouseenter phrase");
+        // console.log("mouseenter phrase");
     });
 
     $(".phrase").mouseleave(function(){
@@ -201,7 +202,8 @@ $(document).ready(function() {
             $(".imgContainer").removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(bgColorClass);
             $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
             $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
-            $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+            // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+            $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
         }
 
         // console.log("mouseleave phrase");
@@ -212,8 +214,11 @@ $(document).ready(function() {
         clicked = true;
         $(".sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
         $(".exitOverlay").addClass("show");
-        $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
+        // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
+        $(".variables-container, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
+        // $(".page-container").addClass("stopScroll");
         $("body").addClass("stopScroll");
+        $(".variablesOverlay").removeClass("stopScroll");
 
         // console.log("click phrase");
     });
@@ -222,7 +227,9 @@ $(document).ready(function() {
         clicked = false;
         $(".sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
         $(".exitOverlay").removeClass("show");
-        $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
+        // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
+        $(".variables-container, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
+        // $(".page-container").removeClass("stopScroll");
         $("body").removeClass("stopScroll");
     });
 
