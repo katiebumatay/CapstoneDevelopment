@@ -6,4 +6,4 @@ Dev2: duplicated to Dev 3 right before trying to get rid of skrollr. Bugs from d
 
 Dev 3: got rid of scroll and implemented position: sticky in css for scrolling, which required making the section height longer so the position stuck for longer as well as giving the sticky elements some margins (top/bottom). Changed "phrase header" placeholder in variable state to the actual text of the phrase hovered over.
 
-Dev4: delete scroll file. Cleaned up variable function syntax. Make separate variables for image width and height instead of just image size. Link image placement and size variables.
+Dev4: delete scroll file. Cleaned up variable function syntax. Make separate variables for image width and height instead of just image size. Link image placement and size variables. Ability to scroll through variable overlay when clicked.
