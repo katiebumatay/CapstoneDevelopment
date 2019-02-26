@@ -20,7 +20,7 @@ html, body{
 	z-index: 0;
 	top: 0;
 	left: 0;
-	width: 120vw;
+	width: 110vw;
 	height: 100vh;
 }
 
@@ -207,7 +207,7 @@ h1 {
 	transition: 1s;
 }
 
-.imgSize1 {
+/*.imgSize1 {
 	height: 40vh;
 	width: 40vw;
 }
@@ -220,6 +220,30 @@ h1 {
 .imgSize3 {
 	height: 80vh;
 	width: 80vw;
+}*/
+
+.imgWidth1 {
+	width: 40vw;
+}
+
+.imgWidth2 {
+	width: 60vw;
+}
+
+.imgWidth3 {
+	width: 80vw;
+}
+
+.imgHeight1 {
+	height: 40vw;
+}
+
+.imgHeight2 {
+	height: 60vw;
+}
+
+.imgHeight3 {
+	height: 80vw;
 }
 
 .phraseSize1 {

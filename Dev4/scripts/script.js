@@ -24,10 +24,22 @@ function imgLeft() {
     return imgLeftClass;
 };
 
-function imgSize() {
-    iS = Math.floor(Math.random() * 3) + 1;
-    imgSizeClass = "imgSize" + iS;
-    return imgSizeClass;
+// function imgSize() {
+//     iS = Math.floor(Math.random() * 3) + 1;
+//     imgSizeClass = "imgSize" + iS;
+//     return imgSizeClass;
+// };
+
+function imgWidth() {
+    iW = Math.floor(Math.random() * 3) + 1;
+    imgWidthClass = "imgWidth" + iW;
+    return imgWidthClass;
+};
+
+function imgHeight() {
+    iH = Math.floor(Math.random() * 3) + 1;
+    imgHeightClass = "imgHeight" + iH;
+    return imgHeightClass;
 };
 
 function phraseTop() {
@@ -72,6 +84,15 @@ function textColor() {
     }
     return textColorClass;
 };
+
+
+// function isInViewport() {
+//     var elementTop = $(this).offset().top;
+//     var elementBottom = elementTop + $(this).outerHeight();
+//     var viewportTop = $(window).scrollTop();
+//     var viewportBottom = viewportTop + $(window).height();
+//     return elementBottom > viewportTop && elementTop < viewportBottom;
+// };
 
 $(document).ready(function() {
 
@@ -142,7 +163,7 @@ $(document).ready(function() {
 
 
         // $(".imgContainer").addClass(topClass leftClass sizeClass);
-        $(".imgContainer").addClass(imgTop()).addClass(imgLeft()).addClass(imgSize()).addClass(bgColor());
+        $(".imgContainer").addClass(imgTop()).addClass(imgLeft()).addClass(imgWidth()).addClass(imgHeight()).addClass(bgColor());
         $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
         $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont());
         $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
@@ -152,7 +173,7 @@ $(document).ready(function() {
 
     $(".phrase").mouseleave(function(){
         if (clicked == false) {
-            $(".imgContainer").removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(imgSizeClass).removeClass(bgColorClass);
+            $(".imgContainer").removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(bgColorClass);
             $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
             $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
             $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
