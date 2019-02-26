@@ -1,8 +1,10 @@
     var thisPhrase;
-
+    
+    var iW; var imgWidthClass;
+    var iH; var imgHeightClass;
     var iT; var imgTopClass;
     var iL; var imgLeftClass;
-    var iS; var imgSizeClass;
+    // var iS; var imgSizeClass;
 
     var pT; var phraseTopClass;
     var pL; var phraseLeftClass;
@@ -12,23 +14,6 @@
 
     var c; var ld; var bgColorClass; var textColorClass;
 
-function imgTop() {
-    iT = Math.floor(Math.random() * 4) + 1;
-    imgTopClass = "imgTop" + iT;
-    return imgTopClass;
-};
-
-function imgLeft() {
-    iL = Math.floor(Math.random() * 4) + 1;
-    imgLeftClass = "imgLeft" + iL;
-    return imgLeftClass;
-};
-
-// function imgSize() {
-//     iS = Math.floor(Math.random() * 3) + 1;
-//     imgSizeClass = "imgSize" + iS;
-//     return imgSizeClass;
-// };
 
 function imgWidth() {
     iW = Math.floor(Math.random() * 3) + 1;
@@ -41,6 +26,46 @@ function imgHeight() {
     imgHeightClass = "imgHeight" + iH;
     return imgHeightClass;
 };
+
+function imgTop() {
+
+    if (iH == 3) {
+        iT = Math.floor(Math.random() * 2) + 1;
+        imgTopClass = "imgTop" + iT;
+    }
+    if (iH == 2) {
+        iT = Math.floor(Math.random() * 3) + 1;
+        imgTopClass = "imgTop" + iT;
+    }
+    else {
+        iT = Math.floor(Math.random() * 4) + 1;
+        imgTopClass = "imgTop" + iT;
+    }
+    return imgTopClass;
+};
+
+function imgLeft() {
+
+    if (iW == 3) {
+        iL = Math.floor(Math.random() * 2) + 1;
+        imgLeftClass = "imgLeft" + iL;
+    }
+    if (iW == 2) {
+        iL = Math.floor(Math.random() * 3) + 1;
+        imgLeftClass = "imgLeft" + iL;
+    }
+    else {
+        iL = Math.floor(Math.random() * 4) + 1;
+        imgLeftClass = "imgLeft" + iL;
+    }
+    return imgLeftClass;
+};
+
+// function imgSize() {
+//     iS = Math.floor(Math.random() * 3) + 1;
+//     imgSizeClass = "imgSize" + iS;
+//     return imgSizeClass;
+// };
 
 function phraseTop() {
     pT = Math.floor(Math.random() * 4) + 1;
@@ -163,7 +188,7 @@ $(document).ready(function() {
 
 
         // $(".imgContainer").addClass(topClass leftClass sizeClass);
-        $(".imgContainer").addClass(imgTop()).addClass(imgLeft()).addClass(imgWidth()).addClass(imgHeight()).addClass(bgColor());
+        $(".imgContainer").addClass(imgWidth()).addClass(imgHeight()).addClass(imgTop()).addClass(imgLeft()).addClass(bgColor());
         $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
         $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont());
         $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
