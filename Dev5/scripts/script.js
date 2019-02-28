@@ -129,10 +129,36 @@ $(document).ready(function() {
 
     $("h1").hover(function(){
         $(this).toggleClass("blurtext");
-   });
+    });
+
+    // $("h1").click(function(){
+    //     $(".titleOverlay").toggleClass("titleOverlayExpand");
+    // });
+
+    $("h1").click(function(){
+        $(".title, h1").toggleClass("clickedTitle");
+    });
+
+    // $(".sectionHeader, .phrase, .extra").hover(function(){
+    //     $(".sectionHeader, .phrase, .extra").toggleClass("blurtext2");
+    // });
+    // $(".sectionText, .sectionHeader").hover(function(){
+    //     $(".sectionHeader, .sectionText").toggleClass("blurtext2");
+    // });
+
+    $(".sectionTextContainer").hover(function(){
+        // console.log("hover in section text container");
+        $(".sectionHeader, .phrase, .extra").toggleClass("blurtext2");
+    });
 
     $(".sectionHeader, .phrase").hover(function(){
         $(this).toggleClass("blurtext2");
+    });
+
+    $(".sectionHeader").click(function() {
+        // console.log("sectionHeader clicked");
+        // $(".line").toggleClass("lineExpand");
+        $(".rect").toggleClass("rectExpand");
     });
 
     // var iT; var imgTopClass;
@@ -194,6 +220,7 @@ $(document).ready(function() {
         // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
         $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
 
+
         // console.log("mouseenter phrase");
     });
 
@@ -238,9 +265,6 @@ $(document).ready(function() {
         $("body").removeClass("stopScroll");
     });
 
-    // $(".sectionHeader").click(function() {
-    //     (."line").toggleClass("lineExpand");
-    // });
 
 
 
