@@ -90,6 +90,8 @@ html, body{
 
 .show {
 	opacity: 1;
+	transition: opacity 0.3s;
+	transition-timing-function: ease-out;
 }
 /*
 .transition {
@@ -189,6 +191,19 @@ h1 {
 	background-color: white;
 }
 
+.about {
+	position: absolute;
+	visibility: hidden;
+	color: #212121;
+	top: 50vh;
+	width: 50%;
+	margin-left: 25%;
+}
+
+.showAbout {
+	visibility: visible;
+}
+
 .blurtext {
 	color: transparent;
 	text-shadow: #ffffff 0 0 30px;
@@ -242,11 +257,28 @@ h1 {
 	height: 0%;
 	background-color: #212121;
 	transition: 0.3s;
+	border-top-width: 0px;
+	border-right-width: 20px;
+	border-left-width: 20px;
+	border-bottom-width: 0px;
+	border-color: #212121;
+	border-style: solid;
 }
 
 .rectExpand {
-	height: 30vh;
+	height: 200%;
 	transition: 0.3s;
+	border-width: 20px;
+	border-color: #212121;
+	border-style: solid;
+	box-sizing: content-box;
+}
+
+.sectionExplanation {
+	margin: 0;
+	color: white;
+	opacity: 0;
+	visibility: hidden;
 }
 
 .sectionHeader {
@@ -295,6 +327,14 @@ h1 {
 	position: fixed;
 	transition: 1s;
 }
+
+.showExplanation {
+	opacity: 1;
+	transition: opacity 0.5s;
+	transition-timing-function: ease-out;
+	visibility: visible;
+}
+
 
 /*.imgSize1 {
 	height: 40vh;

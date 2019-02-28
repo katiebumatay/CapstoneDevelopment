@@ -8,4 +8,4 @@ Dev 3: got rid of scroll and implemented position: sticky in css for scrolling, 
 
 Dev4: delete scroll file. Cleaned up variable function syntax. Make separate variables for image width and height instead of just image size. Link image placement and size variables. Ability to scroll through variable overlay when clicked.
 
-Dev5: Change blur toggle. Cleaned up phrase groupings. Started to add line/rectandle dropdown div to each section heading.
+Dev5: Change blur toggle. Cleaned up phrase groupings. Started to add line/rectangle dropdown div to each section heading. Rectangle expand when click heading, show explanation working for pledge. show about by clicking landing page title.

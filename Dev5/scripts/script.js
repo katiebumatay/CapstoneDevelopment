@@ -123,12 +123,18 @@ $(document).ready(function() {
 
     var clicked = false;
 
+    var titleClicked = false;
+    var sectionHeaderClicked = false;
+
     $(".phrase").mouseenter(function(){
         thisPhrase = $(this).text();     
     });
 
     $("h1").hover(function(){
-        $(this).toggleClass("blurtext");
+        if (titleClicked == false) {
+            $(this).toggleClass("blurtext");
+        }
+        
     });
 
     // $("h1").click(function(){
@@ -136,7 +142,15 @@ $(document).ready(function() {
     // });
 
     $("h1").click(function(){
+        if (titleClicked == true) {
+            titleClicked = false;
+        }
+        else if (titleClicked == false) {
+            titleClicked = true;
+        }
         $(".title, h1").toggleClass("clickedTitle");
+        $("body").toggleClass("stopScroll");
+        $(".about").toggleClass("showAbout")
     });
 
     // $(".sectionHeader, .phrase, .extra").hover(function(){
@@ -148,17 +162,30 @@ $(document).ready(function() {
 
     $(".sectionTextContainer").hover(function(){
         // console.log("hover in section text container");
-        $(".sectionHeader, .phrase, .extra").toggleClass("blurtext2");
+        if (sectionHeaderClicked == false) {
+            $(".sectionHeader, .phrase, .extra").toggleClass("blurtext2");
+        }
     });
 
     $(".sectionHeader, .phrase").hover(function(){
-        $(this).toggleClass("blurtext2");
+        if (sectionHeaderClicked == false) {
+            $(this).toggleClass("blurtext2");
+        }
+        
     });
 
     $(".sectionHeader").click(function() {
+        if (sectionHeaderClicked == true) {
+            sectionHeaderClicked = false;
+        }
+        else if (sectionHeaderClicked == false) {
+            sectionHeaderClicked = true;
+        }
         // console.log("sectionHeader clicked");
         // $(".line").toggleClass("lineExpand");
         $(".rect").toggleClass("rectExpand");
+        $(".sectionExplanation").toggleClass("showExplanation");
+        $("body").toggleClass("stopScroll");
     });
 
     // var iT; var imgTopClass;
@@ -219,6 +246,7 @@ $(document).ready(function() {
         $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont());
         // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
         $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+        $("body").toggleClass("stopScroll");
 
 
         // console.log("mouseenter phrase");
@@ -231,6 +259,7 @@ $(document).ready(function() {
             $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
             // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
             $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+            $("body").toggleClass("stopScroll");
         }
 
         // console.log("mouseleave phrase");
