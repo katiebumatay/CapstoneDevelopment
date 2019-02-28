@@ -44,6 +44,18 @@ html, body{
 	height: 100%;
 }
 
+.variablesOverlayLength {
+	visibility: hidden;
+	height: 100%;
+	width: 100%;
+	background-color: yellow;
+}
+
+.variablesOverlayVisible {
+	visibility: visible;
+	height: 300%;
+}
+
 .imgContainer {
 	/*z-index: -5;*/
 	position: absolute;

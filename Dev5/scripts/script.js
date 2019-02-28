@@ -342,6 +342,8 @@ $(document).ready(function() {
         // $(".page-container").addClass("stopScroll");
         $("body").addClass("stopScroll");
         $(".variablesOverlay").removeClass("stopScroll");
+        $(".variablesOverlayLength").addClass("variablesOverlayVisible").removeClass(stopScroll);
+        // $(".variablesOverlay").removeClass("stopScroll").addClass("variablesOverlayLong");
 
         // console.log("click phrase");
     });
@@ -359,6 +361,9 @@ $(document).ready(function() {
         $(".variables-container, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
         // $(".page-container").removeClass("stopScroll");
         $("body").removeClass("stopScroll");
+        $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
+        // $(".variablesOverlay").removeClass("variablesOverlayLong");
+
     });
 
 
