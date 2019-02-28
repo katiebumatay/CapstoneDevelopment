@@ -38,6 +38,7 @@ html, body{
 }
 
 .variablesOverlay {
+	cursor: default;
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -55,6 +56,7 @@ html, body{
 }
 
 .phraseHeadingContainer {
+	cursor: default;
 	/*z-index: -5;*/
 	margin: 0;
 	position: absolute;
@@ -218,6 +220,7 @@ h1 {
 }
 
 .sectionTextContainer {
+	cursor: default;
 	/*position: absolute;*/
 	margin-top: 40vh;
 	position: sticky;

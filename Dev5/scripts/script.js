@@ -14,6 +14,8 @@
 
     var c; var ld; var bgColorClass; var textColorClass;
 
+    var wordCount;
+
 
 function imgWidth() {
     iW = Math.floor(Math.random() * 3) + 1;
@@ -67,23 +69,44 @@ function imgLeft() {
 //     return imgSizeClass;
 // };
 
+function phraseSize() {
+    if (wordCount >= 7) {
+        pS = Math.floor(Math.random() * 2) + 1;
+        phraseSizeClass = "phraseSize" + pS;
+    }
+    else {
+        pS = Math.floor(Math.random() * 3) + 1;
+        phraseSizeClass = "phraseSize" + pS;
+    }
+    
+    return phraseSizeClass;
+};
+
 function phraseTop() {
-    pT = Math.floor(Math.random() * 4) + 1;
-    phraseTopClass = "phraseTop" + pT;
+    if (pS == 3) {
+        pT = Math.floor(Math.random() * 2) + 1;
+        phraseTopClass = "phraseTop" + pT;
+    }
+    else {
+        pT = Math.floor(Math.random() * 4) + 1;
+        phraseTopClass = "phraseTop" + pT;
+    }
+    
     return phraseTopClass;
 };
 
 function phraseLeft() {
-    pL = Math.floor(Math.random() * 3) + 1;
-    phraseLeftClass = "phraseLeft" + pL;
+    if (pS == 3) {
+        pL = Math.floor(Math.random() * 2) + 1;
+        phraseLeftClass = "phraseLeft" + pL;
+    }
+    else {
+        pL = Math.floor(Math.random() * 3) + 1;
+        phraseLeftClass = "phraseLeft" + pL;
+    }
     return phraseLeftClass;
 };
 
-function phraseSize() {
-    pS = Math.floor(Math.random() * 3) + 1;
-    phraseSizeClass = "phraseSize" + pS;
-    return phraseSizeClass;
-};
 
 function phraseFont() {
     pF = Math.floor(Math.random() * 9) + 1;
@@ -111,13 +134,25 @@ function textColor() {
 };
 
 
-// function isInViewport() {
-//     var elementTop = $(this).offset().top;
-//     var elementBottom = elementTop + $(this).outerHeight();
-//     var viewportTop = $(window).scrollTop();
-//     var viewportBottom = viewportTop + $(window).height();
-//     return elementBottom > viewportTop && elementTop < viewportBottom;
+// function isOnScreen() {
+    
+//     var win = $(window);
+    
+//     var viewport = {
+//         top : win.scrollTop(),
+//         left : win.scrollLeft()
+//     };
+//     viewport.right = viewport.left + win.width();
+//     viewport.bottom = viewport.top + win.height();
+    
+//     var bounds = this.offset();
+//     bounds.right = bounds.left + this.outerWidth();
+//     bounds.bottom = bounds.top + this.outerHeight();
+    
+//     return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+    
 // };
+
 
 $(document).ready(function() {
 
@@ -126,9 +161,28 @@ $(document).ready(function() {
     var titleClicked = false;
     var sectionHeaderClicked = false;
 
-    $(".phrase").mouseenter(function(){
-        thisPhrase = $(this).text();     
-    });
+    // $.fn.isOnScreen = function(){
+    
+    //     var win = $(window);
+    
+    //     var viewport = {
+    //         top : win.scrollTop(),
+    //         left : win.scrollLeft()
+    //     };
+    //     viewport.right = viewport.left + win.width();
+    //     viewport.bottom = viewport.top + win.height();
+    
+    //     var bounds = this.offset();
+    //     bounds.right = bounds.left + this.outerWidth();
+    //     bounds.bottom = bounds.top + this.outerHeight();
+    
+    //     return (!(viewport.right < bounds.right || viewport.left > bounds.left || viewport.bottom < bounds.bottom || viewport.top > bounds.top));
+    // };
+
+
+    // $(".phrase").mouseenter(function(){
+    //     thisPhrase = $(this).text();     
+    // });
 
     $("h1").hover(function(){
         if (titleClicked == false) {
@@ -203,6 +257,11 @@ $(document).ready(function() {
 
     $(".phrase").mouseenter(function(){
 
+        thisPhrase = $(this).text();
+
+        var wordCount = thisPhrase.split(" ").length;
+        console.log(wordCount);
+
         // iT = Math.floor(Math.random() * 4) + 1;
         // imgTopClass = "imgTop" + iT;
 
@@ -242,8 +301,16 @@ $(document).ready(function() {
 
         // $(".imgContainer").addClass(topClass leftClass sizeClass);
         $(".imgContainer").addClass(imgWidth()).addClass(imgHeight()).addClass(imgTop()).addClass(imgLeft()).addClass(bgColor());
-        $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
         $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont());
+        $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
+        // if ($('.phraseHeading').isOnScreen() == false) {
+        //     console.log(thisPhrase);
+        //     console.log("phrase Heading not in viewport")
+        //     $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
+        //     $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
+        //     $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
+        //     $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont());
+        // }
         // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
         $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
         $("body").toggleClass("stopScroll");
@@ -255,8 +322,8 @@ $(document).ready(function() {
     $(".phrase").mouseleave(function(){
         if (clicked == false) {
             $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass);
-            $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
             $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
+            $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
             // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
             $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
             $("body").toggleClass("stopScroll");
@@ -279,12 +346,12 @@ $(document).ready(function() {
         // console.log("click phrase");
     });
 
-    $(".exitOverlay").click(function(){
+    $(".variables-container").click(function(){
         clicked = false;
 
         $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass);
-        $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
         $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
+        $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
 
         $(".sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
         $(".exitOverlay").removeClass("show");
