@@ -48,12 +48,23 @@ html, body{
 	visibility: hidden;
 	height: 100%;
 	width: 100%;
-	background-color: yellow;
+	/*background-color: yellow;*/
 }
 
 .variablesOverlayVisible {
 	visibility: visible;
 	height: 300%;
+}
+
+.hold {
+	height: 33.33%;
+	/*background-color: red;*/
+}
+
+.articleContainer {
+	position: absolute;
+	width: 80%;
+	left: 10%;
 }
 
 .imgContainer {
