@@ -74,6 +74,10 @@ function phraseSize() {
         pS = Math.floor(Math.random() * 2) + 1;
         phraseSizeClass = "phraseSize" + pS;
     }
+    if (iH == 1 || iW == 1) {
+        pS = Math.floor(Math.random() * 2) + 2;
+        phraseSizeClass = "phraseSize" + pS;
+    }
     else {
         pS = Math.floor(Math.random() * 3) + 1;
         phraseSizeClass = "phraseSize" + pS;
