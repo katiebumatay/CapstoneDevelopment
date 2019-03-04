@@ -596,6 +596,10 @@ h1 {
 
 
 .loadImage {
+	display: block;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	vertical-align: middle;
 	background-image: url(../variables/1-pledge/1/1/image.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
