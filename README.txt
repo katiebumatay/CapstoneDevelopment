@@ -10,4 +10,4 @@ Dev4: delete scroll file. Cleaned up variable function syntax. Make separate var
 
 Dev5: Change blur toggle. Cleaned up phrase groupings. Started to add line/rectangle dropdown div to each section heading. Rectangle expand when click heading, show explanation working for pledge. show about by clicking landing page title. ease into variable overlay. adjust size and placement option of phrase based on length/size.
 
-Dev6: Created empty folders for structure of image and text variables. added more colors on color variables. first attempt (failed) at loading txt file into div (need to use a database i think). Placeholder variable image load.
+Dev6: Created empty folders for structure of image and text variables. added more colors on color variables. first attempt (failed) at loading txt file into div (need to use a database i think). Placeholder variable image load. Placeholder article text load from http (through GitHub repository link).
