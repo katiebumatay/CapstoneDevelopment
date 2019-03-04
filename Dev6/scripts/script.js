@@ -141,6 +141,38 @@ function textColor() {
     return textColorClass;
 };
 
+function addVariables() {
+
+    imgWidth(); imgHeight(); imgTop(); imgLeft(); bgColor();
+    $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass("loadImage");
+    $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass)
+    $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont());
+    $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
+}
+
+function removeVariables() {
+        $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
+        $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass);
+        $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
+        $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
+
+
+}
+
+function activateOverlay() {
+        $(".sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
+        $(".exitOverlay").addClass("show");
+        // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
+        $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
+        // $(".page-container").addClass("stopScroll");
+        $("body").addClass("stopScroll");
+        $(".variablesOverlay").removeClass("stopScroll");
+        $(".variablesOverlayLength").addClass("variablesOverlayVisible");
+        // $(".variablesOverlay").removeClass("stopScroll").addClass("variablesOverlayLong");
+
+        // console.log("click phrase");
+}
+
 
 // function isOnScreen() {
     
@@ -281,84 +313,94 @@ $(document).ready(function() {
     $(".phrase").mouseenter(function(){
 
         thisPhrase = $(this).text();
+        wordCount = thisPhrase.split(" ").length;
 
-        var wordCount = thisPhrase.split(" ").length;
-        // console.log(wordCount);
-
-        // iT = Math.floor(Math.random() * 4) + 1;
-        // imgTopClass = "imgTop" + iT;
-
-        // iL = Math.floor(Math.random() * 4) + 1;
-        // imgLeftClass = "imgLeft" + iL;
-
-        // iS = Math.floor(Math.random() * 3) + 1;
-        // imgSizeClass = "imgSize" + iS;
-
-        // pT = Math.floor(Math.random() * 4) + 1;
-        // phraseTopClass = "phraseTop" + pT;
-
-        // pL = Math.floor(Math.random() * 4) + 1;
-        // phraseLeftClass = "phraseLeft" + pL;
-
-        // pS = Math.floor(Math.random() * 3) + 1;
-        // phraseSizeClass = "phraseSize" + pS;
-
-        // pF = Math.floor(Math.random() * 9) + 1;
-        // phraseFontClass = "font" + pF;
-
-
-        // c = Math.floor(Math.random() * 2) + 1;
-        // bgColorClass = "bgColor" + c;
-
-        // ld = Math.floor(Math.random() * 2) + 1;
-        // bgColorClass = bgColorClass + "-" + ld;
-
-        // if (ld == 1) {
-        //     textColorClass = "textColor" + c + "-" + 2;
-        // }
-
-        // else if (ld == 2) {
-        //     textColorClass = "textColor" + c + "-" + 1;
-        // }
-
-        // v = "url: ../variables/1-pledge/1/1/image.jpg"
-        // $(".imgContainer").css("background-image", v).css("background-size", "cover");
-
-
-        // $(".imgContainer").addClass(topClass leftClass sizeClass);
-        // $(".imgContainer").addClass(imgWidth()).addClass(imgHeight()).addClass(imgTop()).addClass(imgLeft()).addClass(bgColor()).addClass("loadImage");
-        imgWidth(); imgHeight(); imgTop(); imgLeft(); bgColor();
-        $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass("loadImage");
-        $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass)
-        $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont());
-        $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
-        // if ($('.phraseHeading').isOnScreen() == false) {
-        //     console.log(thisPhrase);
-        //     console.log("phrase Heading not in viewport")
-        //     $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
-        //     $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
-        //     $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
-        //     $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont());
-        // }
-        // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+        addVariables();
         $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
         $("body").toggleClass("stopScroll");
 
+        // thisPhrase = $(this).text();
 
-        // console.log("mouseenter phrase");
+        // var wordCount = thisPhrase.split(" ").length;
+        // // console.log(wordCount);
+
+        // // iT = Math.floor(Math.random() * 4) + 1;
+        // // imgTopClass = "imgTop" + iT;
+
+        // // iL = Math.floor(Math.random() * 4) + 1;
+        // // imgLeftClass = "imgLeft" + iL;
+
+        // // iS = Math.floor(Math.random() * 3) + 1;
+        // // imgSizeClass = "imgSize" + iS;
+
+        // // pT = Math.floor(Math.random() * 4) + 1;
+        // // phraseTopClass = "phraseTop" + pT;
+
+        // // pL = Math.floor(Math.random() * 4) + 1;
+        // // phraseLeftClass = "phraseLeft" + pL;
+
+        // // pS = Math.floor(Math.random() * 3) + 1;
+        // // phraseSizeClass = "phraseSize" + pS;
+
+        // // pF = Math.floor(Math.random() * 9) + 1;
+        // // phraseFontClass = "font" + pF;
+
+
+        // // c = Math.floor(Math.random() * 2) + 1;
+        // // bgColorClass = "bgColor" + c;
+
+        // // ld = Math.floor(Math.random() * 2) + 1;
+        // // bgColorClass = bgColorClass + "-" + ld;
+
+        // // if (ld == 1) {
+        // //     textColorClass = "textColor" + c + "-" + 2;
+        // // }
+
+        // // else if (ld == 2) {
+        // //     textColorClass = "textColor" + c + "-" + 1;
+        // // }
+
+        // // v = "url: ../variables/1-pledge/1/1/image.jpg"
+        // // $(".imgContainer").css("background-image", v).css("background-size", "cover");
+
+
+        // // $(".imgContainer").addClass(topClass leftClass sizeClass);
+        // // $(".imgContainer").addClass(imgWidth()).addClass(imgHeight()).addClass(imgTop()).addClass(imgLeft()).addClass(bgColor()).addClass("loadImage");
+        // imgWidth(); imgHeight(); imgTop(); imgLeft(); bgColor();
+        // $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass("loadImage");
+        // $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass)
+        // $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont());
+        // $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
+        // // if ($('.phraseHeading').isOnScreen() == false) {
+        // //     console.log(thisPhrase);
+        // //     console.log("phrase Heading not in viewport")
+        // //     $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
+        // //     $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
+        // //     $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
+        // //     $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont());
+        // // }
+        // // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+        // $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+        // $("body").toggleClass("stopScroll");
+
+
+        // // console.log("mouseenter phrase");
     });
 
     $(".phrase").mouseleave(function(){
         if (clicked == false) {
-            // $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
-            $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
-            $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass);
-
-            $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
-            $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
-            // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+            removeVariables();
             $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
             $("body").toggleClass("stopScroll");
+        //     // $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
+        //     $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
+        //     $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass);
+
+        //     $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
+        //     $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
+        //     // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+        //     $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+        //     $("body").toggleClass("stopScroll");
         }
 
         // console.log("mouseleave phrase");
@@ -367,26 +409,23 @@ $(document).ready(function() {
 
     $(".phrase").click(function(){
         clicked = true;
-        $(".sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
-        $(".exitOverlay").addClass("show");
-        // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
-        $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
-        // $(".page-container").addClass("stopScroll");
-        $("body").addClass("stopScroll");
-        $(".variablesOverlay").removeClass("stopScroll");
-        $(".variablesOverlayLength").addClass("variablesOverlayVisible");
-        // $(".variablesOverlay").removeClass("stopScroll").addClass("variablesOverlayLong");
+        activateOverlay();
+        // $(".sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
+        // $(".exitOverlay").addClass("show");
+        // // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
+        // $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
+        // // $(".page-container").addClass("stopScroll");
+        // $("body").addClass("stopScroll");
+        // $(".variablesOverlay").removeClass("stopScroll");
+        // $(".variablesOverlayLength").addClass("variablesOverlayVisible");
+        // // $(".variablesOverlay").removeClass("stopScroll").addClass("variablesOverlayLong");
 
-        // console.log("click phrase");
+        // // console.log("click phrase");
     });
 
     $(".variables-container").click(function(){
         clicked = false;
-
-        $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass);
-        $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass);
-        $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
-        $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
+        removeVariables();
 
         $(".sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
         $(".exitOverlay").removeClass("show");
@@ -414,11 +453,11 @@ $(document).ready(function() {
 
         $(".pledge1").click(function(){
             v = Math.floor(Math.random() * 2) + 1;
-            imageLink = "../variables/1-pledge/1/" + v + "/image.jpg";
-            // $("loadImage").style.setProperty('--myImgURL', imageLink);
-            loadImage.style.setProperty('--myImg-background-image', url(imageLink));
+            // imageLink = "../variables/1-pledge/1/" + v + "/image.jpg";
+            // // $("loadImage").style.setProperty('--myImgURL', imageLink);
+            // loadImage.style.setProperty('--myImg-background-image', url(imageLink));
 
-            
+
             articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev6/variables/1-pledge/1/" + v + "/text.html";
             $(".articleText").load(articleLink);
         });
