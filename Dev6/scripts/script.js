@@ -309,7 +309,10 @@ $(document).ready(function() {
 
 
         // $(".imgContainer").addClass(topClass leftClass sizeClass);
-        $(".imgContainer").addClass(imgWidth()).addClass(imgHeight()).addClass(imgTop()).addClass(imgLeft()).addClass(bgColor()).addClass("loadImage");
+        // $(".imgContainer").addClass(imgWidth()).addClass(imgHeight()).addClass(imgTop()).addClass(imgLeft()).addClass(bgColor()).addClass("loadImage");
+        imgWidth(); imgHeight(); imgTop(); imgLeft(); bgColor();
+        $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass("loadImage");
+        $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass)
         $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont());
         $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
         // if ($('.phraseHeading').isOnScreen() == false) {
@@ -330,7 +333,10 @@ $(document).ready(function() {
 
     $(".phrase").mouseleave(function(){
         if (clicked == false) {
+            // $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
             $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
+            $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass)
+
             $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
             $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
             // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");

@@ -70,13 +70,9 @@ html, body{
 .imgOverlay {
 	/*z-index: -5;*/
 	position: absolute;
-	width: 30vw;
-	height: 30vh;
-	background-color: blue;
-/*	opacity: 0;*/
 	top: 0;
 	left: 0;
-	opacity: 0.5;
+	mix-blend-mode: screen;
 }
 
 .imgContainer {
@@ -88,6 +84,7 @@ html, body{
 /*	opacity: 0;*/
 	top: 0;
 	left: 0;
+	/*background-blend-mode: screen;*/
 }
 
 .phraseHeadingContainer {
