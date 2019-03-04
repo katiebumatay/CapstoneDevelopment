@@ -1,3 +1,7 @@
+:root {
+	--myImg-background-image: url(../variables/1-pledge/1/1/image.jpg);
+}
+
 html, body{
 	width: 100%;
 	height:100%;
@@ -600,9 +604,11 @@ h1 {
  	margin-left: auto;
  	margin-right: auto;
  	vertical-align: middle;
-	background-image: url(../variables/1-pledge/1/1/image.jpg);
+	/*background-image: url(../variables/1-pledge/1/1/image.jpg);*/
+	background-image: var(--myImg-background-image);
 	background-repeat: no-repeat;
 	background-size: cover;
+/*	width: 50%;*/
 }
 
 /*.image2 {

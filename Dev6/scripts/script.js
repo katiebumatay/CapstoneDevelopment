@@ -262,6 +262,21 @@ $(document).ready(function() {
 
     // var c; var ld; var bgColorClass; var textColorClass;
 
+    // $(".pledge1").click(function(){
+    //     v = Math.floor(Math.random() * 2) + 1;
+    //     imageLink = "../variables/1-pledge/1/" + v + "/image.jpg"
+    //     // $("loadImage").style.setProperty('--myImgURL', imageLink);
+    //     loadImage.style.setProperty('--myImgURL', imageLink);
+    //     articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev6/variables/1-pledge/1/" + v + "/text.html";
+    //     $(".articleText").load(articleLink);
+    // });
+    //     // $(".articleText").load("../variables/1-pledge/1/1/text.txt");
+    //     // $(".articleText").load("text.txt");
+
+    // $(".pledge2").click(function(){
+    //     $(".articleText").load("https://katiebumatay.github.io/CapstoneDevelopment/Dev6/variables/1-pledge/2/1/text.html");
+    // });
+
 
     $(".phrase").mouseenter(function(){
 
@@ -398,7 +413,12 @@ $(document).ready(function() {
 
 
         $(".pledge1").click(function(){
-            v = Math.floor(Math.random() * 3) + 1;
+            v = Math.floor(Math.random() * 2) + 1;
+            imageLink = "../variables/1-pledge/1/" + v + "/image.jpg";
+            // $("loadImage").style.setProperty('--myImgURL', imageLink);
+            loadImage.style.setProperty('--myImg-background-image', url(imageLink));
+
+            
             articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev6/variables/1-pledge/1/" + v + "/text.html";
             $(".articleText").load(articleLink);
         });
