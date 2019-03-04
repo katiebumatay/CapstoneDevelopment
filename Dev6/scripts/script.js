@@ -304,12 +304,12 @@ $(document).ready(function() {
         //     textColorClass = "textColor" + c + "-" + 1;
         // }
 
-        v = "url: variables/1-pledge/1/1/image.jpg"
-        $(".imgContainer").css("background-image", v);
+        // v = "url: ../variables/1-pledge/1/1/image.jpg"
+        // $(".imgContainer").css("background-image", v).css("background-size", "cover");
 
 
         // $(".imgContainer").addClass(topClass leftClass sizeClass);
-        $(".imgContainer").addClass(imgWidth()).addClass(imgHeight()).addClass(imgTop()).addClass(imgLeft()).addClass(bgColor());
+        $(".imgContainer").addClass(imgWidth()).addClass(imgHeight()).addClass(imgTop()).addClass(imgLeft()).addClass(bgColor()).addClass("loadImage");
         $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont());
         $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
         // if ($('.phraseHeading').isOnScreen() == false) {
@@ -330,7 +330,7 @@ $(document).ready(function() {
 
     $(".phrase").mouseleave(function(){
         if (clicked == false) {
-            $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass);
+            $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
             $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
             $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
             // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").toggleClass("show");

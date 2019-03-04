@@ -67,6 +67,18 @@ html, body{
 	left: 10%;
 }
 
+.imgOverlay {
+	/*z-index: -5;*/
+	position: absolute;
+	width: 30vw;
+	height: 30vh;
+	background-color: blue;
+/*	opacity: 0;*/
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+}
+
 .imgContainer {
 	/*z-index: -5;*/
 	position: absolute;
@@ -583,11 +595,11 @@ h1 {
 
 
 
-/*.pledge1-image1 {
-	background-image: url(../images/1.jpg);
+.loadImage {
+	background-image: url(../variables/1-pledge/1/1/image.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-}*/
+}
 
 /*.image2 {
 	background-image: url(../images/2.jpg);
