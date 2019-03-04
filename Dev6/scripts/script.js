@@ -335,7 +335,7 @@ $(document).ready(function() {
         if (clicked == false) {
             // $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
             $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
-            $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass)
+            $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass);
 
             $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
             $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
@@ -353,7 +353,7 @@ $(document).ready(function() {
         $(".sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
         $(".exitOverlay").addClass("show");
         // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
-        $(".variables-container, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
+        $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
         // $(".page-container").addClass("stopScroll");
         $("body").addClass("stopScroll");
         $(".variablesOverlay").removeClass("stopScroll");
@@ -367,13 +367,14 @@ $(document).ready(function() {
         clicked = false;
 
         $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass);
+        $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass);
         $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
         $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
 
         $(".sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
         $(".exitOverlay").removeClass("show");
         // $(".variablesOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
-        $(".variables-container, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
+        $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
         // $(".page-container").removeClass("stopScroll");
         $("body").removeClass("stopScroll");
         $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
