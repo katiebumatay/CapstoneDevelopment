@@ -390,36 +390,36 @@ h1 {
 }*/
 
 .imgWidth1 {
-	width: 40%;
+	width: 35%;
 }
 
 .imgWidth2 {
-	width: 60%;
+	width: 55%;
 }
 
 .imgWidth3 {
-	width: 80%;
+	width: 75%;
 }
 
 .imgHeight1 {
-	height: 40%;
+	height: 35%;
 }
 
 .imgHeight2 {
-	height: 60%;
+	height: 55%;
 }
 
 .imgHeight3 {
-	height: 80%;
+	height: 75%;
 }
 
 .phraseSize1 {
-	font-size: 3em;
+	font-size: 4em;
 	line-height: 1.1em;
 }
 
 .phraseSize2 {
-	font-size: 6em;
+	font-size: 6.5em;
 	line-height: 1.05em;
 }
 
@@ -429,7 +429,7 @@ h1 {
 }
 
 .imgTop1{
-	top: 0%;
+	top: 5%;
 }
 
 .imgTop2{
@@ -462,7 +462,7 @@ h1 {
 
 
 .imgLeft1{
-	left: 0%;
+	left: 5%;
 }
 
 .imgLeft2{

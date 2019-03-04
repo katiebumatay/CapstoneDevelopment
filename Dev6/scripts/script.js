@@ -41,7 +41,7 @@ function imgTop() {
         iT = Math.floor(Math.random() * 3) + 1;
         imgTopClass = "imgTop" + iT;
     }
-    else {
+    else if (iH == 1) {
         iT = Math.floor(Math.random() * 4) + 1;
         imgTopClass = "imgTop" + iT;
     }
@@ -58,7 +58,7 @@ function imgLeft() {
         iL = Math.floor(Math.random() * 3) + 1;
         imgLeftClass = "imgLeft" + iL;
     }
-    else {
+    else if (iW == 1) {
         iL = Math.floor(Math.random() * 4) + 1;
         imgLeftClass = "imgLeft" + iL;
     }
@@ -400,6 +400,10 @@ $(document).ready(function() {
         });
         // $(".articleText").load("../variables/1-pledge/1/1/text.txt");
         // $(".articleText").load("text.txt");
+
+        $(".pledge2").click(function(){
+            $(".articleText").load("https://katiebumatay.github.io/CapstoneDevelopment/Dev6/variables/1-pledge/2/1/text.html");
+        });
 
 
 
