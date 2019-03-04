@@ -15,7 +15,8 @@
 
     var wordCount;
 
-    var v;
+    var sec; var phraseNum;
+    var v; var numOptions;
     var articleLink;
     var imageLink;
 
@@ -172,6 +173,14 @@ function deactivateOverlay() {
     $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
 }
 
+function chooseStory() {
+    v = Math.floor(Math.random() * numOptions) + 1;
+    articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev7/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html";
+    $(".articleText").load(articleLink);
+    loadImage.style.setProperty('--myImg-background-image', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image.jpg");
+    $(".imgContainer").addClass("loadImage");
+}
+
 $(document).ready(function() {
 
     var clicked = false;
@@ -291,14 +300,10 @@ $(document).ready(function() {
 
         $(".pledge1").mouseenter(function(){
             v = Math.floor(Math.random() * 2) + 1;
-            articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev7/variables/1-pledge/1/" + v + "/text.html";
-            $(".articleText").load(articleLink);
-
-            // imageLink = "../variables/1-pledge/1/" + v + "/image.jpg";
-            // console.log(imageLink);
-            // // $("loadImage").style.setProperty('--myImgURL', imageLink);
-            loadImage.style.setProperty('--myImg-background-image', "url(../variables/1-pledge/1/" + v + "/image.jpg");
-            $(".imgContainer").addClass("loadImage");
+            sec = "1-pledge";
+            phraseNum = "1";
+            numOptions = 2;
+            chooseStory();
 
         });
 
