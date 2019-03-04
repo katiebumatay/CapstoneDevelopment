@@ -513,6 +513,38 @@ h1 {
 	color: #8c1010;
 }
 
+.bgColor3-1 {
+	background-color: #212121;
+}
+
+.textColor3-1 {
+	color: #212121;
+}
+
+.bgColor3-2 {
+	background-color: #515151;
+}
+
+.textColor3-2 {
+	color: #515151;
+}
+
+.bgColor4-1 {
+	background-color: #fff591;
+}
+
+.textColor4-1 {
+	color: #fff591;
+}
+
+.bgColor4-2 {
+	background-color: #efd900;
+}
+
+.textColor4-2 {
+	color: #efd900;
+}
+
 .font1 {
 	font-family: 'Chonburi', cursive;
 }

@@ -119,7 +119,7 @@ function phraseFont() {
 };
 
 function bgColor() {
-    c = Math.floor(Math.random() * 2) + 1;
+    c = Math.floor(Math.random() * 4) + 1;
     bgColorClass = "bgColor" + c;
     ld = Math.floor(Math.random() * 2) + 1;
     bgColorClass = bgColorClass + "-" + ld;
@@ -346,7 +346,7 @@ $(document).ready(function() {
         // $(".page-container").addClass("stopScroll");
         $("body").addClass("stopScroll");
         $(".variablesOverlay").removeClass("stopScroll");
-        $(".variablesOverlayLength").addClass("variablesOverlayVisible").removeClass(stopScroll);
+        $(".variablesOverlayLength").addClass("variablesOverlayVisible");
         // $(".variablesOverlay").removeClass("stopScroll").addClass("variablesOverlayLong");
 
         // console.log("click phrase");
@@ -369,6 +369,21 @@ $(document).ready(function() {
         // $(".variablesOverlay").removeClass("variablesOverlayLong");
 
     });
+
+    $(".pledge1").click(function(){
+        $.ajax({
+            url : "variables/1-pledge/1/1/text.txt",
+            dataType: "text",
+            success : function (data) {
+                $(".articleText").html(data);
+            }
+        });
+        // $(".articleText").load("../variables/1-pledge/1/1/text.txt");
+        // $(".articleText").load("text.txt");
+    });
+
+
+
 
 
 
