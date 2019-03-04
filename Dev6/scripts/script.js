@@ -396,7 +396,7 @@ $(document).ready(function() {
 
 
         $(".pledge1").click(function(){
-            $(".articleText").load("../variables/1-pledge/1/1/text.html");
+            $(".articleText").load("https://katiebumatay.github.io/CapstoneDevelopment/Dev6/variables/1-pledge/1/1/text.html");
         });
         // $(".articleText").load("../variables/1-pledge/1/1/text.txt");
         // $(".articleText").load("text.txt");
