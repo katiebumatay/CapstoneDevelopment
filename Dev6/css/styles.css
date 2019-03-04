@@ -65,6 +65,7 @@ html, body{
 	position: absolute;
 	width: 80%;
 	left: 10%;
+	z-index: 10;
 }
 
 .imgOverlay {
