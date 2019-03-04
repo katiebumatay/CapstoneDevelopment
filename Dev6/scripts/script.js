@@ -396,16 +396,10 @@ $(document).ready(function() {
 
 
         $(".pledge1").click(function(){
-        $.ajax({
-            url : "variables/1-pledge/1/1/text.txt",
-            dataType: "text",
-            success : function (data) {
-                $(".articleText").html(data);
-            }
+            $(".articleText").load("../variables/1-pledge/1/1/text.html");
         });
         // $(".articleText").load("../variables/1-pledge/1/1/text.txt");
         // $(".articleText").load("text.txt");
-        });
 
 
 
