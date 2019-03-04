@@ -16,6 +16,8 @@
 
     var wordCount;
 
+    var v;
+
 
 function imgWidth() {
     iW = Math.floor(Math.random() * 3) + 1;
@@ -302,6 +304,9 @@ $(document).ready(function() {
         //     textColorClass = "textColor" + c + "-" + 1;
         // }
 
+        v = "url: variables/1-pledge/1/1/image.jpg"
+        $(".imgContainer").css("background-image", v);
+
 
         // $(".imgContainer").addClass(topClass leftClass sizeClass);
         $(".imgContainer").addClass(imgWidth()).addClass(imgHeight()).addClass(imgTop()).addClass(imgLeft()).addClass(bgColor());
@@ -370,17 +375,18 @@ $(document).ready(function() {
 
     });
 
-    $(".pledge1").click(function(){
-        $.ajax({
-            url : "variables/1-pledge/1/1/text.txt",
-            dataType: "text",
-            success : function (data) {
-                $(".articleText").html(data);
-            }
-        });
-        // $(".articleText").load("../variables/1-pledge/1/1/text.txt");
-        // $(".articleText").load("text.txt");
-    });
+    // $(".pledge1").click(function(){
+    //     $.ajax({
+    //         url : "variables/1-pledge/1/1/text.txt",
+    //         dataType: "text",
+    //         success : function (data) {
+    //             $(".articleText").html(data);
+    //         }
+    //     });
+    //     // $(".articleText").load("../variables/1-pledge/1/1/text.txt");
+    //     // $(".articleText").load("text.txt");
+    // });
+
 
 
 
