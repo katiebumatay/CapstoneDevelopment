@@ -304,7 +304,6 @@ $(document).ready(function() {
             phraseNum = "1";
             numOptions = 2;
             chooseStory();
-
         });
 
 
