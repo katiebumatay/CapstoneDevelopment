@@ -138,14 +138,16 @@ function textColor() {
 function addVariables() {
 
     imgWidth(); imgHeight(); imgTop(); imgLeft(); bgColor();
-    $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass("loadImage");
+    // $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass("loadImage");
+    $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass);
     $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass)
     $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont());
     $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
 }
 
 function removeVariables() {
-        $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
+        // $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
+        $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass);
         $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass);
         $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass);
         $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
@@ -162,6 +164,13 @@ function activateOverlay() {
         $(".variablesOverlayLength").addClass("variablesOverlayVisible");
 }
 
+function deactivateOverlay() {
+    $(".sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
+    $(".exitOverlay").removeClass("show");
+    $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
+    $("body").removeClass("stopScroll");
+    $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
+}
 
 $(document).ready(function() {
 
@@ -246,12 +255,7 @@ $(document).ready(function() {
     $(".variables-container").click(function(){
         clicked = false;
         removeVariables();
-
-        $(".sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
-        $(".exitOverlay").removeClass("show");
-        $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
-        $("body").removeClass("stopScroll");
-        $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
+        deactivateOverlay();
 
     });
 
@@ -268,24 +272,35 @@ $(document).ready(function() {
     // });
 
 
-        $(".pledge1").click(function(){
+        // $(".pledge1").click(function(){
+        //     v = Math.floor(Math.random() * 2) + 1;
+        //     // imageLink = "../variables/1-pledge/1/" + v + "/image.jpg";
+        //     // // $("loadImage").style.setProperty('--myImgURL', imageLink);
+        //     // loadImage.style.setProperty('--myImg-background-image', url(imageLink));
+
+
+        //     articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev7/variables/1-pledge/1/" + v + "/text.html";
+        //     $(".articleText").load(articleLink);
+        // });
+        // // $(".articleText").load("../variables/1-pledge/1/1/text.txt");
+        // // $(".articleText").load("text.txt");
+
+        // $(".pledge2").click(function(){
+        //     $(".articleText").load("https://katiebumatay.github.io/CapstoneDevelopment/Dev7/variables/1-pledge/2/1/text.html");
+        // });
+
+        $(".pledge1").mouseenter(function(){
             v = Math.floor(Math.random() * 2) + 1;
-            // imageLink = "../variables/1-pledge/1/" + v + "/image.jpg";
-            // // $("loadImage").style.setProperty('--myImgURL', imageLink);
-            // loadImage.style.setProperty('--myImg-background-image', url(imageLink));
-
-
-            articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev6/variables/1-pledge/1/" + v + "/text.html";
+            articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev7/variables/1-pledge/1/" + v + "/text.html";
             $(".articleText").load(articleLink);
+
+            // imageLink = "../variables/1-pledge/1/" + v + "/image.jpg";
+            // console.log(imageLink);
+            // // $("loadImage").style.setProperty('--myImgURL', imageLink);
+            loadImage.style.setProperty('--myImg-background-image', "url(../variables/1-pledge/1/" + v + "/image.jpg");
+            $(".imgContainer").addClass("loadImage");
+
         });
-        // $(".articleText").load("../variables/1-pledge/1/1/text.txt");
-        // $(".articleText").load("text.txt");
-
-        $(".pledge2").click(function(){
-            $(".articleText").load("https://katiebumatay.github.io/CapstoneDevelopment/Dev6/variables/1-pledge/2/1/text.html");
-        });
-
-
 
 
 
