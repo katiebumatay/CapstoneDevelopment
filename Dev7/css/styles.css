@@ -219,7 +219,7 @@ h1 {
 	position: sticky;
 	width: 100vw;
 	margin: auto;
-	color: white;
+	color: transparent;
 	font-size: 10vh;
 	top: 40vh;
 	text-align: center;
@@ -248,8 +248,15 @@ h1 {
 .blurtext {
 	color: transparent;
 	text-shadow: #ffffff 0 0 30px;
-	transition: 0s;
+	transition: 3s;
 }
+
+.cleartext {
+	color: transparent;
+	text-shadow: #ffffff 0 0 0px;
+	transition: 3s;
+}
+
 
 .section {
 	z-index: 5;

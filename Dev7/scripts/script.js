@@ -20,6 +20,58 @@
     var articleLink;
     var imageLink;
 
+// function animateTitle() {
+//     console.log("animation happening");
+//     var elem = document.getElementById("myTitle");   
+//     var blur = 30;
+//     var id = setInterval(frame(), 5);
+//     function frame() {
+//         console.log("frame function");
+//         if (blur == 0) {
+//             clearInterval(id);
+//         } else {
+//             blur--; 
+//             elem.style.textShadow = "0px 0px " + blur + "px #ffffff";
+//         }
+//     }
+// }
+
+// function animateTitle() {
+//     console.log("animation happening");
+//     var elem = document.getElementById("myTitle");
+//     setInterval(frame(), 2000);
+//     function frame() {
+//         $(elem).toggleClass("clearText");
+//     }
+// }
+
+function animate() {
+    var titleNum = Math.floor(Math.random() * 4) + 1;
+    if (titleNum == 1) {
+        $(".title1").toggleClass("cleartext");
+        console.log("affect title1");
+    }
+    if (titleNum == 2) {
+        $(".title2").toggleClass("cleartext");
+        console.log("affect title2");
+    }
+    if (titleNum == 3) {
+        $(".title3").toggleClass("cleartext");
+        console.log("affect title3");
+    }
+    if (titleNum == 4) {
+        $(".title4").toggleClass("cleartext");
+        console.log("affect title4");
+    }
+    // else if (titleNum == 5 || titleNum == 6) {
+    //     console.log("do nothing");
+    //     return;
+    // }
+};
+
+// function animate() {
+//     $(".title1, .title2, .title3, .title4").toggleClass("cleartext");
+// };
 
 function imgWidth() {
     iW = Math.floor(Math.random() * 3) + 1;
@@ -183,17 +235,31 @@ function chooseStory() {
 
 $(document).ready(function() {
 
+    // $("#myTitle").toggleClass("cleartext");
+
+    setInterval('animate()', 300);
+
     var clicked = false;
 
     var titleClicked = false;
     var sectionHeaderClicked = false;
 
-    $("h1").hover(function(){
-        if (titleClicked == false) {
-            $(this).toggleClass("blurtext");
-        }
+    // $("h1").hover(function(){
+    //     if (titleClicked == false) {
+    //         $(this).toggleClass("blurtext");
+    //     }
         
-    });
+    // });
+
+
+    // $("h1").hover(function(){
+    //     animateTitle();
+        
+    // });
+
+    // $(".title").mouseover(function(){
+    //     setInterval('animate()', 1500);
+    // });
 
 
     $("h1").click(function(){
@@ -305,9 +371,6 @@ $(document).ready(function() {
             numOptions = 3;
             chooseStory();
         });
-
-
-
 
 
 
