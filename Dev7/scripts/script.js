@@ -162,7 +162,7 @@ function activateOverlay() {
         $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
         $("body").addClass("stopScroll");
         $(".variablesOverlay").removeClass("stopScroll");
-        $(".variablesOverlayLength").addClass("variablesOverlayVisible");
+        $(".variablesOverlayLength").addClass("variablesOverlayVisible").removeClass("stopScroll");
 }
 
 function deactivateOverlay() {
