@@ -609,6 +609,7 @@ h1 {
 	background-repeat: no-repeat;
 	background-size: cover;
 /*	width: 50%;*/
+	background-position: 50% 50%;
 }
 
 /*.image2 {
