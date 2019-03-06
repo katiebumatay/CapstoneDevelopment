@@ -20,6 +20,10 @@
     var articleLink;
     var imageLink;
 
+    var prevNum = 1;
+    var tempNum;
+    var titleNum;
+
 // function animateTitle() {
 //     console.log("animation happening");
 //     var elem = document.getElementById("myTitle");   
@@ -45,28 +49,54 @@
 //     }
 // }
 
+// function animate() {
+//     var titleNum = Math.floor(Math.random() * 4) + 1;
+//     if (titleNum == 1) {
+//         $(".title1").toggleClass("cleartext");
+//         console.log("affect title1");
+//     }
+//     if (titleNum == 2) {
+//         $(".title2").toggleClass("cleartext");
+//         console.log("affect title2");
+//     }
+//     if (titleNum == 3) {
+//         $(".title3").toggleClass("cleartext");
+//         console.log("affect title3");
+//     }
+//     if (titleNum == 4) {
+//         $(".title4").toggleClass("cleartext");
+//         console.log("affect title4");
+//     }
+// };
+
 function animate() {
-    var titleNum = Math.floor(Math.random() * 4) + 1;
-    if (titleNum == 1) {
+    titleNum = Math.floor(Math.random() * 4) + 1;
+    if (titleNum == prevNum) {
+        if (titleNum == 4) {
+            tempNum = 1;
+        }
+        else {
+            tempNum = titleNum + 1;
+        }    
+    }
+    if (titleNum != prevNum) {
+        tempNum = titleNum;
+    }
+
+    if (tempNum == 1) {
         $(".title1").toggleClass("cleartext");
-        console.log("affect title1");
     }
-    if (titleNum == 2) {
+    if (tempNum == 2) {
         $(".title2").toggleClass("cleartext");
-        console.log("affect title2");
     }
-    if (titleNum == 3) {
+    if (tempNum == 3) {
         $(".title3").toggleClass("cleartext");
-        console.log("affect title3");
     }
-    if (titleNum == 4) {
+    if (tempNum == 4) {
         $(".title4").toggleClass("cleartext");
-        console.log("affect title4");
     }
-    // else if (titleNum == 5 || titleNum == 6) {
-    //     console.log("do nothing");
-    //     return;
-    // }
+    console.log(tempNum);
+    prevNum = tempNum;
 };
 
 // function animate() {
@@ -237,7 +267,7 @@ $(document).ready(function() {
 
     // $("#myTitle").toggleClass("cleartext");
 
-    setInterval('animate()', 300);
+    setInterval('animate()', 1000);
 
     var clicked = false;
 

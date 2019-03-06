@@ -251,14 +251,15 @@ h1 {
 
 .blurtext {
 	color: transparent;
-	text-shadow: #ffffff 0 0 0.5em;
-	transition: 4s;
-}
+	text-shadow: #ffffff 0 0 0.6em;
+	transition: 6.5s;
+	transition-timing-function: ease-in-out;}
 
 .cleartext {
 	color: transparent;
-	text-shadow: #ffffff 0 0 0px;
-	transition: 4s;
+	text-shadow: #ffffff 0 0 0em;
+	transition: 6.5s;
+	transition-timing-function: ease-in-out;
 }
 
 
