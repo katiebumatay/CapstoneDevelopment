@@ -194,6 +194,7 @@ html, body{
 	left: 0;
 }
 
+
 .titleOverlay {
 	position: absolute;
 	top: 50%;
@@ -217,28 +218,31 @@ html, body{
 h1 {
 	cursor: pointer;
 	position: sticky;
-	width: 100vw;
+	width: 60vw;
 	margin: auto;
 	color: transparent;
-	font-size: 10vh;
+	/*font-size: 10vh;*/
+	font-size: 25vh;
+	line-height: 0.8em;
 	top: 40vh;
-	text-align: center;
+	/*text-align: center;*/
+	text-align: left;
 	transition: 0s;
-	margin-bottom: 20vh;
+	margin-bottom: 15vh;
 }
 
 .clickedTitle {
 	color: #161616;
-	background-color: white;
+	background-color: transparent;
 }
 
 .about {
 	position: absolute;
 	visibility: hidden;
 	color: #212121;
-	top: 50vh;
-	width: 50%;
-	margin-left: 25%;
+	top: 20vh;
+	width: 30%;
+	margin-left: 55%;
 }
 
 .showAbout {
@@ -247,14 +251,14 @@ h1 {
 
 .blurtext {
 	color: transparent;
-	text-shadow: #ffffff 0 0 30px;
-	transition: 3s;
+	text-shadow: #ffffff 0 0 0.5em;
+	transition: 4s;
 }
 
 .cleartext {
 	color: transparent;
 	text-shadow: #ffffff 0 0 0px;
-	transition: 3s;
+	transition: 4s;
 }
 
 

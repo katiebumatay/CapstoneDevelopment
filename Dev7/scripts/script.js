@@ -270,6 +270,7 @@ $(document).ready(function() {
             titleClicked = true;
         }
         $(".title, h1").toggleClass("clickedTitle");
+        $("h1").addClass("cleartext");
         $("body").toggleClass("stopScroll");
         $(".about").toggleClass("showAbout")
     });
