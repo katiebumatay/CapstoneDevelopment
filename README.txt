@@ -13,3 +13,5 @@ Dev5: Change blur toggle. Cleaned up phrase groupings. Started to add line/recta
 Dev6: Created empty folders for structure of image and text variables. added more colors on color variables. first attempt (failed) at loading txt file into div (need to use a database i think). Placeholder variable image load. Placeholder article text load from http (through GitHub repository link). consolidate add and remove variable classes into functions.
 
 Dev7: delete old comments. got image loading to work with variable between css and javascript. add content for pledge1 phrase. title animation.X on exit overlay for variables. add small title. changed position of article. going to duplicate to dev8 before trying to make article scroll without page scroll.
+
+Dev8: article container and scroll.

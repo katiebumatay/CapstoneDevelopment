@@ -24,6 +24,11 @@
     var tempNum;
     var titleNum;
 
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    // var navbarHeight = $('header').outerHeight();
+
 // function animateTitle() {
 //     console.log("animation happening");
 //     var elem = document.getElementById("myTitle");   
@@ -95,7 +100,7 @@ function animate() {
     if (tempNum == 4) {
         $(".title4").toggleClass("cleartext");
     }
-    console.log(tempNum);
+    // console.log(tempNum);
     prevNum = tempNum;
 };
 
@@ -265,6 +270,44 @@ function chooseStory() {
     $(".imgContainer").addClass("loadImage");
 }
 
+
+
+
+function hasScrolled() {
+    var navbarHeight = $('header').outerHeight();
+        // console.log("in hasScrolled func");
+        var st = $(this).scrollTop();
+    
+        // Make sure they scroll more than delta
+        if(Math.abs(lastScrollTop - st) <= delta) {
+            return;
+        }
+    
+        // If they scrolled down and are past the navbar, add class .nav-up.
+        // This is necessary so you never see what is "behind" the navbar.
+        // console.log("st = " +st);
+        // console.log("lastScrollTop = " + lastScrollTop);
+        // console.log("navbarHeight = " + navbarHeight);
+
+
+        if (st > lastScrollTop && st > navbarHeight){
+            // Scroll Down
+            // console.log("scrolled down");
+            $('header').addClass('nav-up');
+        } else {
+            // Scroll Up
+            if(st + $(window).height() < $(document).height()) {
+                // console.log("scrolled up");
+                $('header').removeClass('nav-up');
+            }
+        }
+    
+        lastScrollTop = st;
+    }
+
+
+
+
 $(document).ready(function() {
 
     // $("#myTitle").toggleClass("cleartext");
@@ -292,6 +335,24 @@ $(document).ready(function() {
     // $(".title").mouseover(function(){
     //     setInterval('animate()', 1500);
     // });
+
+    $(".goToPledge").click(function() {
+        $('html,body').animate({
+        scrollTop: $("#pledgeSection").offset().top},
+        'slow');
+    });
+
+    $(".goToDeclaration").click(function() {
+        $('html,body').animate({
+        scrollTop: $("#declarationSection").offset().top},
+        'slow');
+    });
+
+    $(".goToConstitution").click(function() {
+        $('html,body').animate({
+        scrollTop: $("#constitutionSection").offset().top},
+        'slow');
+    });
 
 
     $("h1").click(function(){
@@ -373,6 +434,7 @@ $(document).ready(function() {
         // $('html,body').animate({
         // scrollTop: $(".variables-container").offset().top},
         // 'slow');
+        $(".articleContainer").scrollTop(0);
 
     });
 
@@ -413,6 +475,55 @@ $(document).ready(function() {
             numOptions = 3;
             chooseStory();
         });
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // $(window).scroll(function(event){
+    //     didScroll = true;
+    //     // console.log("user scrolled");
+    // });
+
+    // setInterval(function() {
+    //     if (didScroll) {
+    //         hasScrolled();
+    //         didScroll = false;
+    //     }
+    //     // else {
+    //     //     console.log("didScroll is false");
+    //     // }
+    // }, 250);
+
+    // function hasScrolled() {
+    //     var st = $(this).scrollTop();
+    
+    //     // Make sure they scroll more than delta
+    //     if(Math.abs(lastScrollTop - st) <= delta)
+    //         return;
+    
+    //     // If they scrolled down and are past the navbar, add class .nav-up.
+    //     // This is necessary so you never see what is "behind" the navbar.
+    //     if (st > lastScrollTop && st > navbarHeight){
+    //         // Scroll Down
+    //         $('header').removeClass('nav-down').addClass('nav-up');
+    //     } else {
+    //         // Scroll Up
+    //         if(st + $(window).height() < $(document).height()) {
+    //             $('header').removeClass('nav-up').addClass('nav-down');
+    //         }
+    //     }
+    
+    //     lastScrollTop = st;
+    // }
 
 
 
