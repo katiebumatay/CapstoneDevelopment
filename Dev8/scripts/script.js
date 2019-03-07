@@ -243,8 +243,9 @@ function activateOverlay() {
         $(".exitOverlay").addClass("show");
         $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
         $("body").addClass("stopScroll");
-        $(".variablesOverlay").removeClass("stopScroll");
-        $(".variablesOverlayLength").addClass("variablesOverlayVisible").removeClass("stopScroll");
+        // $(".variablesOverlay").removeClass("stopScroll");
+        // $(".variablesOverlayLength").addClass("variablesOverlayVisible").removeClass("stopScroll");
+        $(".articleContainer").addClass("articleOverlayVisible");
 }
 
 function deactivateOverlay() {
@@ -252,7 +253,8 @@ function deactivateOverlay() {
     $(".exitOverlay").removeClass("show");
     $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
     $("body").removeClass("stopScroll");
-    $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
+    // $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
+    $(".articleContainer").removeClass("articleOverlayVisible");
 }
 
 function chooseStory() {
