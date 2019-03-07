@@ -52,6 +52,10 @@ header {
   	margin-top: 10px;
 }
 
+.circle:hover {
+	transform: scale(1.5);
+	/*transition: 0.2s;*/
+}
 
 h4 {
 	float: right;
@@ -372,13 +376,13 @@ h2 {
 .blurtext {
 	color: transparent;
 	text-shadow: #ffffff 0 0 0.6em;
-	transition: 6.5s;
+	transition: 5s;
 	transition-timing-function: ease-in-out;}
 
 .cleartext {
 	color: transparent;
-	text-shadow: #ffffff 0 0 0em;
-	transition: 6.5s;
+	text-shadow: #ffffff 0 0 0.001em;
+	transition: 5s;
 	transition-timing-function: ease-in-out;
 }
 

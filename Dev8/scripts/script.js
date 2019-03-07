@@ -27,6 +27,9 @@
     var didScroll;
     var lastScrollTop = 0;
     var delta = 5;
+
+    var titleHover = false;
+
     // var navbarHeight = $('header').outerHeight();
 
 // function animateTitle() {
@@ -75,6 +78,10 @@
 // };
 
 function animate() {
+    if (titleHover) {
+        return;
+    }
+    else {
     titleNum = Math.floor(Math.random() * 4) + 1;
     if (titleNum == prevNum) {
         if (titleNum == 4) {
@@ -102,6 +109,7 @@ function animate() {
     }
     // console.log(tempNum);
     prevNum = tempNum;
+}
 };
 
 // function animate() {
@@ -312,7 +320,7 @@ $(document).ready(function() {
 
     // $("#myTitle").toggleClass("cleartext");
 
-    setInterval('animate()', 1000);
+    setInterval('animate()', 800);
 
     var clicked = false;
 
@@ -352,6 +360,15 @@ $(document).ready(function() {
         $('html,body').animate({
         scrollTop: $("#constitutionSection").offset().top},
         'slow');
+    });
+
+    $("h1").mouseenter(function(){
+        titleHover = true;
+        $(".title1, .title2, .title3, .title4").addClass("cleartext");
+    });
+
+    $("h1").mouseleave(function(){
+        titleHover = false;
     });
 
 
