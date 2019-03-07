@@ -499,7 +499,7 @@ $(document).ready(function() {
             // v = Math.floor(Math.random() * 2) + 1;
             sec = "1-pledge";
             phraseNum = "2";
-            numOptions = 3;
+            numOptions = 4;
             chooseStory();
         });
 
