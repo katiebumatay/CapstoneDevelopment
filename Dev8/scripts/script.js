@@ -336,19 +336,19 @@ $(document).ready(function() {
     //     setInterval('animate()', 1500);
     // });
 
-    $(".goToPledge").click(function() {
+    $("#goToPledge").click(function() {
         $('html,body').animate({
         scrollTop: $("#pledgeSection").offset().top},
         'slow');
     });
 
-    $(".goToDeclaration").click(function() {
+    $("#goToDeclaration").click(function() {
         $('html,body').animate({
         scrollTop: $("#declarationSection").offset().top},
         'slow');
     });
 
-    $(".goToConstitution").click(function() {
+    $("#goToConstitution").click(function() {
         $('html,body').animate({
         scrollTop: $("#constitutionSection").offset().top},
         'slow');
@@ -363,7 +363,8 @@ $(document).ready(function() {
             titleClicked = true;
         }
         $(".title, h1").toggleClass("clickedTitle");
-        $("h1").addClass("cleartext");
+        // $("h1").addClass("cleartext");
+        $(".page-container").toggleClass("darker");
         $("body").toggleClass("stopScroll");
         $(".about").toggleClass("showAbout")
     });
