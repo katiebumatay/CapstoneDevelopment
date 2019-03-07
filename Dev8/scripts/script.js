@@ -488,10 +488,18 @@ $(document).ready(function() {
         // });
 
         $(".pledge1").mouseenter(function(){
-            v = Math.floor(Math.random() * 2) + 1;
+            // v = Math.floor(Math.random() * 2) + 1;
             sec = "1-pledge";
             phraseNum = "1";
             numOptions = 4;
+            chooseStory();
+        });
+
+        $(".pledge2").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "1-pledge";
+            phraseNum = "2";
+            numOptions = 1;
             chooseStory();
         });
 
