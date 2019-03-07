@@ -375,13 +375,13 @@ h2 {
 
 .blurtext {
 	color: transparent;
-	text-shadow: #ffffff 0 0 0.6em;
+	text-shadow: #ffffff 0.05em 0.05em 0.7em;
 	transition: 5s;
 	transition-timing-function: ease-in-out;}
 
 .cleartext {
 	color: transparent;
-	text-shadow: #ffffff 0 0 0.001em;
+	text-shadow: #ffffff 0 0 0.0001em;
 	transition: 5s;
 	transition-timing-function: ease-in-out;
 }
