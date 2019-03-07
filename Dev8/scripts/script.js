@@ -364,7 +364,7 @@ $(document).ready(function() {
         }
         $(".title, h1").toggleClass("clickedTitle");
         // $("h1").addClass("cleartext");
-        $(".page-container").toggleClass("darker");
+        $(".page-container, .circle, .smallTitle").toggleClass("darker");
         $("body").toggleClass("stopScroll");
         $(".about").toggleClass("showAbout")
     });
@@ -379,7 +379,7 @@ $(document).ready(function() {
     $(".sectionTextContainer").hover(function(){
         if (sectionHeaderClicked == false) {
             $(".sectionHeader, .phrase, .extra").toggleClass("blurtext2");
-            $("body").toggleClass("stopScroll");
+            // $("body").toggleClass("stopScroll");
         }
     });
 
@@ -411,7 +411,7 @@ $(document).ready(function() {
 
         addVariables();
         $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
-        // $("body").toggleClass("stopScroll");
+        $("body").toggleClass("stopScroll");
     });
 
 
@@ -419,7 +419,7 @@ $(document).ready(function() {
         if (clicked == false) {
             removeVariables();
             $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
-            // $("body").toggleClass("stopScroll");
+            $("body").toggleClass("stopScroll");
         }
 
     });
@@ -487,7 +487,16 @@ $(document).ready(function() {
 
 
 
-
+    // setInterval(function() {
+    //     var abc = $("#declarationSection").scrollTop();
+    //     console.log(abc);
+    //     // if ($(".pledgeText").scrollTop() == 30) {
+    //     //     console.log("pledge");
+    //     // }
+    //     // else {
+    //     //     console.log("didScroll is false");
+    //     // }
+    // }, 250);
 
 
     // $(window).scroll(function(event){
