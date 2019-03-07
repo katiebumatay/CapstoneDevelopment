@@ -14,4 +14,4 @@ Dev6: Created empty folders for structure of image and text variables. added mor
 
 Dev7: delete old comments. got image loading to work with variable between css and javascript. add content for pledge1 phrase. title animation.X on exit overlay for variables. add small title. changed position of article. going to duplicate to dev8 before trying to make article scroll without page scroll.
 
-Dev8: article container and scroll. buttons to jump to each one.
+Dev8: article container and scroll. buttons to jump to each one. title becomes clear on hover.
