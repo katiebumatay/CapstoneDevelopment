@@ -444,7 +444,7 @@ h2 {
 }
 
 .rectExpand {
-	height: 200%;
+	height: 300%;
 	transition: 0.3s;
 	border-width: 20px;
 	border-color: #212121;
