@@ -503,6 +503,22 @@ $(document).ready(function() {
             chooseStory();
         });
 
+        $(".pledge3").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "1-pledge";
+            phraseNum = "3";
+            numOptions = 2;
+            chooseStory();
+        });
+
+        $(".pledge4").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "1-pledge";
+            phraseNum = "4";
+            numOptions = 2;
+            chooseStory();
+        });
+
 
 
 
