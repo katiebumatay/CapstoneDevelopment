@@ -305,6 +305,12 @@ $(document).ready(function() {
         $(".about").toggleClass("showAbout")
     });
 
+    $(".smallTitle").click(function() {
+        $('html,body').animate({
+        scrollTop: $(".title").offset().top},
+        'slow');
+    });
+
 
     $(".sectionTextContainer").hover(function(){
         if (sectionHeaderClicked == false) {
@@ -362,6 +368,9 @@ $(document).ready(function() {
         clicked = false;
         removeVariables();
         deactivateOverlay();
+        // $('html,body').animate({
+        // scrollTop: $(".variables-container").offset().top},
+        // 'slow');
 
     });
 

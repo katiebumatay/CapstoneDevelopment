@@ -26,6 +26,23 @@ html, body{
 	line-height: 1.3em;
 }*/
 
+.smallTitle {
+	position: fixed;
+	top: 14px;
+	left: 20px;
+	margin: 0;
+	z-index: 10;
+	cursor: pointer;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 18pt;
+	line-height: 14pt;
+	text-align: left;
+	margin: 0;
+}
+
 .stopScroll {
 	overflow: hidden;
 }
@@ -67,7 +84,7 @@ html, body{
 
 .articleContainer {
 	position: absolute;
-	width: 80%;
+	width: 50%;
 	left: 10%;
 	z-index: 10;
 }
@@ -118,8 +135,15 @@ html, body{
 	z-index: 10;
 /*	opacity: 0;*/
 	padding: 20px;
-	top: 0;
-	left: 0;
+	top: 20px;
+	right: 20px;
+/*	width: 20px;
+	height: 20px;*/
+	background-image: url("../images/exit.png");
+/*	width: 10%;
+	height: 10%;*/
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .phrase {
@@ -204,7 +228,7 @@ html, body{
 	bottom: 0;
 	left: 0;
 /*	margin-bottom: -50vh;*/
-	/*background-image: linear-gradient(to bottom, #dddddd, #ffffff);*/
+	/*background-image: linear-gradient(to bottom, #ededed, #ffffff);*/
 }
 
 
