@@ -535,6 +535,24 @@ $(document).ready(function() {
             chooseStory();
         });
 
+        $(".pledge7").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "1-pledge";
+            phraseNum = "7";
+            numOptions = 1;
+            chooseStory();
+        });
+
+        $(".pledge8").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "1-pledge";
+            phraseNum = "8";
+            numOptions = 2;
+            chooseStory();
+        });
+
+
+
 
 
 
