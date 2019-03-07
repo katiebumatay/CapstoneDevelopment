@@ -379,6 +379,7 @@ $(document).ready(function() {
     $(".sectionTextContainer").hover(function(){
         if (sectionHeaderClicked == false) {
             $(".sectionHeader, .phrase, .extra").toggleClass("blurtext2");
+            $("body").toggleClass("stopScroll");
         }
     });
 
@@ -410,7 +411,7 @@ $(document).ready(function() {
 
         addVariables();
         $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
-        $("body").toggleClass("stopScroll");
+        // $("body").toggleClass("stopScroll");
     });
 
 
@@ -418,7 +419,7 @@ $(document).ready(function() {
         if (clicked == false) {
             removeVariables();
             $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
-            $("body").toggleClass("stopScroll");
+            // $("body").toggleClass("stopScroll");
         }
 
     });
