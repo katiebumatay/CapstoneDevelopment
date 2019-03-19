@@ -272,7 +272,7 @@ function deactivateOverlay() {
 
 function chooseStory() {
     v = Math.floor(Math.random() * numOptions) + 1;
-    articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev8/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html";
+    articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev9/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html";
     $(".articleText").load(articleLink);
     loadImage.style.setProperty('--myImg-background-image', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image.jpg");
     $(".imgContainer").addClass("loadImage");

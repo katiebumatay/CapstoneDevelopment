@@ -146,6 +146,7 @@ h3 {
 	padding-left: 30px;
 	padding-bottom: 50px;
 	box-sizing: content-box;
+	/*cursor: url("../images/exit.png"), auto;*/
 }
 
 .articleText {
