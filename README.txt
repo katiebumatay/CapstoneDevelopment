@@ -16,4 +16,4 @@ Dev7: delete old comments. got image loading to work with variable between css a
 
 Dev8: article container and scroll. buttons to jump to each one. title becomes clear on hover. content on pledge.
 
-Dev9: Change entry to click to about then scroll (the title page is the overlay/stop scroll as opposed to the other way around). Basic scroll hint on about.
+Dev9: Change entry to click to about then scroll (the title page is the overlay/stop scroll as opposed to the other way around). Basic scroll hint on about. Add more fonts. Grow/shrink title sequence entry.
