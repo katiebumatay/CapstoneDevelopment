@@ -275,7 +275,8 @@ function addVariables() {
     $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass(imgMixClass);
     $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont()).addClass(fontWeight());
     $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
-    $("mark").addClass(captionColor()).addClass(phraseFontClass).addClass(captionBgColor());
+    // $("h5").addClass(captionColor()).addClass(phraseFontClass).addClass(captionBgColor());
+    $("h5").addClass(captionColor()).addClass(phraseFontClass);
     // $("h5").addClass(phraseFontClass);
 }
 
@@ -285,7 +286,8 @@ function removeVariables() {
         $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass(imgMixClass);
         $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass).removeClass(fontWeightClass);
         $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
-        $("mark").removeClass(captionColorClass).removeClass(phraseFontClass).removeClass(captionBgColorClass);
+        // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass).removeClass(captionBgColorClass);
+        $("h5").removeClass(captionColorClass).removeClass(phraseFontClass);
         // $("h5").removeClass(phraseFontClass);
 
 
