@@ -312,7 +312,7 @@ h3 {
 	height: 100%;
 	position: relative;
 	background-color: #161616;
-	transition: 2s;
+	/*transition: 2s;*/
 }
 
 .title {
@@ -389,7 +389,7 @@ h1 {
 	left: 55%;
 	top: 0%;
 	height: 100vh;
-	transition: 2s;
+	/*transition: 2s;*/
 }
 
 .aboutTextContainer {

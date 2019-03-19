@@ -320,7 +320,7 @@ $(document).ready(function() {
 
     // $("#myTitle").toggleClass("cleartext");
 
-    // setInterval('animate()', 800);
+    setInterval('animate()', 800);
 
     var clicked = false;
 
@@ -372,30 +372,35 @@ $(document).ready(function() {
     });
 
 
-    // $("h1").click(function(){
-    //     if (titleClicked == true) {
-    //         titleClicked = false;
-    //     }
-    //     else if (titleClicked == false) {
-    //         titleClicked = true;
-    //     }
-    //     $(".title, h1").toggleClass("clickedTitle");
-    //     $(".page-container").toggleClass("pageContainerHide");
-    //     // $("h1").addClass("cleartext");
-    //     // $(".page-container, .circle, .smallTitle").toggleClass("darker");
-    //     $("body").toggleClass("stopScroll");
-    //     $(".about").toggleClass("showAbout")
-    // });
-
-    $(".smallTitle").click(function() {
-        // $(".title, h1").toggleClass("clickedTitle");
-        $(".intro-container").toggleClass("clickedTitle");
-        $(".page-container").toggleClass("pageContainerHide");
+    $("h1").click(function(){
+        if (titleClicked == true) {
+            titleClicked = false;
+        }
+        else if (titleClicked == false) {
+            titleClicked = true;
+        }
+        $(".title, h1").toggleClass("clickedTitle");
+        // $(".page-container").toggleClass("pageContainerHide");
+        // $("h1").addClass("cleartext");
+        // $(".page-container, .circle, .smallTitle").toggleClass("darker");
         $("body").toggleClass("stopScroll");
         $(".aboutSection").toggleClass("showAbout");
-        // $('html,body').animate({
-        // scrollTop: $(".title").offset().top},
-        // 'slow');
+        $(".intro-container").toggleClass("clickedTitle");
+        // $(".about").toggleClass("showAbout")
+    });
+
+    $(".smallTitle").click(function() {
+        titleClicked = true;
+        // $(".title, h1").toggleClass("clickedTitle");
+        $(".intro-container").toggleClass("clickedTitle");
+        $(".aboutSection").toggleClass("showAbout");
+        $("body").toggleClass("stopScroll");
+        // $(".page-container").toggleClass("pageContainerHide");
+        // $("body").toggleClass("stopScroll");
+        // $(".aboutSection").toggleClass("showAbout");
+        $('html,body').animate({
+        scrollTop: $(".title").offset().top},
+        'slow');
     });
 
 
