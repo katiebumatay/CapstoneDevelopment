@@ -384,7 +384,8 @@ $(document).ready(function() {
         // $("h1").addClass("cleartext");
         // $(".page-container, .circle, .smallTitle").toggleClass("darker");
         $("body").toggleClass("stopScroll");
-        $(".aboutSection, .scrollHint").toggleClass("showAbout");
+        // $(".aboutSection, .scrollHint").toggleClass("showAbout");
+        $(".aboutSection").toggleClass("showAbout");
         $(".intro-container").toggleClass("clickedTitle");
         // $(".about").toggleClass("showAbout")
     });
@@ -393,7 +394,8 @@ $(document).ready(function() {
         titleClicked = true;
         // $(".title, h1").toggleClass("clickedTitle");
         $(".intro-container").toggleClass("clickedTitle");
-        $(".aboutSection, .scrollHint").toggleClass("showAbout");
+        $(".aboutSection").toggleClass("showAbout");
+        // $(".aboutSection, .scrollHint").toggleClass("showAbout");
         $("body").toggleClass("stopScroll");
         // $(".page-container").toggleClass("pageContainerHide");
         // $("body").toggleClass("stopScroll");
