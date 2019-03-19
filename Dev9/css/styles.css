@@ -12,6 +12,7 @@ html, body{
 	font-size: 14pt;
 	color: #161616;
 	line-height: 1.3em;
+	overflow-x: hidden;
 }
 
 .background {
@@ -408,6 +409,23 @@ h1 {
 h2 {
 	font-weight: bold;
 	font-size: 14pt;
+}
+
+.scrollHint {
+	opacity: 0;
+	position: absolute;
+	z-index: 10;
+/*	opacity: 0;*/
+	padding: 25px;
+	bottom: 20px;
+	left: 55%;
+/*	width: 20px;
+	height: 20px;*/
+	background-image: url("../images/scroll.png");
+/*	width: 10%;
+	height: 10%;*/
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 .colophon {
