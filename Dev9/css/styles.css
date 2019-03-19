@@ -181,7 +181,7 @@ h3 {
 	left: 0;
 	/*mix-blend-mode: multiply;*/
 	/*mix-blend-mode: lighten;*/
-	mix-blend-mode: overlay;
+	/*mix-blend-mode: overlay;*/
 }
 
 .imgContainer {
@@ -589,6 +589,14 @@ h2 {
 	width: 80vw;
 }*/
 
+.mix1 {
+	mix-blend-mode: screen;
+}
+
+.mix2 {
+	mix-blend-mode: overlay;
+}
+
 .imgWidth1 {
 	width: 35%;
 }
@@ -734,11 +742,11 @@ h2 {
 }
 
 .bgColor3-2 {
-	background-color: #515151;
+	background-color: #afafaf;
 }
 
 .textColor3-2 {
-	color: #515151;
+	color: #afafaf;
 }
 
 .bgColor4-1 {
@@ -755,6 +763,38 @@ h2 {
 
 .textColor4-2 {
 	color: #efd900;
+}
+
+.bgColor5-1 {
+	background-color: #6a6eed;
+}
+
+.textColor5-1 {
+	color: #6a6eed;
+}
+
+.bgColor5-2 {
+	background-color: #0d0f5b;
+}
+
+.textColor5-2 {
+	color: #0d0f5b;
+}
+
+.bgColor6-1 {
+	background-color: #ea7e92;
+}
+
+.textColor6-1 {
+	color: #ea7e92;
+}
+
+.bgColor6-2 {
+	background-color: #5b101d;
+}
+
+.textColor6-2 {
+	color: #5b101d;
 }
 
 .font1 {

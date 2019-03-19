@@ -129,6 +129,12 @@ function imgHeight() {
     return imgHeightClass;
 };
 
+function imgMix() {
+    iM = Math.floor(Math.random() * 2) + 1;
+    imgMixClass = "mix" + iM;
+    return imgMixClass;
+}
+
 function imgTop() {
 
     if (iH == 3) {
@@ -220,7 +226,7 @@ function fontWeight() {
 };
 
 function bgColor() {
-    c = Math.floor(Math.random() * 4) + 1;
+    c = Math.floor(Math.random() * 6) + 1;
     bgColorClass = "bgColor" + c;
     ld = Math.floor(Math.random() * 2) + 1;
     bgColorClass = bgColorClass + "-" + ld;
@@ -240,10 +246,10 @@ function textColor() {
 
 function addVariables() {
 
-    imgWidth(); imgHeight(); imgTop(); imgLeft(); bgColor();
+    imgMix(); imgWidth(); imgHeight(); imgTop(); imgLeft(); bgColor();
     // $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass("loadImage");
     $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass);
-    $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass)
+    $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass(imgMixClass);
     $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont()).addClass(fontWeight());
     $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
 }
@@ -251,7 +257,7 @@ function addVariables() {
 function removeVariables() {
         // $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
         $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass);
-        $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass);
+        $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass(imgMixClass);
         $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass).removeClass(fontWeightClass);
         $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
 
