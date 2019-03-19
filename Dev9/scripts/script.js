@@ -408,17 +408,13 @@ $(document).ready(function() {
 
     $(".smallTitle").click(function() {
         titleClicked = true;
-        // $(".title, h1").toggleClass("clickedTitle");
         $(".intro-container").toggleClass("clickedTitle");
         $(".title").toggleClass("titleGrow");
         $(".aboutSection").toggleClass("showAbout");
         $("body").toggleClass("stopScroll");
-        // $(".page-container").toggleClass("pageContainerHide");
-        // $("body").toggleClass("stopScroll");
-        // $(".aboutSection").toggleClass("showAbout");
-        // $('html,body').animate({
-        // scrollTop: $(".title").offset().top},
-        // 'slow');
+
+        $('html,body').animate({
+        scrollTop: $("body").offset().top});
     });
 
 

@@ -14,6 +14,7 @@ html, body{
 	line-height: 1.3em;
 }
 
+
 .cursorClick {
 	cursor: url("../images/exit.png");
 }
@@ -236,6 +237,7 @@ h3 {
 	display: inline;
 	padding: 10px 0px 10px 0px;
 	cursor: pointer;
+	/*text-decoration: underline solid blue;*/
 }
 
 .show {
