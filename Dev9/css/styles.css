@@ -392,6 +392,7 @@ h1 {
 	left: 55%;
 	top: 0%;
 	height: 100vh;
+	cursor: default;
 	/*transition: 2s;*/
 }
 

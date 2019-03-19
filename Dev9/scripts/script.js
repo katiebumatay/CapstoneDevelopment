@@ -318,6 +318,9 @@ function hasScrolled() {
 
 $(document).ready(function() {
 
+    $('html,body').animate({
+        scrollTop: $("body").offset().top});
+
     // $("#myTitle").toggleClass("cleartext");
 
     setInterval('animate()', 800);
