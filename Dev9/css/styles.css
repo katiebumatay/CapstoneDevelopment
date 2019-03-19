@@ -14,6 +14,17 @@ html, body{
 	line-height: 1.3em;
 }
 
+.background {
+	position: fixed;
+	z-index: -10;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #f9f9f9;
+
+}
+
 /*.page-container {
 	width: 100%;
 	height:100%;
@@ -80,6 +91,7 @@ h4 {
 	margin: 0;
 	z-index: 10;
 	cursor: pointer;
+	background-color: transparent;
 }
 
 h3 {
@@ -254,11 +266,23 @@ h3 {
 }
 */
 .page-container {
-	z-index: 0;
+	position: absolute;
+	z-index: 10;
+	margin: 0;
 	width: 100%;
 	height: 1000%;
-	background-color: #f9f9f9;
-	margin-top: -20%;
+	/*background-color: #f9f9f9;*/
+	background-color: transparent;
+	opacity: 1;
+	transition: 2s;
+	/*visibility: visible;*/
+	/*margin-top: -20%;*/
+}
+
+.pageContainerHide {
+	opacity: 0;
+	transition: 2s;
+	/*visibility: hidden;*/
 }
 
 .darker {
@@ -283,30 +307,33 @@ h3 {
 	font-weight: bold;
 }
 
-.title {
+.intro-container {
+	z-index: 50;
+	height: 100%;
 	position: relative;
-	z-index: 10;
 	background-color: #161616;
-	height: 200vh;
-	width: 100vw;
-	top: 0;
-	left: 0;
+	transition: 2s;
 }
 
-.bg1 {
+.title {
+	/*position: fixed;*/
 	position: absolute;
-	z-index: 2;
-	background-color: #f9f9f9;
-	height: 30%;
-	width: 100%;
-	bottom: 0;
-	left: 0;
-/*	margin-bottom: -50vh;*/
-	/*background-image: linear-gradient(to bottom, #ededed, #ffffff);*/
+	/*z-index: 0;*/
+	/*background-color: #161616;*/
+	/*height: 200vh;
+	width: 100vw;*/
+	/*top: 0;
+	left: 0;*/
+	overflow: hidden;
+	transition: 2s;
+	padding-left: 20%;
+	padding-top: 10%;
+	padding-bottom: 10%;
 }
 
 
-.titleOverlay {
+
+/*.titleOverlay {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -315,48 +342,64 @@ h3 {
 	margin: 0;
 	background-color: #eeeeee;
 	transition: 0.5s;
-}
+}*/
 
-.titleOverlayExpand {
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	transition: 0.5s;
-
-}
 
 h1 {
-	z-index: 5;
+	background-color: transparent;
+	/*z-index: -5;*/
 	cursor: pointer;
-	position: sticky;
+	/*position: sticky;*/
+	/*position: fixed;*/
 	width: 60vw;
 	margin: auto;
 	color: transparent;
 	/*font-size: 10vh;*/
 	font-size: 25vh;
 	line-height: 0.8em;
-	top: 40vh;
 	/*text-align: center;*/
 	text-align: left;
 	transition: 0s;
 	top: 20%;
+	left: 20%;
 }
 
 .clickedTitle {
+	/*z-index: -5;*/
 	color: #161616;
 	background-color: transparent;
+	/*background-color: #f9f9f9;*/
+	/*opacity: 0;*/
+	transition: 2s;
 }
 
-.about {
-	position: fixed;
-	visibility: hidden;
+/*.about {
+	position: absolute;
 	color: #212121;
 	top: 20vh;
 	width: 30%;
 	margin-left: 55%;
 	font-size: 14pt;
 	z-index: 10;
+}*/
+
+.aboutSection {
+	opacity: 0;
+	position: relative;
+	left: 55%;
+	top: 0%;
+	height: 100vh;
+	transition: 2s;
+}
+
+.aboutTextContainer {
+	position: absolute;
+	margin-top: 10%;
+	width: 30%;
+}
+
+.aboutHeader {
+	font-weight: bold;
 }
 
 h2 {
@@ -371,7 +414,9 @@ h2 {
 }
 
 .showAbout {
-	visibility: visible;
+	opacity: 1;
+	transition: 2s;
+	/*visibility: visible;*/
 }
 
 .blurtext {
