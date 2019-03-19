@@ -197,6 +197,19 @@ h3 {
 	/*background-blend-mode: screen;*/
 }
 
+mark {
+	z-index: 20;
+	position: absolute;
+	top: 50%;
+	left: -30px;
+	width: 20vw;
+	margin:0;
+	padding: 0;
+	font-size: 12pt;
+	line-height: 1.2em;
+	font-weight: 400;
+}
+
 .phraseHeadingContainer {
 	cursor: default;
 	/*z-index: -5;*/

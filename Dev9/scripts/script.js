@@ -12,13 +12,14 @@
     var pF; var phraseFontClass;
     var fW; var fontWeightClass;
 
-    var c; var ld; var bgColorClass; var textColorClass;
+    var c; var ld; var bgColorClass; var textColorClass; var captionColorClass; var captionBgColorClass;
 
     var wordCount;
 
     var sec; var phraseNum;
     var v; var numOptions;
     var articleLink;
+    var captionLink;
     var imageLink;
 
     var prevNum = 1;
@@ -244,6 +245,28 @@ function textColor() {
     return textColorClass;
 };
 
+function captionColor() {
+    if (ld == 1) {
+        captionColorClass = "textColor" + c + "-" + 1;
+    }
+
+    else if (ld == 2) {
+        captionColorClass = "textColor" + c + "-" + 2;
+    }
+    return captionColorClass;
+};
+
+function captionBgColor() {
+    if (ld == 1) {
+        captionBgColorClass = "bgColor" + c + "-" + 2;
+    }
+
+    else if (ld == 2) {
+        captionBgColorClass = "bgColor" + c + "-" + 1;
+    }
+    return captionBgColorClass;
+};
+
 function addVariables() {
 
     imgMix(); imgWidth(); imgHeight(); imgTop(); imgLeft(); bgColor();
@@ -252,6 +275,8 @@ function addVariables() {
     $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass(imgMixClass);
     $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont()).addClass(fontWeight());
     $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
+    $("mark").addClass(captionColor()).addClass(phraseFontClass).addClass(captionBgColor());
+    // $("h5").addClass(phraseFontClass);
 }
 
 function removeVariables() {
@@ -260,6 +285,8 @@ function removeVariables() {
         $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass(imgMixClass);
         $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass).removeClass(fontWeightClass);
         $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
+        $("mark").removeClass(captionColorClass).removeClass(phraseFontClass).removeClass(captionBgColorClass);
+        // $("h5").removeClass(phraseFontClass);
 
 
 }
@@ -287,6 +314,8 @@ function chooseStory() {
     v = Math.floor(Math.random() * numOptions) + 1;
     articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev9/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html";
     $(".articleText").load(articleLink);
+    captionLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev9/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html p:first-child";
+    $("h5").load(captionLink);
     loadImage.style.setProperty('--myImg-background-image', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image.jpg");
     $(".imgContainer").addClass("loadImage");
 }
