@@ -310,7 +310,9 @@ h3 {
 .intro-container {
 	z-index: 50;
 	height: 100%;
-	position: relative;
+	width: 100%;
+	/*position: relative;*/
+	position: fixed;
 	background-color: #161616;
 	/*transition: 2s;*/
 }
@@ -366,9 +368,10 @@ h1 {
 
 .clickedTitle {
 	/*z-index: -5;*/
+	position: relative;
 	color: #161616;
-	background-color: transparent;
-	/*background-color: #f9f9f9;*/
+	/*background-color: transparent;*/
+	background-color: #f9f9f9;
 	/*opacity: 0;*/
 	transition: 2s;
 }

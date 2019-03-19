@@ -372,14 +372,14 @@ $(document).ready(function() {
     });
 
 
-    $("h1").click(function(){
+    $(".intro-container").click(function(){
         if (titleClicked == true) {
             titleClicked = false;
         }
         else if (titleClicked == false) {
             titleClicked = true;
         }
-        $(".title, h1").toggleClass("clickedTitle");
+        // $(".title, h1").toggleClass("clickedTitle");
         // $(".page-container").toggleClass("pageContainerHide");
         // $("h1").addClass("cleartext");
         // $(".page-container, .circle, .smallTitle").toggleClass("darker");
@@ -398,9 +398,9 @@ $(document).ready(function() {
         // $(".page-container").toggleClass("pageContainerHide");
         // $("body").toggleClass("stopScroll");
         // $(".aboutSection").toggleClass("showAbout");
-        $('html,body').animate({
-        scrollTop: $(".title").offset().top},
-        'slow');
+        // $('html,body').animate({
+        // scrollTop: $(".title").offset().top},
+        // 'slow');
     });
 
 
