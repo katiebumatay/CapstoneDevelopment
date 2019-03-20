@@ -206,17 +206,21 @@ h3 {
 	left: -30px;*/
 	width: 25vw;
 	margin:0;
-	padding: 0;
-	font-size: 12pt;
-	line-height: 1em;
-	font-weight: 400;
+	padding: -30px;
+	font-size: 11pt;
+	line-height: 1.2em;
 /*	font-style: italic;*/
-	font-family: Baskerville, serif;
+	font-family: Monterrat, sans-serif;
 	/*background-color: white;*/
 }
 
+.caption p {
+	font-weight: normal !important;
+	margin: 10px 0px 10px 0px;
+}
+
 .captionPlaceAbove {
-	bottom: 105%;
+	bottom: calc(100% + 10px);
 	left: 0;
 	border-bottom-width: 2px;
 	border-bottom-color: #212121;
@@ -225,7 +229,7 @@ h3 {
 }
 
 .captionPlaceBelow {
-	top: 105%;
+	top: calc(100% + 10px);
 	left: 0;
 	border-top-width: 2px;
 	border-top-color: #212121;
