@@ -196,7 +196,13 @@ h3 {
 	top: 0;
 	left: 0;
 	/*background-blend-mode: screen;*/
+	/*resize: both;*/
 }
+
+/*.resizeElement {
+	resize: vertical;
+	overflow: auto;
+}*/
 
 .caption {
 /*	z-index: 20;*/
@@ -378,6 +384,8 @@ h3 {
 	padding-left: 20%;
 	padding-top: 10%;
 	padding-bottom: 10%;
+	padding-right: 10%;
+	/*min-width: 520px;*/
 }
 
 
@@ -523,6 +531,7 @@ h2 {
 /*	padding: 2%;*/
 	/*box-sizing: border-box;*/
 	max-width: 480px;
+	min-width: 364px;
 }
 
 .line {
@@ -965,6 +974,42 @@ h2 {
 .textColor6-2 {
 	color: #5b101d;
 	border-color: #5b101d;
+}
+
+.bgColor7-1 {
+	background-color: #87b3c4;
+}
+
+.textColor7-1 {
+	color: #87b3c4;
+	border-color: #87b3c4;
+}
+
+.bgColor7-2 {
+	background-color: #356070;
+}
+
+.textColor7-2 {
+	color: #356070;
+	border-color: #356070;
+}
+
+.bgColor8-1 {
+	background-color: #ffb107;
+}
+
+.textColor8-1 {
+	color: #ffb107;
+	border-color: #ffb107;
+}
+
+.bgColor8-2 {
+	background-color: #ad7600;
+}
+
+.textColor8-2 {
+	color: #ad7600;
+	border-color: #ad7600;
 }
 
 .font1 {

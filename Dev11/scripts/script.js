@@ -298,7 +298,7 @@ function fontWeight() {
 };
 
 function bgColor() {
-    c = Math.floor(Math.random() * 6) + 1;
+    c = Math.floor(Math.random() * 8) + 1;
     bgColorClass = "bgColor" + c;
     ld = Math.floor(Math.random() * 2) + 1;
     bgColorClass = bgColorClass + "-" + ld;
@@ -398,6 +398,7 @@ function activateOverlay() {
         $(".exitOverlay").addClass("show");
         $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
         $("body").addClass("stopScroll");
+        // $(".imgOverlay, .phraseHeading").addClass("resizeElement");
         // $(".variablesOverlay").removeClass("stopScroll");
         // $(".variablesOverlayLength").addClass("variablesOverlayVisible").removeClass("stopScroll");
         // $(".articleContainer").addClass("articleOverlayVisible");
@@ -408,6 +409,7 @@ function deactivateOverlay() {
     $(".exitOverlay").removeClass("show");
     $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
     $("body").removeClass("stopScroll");
+    // $(".imgOverlay, .phraseHeading").removeClass("resizeElement");
     // $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
     // $(".articleContainer").removeClass("articleOverlayVisible");
 }
@@ -602,7 +604,8 @@ $(document).ready(function() {
         activateOverlay();
     });
 
-    $(".variables-container").click(function(){
+    // $(".variables-container").click(function(){
+    $(".exitOverlay").click(function(){
         clicked = false;
         removeVariables();
         deactivateOverlay();
