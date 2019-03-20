@@ -210,7 +210,7 @@ h3 {
 	font-size: 11pt;
 	line-height: 1.2em;
 /*	font-style: italic;*/
-	font-family: Monterrat, sans-serif;
+	font-family: Heebo, sans-serif;
 	/*background-color: white;*/
 }
 
@@ -460,7 +460,19 @@ h1 {
 
 h2 {
 	font-weight: bold;
-	font-size: 14pt;
+	font-size: 15pt;
+}
+
+.aboutText {
+	display: inline-block;
+	margin-top: 10px;
+	opacity: 1;
+	color: #161616;
+	left: 20vw;
+	transition: 0.5s;
+	font-family: Heebo, sans-serif;
+	font-size: 11pt;
+	line-height: 1.5em;
 }
 
 .colophon {
@@ -639,6 +651,10 @@ h2 {
 	mix-blend-mode: overlay;
 }
 
+.mix3 {
+	mix-blend-mode: multiply;
+}
+
 .imgWidth1 {
 	width: 35%;
 }
@@ -710,7 +726,7 @@ h2 {
 	top: 70%;
 }
 
-.captionTop1{
+/*.captionTop1{
 	top: 15%;
 }
 
@@ -736,7 +752,7 @@ h2 {
 
 .captionTop7{
 	top: 75%;
-}
+}*/
 
 
 .imgLeft1{
@@ -771,7 +787,7 @@ h2 {
 	left: 70%;
 }*/
 
-.captionLeft1{
+/*.captionLeft1{
 	left: 15%;
 }
 
@@ -797,7 +813,7 @@ h2 {
 
 .captionLeft7{
 	left: 75%;
-}
+}*/
 
 
 .bgColor1-1 {
@@ -1014,7 +1030,7 @@ h2 {
 
 .font27 {
 	font-family: 'Alfa Slab One', cursive;
-	letter-spacing: 0.005em;
+	letter-spacing: 0.03em;
 }
 
 .font28 {
