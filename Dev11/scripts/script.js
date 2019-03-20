@@ -400,7 +400,7 @@ function activateOverlay() {
         $("body").addClass("stopScroll");
         // $(".variablesOverlay").removeClass("stopScroll");
         // $(".variablesOverlayLength").addClass("variablesOverlayVisible").removeClass("stopScroll");
-        $(".articleContainer").addClass("articleOverlayVisible");
+        // $(".articleContainer").addClass("articleOverlayVisible");
 }
 
 function deactivateOverlay() {
@@ -409,7 +409,7 @@ function deactivateOverlay() {
     $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
     $("body").removeClass("stopScroll");
     // $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
-    $(".articleContainer").removeClass("articleOverlayVisible");
+    // $(".articleContainer").removeClass("articleOverlayVisible");
 }
 
 function chooseStory() {

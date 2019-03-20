@@ -94,6 +94,7 @@ h4 {
 	top: 14px;
 	left: 20px;
 	margin: 0;
+	/*z-index: 11; ---- stays on clicked overlay ----- */
 	z-index: 10;
 	cursor: pointer;
 	background-color: transparent;
@@ -198,7 +199,7 @@ h3 {
 }
 
 .caption {
-	z-index: 20;
+/*	z-index: 20;*/
 	/*position: fixed;*/
 	position: absolute;
 	/*top: 50%;*/
@@ -260,9 +261,9 @@ h3 {
 	position: fixed;
 	z-index: 10;
 /*	opacity: 0;*/
-	padding: 25px;
+	padding: 20px;
 	top: 20px;
-	left: 20px;
+	right: 20px;
 /*	width: 20px;
 	height: 20px;*/
 	background-image: url("../images/exit.png");
@@ -282,7 +283,7 @@ h3 {
 
 .show {
 	opacity: 1;
-	transition: opacity 0.3s;
+	transition: opacity 0.2s;
 	transition-timing-function: ease-out;
 }
 /*
@@ -572,6 +573,8 @@ h2 {
 	color: white;
 	opacity: 0;
 	visibility: hidden;
+	font-family: Heebo, sans-serif;
+	font-size: 11pt;
 }
 
 .sectionHeader {
