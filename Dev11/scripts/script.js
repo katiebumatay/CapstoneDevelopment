@@ -8,6 +8,7 @@
 
     var pT; var phraseTopClass;
     var pL; var phraseLeftClass;
+    var phrasePlaceClass;
     var pS; var phraseSizeClass;
     var pC; var phraseColorClass;
     var pF; var phraseFontClass;
@@ -263,27 +264,25 @@ function phraseSize() {
 function phraseTop() {
     if (pS == 3) {
         pT = Math.floor(Math.random() * 2) + 1;
-        phraseTopClass = "phraseTop" + pT;
     }
     else {
         pT = Math.floor(Math.random() * 4) + 1;
-        phraseTopClass = "phraseTop" + pT;
     }
-    
-    return phraseTopClass;
 };
 
 function phraseLeft() {
     if (pS == 3 || pT > 2) {
         pL = Math.floor(Math.random() * 2) + 1;
-        phraseLeftClass = "phraseLeft" + pL;
     }
     else {
         pL = Math.floor(Math.random() * 3) + 1;
-        phraseLeftClass = "phraseLeft" + pL;
     }
-    return phraseLeftClass;
 };
+
+function phrasePlace() {
+    phrasePlaceClass = "phrasePlace-" + pT + "-" + pL;
+    return phrasePlaceClass;
+}
 
 
 function phraseFont() {
@@ -364,15 +363,18 @@ function captionPlace() {
 function addVariables() {
 
     imgMix(); imgWidth(); imgHeight(); imgTop(); imgLeft(); imgPlace(); bgColor();
+    phraseSize(); textColor(); phraseFont(); fontWeight();
+    phraseTop(); phraseLeft(); phrasePlace();
+    captionColor(); captionPlace();
     // $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass("loadImage");
     $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass);
     $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass).addClass(imgMixClass);
-    $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont()).addClass(fontWeight());
-    $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
+    $(".phraseHeading").text(thisPhrase).addClass(phraseSizeClass).addClass(textColorClass).addClass(phraseFontClass).addClass(fontWeightClass);
+    $(".phraseHeadingContainer").addClass(phrasePlaceClass);
     // $("h5").addClass(captionColor()).addClass(phraseFontClass).addClass(captionBgColor());
     // $("h5").addClass(captionColor()).addClass(phraseFontClass).addClass(captionTop()).addClass(captionLeft());
     // $("h5").addClass(captionColor()).addClass(phraseFontClass);
-    $(".caption").addClass(captionColor()).addClass(captionPlace());
+    $(".caption").addClass(captionColorClass).addClass(captionPlaceClass);
     // $("h5").addClass(phraseFontClass);
 }
 
@@ -381,7 +383,7 @@ function removeVariables() {
         $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgPlaceClass).removeClass(bgColorClass);
         $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgPlaceClass).removeClass(bgColorClass).removeClass(imgMixClass);
         $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass).removeClass(fontWeightClass);
-        $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
+        $(".phraseHeadingContainer").removeClass(phrasePlaceClass);
         // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass).removeClass(captionBgColorClass);
         // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass).removeClass(captionTopClass).removeClass(captionLeftClass);
         // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass);
