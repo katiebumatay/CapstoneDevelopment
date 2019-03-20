@@ -146,14 +146,32 @@ function imgTop() {
     if (iH == 3) {
         iT = Math.floor(Math.random() * 2) + 1;
         imgTopClass = "imgTop" + iT;
+        if (iT == 1) {
+            captionPlaceClass = "captionPlaceBelow";
+        }
+        if (iT == 2) {
+            captionPlaceClass = "captionPlaceAbove";
+        }
     }
     if (iH == 2) {
         iT = Math.floor(Math.random() * 3) + 1;
         imgTopClass = "imgTop" + iT;
+        if (iT == 1) {
+            captionPlaceClass = "captionPlaceBelow";
+        }
+        if (iT > 1) {
+            captionPlaceClass = "captionPlaceAbove";
+        }
     }
     else if (iH == 1) {
         iT = Math.floor(Math.random() * 4) + 1;
         imgTopClass = "imgTop" + iT;
+        if (iT < 3) {
+            captionPlaceClass = "captionPlaceBelow";
+        }
+        if (iT >= 3) {
+            captionPlaceClass = "captionPlaceAbove";
+        }
     }
     return imgTopClass;
 };
@@ -285,12 +303,12 @@ function captionLeft() {
 };
 
 function captionPlace() {
-    if (iT < 3) {
-        captionPlaceClass = "captionPlaceBelow";
-    }
-    else if (iT >= 3) {
-        captionPlaceClass = "captionPlaceAbove";
-    }
+    // if (iT < 3) {
+    //     captionPlaceClass = "captionPlaceBelow";
+    // }
+    // else if (iT >= 3) {
+    //     captionPlaceClass = "captionPlaceAbove";
+    // }
     return captionPlaceClass;
 }
 
