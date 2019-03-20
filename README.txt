@@ -20,4 +20,4 @@ Dev9: Change entry to click to about then scroll (the title page is the overlay/
 
 Dev10: tried to implement full page -- didn't work so far (3/19 went back to dev9)
 
-Dev 11: tried to optimize by using transform translate instead of recalculating top and left -- struggle bc can't do 2 separate transforms on same element (3/19 went back to dev9)
+Dev 11: tried to optimize by using transform translate instead of recalculating top and left -- struggle bc can't do 2 separate transforms on same element (3/19 went back to dev9) --> deleted folder and reduplicated dev9 to dev11 (3/20) -->

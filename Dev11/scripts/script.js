@@ -136,7 +136,7 @@ function imgHeight() {
 };
 
 function imgMix() {
-    iM = Math.floor(Math.random() * 2) + 1;
+    iM = Math.floor(Math.random() * 3) + 1;
     imgMixClass = "mix" + iM;
     return imgMixClass;
 }
@@ -225,7 +225,7 @@ function phraseTop() {
 };
 
 function phraseLeft() {
-    if (pS == 3) {
+    if (pS == 3 || pT > 2) {
         pL = Math.floor(Math.random() * 2) + 1;
         phraseLeftClass = "phraseLeft" + pL;
     }
@@ -367,7 +367,7 @@ function chooseStory() {
     $(".articleText").load(articleLink);
     captionLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev9/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html p:first-child";
     $(".caption").load(captionLink);
-    loadImage.style.setProperty('--myImg-background-image', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image.jpg");
+    loadImage.style.setProperty('--myImg-background-image', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image-small.jpg");
     $(".imgContainer").addClass("loadImage");
 }
 
