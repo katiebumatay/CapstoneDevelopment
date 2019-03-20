@@ -197,19 +197,40 @@ h3 {
 	/*background-blend-mode: screen;*/
 }
 
-h5 {
+.caption {
 	z-index: 20;
+	/*position: fixed;*/
 	position: absolute;
 	/*top: 50%;*/
-	bottom: 98%;
-	left: -30px;
-	width: 30%;
+	/*bottom: 98%;
+	left: -30px;*/
+	width: 25vw;
 	margin:0;
 	padding: 0;
 	font-size: 12pt;
 	line-height: 1em;
 	font-weight: 400;
+/*	font-style: italic;*/
+	font-family: Baskerville, serif;
+	/*background-color: white;*/
+}
 
+.captionPlaceAbove {
+	bottom: 105%;
+	left: 0;
+	border-bottom-width: 2px;
+	border-bottom-color: #212121;
+	border-bottom-style: solid;
+	/*margin-bottom: 10px;*/
+}
+
+.captionPlaceBelow {
+	top: 105%;
+	left: 0;
+	border-top-width: 2px;
+	border-top-color: #212121;
+	border-top-style: solid;
+	/*margin-top: 10px;*/
 }
 
 .phraseHeadingContainer {
@@ -685,6 +706,34 @@ h2 {
 	top: 70%;
 }
 
+.captionTop1{
+	top: 15%;
+}
+
+.captionTop2{
+	top: 25%;
+}
+
+.captionTop3{
+	top: 35%;
+}
+
+.captionTop4{
+	top: 45%;
+}
+
+.captionTop5{
+	top: 55%;
+}
+
+.captionTop6{
+	top: 65%;
+}
+
+.captionTop7{
+	top: 75%;
+}
+
 
 .imgLeft1{
 	left: 5%;
@@ -718,12 +767,42 @@ h2 {
 	left: 70%;
 }*/
 
+.captionLeft1{
+	left: 15%;
+}
+
+.captionLeft2{
+	left: 25%;
+}
+
+.captionLeft3{
+	left: 35%;
+}
+
+.captionLeft4{
+	left: 45%;
+}
+
+.captionLeft5{
+	left: 55%;
+}
+
+.captionLeft6{
+	left: 65%;
+}
+
+.captionLeft7{
+	left: 75%;
+}
+
+
 .bgColor1-1 {
 	background-color: #68a2ff;
 }
 
 .textColor1-1 {
 	color: #68a2ff;
+	border-color: #68a2ff;
 }
 
 .bgColor1-2 {
@@ -732,6 +811,7 @@ h2 {
 
 .textColor1-2 {
 	color: #2a5baa;
+	border-color: #2a5baa;
 }
 
 .bgColor2-1 {
@@ -740,6 +820,7 @@ h2 {
 
 .textColor2-1 {
 	color: #cc2222;
+	border-color: #cc2222;
 }
 
 .bgColor2-2 {
@@ -748,6 +829,7 @@ h2 {
 
 .textColor2-2 {
 	color: #8c1010;
+	border-color: #8c1010;
 }
 
 .bgColor3-1 {
@@ -756,6 +838,7 @@ h2 {
 
 .textColor3-1 {
 	color: #212121;
+	border-color: #212121;
 }
 
 .bgColor3-2 {
@@ -764,6 +847,7 @@ h2 {
 
 .textColor3-2 {
 	color: #afafaf;
+	border-color: #afafaf;
 }
 
 .bgColor4-1 {
@@ -772,6 +856,7 @@ h2 {
 
 .textColor4-1 {
 	color: #fff591;
+	border-color: #fff591;
 }
 
 .bgColor4-2 {
@@ -780,6 +865,7 @@ h2 {
 
 .textColor4-2 {
 	color: #efd900;
+	border-color: #efd900;
 }
 
 .bgColor5-1 {
@@ -788,6 +874,7 @@ h2 {
 
 .textColor5-1 {
 	color: #6a6eed;
+	border-color: #6a6eed;
 }
 
 .bgColor5-2 {
@@ -796,6 +883,7 @@ h2 {
 
 .textColor5-2 {
 	color: #0d0f5b;
+	border-color: #0d0f5b;
 }
 
 .bgColor6-1 {
@@ -804,6 +892,7 @@ h2 {
 
 .textColor6-1 {
 	color: #ea7e92;
+	border-color: #ea7e92;
 }
 
 .bgColor6-2 {
@@ -812,6 +901,7 @@ h2 {
 
 .textColor6-2 {
 	color: #5b101d;
+	border-color: #5b101d;
 }
 
 .font1 {

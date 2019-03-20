@@ -12,6 +12,11 @@
     var pF; var phraseFontClass;
     var fW; var fontWeightClass;
 
+    var cT; var captionTopClass;
+    var cL; var captionLeftClass;
+
+    var captionPlaceClass;
+
     var c; var ld; var bgColorClass; var textColorClass; var captionColorClass; var captionBgColorClass;
 
     var wordCount;
@@ -267,6 +272,28 @@ function captionBgColor() {
     return captionBgColorClass;
 };
 
+function captionTop() {
+    cT = Math.floor(Math.random() * 7) + 1;
+    captionTopClass = "captionTop" + cT;
+    return captionTopClass;
+};
+
+function captionLeft() {
+    cL = Math.floor(Math.random() * 7) + 1;
+    captionLeftClass = "captionLeft" + cL;
+    return captionLeftClass;
+};
+
+function captionPlace() {
+    if (iT < 3) {
+        captionPlaceClass = "captionPlaceBelow";
+    }
+    else if (iT >= 3) {
+        captionPlaceClass = "captionPlaceAbove";
+    }
+    return captionPlaceClass;
+}
+
 function addVariables() {
 
     imgMix(); imgWidth(); imgHeight(); imgTop(); imgLeft(); bgColor();
@@ -276,7 +303,9 @@ function addVariables() {
     $(".phraseHeading").text(thisPhrase).addClass(phraseSize()).addClass(textColor()).addClass(phraseFont()).addClass(fontWeight());
     $(".phraseHeadingContainer").addClass(phraseTop()).addClass(phraseLeft());
     // $("h5").addClass(captionColor()).addClass(phraseFontClass).addClass(captionBgColor());
-    $("h5").addClass(captionColor()).addClass(phraseFontClass);
+    // $("h5").addClass(captionColor()).addClass(phraseFontClass).addClass(captionTop()).addClass(captionLeft());
+    // $("h5").addClass(captionColor()).addClass(phraseFontClass);
+    $(".caption").addClass(captionColor()).addClass(captionPlace());
     // $("h5").addClass(phraseFontClass);
 }
 
@@ -287,7 +316,9 @@ function removeVariables() {
         $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass).removeClass(fontWeightClass);
         $(".phraseHeadingContainer").removeClass(phraseTopClass).removeClass(phraseLeftClass);
         // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass).removeClass(captionBgColorClass);
-        $("h5").removeClass(captionColorClass).removeClass(phraseFontClass);
+        // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass).removeClass(captionTopClass).removeClass(captionLeftClass);
+        // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass);
+        $(".caption").removeClass(captionColorClass).removeClass(captionPlaceClass);
         // $("h5").removeClass(phraseFontClass);
 
 
@@ -317,7 +348,7 @@ function chooseStory() {
     articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev9/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html";
     $(".articleText").load(articleLink);
     captionLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev9/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html p:first-child";
-    $("h5").load(captionLink);
+    $(".caption").load(captionLink);
     loadImage.style.setProperty('--myImg-background-image', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image.jpg");
     $(".imgContainer").addClass("loadImage");
 }
