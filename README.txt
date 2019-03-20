@@ -16,4 +16,8 @@ Dev7: delete old comments. got image loading to work with variable between css a
 
 Dev8: article container and scroll. buttons to jump to each one. title becomes clear on hover. content on pledge.
 
-Dev9: Change entry to click to about then scroll (the title page is the overlay/stop scroll as opposed to the other way around). Basic scroll hint on about. Add more fonts. Grow/shrink title sequence entry.
+Dev9: Change entry to click to about then scroll (the title page is the overlay/stop scroll as opposed to the other way around). Basic scroll hint on about. Add more fonts. Grow/shrink title sequence entry. Captions.
+
+Dev10: tried to implement full page -- didn't work so far (3/19 went back to dev9)
+
+Dev 11: tried to optimize by using transform translate instead of recalculating top and left -- struggle bc can't do 2 separate transforms on same element (3/19 went back to dev9)
