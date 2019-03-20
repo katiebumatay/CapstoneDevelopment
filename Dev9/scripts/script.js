@@ -225,7 +225,7 @@ function phraseTop() {
 };
 
 function phraseLeft() {
-    if (pS == 3) {
+    if (pS == 3 || pT > 2) {
         pL = Math.floor(Math.random() * 2) + 1;
         phraseLeftClass = "phraseLeft" + pL;
     }

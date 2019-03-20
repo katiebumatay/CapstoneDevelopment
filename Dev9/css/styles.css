@@ -220,7 +220,7 @@ h3 {
 }
 
 .captionPlaceAbove {
-	bottom: calc(100% + 10px);
+	bottom: calc(100% + 12px);
 	left: 0;
 	border-bottom-width: 2px;
 	border-bottom-color: #212121;
@@ -229,7 +229,7 @@ h3 {
 }
 
 .captionPlaceBelow {
-	top: calc(100% + 10px);
+	top: calc(100% + 12px);
 	left: 0;
 	border-top-width: 2px;
 	border-top-color: #212121;
@@ -855,21 +855,21 @@ h2 {
 }
 
 .bgColor4-1 {
-	background-color: #fff591;
+	background-color: #efc004;
 }
 
 .textColor4-1 {
-	color: #fff591;
-	border-color: #fff591;
+	color: #efc004;
+	border-color: #efc004;
 }
 
 .bgColor4-2 {
-	background-color: #efd900;
+	background-color: #af8c00;
 }
 
 .textColor4-2 {
-	color: #efd900;
-	border-color: #efd900;
+	color: #af8c00;
+	border-color: #af8c00;
 }
 
 .bgColor5-1 {
@@ -1014,6 +1014,7 @@ h2 {
 
 .font27 {
 	font-family: 'Alfa Slab One', cursive;
+	letter-spacing: 0.005em;
 }
 
 .font28 {
