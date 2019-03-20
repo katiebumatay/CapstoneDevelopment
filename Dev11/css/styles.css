@@ -12,6 +12,7 @@ html, body{
 	font-size: 14pt;
 	color: #161616;
 	line-height: 1.3em;
+/*	min-width: 880px;*/
 }
 
 
@@ -199,6 +200,20 @@ h3 {
 	/*resize: both;*/
 }
 
+.articleBox {
+	z-index: -5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*mix-blend-mode: multiply;*/
+	/*mix-blend-mode: lighten;*/
+	/*mix-blend-mode: overlay;*/
+}
+
+/*.articleBoxPeek {
+	transform: translateX(-20px;);
+}
+*/
 /*.resizeElement {
 	resize: vertical;
 	overflow: auto;
@@ -385,7 +400,7 @@ h3 {
 	padding-top: 10%;
 	padding-bottom: 10%;
 	padding-right: 10%;
-	/*min-width: 520px;*/
+	min-width: 520px;
 }
 
 

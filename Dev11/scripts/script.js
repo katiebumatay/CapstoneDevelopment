@@ -369,6 +369,7 @@ function addVariables() {
     // $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass("loadImage");
     $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass);
     $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass).addClass(imgMixClass);
+    $(".articleBox").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass);
     $(".phraseHeading").text(thisPhrase).addClass(phraseSizeClass).addClass(textColorClass).addClass(phraseFontClass).addClass(fontWeightClass);
     $(".phraseHeadingContainer").addClass(phrasePlaceClass);
     // $("h5").addClass(captionColor()).addClass(phraseFontClass).addClass(captionBgColor());
@@ -382,6 +383,7 @@ function removeVariables() {
         // $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
         $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgPlaceClass).removeClass(bgColorClass);
         $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgPlaceClass).removeClass(bgColorClass).removeClass(imgMixClass);
+        $(".articleBox").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgPlaceClass).removeClass(bgColorClass);
         $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass).removeClass(fontWeightClass);
         $(".phraseHeadingContainer").removeClass(phrasePlaceClass);
         // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass).removeClass(captionBgColorClass);
@@ -402,6 +404,8 @@ function activateOverlay() {
         // $(".variablesOverlay").removeClass("stopScroll");
         // $(".variablesOverlayLength").addClass("variablesOverlayVisible").removeClass("stopScroll");
         // $(".articleContainer").addClass("articleOverlayVisible");
+
+        $(".articleBox").animate({transform: "translateX(20px)"}, 100);
 }
 
 function deactivateOverlay() {
@@ -412,6 +416,8 @@ function deactivateOverlay() {
     // $(".imgOverlay, .phraseHeading").removeClass("resizeElement");
     // $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
     // $(".articleContainer").removeClass("articleOverlayVisible");
+
+    // $(".articleBox").removeClass("articleBoxPeek");
 }
 
 function chooseStory() {
