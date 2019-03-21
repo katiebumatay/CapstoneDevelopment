@@ -175,21 +175,21 @@ h3 {
 
 
 .articleText {
+	width: calc(45vw - 60px);
 	position: absolute;
-	visibility: hidden;
-	margin-top: 50%;
+	/*visibility: hidden;*/
+	margin: 60px 30px 30px 30px;
+	/*margin-top: 100vh;*/
+}
+
+.articleText p {
+	font-family: Heebo, sans-serif;
+	font-size: 11pt;
 }
 
 .readArticle .articleBox {
 	overflow: scroll;
 	/*padding-top: 50%;*/
-}
-
-.readArticle .articleText {
-	transition-delay: 0.5s;
-	visibility: visible;
-	margin: 60px 30px 30px 30px;
-/*	margin-top: 50%;*/
 }
 
 .articleOverlayVisible {
@@ -773,6 +773,7 @@ h2 {
 
 .imgWidthTemp {
 	width: 45%;
+	transition: 0.5s;
 }
 
 .imgHeight1 {
