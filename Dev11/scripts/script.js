@@ -41,6 +41,7 @@
     var delta = 5;
 
     var titleHover = false;
+    var titleClicked = false;
 
     // var navbarHeight = $('header').outerHeight();
 
@@ -90,10 +91,13 @@
 // };
 
 function animate() {
-    if (titleHover) {
+    if (titleHover == true) {
         return;
     }
-    else {
+    // if (titleClicked == true) {
+    //     return;
+    // }
+    else if (titleClicked == false) {
     titleNum = Math.floor(Math.random() * 4) + 1;
     if (titleNum == prevNum) {
         if (titleNum == 4) {
@@ -537,7 +541,7 @@ $(document).ready(function() {
 
     var clicked = false;
 
-    var titleClicked = false;
+    // var titleClicked = false;
     var sectionHeaderClicked = false;
 
 $("#draggable").draggable
@@ -611,10 +615,7 @@ $("#draggable").data({'originalLeft': $("#draggable").css('left'),
 
 
     $(".intro-container").click(function(){
-        if (titleClicked == true) {
-            titleClicked = false;
-        }
-        else if (titleClicked == false) {
+        if (titleClicked == false) {
             titleClicked = true;
         }
         // $(".title, h1").toggleClass("clickedTitle");
@@ -629,7 +630,7 @@ $("#draggable").data({'originalLeft': $("#draggable").css('left'),
     });
 
     $(".smallTitle").click(function() {
-        titleClicked = true;
+        titleClicked = false;
         $(".intro-container").toggleClass("clickedTitle");
         $(".title").toggleClass("titleGrow");
         $(".aboutSection").toggleClass("showAbout");
