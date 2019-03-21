@@ -524,6 +524,10 @@ $(document).ready(function() {
     var titleClicked = false;
     var sectionHeaderClicked = false;
 
+    $( function() {
+        $( "#draggable" ).draggable();
+    } );
+
     // $("h1").hover(function(){
     //     if (titleClicked == false) {
     //         $(this).toggleClass("blurtext");
