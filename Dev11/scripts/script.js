@@ -1,6 +1,7 @@
     var thisPhrase;
     
-    var iW; var imgWidthClass;
+    var iW; var imgWidthClass; 
+    var imgWidthTempClass = "imgWidthTemp";
     var iH; var imgHeightClass;
     var iT; var imgTopClass;
     var iL; var imgLeftClass;
@@ -213,30 +214,30 @@ function imgTop() {
 function imgLeft() {
     if (iW == 3) {
         iL = Math.floor(Math.random() * 2) + 1;
-        if (iL == 1) {
-            articleBoxPlaceClass = "articleBoxPlaceRight";
-        }
-        if (iL == 2) {
-            articleBoxPlaceClass = "articleBoxPlaceLeft";
-        }
+        // if (iL == 1) {
+        //     articleBoxPlaceClass = "articleBoxPlaceRight";
+        // }
+        // if (iL == 2) {
+        //     articleBoxPlaceClass = "articleBoxPlaceLeft";
+        // }
     }
     if (iW == 2) {
         iL = Math.floor(Math.random() * 3) + 1;
-        if (iL < 3) {
-            articleBoxPlaceClass = "articleBoxPlaceRight";
-        }
-        if (iL == 3) {
-            articleBoxPlaceClass = "articleBoxPlaceLeft";
-        }
+        // if (iL < 3) {
+        //     articleBoxPlaceClass = "articleBoxPlaceRight";
+        // }
+        // if (iL == 3) {
+        //     articleBoxPlaceClass = "articleBoxPlaceLeft";
+        // }
     }
     else if (iW == 1) {
         iL = Math.floor(Math.random() * 4) + 1;
-        if (iL < 3) {
-            articleBoxPlaceClass = "articleBoxPlaceRight";
-        }
-        if (iL >= 3) {
-            articleBoxPlaceClass = "articleBoxPlaceLeft";
-        }
+        // if (iL < 3) {
+        //     articleBoxPlaceClass = "articleBoxPlaceRight";
+        // }
+        // if (iL >= 3) {
+        //     articleBoxPlaceClass = "articleBoxPlaceLeft";
+        // }
     }
 }
 
@@ -379,15 +380,15 @@ function captionPlace() {
     return captionPlaceClass;
 }
 
-function articleBoxPlace() {
-    // if (iT < 3) {
-    //     captionPlaceClass = "captionPlaceBelow";
-    // }
-    // else if (iT >= 3) {
-    //     captionPlaceClass = "captionPlaceAbove";
-    // }
-    return articleBoxPlaceClass;
-}
+// function articleBoxPlace() {
+//     // if (iT < 3) {
+//     //     captionPlaceClass = "captionPlaceBelow";
+//     // }
+//     // else if (iT >= 3) {
+//     //     captionPlaceClass = "captionPlaceAbove";
+//     // }
+//     return articleBoxPlaceClass;
+// }
 
 
 function addVariables() {
@@ -396,7 +397,7 @@ function addVariables() {
     phraseSize(); textColor(); phraseFont(); fontWeight();
     phraseTop(); phraseLeft(); phrasePlace();
     captionColor(); captionPlace();
-    articleBoxPlace();
+    // articleBoxPlace();
     // $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass("loadImage");
     $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass);
     $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass).addClass(imgMixClass);
@@ -407,7 +408,7 @@ function addVariables() {
     // $("h5").addClass(captionColor()).addClass(phraseFontClass).addClass(captionTop()).addClass(captionLeft());
     // $("h5").addClass(captionColor()).addClass(phraseFontClass);
     $(".caption").addClass(captionColorClass).addClass(captionPlaceClass);
-    $(".articleBox").addClass(articleBoxPlaceClass);
+    // $(".articleBox").addClass(articleBoxPlaceClass);
     $(".fa-sort-up").addClass(textColorClass);
     // $("h5").addClass(phraseFontClass);
 }
@@ -423,7 +424,7 @@ function removeVariables() {
         // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass).removeClass(captionTopClass).removeClass(captionLeftClass);
         // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass);
         $(".caption").removeClass(captionColorClass).removeClass(captionPlaceClass);
-        $(".articleBox").removeClass(articleBoxPlaceClass);
+        // $(".articleBox").removeClass(articleBoxPlaceClass);
          $(".fa-sort-up").removeClass(textColorClass);
         // $("h5").removeClass(phraseFontClass);
 
@@ -453,7 +454,9 @@ function deactivateOverlay() {
     // $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
     // $(".articleContainer").removeClass("articleOverlayVisible");
 
-    $(".articleBox").removeClass("articleBoxPeek");
+    $(".articleBox").removeClass("articleBoxPeek").removeClass("articleBoxExpand");
+     $(".variablesOverlay").removeClass("readArticle");
+     $(".imgContainer, .imgOverlay").removeClass(imgWidthTempClass);
 }
 
 function chooseStory() {
@@ -656,6 +659,12 @@ $(document).ready(function() {
         // 'slow');
         $(".articleContainer").scrollTop(0);
 
+    });
+
+    $(".articleBox").click(function(){
+        $(".articleBox").toggleClass("articleBoxExpand");
+        $(".variablesOverlay").toggleClass("readArticle");
+        $(".imgContainer, .imgOverlay").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
     });
 
     // $(".pledge1").click(function(){
