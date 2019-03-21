@@ -231,6 +231,7 @@ h3 {
 	/*mix-blend-mode: multiply;*/
 	/*mix-blend-mode: lighten;*/
 	/*mix-blend-mode: overlay;*/
+	cursor: pointer;
 }
 
 .articleBoxPeek {
@@ -346,17 +347,20 @@ h3 {
 	top: 0;
 	left: 0;
 /*	opacity: 0;*/
-	/*pointer-events: none;*/
+	pointer-events: none;
 }
 
-#draggable {
-	
-}
 
 .phraseHeading {
 	margin: 0;
 	font-size: 7em;
+	pointer-events: auto;
+	cursor: move;
 }
+
+/*.dragMe {
+	pointer-events: auto;
+}*/
 
 .exitOverlay {
 	opacity: 0;

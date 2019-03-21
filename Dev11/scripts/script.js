@@ -443,6 +443,8 @@ function activateOverlay() {
 
         // $(".articleBox").animate({width: "(10px)"}, 100);
         $(".articleBox").addClass("articleBoxPeek");
+        // $(".phraseHeadingContainer").addClass("dragMe");
+
 }
 
 function deactivateOverlay() {
@@ -460,6 +462,8 @@ function deactivateOverlay() {
      // $(".articleText").animate({
      //    scrollTop: $(".articleText").offset().top});
      $(".articleBox").scrollTop(0);
+     // $(".phraseHeadingContainer").removeClass("dragMe");
+
 }
 
 function chooseStory() {
@@ -524,9 +528,30 @@ $(document).ready(function() {
     var titleClicked = false;
     var sectionHeaderClicked = false;
 
-    $( function() {
-        $( "#draggable" ).draggable();
-    } );
+$("#draggable").draggable
+    ({  
+        revert: 'valid',
+        // snap: '#droppable',
+        // snapMode: 'corner',
+        // snapTolerance: '22'
+    });
+
+$("#draggable").data({'originalLeft': $("#draggable").css('left'),
+                      'origionalTop': $("#draggable").css('top')
+                     });
+
+
+//     $("#droppable").droppable
+//     ({
+//         accept: '#draggable', 
+//         drop: function(event, ui) 
+//         {
+//             $(this).find("#draggable").html();
+//         }
+// });
+    // $( "#selector" ).draggable({
+    //     revert: true
+    // });
 
     // $("h1").hover(function(){
     //     if (titleClicked == false) {
@@ -666,12 +691,19 @@ $(document).ready(function() {
         // 'slow');
         $(".articleContainer").scrollTop(0);
 
+        $("#draggable").css({'left': $("#draggable").data('originalLeft'),
+                             'top': $("#draggable").data('origionalTop')}
+                             );
+
     });
 
     $(".articleBox").click(function(){
         $(".articleBox").toggleClass("articleBoxExpand");
         $(".variablesOverlay").toggleClass("readArticle");
         $(".imgContainer, .imgOverlay").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
+        // $( function() {
+        //     $( "#draggable" ).draggable();
+        //  } );
     });
 
     // $(".pledge1").click(function(){
