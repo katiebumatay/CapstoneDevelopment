@@ -188,7 +188,7 @@ h3 {
 }
 
 .imgContainer {
-	/*z-index: -5;*/
+	z-index: 0;
 	position: absolute;
 	width: 30vw;
 	height: 30vh;
@@ -201,19 +201,52 @@ h3 {
 }
 
 .articleBox {
-	z-index: -5;
+	z-index: -50 !important;
 	position: absolute;
 	top: 0;
-	left: 0;
+	/*left: calc(100% - 20px);*/
+	/*width: 20px;*/
+	width: 0px;
+	height: 100%;
+	overflow: hidden;
 	/*mix-blend-mode: multiply;*/
 	/*mix-blend-mode: lighten;*/
 	/*mix-blend-mode: overlay;*/
 }
 
-/*.articleBoxPeek {
-	transform: translateX(-20px;);
+.articleBoxPeek {
+	/*left: 100%;*/
+	/*left: calc(100% - 10px);*/
+	width: 20px;
+	transition: 0.5s;
 }
-*/
+
+.side {
+	position: absolute;
+	padding: 10px;
+	/*background-image: url("../images/side.png");
+	background-repeat: no-repeat;
+	background-size: contain;*/
+	margin: auto;
+	top: calc(50% - 20pt);
+}
+
+.fa-sort-up {
+	font-size: 20pt;
+	color: white;
+	transform: rotateZ(90deg);
+	margin: -10pt;
+	padding: 0;
+}
+
+.sidePlaceRight {
+	left: 100%;
+}
+
+.sidePlaceLeft {
+	right: 100%;
+}
+
 /*.resizeElement {
 	resize: vertical;
 	overflow: auto;

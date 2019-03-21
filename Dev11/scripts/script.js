@@ -369,13 +369,14 @@ function addVariables() {
     // $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass("loadImage");
     $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass);
     $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass).addClass(imgMixClass);
-    $(".articleBox").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass);
+    $(".articleBox").addClass(bgColorClass);
     $(".phraseHeading").text(thisPhrase).addClass(phraseSizeClass).addClass(textColorClass).addClass(phraseFontClass).addClass(fontWeightClass);
     $(".phraseHeadingContainer").addClass(phrasePlaceClass);
     // $("h5").addClass(captionColor()).addClass(phraseFontClass).addClass(captionBgColor());
     // $("h5").addClass(captionColor()).addClass(phraseFontClass).addClass(captionTop()).addClass(captionLeft());
     // $("h5").addClass(captionColor()).addClass(phraseFontClass);
     $(".caption").addClass(captionColorClass).addClass(captionPlaceClass);
+    $(".fa-sort-up").addClass(textColorClass);
     // $("h5").addClass(phraseFontClass);
 }
 
@@ -383,13 +384,14 @@ function removeVariables() {
         // $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
         $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgPlaceClass).removeClass(bgColorClass);
         $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgPlaceClass).removeClass(bgColorClass).removeClass(imgMixClass);
-        $(".articleBox").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgPlaceClass).removeClass(bgColorClass);
+        $(".articleBox").removeClass(bgColorClass);
         $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass).removeClass(fontWeightClass);
         $(".phraseHeadingContainer").removeClass(phrasePlaceClass);
         // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass).removeClass(captionBgColorClass);
         // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass).removeClass(captionTopClass).removeClass(captionLeftClass);
         // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass);
         $(".caption").removeClass(captionColorClass).removeClass(captionPlaceClass);
+         $(".fa-sort-up").removeClass(textColorClass);
         // $("h5").removeClass(phraseFontClass);
 
 
@@ -405,7 +407,8 @@ function activateOverlay() {
         // $(".variablesOverlayLength").addClass("variablesOverlayVisible").removeClass("stopScroll");
         // $(".articleContainer").addClass("articleOverlayVisible");
 
-        $(".articleBox").animate({transform: "translateX(20px)"}, 100);
+        // $(".articleBox").animate({width: "(10px)"}, 100);
+        $(".articleBox").addClass("articleBoxPeek");
 }
 
 function deactivateOverlay() {
@@ -417,7 +420,7 @@ function deactivateOverlay() {
     // $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
     // $(".articleContainer").removeClass("articleOverlayVisible");
 
-    // $(".articleBox").removeClass("articleBoxPeek");
+    $(".articleBox").removeClass("articleBoxPeek");
 }
 
 function chooseStory() {
