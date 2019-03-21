@@ -457,6 +457,8 @@ function deactivateOverlay() {
     $(".articleBox").removeClass("articleBoxPeek").removeClass("articleBoxExpand");
      $(".variablesOverlay").removeClass("readArticle");
      $(".imgContainer, .imgOverlay").removeClass(imgWidthTempClass);
+     $(".articleText").animate({
+        scrollTop: $(".articleText").offset().top});
 }
 
 function chooseStory() {

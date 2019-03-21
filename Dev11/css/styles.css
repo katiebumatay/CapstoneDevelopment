@@ -177,17 +177,19 @@ h3 {
 .articleText {
 	position: absolute;
 	visibility: hidden;
+	margin-top: 50%;
 }
 
 .readArticle .articleBox {
 	overflow: scroll;
+	/*padding-top: 50%;*/
 }
 
 .readArticle .articleText {
 	transition-delay: 0.5s;
 	visibility: visible;
-	margin: 30px;
-	margin-top: 50%;
+	margin: 60px 30px 30px 30px;
+/*	margin-top: 50%;*/
 }
 
 .articleOverlayVisible {
@@ -249,13 +251,14 @@ h3 {
 }*/
 
 .fa-sort-up {
+	/*position: fixed;*/
 	font-size: 20pt;
 	color: white;
 	transform: rotateZ(90deg);
 	margin: -10pt;
 	padding-top: 5px;
 	margin: auto;
-	top: calc(50% - 20pt);
+	/*top: calc(50% - 20pt);*/
 	transition: 0.5s;
 	/*float: left;*/
 }
@@ -272,13 +275,13 @@ h3 {
 
 .articleBoxExpand {
 	width: 45vw;
-	transition-timing-function: 0.5s;
+	transition: 0.5s;
 }
 
 .articleBoxPlaceRight.articleBoxExpand .fa-sort-up {
 	float: right;
 	transform: rotateZ(-90deg);
-	transition-timing-function: 0.5s;
+	/*transition-timing-function: 0.5s;*/
 }
 
 /*.articleBoxPlaceLeft.articleBoxExpand .fa-sort-up {
