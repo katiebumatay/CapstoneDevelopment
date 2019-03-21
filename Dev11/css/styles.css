@@ -188,6 +188,7 @@ h3 {
 }
 
 .readArticle .articleBox {
+	/*transition-delay: 0.5s;*/
 	overflow: scroll;
 	/*padding-top: 50%;*/
 }
@@ -220,7 +221,7 @@ h3 {
 }
 
 .articleBox {
-	z-index: -50 !important;
+	/*z-index: -50 !important;*/
 	position: absolute;
 	top: 0;
 	/*left: calc(100% - 20px);*/
@@ -262,10 +263,14 @@ h3 {
 	/*top: calc(50% - 20pt);*/
 	transition: 0.5s;
 	/*float: left;*/
+	overflow: hidden;
+
 }
 
 .articleBoxPlaceRight {
-	left: calc(100% - 0.5px);
+	left: 100%;
+	/*left: calc(100% + 10px);*/
+	/*left: calc(100% - 0.5px);*/
 	/*float: right;*/
 }
 
@@ -348,10 +353,12 @@ h3 {
 	left: 0;
 /*	opacity: 0;*/
 	pointer-events: none;
+	display: inline-block;
 }
 
 
 .phraseHeading {
+	display: inline-block;
 	margin: 0;
 	font-size: 7em;
 	pointer-events: auto;
