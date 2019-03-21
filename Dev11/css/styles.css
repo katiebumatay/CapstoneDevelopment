@@ -239,12 +239,13 @@ h3 {
 	padding: 0;
 }
 
-.sidePlaceRight {
+.articleBoxPlaceRight {
 	left: 100%;
 }
 
-.sidePlaceLeft {
+.articleBoxPlaceLeft {
 	right: 100%;
+	transform: rotateZ(180deg);
 }
 
 /*.resizeElement {

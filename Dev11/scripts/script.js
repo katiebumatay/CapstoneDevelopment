@@ -18,6 +18,7 @@
     var cL; var captionLeftClass;
 
     var captionPlaceClass;
+    var articleBoxPlaceClass;
 
     var c; var ld; var bgColorClass; var textColorClass; var captionColorClass; var captionBgColorClass;
 
@@ -212,12 +213,30 @@ function imgTop() {
 function imgLeft() {
     if (iW == 3) {
         iL = Math.floor(Math.random() * 2) + 1;
+        if (iL == 1) {
+            articleBoxPlaceClass = "articleBoxPlaceRight";
+        }
+        if (iL == 2) {
+            articleBoxPlaceClass = "articleBoxPlaceLeft";
+        }
     }
     if (iW == 2) {
         iL = Math.floor(Math.random() * 3) + 1;
+        if (iL < 3) {
+            articleBoxPlaceClass = "articleBoxPlaceRight";
+        }
+        if (iL == 3) {
+            articleBoxPlaceClass = "articleBoxPlaceLeft";
+        }
     }
     else if (iW == 1) {
         iL = Math.floor(Math.random() * 4) + 1;
+        if (iL < 3) {
+            articleBoxPlaceClass = "articleBoxPlaceRight";
+        }
+        if (iL >= 3) {
+            articleBoxPlaceClass = "articleBoxPlaceLeft";
+        }
     }
 }
 
@@ -360,12 +379,24 @@ function captionPlace() {
     return captionPlaceClass;
 }
 
+function articleBoxPlace() {
+    // if (iT < 3) {
+    //     captionPlaceClass = "captionPlaceBelow";
+    // }
+    // else if (iT >= 3) {
+    //     captionPlaceClass = "captionPlaceAbove";
+    // }
+    return articleBoxPlaceClass;
+}
+
+
 function addVariables() {
 
     imgMix(); imgWidth(); imgHeight(); imgTop(); imgLeft(); imgPlace(); bgColor();
     phraseSize(); textColor(); phraseFont(); fontWeight();
     phraseTop(); phraseLeft(); phrasePlace();
     captionColor(); captionPlace();
+    articleBoxPlace();
     // $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass("loadImage");
     $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass);
     $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass).addClass(imgMixClass);
@@ -376,6 +407,7 @@ function addVariables() {
     // $("h5").addClass(captionColor()).addClass(phraseFontClass).addClass(captionTop()).addClass(captionLeft());
     // $("h5").addClass(captionColor()).addClass(phraseFontClass);
     $(".caption").addClass(captionColorClass).addClass(captionPlaceClass);
+    $(".articleBox").addClass(articleBoxPlaceClass);
     $(".fa-sort-up").addClass(textColorClass);
     // $("h5").addClass(phraseFontClass);
 }
@@ -391,6 +423,7 @@ function removeVariables() {
         // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass).removeClass(captionTopClass).removeClass(captionLeftClass);
         // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass);
         $(".caption").removeClass(captionColorClass).removeClass(captionPlaceClass);
+        $(".articleBox").removeClass(articleBoxPlaceClass);
          $(".fa-sort-up").removeClass(textColorClass);
         // $("h5").removeClass(phraseFontClass);
 
