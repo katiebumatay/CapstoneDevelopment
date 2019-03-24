@@ -416,7 +416,8 @@ function addVariables() {
     // articleBoxPlace();
     // $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass("loadImage");
     $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass);
-    $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass).addClass(imgMixClass);
+    // $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass).addClass(imgMixClass);
+    $(".imgOverlay").addClass(bgColorClass).addClass(imgMixClass);
     $(".articleBox").addClass(bgColorClass);
     $(".phraseHeading").text(thisPhrase).addClass(phraseSizeClass).addClass(textColorClass).addClass(phraseFontClass).addClass(fontWeightClass);
     $(".phraseHeadingContainer").addClass(phrasePlaceClass).addClass(phraseWidthClass);
@@ -432,7 +433,8 @@ function addVariables() {
 function removeVariables() {
         // $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
         $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgPlaceClass).removeClass(bgColorClass);
-        $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgPlaceClass).removeClass(bgColorClass).removeClass(imgMixClass);
+        // $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgPlaceClass).removeClass(bgColorClass).removeClass(imgMixClass);
+        $(".imgOverlay").removeClass(bgColorClass).removeClass(imgMixClass);
         $(".articleBox").removeClass(bgColorClass);
         $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass).removeClass(fontWeightClass);
         $(".phraseHeadingContainer").removeClass(phrasePlaceClass).removeClass(phraseWidthClass);;
@@ -450,7 +452,8 @@ function removeVariables() {
 function activateOverlay() {
         $(".sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
         $(".exitOverlay").addClass("show");
-        $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
+        // $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
+         $(".variables-container, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
         $("body").addClass("stopScroll");
         // $(".imgOverlay, .phraseHeading").addClass("resizeElement");
         // $(".variablesOverlay").removeClass("stopScroll");
@@ -466,7 +469,8 @@ function activateOverlay() {
 function deactivateOverlay() {
     $(".sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
     $(".exitOverlay").removeClass("show");
-    $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
+    // $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
+    $(".variables-container, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
     $("body").removeClass("stopScroll");
     // $(".imgOverlay, .phraseHeading").removeClass("resizeElement");
     // $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
@@ -474,7 +478,8 @@ function deactivateOverlay() {
 
     $(".articleBox").removeClass("articleBoxPeek").removeClass("articleBoxExpand");
      $(".variablesOverlay").removeClass("readArticle");
-     $(".imgContainer, .imgOverlay").removeClass(imgWidthTempClass);
+     // $(".imgContainer, .imgOverlay").removeClass(imgWidthTempClass);
+     $(".imgContainer").removeClass(imgWidthTempClass);
      // $(".articleText").animate({
      //    scrollTop: $(".articleText").offset().top});
      $(".articleBox").scrollTop(0);
@@ -484,9 +489,9 @@ function deactivateOverlay() {
 
 function chooseStory() {
     v = Math.floor(Math.random() * numOptions) + 1;
-    articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev11/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html";
+    articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev12/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html";
     $(".articleText").load(articleLink);
-    captionLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev11/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html p:first-child";
+    captionLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev12/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html p:first-child";
     $(".caption").load(captionLink);
     loadImage.style.setProperty('--myImg-background-image', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image-small.jpg");
     $(".imgContainer").addClass("loadImage");
@@ -544,7 +549,7 @@ $(document).ready(function() {
     // var titleClicked = false;
     var sectionHeaderClicked = false;
 
-$("#draggable").draggable
+$(".draggable").draggable
     ({  
         revert: 'valid',
         // snap: '#droppable',
@@ -552,8 +557,8 @@ $("#draggable").draggable
         // snapTolerance: '22'
     });
 
-$("#draggable").data({'originalLeft': $("#draggable").css('left'),
-                      'origionalTop': $("#draggable").css('top')
+$(".draggable").data({'originalLeft': $(".draggable").css('left'),
+                      'origionalTop': $(".draggable").css('top')
                      });
 
 
@@ -709,8 +714,8 @@ $("#draggable").data({'originalLeft': $("#draggable").css('left'),
         // 'slow');
         $(".articleContainer").scrollTop(0);
 
-        $("#draggable").css({'left': $("#draggable").data('originalLeft'),
-                             'top': $("#draggable").data('origionalTop')}
+        $(".draggable").css({'left': $(".draggable").data('originalLeft'),
+                             'top': $(".draggable").data('origionalTop')}
                              );
 
     });
@@ -718,7 +723,8 @@ $("#draggable").data({'originalLeft': $("#draggable").css('left'),
     $(".articleBox").click(function(){
         $(".articleBox").toggleClass("articleBoxExpand");
         $(".variablesOverlay").toggleClass("readArticle");
-        $(".imgContainer, .imgOverlay").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
+        // $(".imgContainer, .imgOverlay").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
+        $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
         // $( function() {
         //     $( "#draggable" ).draggable();
         //  } );
