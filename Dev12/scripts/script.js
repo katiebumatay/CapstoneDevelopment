@@ -406,6 +406,13 @@ function captionPlace() {
 //     return articleBoxPlaceClass;
 // }
 
+// function hideVariables(callback) {
+//     $(".variables-container").removeClass("show");
+//     setTimeout(function(){
+//         callback();
+//     }, 500); 
+// }
+
 
 function addVariables() {
 
@@ -453,7 +460,8 @@ function activateOverlay() {
         $(".sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
         $(".exitOverlay").addClass("show");
         // $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
-         $(".variables-container, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
+        // $(".variables-container, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
+        $(".variables-container").addClass("show variablesToFront");
         $("body").addClass("stopScroll");
         // $(".imgOverlay, .phraseHeading").addClass("resizeElement");
         // $(".variablesOverlay").removeClass("stopScroll");
@@ -470,7 +478,8 @@ function deactivateOverlay() {
     $(".sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
     $(".exitOverlay").removeClass("show");
     // $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
-    $(".variables-container, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
+    // $(".variables-container, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
+    $(".variables-container").removeClass("show variablesToFront");
     $("body").removeClass("stopScroll");
     // $(".imgOverlay, .phraseHeading").removeClass("resizeElement");
     // $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
@@ -685,16 +694,22 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
         wordCount = thisPhrase.split(" ").length;
 
         addVariables();
-        $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+        // $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+        $(".variables-container").toggleClass("show");
         $("body").toggleClass("stopScroll");
     });
 
 
     $(".phrase").mouseleave(function(){
         if (clicked == false) {
-            removeVariables();
-            $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+            // $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
+            $(".variables-container").toggleClass("show");
             $("body").toggleClass("stopScroll");
+            // setTimeout(function() {
+            //     $(".variables-container").removeClass("show");
+            // }, 500);
+            removeVariables();
+            // hideVariables(removeVariables());
         }
 
     });
