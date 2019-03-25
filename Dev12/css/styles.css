@@ -1,5 +1,7 @@
 :root {
 	--myImg-background-image: url(../variables/1-pledge/1/1/image.jpg);
+	--introImg1-background-image: url(../images/variables/1.jpg);
+	--introImg2-background-image: url(../images/variables/2.jpg);
 }
 
 html, body{
@@ -514,10 +516,40 @@ h3 {
 	width: 100%;
 	/*position: relative;*/
 	position: fixed;
-	background-color: #161616;
+	/*background-color: #161616;*/
 	transition: 2s;
 /*	overflow-x: hidden;
 	overflow-y: scroll;*/
+}
+
+.intro-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #161616;
+}
+
+.intro-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: 50% 50%;
+	opacity: 0.1;
+	/*mix-blend-mode: multiply;*/
+
+}
+
+#img1 {
+	background-image: var(--introImg1-background-image);
+}
+
+#img2 {
+	background-image: var(--introImg2-background-image);
 }
 
 .title {
