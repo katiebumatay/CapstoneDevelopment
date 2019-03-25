@@ -224,11 +224,9 @@ h3 {
  	margin-left: auto;
  	margin-right: auto;
  	vertical-align: middle;
-	/*background-image: url(../variables/1-pledge/1/1/image.jpg);*/
 	background-image: var(--myImg-background-image);
 	background-repeat: no-repeat;
 	background-size: cover;
-/*	width: 50%;*/
 	background-position: 50% 50%;
 }
 
@@ -537,19 +535,35 @@ h3 {
 	left: 0;
 	width: 100%;
 	height: 100%;
+	opacity: 0;
+	filter: blur(5px);
+	transition: 2s;
 	background-size: cover;
-	background-position: 50% 50%;
-	opacity: 0.1;
+	background-position: center;
 	/*mix-blend-mode: multiply;*/
 
 }
 
 #img1 {
 	background-image: var(--introImg1-background-image);
+	/*background-size: cover;
+	background-position: 50% 50%;*/
 }
 
 #img2 {
 	background-image: var(--introImg2-background-image);
+	/*background-size: cover;
+	background-position: 50% 50%;*/
+}
+
+.fadeInImg {
+	opacity: 0.1;
+	transition: 3s;
+}
+
+.fadeOutImg {
+	opacity: 0.05;
+	transition: 3s;
 }
 
 .title {
@@ -621,6 +635,11 @@ h1 {
 	/*background-color: transparent;*/
 	background-color: #f9f9f9;
 	/*opacity: 0;*/
+	transition: 2s;
+}
+
+.clickedTitleImg {
+	background-color: #f9f9f9;
 	transition: 2s;
 }
 

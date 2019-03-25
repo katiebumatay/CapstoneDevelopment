@@ -43,6 +43,12 @@
     var titleHover = false;
     var titleClicked = false;
 
+    var introImgNum;
+    var img1Num = 1;
+    var img2Num = 2;
+    var in1 = true;
+    var in2 = false;
+
     // var navbarHeight = $('header').outerHeight();
 
 // function animateTitle() {
@@ -127,6 +133,36 @@ function animate() {
     prevNum = tempNum;
 }
 };
+
+function imgFade1() {
+    if (titleClicked == false) {
+        if (in1 == true) {
+            introImgNum = Math.floor(Math.random() * 9) + 1;
+            img1.style.setProperty('--introImg1-background-image', "url(../images/variables/" + introImgNum + ".jpg");
+            in1 = false;
+        }
+        else if (in1 == false) {
+            in1 = true;
+        }
+        $("#img1").toggleClass("fadeInImg").toggleClass("fadeOutImg");
+
+    }
+}
+
+function imgFade2() {
+    if (titleClicked == false) {
+        if (in2 == true) {
+            introImgNum = Math.floor(Math.random() * 9) + 1;
+            img2.style.setProperty('--introImg2-background-image', "url(../images/variables/" + introImgNum + ".jpg");
+            in2 = false;
+        }
+        else if (in2 == false) {
+            in2 = true;
+        }
+        $("#img2").toggleClass("fadeInImg").toggleClass("fadeOutImg");;
+
+    }
+}
 
 // function animate() {
 //     $(".title1, .title2, .title3, .title4").toggleClass("cleartext");
@@ -414,6 +450,9 @@ function captionPlace() {
 // }
 
 
+
+
+
 function addVariables() {
 
     imgMix(); imgWidth(); imgHeight(); imgTop(); imgLeft(); imgPlace(); bgColor();
@@ -503,7 +542,7 @@ function chooseStory() {
     captionLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev12/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html p:first-child";
     $(".caption").load(captionLink);
     loadImage.style.setProperty('--myImg-background-image', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image-small.jpg");
-    $(".imgContainer").addClass("loadImage");
+    // $(".imgContainer").addClass("loadImage");
 }
 
 
@@ -552,6 +591,9 @@ $(document).ready(function() {
     // $("#myTitle").toggleClass("cleartext");
 
     setInterval('animate()', 800);
+
+    setInterval('imgFade1()', 5000);
+    setInterval('imgFade2()', 5000);
 
     var clicked = false;
 
@@ -634,7 +676,9 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             $("body").toggleClass("stopScroll");
             $(".aboutSection").toggleClass("showAbout");
             $(".intro-container").toggleClass("clickedTitle");
+            $(".intro-bg").toggleClass("clickedTitleImg");
             $(".title").toggleClass("titleGrow");
+            $("#img1, #img2").removeClass("fadeInImg").removeClass("fadeOutImg");
             
         }
         // $(".title, h1").toggleClass("clickedTitle");
@@ -651,9 +695,12 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
     $(".smallTitle").click(function() {
         titleClicked = false;
         $(".intro-container").toggleClass("clickedTitle");
+        $(".intro-bg").toggleClass("clickedTitleImg");
         $(".title").toggleClass("titleGrow");
         $(".aboutSection").toggleClass("showAbout");
         $("body").toggleClass("stopScroll");
+        $("#img1").addClass("fadeInImg");
+        $("#img2").addClass("fadeOutImg");
 
         $('html,body').animate({
         scrollTop: $("body").offset().top});
