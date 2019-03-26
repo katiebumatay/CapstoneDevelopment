@@ -502,12 +502,14 @@ function removeVariables() {
 }
 
 function activateOverlay() {
+        $(".variablesOverlay.variablesToFront").addClass(bgColorClass);
         $(".sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
         $(".exitOverlay").addClass("show");
         // $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
         // $(".variables-container, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
-        $(".variables-container").addClass("show variablesToFront");
+        $(".variables-container, .variablesOverlay").addClass("show variablesToFront");
         $("body").addClass("stopScroll");
+        /////////// $(".variablesOverlay.variablesToFront").addClass(bgColorClass);
         // $(".imgOverlay, .phraseHeading").addClass("resizeElement");
         // $(".variablesOverlay").removeClass("stopScroll");
         // $(".variablesOverlayLength").addClass("variablesOverlayVisible").removeClass("stopScroll");
@@ -520,11 +522,12 @@ function activateOverlay() {
 }
 
 function deactivateOverlay() {
+    /////////////////// $(".variablesOverlay.variablesToFront").removeClass(bgColorClass);
     $(".sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
     $(".exitOverlay").removeClass("show");
     // $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
     // $(".variables-container, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
-    $(".variables-container").removeClass("show variablesToFront");
+    $(".variables-container, .variablesOverlay").removeClass("show variablesToFront");
     $("body").removeClass("stopScroll");
     // $(".imgOverlay, .phraseHeading").removeClass("resizeElement");
     // $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
@@ -770,7 +773,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
     $(".phrase").click(function(){
         clicked = true;
         activateOverlay();
-        peekTimer = setInterval('articlePeekAnimate()', 2000);
+        /////////// peekTimer = setInterval('articlePeekAnimate()', 1500);
 
     });
 
@@ -779,7 +782,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
         clicked = false;
         removeVariables();
         deactivateOverlay();
-        clearInterval(peekTimer);
+        /////// clearInterval(peekTimer);
         // $('html,body').animate({
         // scrollTop: $(".variables-container").offset().top},
         // 'slow');

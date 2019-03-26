@@ -98,15 +98,15 @@ h4 {
 	left: 20px;
 	margin: 0;
 	/*z-index: 11; ---- stays on clicked overlay ----- */
-	z-index: 10;
+	z-index: 11;
 	cursor: pointer;
 	background-color: transparent;
 }
 
 h3 {
 	font-weight: bold;
-	font-size: 18pt;
-	line-height: 14pt;
+	font-size: 16pt;
+	line-height: 12pt;
 	text-align: left;
 	margin: 0;
 }
@@ -124,7 +124,8 @@ h3 {
 	width: 100vw;
 	height: 100vh;
 	overflow: scroll;
-	background-color: white;
+	background-color: transparent;
+	overflow: hidden;
 	/*transition: opacity 0.5s;*/
 	/*transition: 0.5s;*/
 }
@@ -132,11 +133,26 @@ h3 {
 .variablesOverlay {
 	cursor: default;
 	/*position: relative;*/
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background-color: #f9f9f9;
+	position: relative;
+	width: calc(100% - 80px);
+	height: calc(100% - 80px);
+	top: 40px;
+	left: 40px;
+	overflow: visible;
+	/*background-color: #f9f9f9;*/
+	/*background-color: blue;*/
 	/*transition: opacity 0.5s;*/
+}
+
+.variablesToFront {
+	z-index: 10;
+	/*background-color: yellow;*/
+}
+
+.variablesOverlay.variablesToFront {
+	transition: 0.5s;
+	background-color: #eeeeee;
+	/*opacity: 0.2;*/
 }
 
 /*.variablesOverlayLength {
@@ -205,13 +221,13 @@ h3 {
 
 .imgContainer {
 	z-index: 0;
-	position: fixed;
+	position: absolute;
 	width: 30vw;
 	height: 30vh;
 	background-color: blue;
 /*	opacity: 0;*/
-	top: 0;
-	left: 0;
+	top: 0%;
+	left: 0%;
 	/*background-blend-mode: screen;*/
 	/*resize: both;*/
 }
@@ -233,7 +249,7 @@ h3 {
 .imgOverlay {
 	/*z-index: -5;*/
 	z-index: 1;
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -253,7 +269,7 @@ h3 {
 	height: 100%;
 	overflow: hidden;
 	cursor: pointer;
-	transition: 2s;
+	/*transition: 2s;*/
 }
 
 /*.articleTextScroll {
@@ -267,7 +283,7 @@ h3 {
 	/*left: 100%;*/
 	/*left: calc(100% - 10px);*/
 	width: 20px;
-	transition: 1s;
+	transition: 0.5s;
 }
 
 /*.side {
@@ -446,9 +462,10 @@ h3 {
 	transition: 0.3s;
 }
 */
-.variablesToFront {
+/*.variablesToFront {
 	z-index: 10;
-}
+	background-color: blue;
+}*/
 
 .progressContainer {
 	z-index: 5;
@@ -971,123 +988,123 @@ h2 {
 
 
 .imgPlace-1-1 {
-	transform: translate(5vw, 5vh);
+	transform: translate(5%, 5%);
 }
 
 .imgPlace-1-2 {
-	transform: translate(20vw, 5vh);
+	transform: translate(20%, 5%);
 }
 
 .imgPlace-1-3 {
-	transform: translate(40vw, 5vh);
+	transform: translate(40%, 5%);
 }
 
 .imgPlace-1-4 {
-	transform: translate(60vw, 5vh);
+	transform: translate(60%, 5%);
 }
 
 .imgPlace-2-1 {
-	transform: translate(5vw, 20vh);
+	transform: translate(5%, 20%);
 }
 
 .imgPlace-2-2 {
-	transform: translate(20vw, 20vh);
+	transform: translate(20%, 20%);
 }
 
 .imgPlace-2-3 {
-	transform: translate(40vw, 20vh);
+	transform: translate(40%, 20%);
 }
 
 .imgPlace-2-4 {
-	transform: translate(60vw, 20vh);
+	transform: translate(60%, 20%);
 }
 
 .imgPlace-3-1 {
-	transform: translate(5vw, 40vh);
+	transform: translate(5%, 40%);
 }
 
 .imgPlace-3-2 {
-	transform: translate(20vw, 40vh);
+	transform: translate(20%, 40%);
 }
 
 .imgPlace-3-3 {
-	transform: translate(40vw, 40vh);
+	transform: translate(40%, 40%);
 }
 
 .imgPlace-3-4 {
-	transform: translate(60vw, 40vh);
+	transform: translate(60%, 40%);
 }
 
 .imgPlace-4-1 {
-	transform: translate(5vw, 60vh);
+	transform: translate(5%, 60%);
 }
 
 .imgPlace-4-2 {
-	transform: translate(20vw, 60vh);
+	transform: translate(20%, 60%);
 }
 
 .imgPlace-4-3 {
-	transform: translate(40vw, 60vh);
+	transform: translate(40%, 60%);
 }
 
 .imgPlace-4-4 {
-	transform: translate(60vw, 60vh);
+	transform: translate(60%, 60%);
 }
 
 .phrasePlace-1-1 {
-	transform: translate(10vw, 10vh);
+	transform: translate(10%, 10%);
 }
 
 .phrasePlace-1-2 {
-	transform: translate(30vw, 10vh);
-	/*width: 62vw;*/
+	transform: translate(30%, 10%);
+	/*width: 62%;*/
 }
 
 .phrasePlace-1-3 {
-	transform: translate(50vw, 10vh);
-	/*width: 52vw;*/
+	transform: translate(50%, 10%);
+	/*width: 52%;*/
 }
 
 .phrasePlace-2-1 {
-	transform: translate(10vw, 30vh);
+	transform: translate(10%, 30%);
 }
 
 .phrasePlace-2-2 {
-	transform: translate(30vw, 30vh);
-	/*width: 62vw;*/
+	transform: translate(30%, 30%);
+	/*width: 62%;*/
 }
 
 .phrasePlace-2-3 {
-	transform: translate(50vw, 30vh);
-	/*width: 52vw;*/
+	transform: translate(50%, 30%);
+	/*width: 52%;*/
 }
 
 .phrasePlace-3-1 {
-	transform: translate(10vw, 50vh);
+	transform: translate(10%, 50%);
 }
 
 .phrasePlace-3-2 {
-	transform: translate(30vw, 50vh);
-	/*width: 62vw;*/
+	transform: translate(30%, 50%);
+	/*width: 62%;*/
 }
 
 .phrasePlace-3-3 {
-	transform: translate(50vw, 50vh);
-	/*width: 52vw;*/
+	transform: translate(50%, 50%);
+	/*width: 52%;*/
 }
 
 .phrasePlace-4-1 {
-	transform: translate(10vw, 70vh);
+	transform: translate(10%, 70%);
 }
 
 .phrasePlace-4-2 {
-	transform: translate(30vw, 70vh);
-	/*width: 72vw;*/
+	transform: translate(30%, 70%);
+	/*width: 72%;*/
 }
 
 .phrasePlace-4-3 {
-	transform: translate(50vw, 70vh);
-	/*width: 52vw;*/
+	transform: translate(50%, 70%);
+	/*width: 52%;*/
 }
 
 .phraseWidth1 {
@@ -1497,83 +1514,83 @@ h2 {
 
 
 .readArticle .imgPlace-1-1 {
-	transform: translate(5vw, 5vh);
+	transform: translate(5%, 5%);
 	transition: 0.5s;
 }
 
 .readArticle .imgPlace-1-2 {
-	transform: translate(5vw, 5vh);
+	transform: translate(5%, 5%);
 	transition: 0.5s;
 }
 
 .readArticle .imgPlace-1-3 {
-	transform: translate(5vw, 5vh);
+	transform: translate(5%, 5%);
 	transition: 0.5s;
 }
 
 .readArticle .imgPlace-1-4 {
-	transform: translate(5vw, 5vh);
+	transform: translate(5%, 5%);
 	transition: 0.5s;
 }
 
 .readArticle .imgPlace-2-1 {
-	transform: translate(5vw, 20vh);
+	transform: translate(5%, 20%);
 	transition: 0.5s;
 }
 
 .readArticle .imgPlace-2-2 {
-	transform: translate(5vw, 20vh);
+	transform: translate(5%, 20%);
 	transition: 0.5s;
 }
 
 .readArticle .imgPlace-2-3 {
-	transform: translate(5vw, 20vh);
+	transform: translate(5%, 20%);
 	transition: 0.5s;
 }
 
 .readArticle .imgPlace-2-4 {
-	transform: translate(5vw, 20vh);
+	transform: translate(5%, 20%);
 	transition: 0.5s;
 }
 
 
 .readArticle .imgPlace-3-1 {
-	transform: translate(5vw, 40vh);
+	transform: translate(5%, 40%);
 	transition: 0.5s;
 }
 
 .readArticle .imgPlace-3-2 {
-	transform: translate(5vw, 40vh);
+	transform: translate(5%, 40%);
 	transition: 0.5s;
 }
 
 .readArticle .imgPlace-3-3 {
-	transform: translate(5vw, 40vh);
+	transform: translate(5%, 40%);
 	transition: 0.5s;
 }
 
 .readArticle .imgPlace-3-4 {
-	transform: translate(5vw, 40vh);
+	transform: translate(5%, 40%);
 	transition: 0.5s;
 }
 
 .readArticle .imgPlace-4-1 {
-	transform: translate(5vw, 60vh);
+	transform: translate(5%, 60%);
 	transition: 0.5s;
 }
 
 .readArticle .imgPlace-4-2 {
-	transform: translate(5vw, 60vh);
+	transform: translate(5%, 60%);
 	transition: 0.5s;
 }
 
 .readArticle .imgPlace-4-3 {
-	transform: translate(5vw, 60vh);
+	transform: translate(5%, 60%);
 	transition: 0.5s;
 }
 
 .readArticle .imgPlace-4-4 {
-	transform: translate(5vw, 60vh);
+	transform: translate(5%, 60%);
 	transition: 0.5s;
 }
 

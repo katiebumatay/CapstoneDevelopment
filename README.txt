@@ -22,4 +22,4 @@ Dev10: tried to implement full page -- didn't work so far (3/19 went back to dev
 
 Dev 11: tried to optimize by using transform translate instead of recalculating top and left -- struggle bc can't do 2 separate transforms on same element (3/19 went back to dev9) --> deleted folder and reduplicated dev9 to dev11 (3/20) --> Successfully changed image and phrase variable placement to transform translate. More colors. Max and min width for section text. Change the way articles appear with side panel expand and scroll. allow user to drag phrase out of the way of article.
 
-Dev12: put imgOverlay div within imgContainer div. slow down fade in of variables on hover. title sequence image fading.
+Dev12: put imgOverlay div within imgContainer div. slow down fade in of variables on hover. title sequence image fading. animated articleBoxPeek.
