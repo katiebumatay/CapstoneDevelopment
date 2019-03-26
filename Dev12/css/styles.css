@@ -253,6 +253,7 @@ h3 {
 	height: 100%;
 	overflow: hidden;
 	cursor: pointer;
+	transition: 2s;
 }
 
 /*.articleTextScroll {
@@ -266,7 +267,7 @@ h3 {
 	/*left: 100%;*/
 	/*left: calc(100% - 10px);*/
 	width: 20px;
-	transition: 0.5s;
+	transition: 1s;
 }
 
 /*.side {
@@ -558,12 +559,12 @@ h3 {
 
 .fadeInImg {
 	opacity: 0.1;
-	transition: 3s;
+	transition: 5s;
 }
 
 .fadeOutImg {
 	opacity: 0.05;
-	transition: 3s;
+	transition: 5s;
 }
 
 .title {
