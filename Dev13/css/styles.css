@@ -365,15 +365,23 @@ h3 {
 }*/
 
 
-.articlePreview {
+.readMore {
 /*	z-index: 20;*/
-	/*font-size: 12pt;*/
+	margin-right: 10px;
+	text-align: right;
+	font-family: Heebo, sans-serif;
+	font-size: 10pt;
+	font-style: italic;
 	/*position: absolute;*/
 	bottom: 100%;
 	/*color: black;*/
 	/*background-color: yellow;*/
 	opacity: 1;
 	visibility: visible;
+}
+
+.readArticle .readMore {
+	visibility: hidden;
 }
 
 .caption {
@@ -736,6 +744,16 @@ h2 {
 	font-family: Heebo, sans-serif;
 	font-size: 11pt;
 	line-height: 1.5em;
+}
+
+.tellScroll {
+	/*font-family: Heebo, sans-serif;*/
+	font-size: 14pt;
+	/*font-style: italic;*/
+	position: absolute;
+	bottom: 30px;
+	cursor: pointer;
+	/*color: #dddddd;*/
 }
 
 .colophon {

@@ -482,6 +482,7 @@ function addVariables() {
     $(".caption").addClass(captionColorClass).addClass(captionPlaceClass);
     // $(".articleBox").addClass(articleBoxPlaceClass);
     $(".fa-sort-up").addClass(textColorClass);
+    $(".readMore").addClass(textColorClass);
     // $("h5").addClass(phraseFontClass);
 }
 
@@ -499,6 +500,7 @@ function removeVariables() {
         $(".caption").removeClass(captionColorClass).removeClass(captionPlaceClass);
         // $(".articleBox").removeClass(articleBoxPlaceClass);
          $(".fa-sort-up").removeClass(textColorClass);
+         $(".readMore").removeClass(textColorClass);
         // $("h5").removeClass(phraseFontClass);
 
 
@@ -711,6 +713,12 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
         // $(".aboutSection").toggleClass("showAbout");
         // $(".intro-container").toggleClass("clickedTitle");
         // $(".title").toggleClass("titleGrow");
+    });
+
+    $(".tellScroll").click(function(){
+        $('html,body').animate({
+        scrollTop: $("#pledgeSection").offset().top}, 'slow');
+        // $("#pledgeSection").scrollTop(0);
     });
 
     $(".smallTitle").click(function() {
