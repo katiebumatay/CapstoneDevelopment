@@ -525,6 +525,8 @@ function activateOverlay() {
 
 }
 
+
+
 function deactivateOverlay() {
     /////////////////// $(".variablesOverlay.variablesToFront").removeClass(bgColorClass);
     $(".sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
@@ -546,6 +548,12 @@ function deactivateOverlay() {
      $(".articleBox").scrollTop(0);
      // $(".phraseHeadingContainer").removeClass("dragMe");
 
+}
+
+
+function tempToggleVariables() {
+    $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgHeightClass).toggleClass(imgPlaceClass).toggleClass(bgColorClass);
+    $(".caption").toggleClass(captionColorClass).toggleClass(captionPlaceClass);
 }
 
 function chooseStory() {
@@ -801,6 +809,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
     $(".articleBox").click(function(){
         $(".articleBox").toggleClass("articleBoxExpand");
         $(".variablesOverlay").toggleClass("readArticle");
+        tempToggleVariables();
         // $(".imgContainer, .imgOverlay").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
         $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
         // $( function() {
