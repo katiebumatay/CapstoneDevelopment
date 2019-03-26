@@ -168,6 +168,9 @@ function imgFade2() {
 
 function articlePeekAnimate() {
     $(".articleBox").toggleClass("articleBoxPeek");
+
+    // $(".articleBox").animate({width: "20px"}, 500).animate({width: "0px"}, 500);
+    // console.log("run article box animation");
 }
 
 // function animate() {
@@ -516,6 +519,7 @@ function activateOverlay() {
         // $(".articleContainer").addClass("articleOverlayVisible");
 
         // $(".articleBox").animate({width: "(10px)"}, 100);
+        //////// $(".articleBox").addClass("articleBoxPeek");
         $(".articleBox").addClass("articleBoxPeek");
         // $(".phraseHeadingContainer").addClass("dragMe");
 
