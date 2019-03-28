@@ -197,7 +197,7 @@ h3 {
 
 .articleText {
 	width: calc(45vw - 60px);
-	position: absolute;
+	/*position: absolute;*/
 	/*visibility: hidden;*/
 	margin: 60px 30px 30px 30px;
 	/*margin-top: 100vh;*/
@@ -213,6 +213,19 @@ h3 {
 	overflow: scroll;
 	/*padding-top: 50%;*/
 }
+
+.archiveLink {
+	/*position: absolute;*/
+	display: block;
+	/*bottom: 0;*/
+	margin: 10px;
+	text-align: right;
+	font-family: Heebo, sans-serif;
+	font-size: 10pt;
+	font-style: italic;
+
+}
+
 
 .articleOverlayVisible {
 	visibility: visible;
@@ -377,11 +390,12 @@ h3 {
 	/*color: black;*/
 	/*background-color: yellow;*/
 	opacity: 1;
-	visibility: visible;
+	transition: 0.5s;
 }
 
 .readArticle .readMore {
-	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
 }
 
 .caption {

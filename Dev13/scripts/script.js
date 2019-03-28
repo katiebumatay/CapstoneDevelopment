@@ -482,7 +482,7 @@ function addVariables() {
     $(".caption").addClass(captionColorClass).addClass(captionPlaceClass);
     // $(".articleBox").addClass(articleBoxPlaceClass);
     $(".fa-sort-up").addClass(textColorClass);
-    $(".readMore").addClass(textColorClass);
+    $(".readMore, a").addClass(textColorClass);
     // $("h5").addClass(phraseFontClass);
 }
 
@@ -500,7 +500,7 @@ function removeVariables() {
         $(".caption").removeClass(captionColorClass).removeClass(captionPlaceClass);
         // $(".articleBox").removeClass(articleBoxPlaceClass);
          $(".fa-sort-up").removeClass(textColorClass);
-         $(".readMore").removeClass(textColorClass);
+         $(".readMore, a").removeClass(textColorClass);
         // $("h5").removeClass(phraseFontClass);
 
 
@@ -820,6 +820,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
         tempToggleVariables();
         // $(".imgContainer, .imgOverlay").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
         $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
+        $(".articleBox").scrollTop(0);
         // $( function() {
         //     $( "#draggable" ).draggable();
         //  } );
