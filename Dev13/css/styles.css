@@ -1671,6 +1671,19 @@ h2 {
 }
 
 
+.variablesToFront .phraseSize1 {
+	transition: 0.5s;
+}
+
+.variablesToFront .phraseSize2 {
+	transition: 0.5s;
+}
+
+.variablesToFront .phraseSize3 {
+	transition: 0.5s;
+}
+
+
 
 
 
@@ -1827,6 +1840,19 @@ h2 {
 		width: 100%;
 		height: 40%;
 	}
+
+	.phraseSizeTemp {
+		font-size: 4em;
+		line-height: 1.1em;
+		transition: 0.5s;
+	}
+
+	.phrasePlaceTemp {
+		/*transform: translate(0%,0%);*/
+		/*bottom: 60%;*/
+		transition: 0.5s;
+	}
+
 
 
 

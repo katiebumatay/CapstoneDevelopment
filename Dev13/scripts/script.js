@@ -12,6 +12,8 @@
     var pW; var phraseWidthClass;
     var phrasePlaceClass;
     var pS; var phraseSizeClass;
+    var phraseSizeTempClass = "phraseSizeTemp";
+    var phrasePlaceTempClass = "phrasePlaceTemp";
     var pC; var phraseColorClass;
     var pF; var phraseFontClass;
     var fW; var fontWeightClass;
@@ -545,6 +547,8 @@ function deactivateOverlay() {
      $(".variablesOverlay").removeClass("readArticle");
      // $(".imgContainer, .imgOverlay").removeClass(imgWidthTempClass);
      $(".imgContainer").removeClass(imgWidthTempClass);
+     $(".phraseHeading").removeClass(phraseSizeTempClass);
+     $(".phraseHeadingContainer").removeClass(phrasePlaceTempClass);
      // $(".articleText").animate({
      //    scrollTop: $(".articleText").offset().top});
      $(".articleBox").scrollTop(0);
@@ -554,8 +558,12 @@ function deactivateOverlay() {
 
 
 function tempToggleVariables() {
-    $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgHeightClass).toggleClass(imgPlaceClass).toggleClass(bgColorClass);
+    $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgHeightClass).toggleClass(imgPlaceClass).toggleClass(bgColorClass).toggleClass(imgWidthTempClass);
     $(".caption").toggleClass(captionColorClass).toggleClass(captionPlaceClass);
+    // $(".phraseHeading").toggleClass(phraseSizeClass);
+    $(".phraseHeading").toggleClass(phraseSizeClass).toggleClass(phraseSizeTempClass);
+    $(".phraseHeadingContainer").toggleClass(phrasePlaceClass).toggleClass(phrasePlaceTempClass);
+    // $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
 }
 
 function chooseStory() {
@@ -819,7 +827,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
         $(".variablesOverlay").toggleClass("readArticle");
         tempToggleVariables();
         // $(".imgContainer, .imgOverlay").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
-        $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
+        // $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
         $(".articleBox").scrollTop(0);
         // $( function() {
         //     $( "#draggable" ).draggable();
