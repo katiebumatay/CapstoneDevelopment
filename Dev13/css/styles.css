@@ -44,18 +44,15 @@ html, body{
 	color: #161616;
 	line-height: 1.3em;
 }*/
-
+/*
 header {
 	z-index: 10;
     background: transparent;
     height: 40px;
     position: fixed;
-    /*top: 0;
-    right: 0;*/
     top: 30%;
     left: 0px;
     transition: top 0.2s ease-in-out;
-    /*width: 50%;*/
     width: 20px;
     cursor: pointer;
     margin-top: 15px;
@@ -73,24 +70,20 @@ header {
 
 .circle:hover {
 	transform: scale(1.5);
-	/*transition: 0.2s;*/
 }
 
 h4 {
 	float: right;
-	/*display: inline-block;*/
 	margin-right: 20px;
 	text-align: right;
 	color: #cccccc;
 	font-size: 14pt;
 	margin-top: 20px;
-/*	font-weight: normal;*/
-/*	font-style: italic;*/
 }
 
 .nav-up {
     top: -50px;
-}
+}*/
 
 .smallTitle {
 	position: fixed;
@@ -123,7 +116,7 @@ h3 {
 	opacity: 0;
 	width: 100vw;
 	height: 100vh;
-	overflow: scroll;
+/*	overflow: scroll;*/
 	background-color: transparent;
 	overflow: hidden;
 	/*transition: opacity 0.5s;*/
@@ -170,9 +163,8 @@ h3 {
 	/*background-color: red;*/
 }
 
-.articleContainer {
+/*.articleContainer {
 	position: absolute;
-/*	position: relative;*/
 	width: 50%;
 	left: 10%;
 	z-index: 10;
@@ -186,8 +178,7 @@ h3 {
 	padding-left: 30px;
 	padding-bottom: 50px;
 	box-sizing: content-box;
-	/*cursor: url("../images/exit.png"), auto;*/
-}
+}*/
 
 /*.articleText {
 	margin-top: 60%;
@@ -584,8 +575,7 @@ h3 {
 	position: fixed;
 	/*background-color: #161616;*/
 	transition: 2s;
-/*	overflow-x: hidden;
-	overflow-y: scroll;*/
+	overflow: hidden; /* NEED THIS TO STOP X SCROLL */
 }
 
 .intro-bg {
@@ -645,10 +635,12 @@ h3 {
 	left: 0;*/
 	overflow: hidden;
 	transition: 2s;
-	padding-left: 20%;
+/*	padding-left: 20%;
 	padding-top: 10%;
 	padding-bottom: 10%;
-	padding-right: 10%;
+	padding-right: 10%;*/
+	height: 100%;
+	width: 100%;
 	min-width: 520px;
 }
 
@@ -668,7 +660,8 @@ h3 {
 
 h1 {
 	background-color: transparent;
-	/*z-index: -5;*/
+	position: absolute;
+	z-index: 10;
 	cursor: pointer;
 	/*position: sticky;*/
 	/*position: fixed;*/
@@ -686,7 +679,7 @@ h1 {
 }
 
 .titleGrow {
-	transform: scale(2,2);
+	transform: scale(1.5,1.5);
 	transition: 2s;
 	transition-timing-function: ease;
 }
@@ -724,11 +717,12 @@ h1 {
 .aboutSection {
 	opacity: 0;
 	position: relative;
-	left: 55%;
+	width: 100%;
 	top: 0%;
 	height: 100vh;
 	cursor: default;
 	margin-left: 0;
+	overflow-x: hidden;
 	/*width: 30%;*/
 	/*transition: 2s;*/
 }
@@ -736,6 +730,7 @@ h1 {
 .aboutTextContainer {
 	position: absolute;
 	margin-top: 10%;
+	left: 55%;
 	width: 30%;
 }
 
@@ -1581,7 +1576,7 @@ h2 {
 }*/
 
 
-.readArticle .imgPlace-1-1 {
+/*.readArticle .imgPlace-1-1 {
 	transform: translate(0%, 5%);
 	transition: 0.5s;
 }
@@ -1660,7 +1655,7 @@ h2 {
 .readArticle .imgPlace-4-4 {
 	transform: translate(0%, 60%);
 	transition: 0.5s;
-}
+}*/
 
 .variablesToFront .imgWidth1 {
 	transition: 0.5s;
@@ -1672,4 +1667,41 @@ h2 {
 
 .variablesToFront .imgWidth3 {
 	transition: 0.5s;
+}
+
+
+
+
+
+@media screen and (orientation: portrait) {
+
+	html, body{
+		font-size: 28pt;
+		line-height: 1.3em;
+	}
+
+	.smallTitle {
+		position: fixed;
+		top: 30px;
+		left: 36px;
+		margin: 0;
+	}
+
+	h3 {
+		font-weight: bold;
+		font-size: 40pt;
+		line-height: 32pt;
+		text-align: left;
+		margin: 0;
+	}
+
+	.variablesOverlay {
+		width: calc(100% - 160px);
+		height: calc(100% - 160px);
+		top: 80px;
+		left: 80px;
+	}
+
+
+
 }
