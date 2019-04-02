@@ -106,9 +106,10 @@
 
 
 function checkMobile(){
-    if ($(".smallTitle").css("top") == "36px" ){
+    if ($(".variablesOverlay").css("top") == "30px" ){
         isMobile = true;
     }
+    console.log(isMobile);
 };
 
 function animatePhrase() {
@@ -766,6 +767,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
     });
 
     $("#declarationSection .next").click(function(){
+        // console.log("click dec next");
         $('html,body').animate({
         scrollLeft: $("#constitutionSection").offset().left}, 'slow');
     });
@@ -854,7 +856,9 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
     $(".phrase").click(function(){
         clicked = true;
         activateOverlay();
-        peekTimer = setInterval('articlePeekAnimate()', 1000);
+        if (isMobile == false) {
+            peekTimer = setInterval('articlePeekAnimate()', 1000);
+        }
 
     });
 
@@ -863,7 +867,9 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
         clicked = false;
         removeVariables();
         deactivateOverlay();
-        clearInterval(peekTimer);
+        if (isMobile == false) {
+            clearInterval(peekTimer);
+        }
         // $('html,body').animate({
         // scrollTop: $(".variables-container").offset().top},
         // 'slow');
@@ -876,13 +882,17 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
     });
 
     $(".articleBox").click(function(){
-        if (articleOpen == false) {
-            articleOpen = true;
-            clearInterval(peekTimer);
-        }
-        else if (articleOpen == true) {
-            articleOpen = false;
-            peekTimer = setInterval('articlePeekAnimate()', 1000);
+        if (isMobile == false) {
+            if (articleOpen == false) {
+                articleOpen = true;
+                if (isMobile == false) {
+                    clearInterval(peekTimer);
+                }
+            }
+            else if (articleOpen == true) {
+                articleOpen = false;
+                peekTimer = setInterval('articlePeekAnimate()', 1000);
+            }
         }
         $(".articleBox").toggleClass("articleBoxExpand");
         $(".variablesOverlay").toggleClass("readArticle");
