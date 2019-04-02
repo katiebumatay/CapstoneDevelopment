@@ -1844,9 +1844,10 @@ h2 {
 		height: 40%;
 	}
 
-	/*.phrase {
-		text-decoration: underline; 
-	}*/
+	.phrase {
+		/*font-weight: bold;*/
+		text-decoration: underline;
+	}
 /*
 	.phraseSizeTemp {
 		font-size: 4em;
