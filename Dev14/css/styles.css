@@ -14,6 +14,7 @@ html, body{
 	font-size: 14pt;
 	color: #161616;
 	line-height: 1.3em;
+	overflow: hidden;
 /*	min-width: 880px;*/
 }
 
@@ -537,8 +538,8 @@ h3 {
 	position: absolute;
 	z-index: 10;
 	margin: 0;
-	width: 100%;
-	height: 1000%;
+	width: 300%;
+	height: 100%;
 	/*background-color: #f9f9f9;*/
 	background-color: transparent;
 	opacity: 1;
@@ -802,17 +803,48 @@ h2 {
 
 
 .section {
+	display: inline-block;
 	z-index: 5;
 	position: relative;
-	height: 200vh;
+	height: 100vh;
 	width: 100vw;
+	float: left;
+}
+
+/*#pledgeSection {
+	background-color: blue;
+}
+
+#declarationSection {
+	background-color: red;
+}
+
+
+#constitutionSection {
+	background-color: yellow;
+}*/
+
+.next {
+	position: absolute;
+	right: 30px;
+	top: calc(30vh + 14pt);
+	cursor: pointer;
+	color: #bbbbbb;
+}
+
+.previous {
+	position: absolute;
+	left: 30px;
+	top: calc(30vh + 14pt);
+	cursor: pointer;
+	color: #bbbbbb;
 }
 
 .sectionTextContainer {
 	cursor: default;
-	/*position: absolute;*/
-	margin-top: 40vh;
-	position: sticky;
+	position: absolute;
+/*	margin-top: 40vh;*/
+	/*position: sticky;*/
 	opacity: 1;
 	z-index: 5;
 	left: 20vw;
@@ -1818,9 +1850,9 @@ h2 {
 	}
 
 	.tellScroll {
-		font-size: 40pt;
 		bottom: 80px;
-		left: 10%;
+		/*left: 10%;*/
+		color: #bbbbbb;
 	}
 
 	.sectionTextContainer {

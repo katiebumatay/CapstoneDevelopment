@@ -533,7 +533,7 @@ function removeVariables() {
 
 function activateOverlay() {
         $(".variablesOverlay.variablesToFront").addClass(bgColorClass);
-        $(".sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
+        $(".section, .sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
         $(".exitOverlay").addClass("show");
         // $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
         // $(".variables-container, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
@@ -556,7 +556,7 @@ function activateOverlay() {
 
 function deactivateOverlay() {
     /////////////////// $(".variablesOverlay.variablesToFront").removeClass(bgColorClass);
-    $(".sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
+    $(".section, .sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
     $(".exitOverlay").removeClass("show");
     // $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
     // $(".variables-container, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
@@ -647,6 +647,8 @@ $(document).ready(function() {
 
     $('html,body').animate({
         scrollTop: $("body").offset().top});
+    $('html,body').animate({
+        scrollLeft: $("body").offset().left});
 
     // $("#myTitle").toggleClass("cleartext");
 
@@ -758,6 +760,26 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
         // $("#pledgeSection").scrollTop(0);
     });
 
+    $("#pledgeSection .next").click(function(){
+        $('html,body').animate({
+        scrollLeft: $("#declarationSection").offset().left}, 'slow');
+    });
+
+    $("#declarationSection .next").click(function(){
+        $('html,body').animate({
+        scrollLeft: $("#constitutionSection").offset().left}, 'slow');
+    });
+
+    $("#declarationSection .previous").click(function(){
+        $('html,body').animate({
+        scrollLeft: $("#pledgeSection").offset().left}, 'slow');
+    });
+
+    $("#constitutionSection .previous").click(function(){
+        $('html,body').animate({
+        scrollLeft: $("#declarationSection").offset().left}, 'slow');
+    });
+
     $(".smallTitle").click(function() {
         titleClicked = false;
         $(".intro-container").toggleClass("clickedTitle");
@@ -770,6 +792,8 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
 
         $('html,body').animate({
         scrollTop: $("body").offset().top});
+        $('html,body').animate({
+        scrollLeft: $("body").offset().left});
     });
 
 
