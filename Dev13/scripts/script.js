@@ -185,7 +185,7 @@ function imgFade2() {
 }
 
 function articlePeekAnimate() {
-    console.log("bounce");
+    // console.log("bounce");
     $(".articleBox").toggleClass("articleBoxBounce");
 
     // $(".articleBox").animate({width: "20px"}, 500).animate({width: "0px"}, 500);
