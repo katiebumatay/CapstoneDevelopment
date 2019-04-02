@@ -53,6 +53,8 @@
 
     var peekTimer;
 
+    var isMobile = false;
+
     // var navbarHeight = $('header').outerHeight();
 
 // function animateTitle() {
@@ -99,6 +101,18 @@
 //         console.log("affect title4");
 //     }
 // };
+
+
+function checkMobile(){
+    if ($(".smallTitle").css("top") == "36px" ){
+        isMobile = true;
+    }
+};
+
+function animatePhrase() {
+    console.log("animate phrase");
+    // $(".sectionText .phrase").animate({fontSize: "38pt"}).animate({fontSize: "34pt"});
+};
 
 function animate() {
     if (titleHover == true) {
@@ -547,8 +561,8 @@ function deactivateOverlay() {
      $(".variablesOverlay").removeClass("readArticle");
      // $(".imgContainer, .imgOverlay").removeClass(imgWidthTempClass);
      $(".imgContainer").removeClass(imgWidthTempClass);
-     $(".phraseHeading").removeClass(phraseSizeTempClass);
-     $(".phraseHeadingContainer").removeClass(phrasePlaceTempClass);
+     //////////$(".phraseHeading").removeClass(phraseSizeTempClass);
+     ///////////$(".phraseHeadingContainer").removeClass(phrasePlaceTempClass);
      // $(".articleText").animate({
      //    scrollTop: $(".articleText").offset().top});
      $(".articleBox").scrollTop(0);
@@ -561,8 +575,8 @@ function tempToggleVariables() {
     $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgHeightClass).toggleClass(imgPlaceClass).toggleClass(bgColorClass).toggleClass(imgWidthTempClass);
     $(".caption").toggleClass(captionColorClass).toggleClass(captionPlaceClass);
     // $(".phraseHeading").toggleClass(phraseSizeClass);
-    $(".phraseHeading").toggleClass(phraseSizeClass).toggleClass(phraseSizeTempClass);
-    $(".phraseHeadingContainer").toggleClass(phrasePlaceClass).toggleClass(phrasePlaceTempClass);
+    /////////$(".phraseHeading").toggleClass(phraseSizeTempClass);
+    ///////////$(".phraseHeadingContainer").toggleClass(phrasePlaceTempClass);
     // $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
 }
 
@@ -615,6 +629,12 @@ function hasScrolled() {
 
 
 $(document).ready(function() {
+
+    checkMobile();
+
+    // if (isMobile == true) {
+    //     setInterval('animatePhrase()', 1000);
+    // }
 
     $('html,body').animate({
         scrollTop: $("body").offset().top});
