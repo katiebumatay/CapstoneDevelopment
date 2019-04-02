@@ -566,7 +566,7 @@ function deactivateOverlay() {
     // $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
     // $(".articleContainer").removeClass("articleOverlayVisible");
 
-    $(".articleBox").removeClass("articleBoxPeek").removeClass("articleBoxExpand");
+    $(".articleBox").removeClass("articleBoxPeek").removeClass("articleBoxExpand").removeClass("articleBoxBounce");
      $(".variablesOverlay").removeClass("readArticle");
      // $(".imgContainer, .imgOverlay").removeClass(imgWidthTempClass);
      $(".imgContainer").removeClass(imgWidthTempClass);
