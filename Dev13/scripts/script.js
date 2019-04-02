@@ -55,6 +55,8 @@
 
     var isMobile = false;
 
+    var articleOpen = false;
+
     // var navbarHeight = $('header').outerHeight();
 
 // function animateTitle() {
@@ -183,11 +185,18 @@ function imgFade2() {
 }
 
 function articlePeekAnimate() {
-    $(".articleBox").toggleClass("articleBoxPeek");
+    console.log("bounce");
+    $(".articleBox").toggleClass("articleBoxBounce");
 
     // $(".articleBox").animate({width: "20px"}, 500).animate({width: "0px"}, 500);
     // console.log("run article box animation");
 }
+
+// function articlePeekAnimate2() {
+//     // $(".articleBoxPeek").animate({height: "30px"}, 500);
+//     // $(".articleBoxPeek").animate({height: "20px"}, 500);
+//     $(".articleBoxPeek").animate({height: "50px",}, 500).animate({height: "20px",}, 500);
+// }
 
 // function animate() {
 //     $(".title1, .title2, .title3, .title4").toggleClass("cleartext");
@@ -821,7 +830,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
     $(".phrase").click(function(){
         clicked = true;
         activateOverlay();
-        /////////// peekTimer = setInterval('articlePeekAnimate()', 1500);
+        peekTimer = setInterval('articlePeekAnimate()', 1000);
 
     });
 
@@ -830,7 +839,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
         clicked = false;
         removeVariables();
         deactivateOverlay();
-        /////// clearInterval(peekTimer);
+        clearInterval(peekTimer);
         // $('html,body').animate({
         // scrollTop: $(".variables-container").offset().top},
         // 'slow');
@@ -843,6 +852,14 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
     });
 
     $(".articleBox").click(function(){
+        if (articleOpen == false) {
+            articleOpen = true;
+            clearInterval(peekTimer);
+        }
+        else if (articleOpen == true) {
+            articleOpen = false;
+            peekTimer = setInterval('articlePeekAnimate()', 1000);
+        }
         $(".articleBox").toggleClass("articleBoxExpand");
         $(".variablesOverlay").toggleClass("readArticle");
         tempToggleVariables();

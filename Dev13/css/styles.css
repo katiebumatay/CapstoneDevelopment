@@ -293,7 +293,13 @@ h3 {
 	/*left: calc(100% - 10px);*/
 	/*width: 20px;*/
 	height: 20px;
-	transition: 0.5s;
+	transition: 0.7s;
+}
+
+.articleBoxBounce {
+	height: 30px;
+	/*opacity: 0.5;*/
+	transition: 0.3s;
 }
 
 /*.side {
@@ -674,10 +680,8 @@ h1 {
 	/*text-align: center;*/
 	text-align: left;
 	transition: 0s;
-	padding-top: 20vh;
-	padding-left: 20vw;
-	top:0;
-	left: 0;
+	top: 20%;
+	left: 20%;
 }
 
 .titleGrow {
@@ -1789,8 +1793,8 @@ h2 {
 		margin: auto;
 		font-size: 5em;
 		line-height: 0.8em;
-		padding-top: 40vh;
-		padding-left: 10vw;
+		top: 40%;
+		left: 10%;
 	}
 
 	.titleGrow {
