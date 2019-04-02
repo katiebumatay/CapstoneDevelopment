@@ -767,7 +767,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
     });
 
     $("#declarationSection .next").click(function(){
-        // console.log("click dec next");
+        console.log("declaration next click");
         $('html,body').animate({
         scrollLeft: $("#constitutionSection").offset().left}, 'slow');
     });
