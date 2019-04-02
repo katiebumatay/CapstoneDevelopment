@@ -761,25 +761,41 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
         // $("#pledgeSection").scrollTop(0);
     });
 
+    // $("#pledgeSection .next").click(function(){
+    //     $('html,body').animate({
+    //     scrollLeft: $("#declarationSection").offset().left}, 'slow');
+    // });
+
+    // $("#declarationSection .next").click(function(){
+    //     console.log("declaration next click");
+    //     $('html,body').animate({
+    //     scrollLeft: $("#constitutionSection").offset().left}, 'slow');
+    // });
+
+    // $("#declarationSection .previous").click(function(){
+    //     $('html,body').animate({
+    //     scrollLeft: $("#pledgeSection").offset().left}, 'slow');
+    // });
+
+    // $("#constitutionSection .previous").click(function(){
+    //     $('html,body').animate({
+    //     scrollLeft: $("#declarationSection").offset().left}, 'slow');
+    // });
+
     $("#pledgeSection .next").click(function(){
-        $('html,body').animate({
-        scrollLeft: $("#declarationSection").offset().left}, 'slow');
+        $(".page-container").addClass("view2");
     });
 
     $("#declarationSection .next").click(function(){
-        console.log("declaration next click");
-        $('html,body').animate({
-        scrollLeft: $("#constitutionSection").offset().left}, 'slow');
+        $(".page-container").addClass("view3");
     });
 
     $("#declarationSection .previous").click(function(){
-        $('html,body').animate({
-        scrollLeft: $("#pledgeSection").offset().left}, 'slow');
+        $(".page-container").removeClass("view2");
     });
 
     $("#constitutionSection .previous").click(function(){
-        $('html,body').animate({
-        scrollLeft: $("#declarationSection").offset().left}, 'slow');
+        $(".page-container").removeClass("view3");
     });
 
     $(".smallTitle").click(function() {
