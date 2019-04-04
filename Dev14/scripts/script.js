@@ -758,6 +758,8 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
     $(".tellScroll").click(function(){
         $('html,body').animate({
         scrollTop: $("#pledgeSection").offset().top}, 'slow');
+        $(".bar").addClass("barShow");
+        $("#pledgeBar").addClass("selected");
         // $("#pledgeSection").scrollTop(0);
     });
 
@@ -783,19 +785,45 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
     // });
 
     $("#pledgeSection .next").click(function(){
-        $(".page-container").addClass("view2");
+        $(".page-container").addClass("view2").removeClass("view1");
+        $("#pledgeBar").removeClass("selected");
+        $("#declarationBar").addClass("selected");
     });
 
     $("#declarationSection .next").click(function(){
-        $(".page-container").addClass("view3");
+        $(".page-container").addClass("view3").removeClass("view2");
+        $("#declarationBar").removeClass("selected");
+        $("#constitutionBar").addClass("selected");
     });
 
     $("#declarationSection .previous").click(function(){
-        $(".page-container").removeClass("view2");
+        $(".page-container").addClass("view1").removeClass("view2");
+        $("#declarationBar").removeClass("selected");
+        $("#pledgeBar").addClass("selected");
     });
 
     $("#constitutionSection .previous").click(function(){
-        $(".page-container").removeClass("view3");
+        $(".page-container").addClass("view2").removeClass("view3");
+        $("#constitutionBar").removeClass("selected");
+        $("#declarationBar").addClass("selected");
+    });
+
+    $("#pledgeBar").click(function(){
+        $(".page-container").addClass("view1").removeClass("view2").removeClass("view3");
+        $("#pledgeBar").addClass("selected");
+        $("#declarationBar, #constitutionBar").removeClass("selected");
+    });
+
+    $("#declarationBar").click(function(){
+        $(".page-container").addClass("view2").removeClass("view1").removeClass("view3");
+        $("#declarationBar").addClass("selected");
+        $("#pledgeBar, #constitutionBar").removeClass("selected");
+    });
+
+     $("#constitutionBar").click(function(){
+        $(".page-container").addClass("view3").removeClass("view1").removeClass("view2");
+        $("#constitutionBar").addClass("selected");
+        $("#pledgeBar, #declarationBar").removeClass("selected");
     });
 
     $(".smallTitle").click(function() {

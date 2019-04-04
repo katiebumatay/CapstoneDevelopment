@@ -35,6 +35,49 @@ html, body{
 
 }
 
+.bar {
+	width: calc(100% - 80px);
+	height: 10px;
+	position: fixed;
+	/*background-color: yellow;*/
+	left: 40px;
+	bottom: 40px;
+	opacity: 0;
+	z-index: 11;
+	/*transition-delay: 1s;*/
+	/*transition-delay: 0.5s;*/
+}
+
+.singleBar {
+	position: relative;
+	width: 32%;
+	height: 100%;
+	margin: auto;
+	float: left;
+	background-color: #eeeeee;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+#pledgeBar {
+	margin-right: 2%;
+}
+
+#declarationBar {
+	margin-right: 2%;
+}
+
+.barShow {
+	/*transition-delay: 1s;*/
+	transition: 1s;
+	opacity: 1;
+}
+
+.selected {
+	transition: 0.5s;
+	background-color: #bbbbbb;
+}
+
 /*.page-container {
 	width: 100%;
 	height:100%;
@@ -93,7 +136,7 @@ h4 {
 	left: 20px;
 	margin: 0;
 	/*z-index: 11; ---- stays on clicked overlay ----- */
-	z-index: 11;
+	z-index: 12;
 	cursor: pointer;
 	background-color: transparent;
 }
@@ -140,7 +183,7 @@ h3 {
 }
 
 .variablesToFront {
-	z-index: 10;
+	z-index: 11;
 	/*background-color: yellow;*/
 }
 
@@ -474,7 +517,7 @@ h3 {
 .exitOverlay {
 	opacity: 0;
 	position: fixed;
-	z-index: 10;
+	z-index: 12;
 /*	opacity: 0;*/
 	padding: 20px;
 	top: 20px;
@@ -822,6 +865,7 @@ h2 {
 	height: 100vh;
 	width: 100vw;
 	float: left;
+	pointer-events: none;
 }
 
 /*#pledgeSection {
@@ -845,6 +889,7 @@ h2 {
 	top: calc(50vh - 48pt - 100px);
 	cursor: pointer;
 	color: #bbbbbb;
+	pointer-events: auto;
 }
 
 .previous {
@@ -855,6 +900,7 @@ h2 {
 	top: calc(50vh - 48pt - 100px);
 	cursor: pointer;
 	color: #bbbbbb;
+	pointer-events: auto;
 }
 
 .fas {
@@ -878,6 +924,7 @@ h2 {
 	/*box-sizing: border-box;*/
 	max-width: 480px;
 	min-width: 364px;
+	pointer-events: auto;
 }
 
 .line {
