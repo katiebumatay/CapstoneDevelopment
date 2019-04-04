@@ -43,7 +43,7 @@ html, body{
 	left: 40px;
 	bottom: 40px;
 	opacity: 0;
-	z-index: 11;
+	z-index: 0;
 	/*transition-delay: 1s;*/
 	/*transition-delay: 0.5s;*/
 }
@@ -164,6 +164,7 @@ h3 {
 /*	overflow: scroll;*/
 	background-color: transparent;
 	overflow: hidden;
+	pointer-events: none;
 	/*transition: opacity 0.5s;*/
 	/*transition: 0.5s;*/
 }
@@ -184,6 +185,7 @@ h3 {
 
 .variablesToFront {
 	z-index: 11;
+	pointer-events: auto;
 	/*background-color: yellow;*/
 }
 
@@ -580,7 +582,7 @@ h3 {
 */
 .page-container {
 	position: absolute;
-	z-index: 10;
+	z-index: 2;
 	margin: 0;
 	width: 300%;
 	height: 100%;
@@ -589,6 +591,7 @@ h3 {
 	opacity: 1;
 	transition: 2s;
 	transition: transform 0.5s;
+	pointer-events: none;
 	/*visibility: visible;*/
 	/*margin-top: -20%;*/
 	left: 0;
