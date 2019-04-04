@@ -44,7 +44,7 @@ html, body{
 	bottom: 40px;
 	opacity: 0;
 	z-index: 0;
-	/*transition-delay: 1s;*/
+/*	transition-delay: 1s;*/
 	/*transition-delay: 0.5s;*/
 }
 
@@ -1810,9 +1810,8 @@ h2 {
 		line-height: 1.3em;
 	}
 
-	.smallTitle {
-		position: fixed;
-		margin: 0;
+	.bar {
+		visibility: hidden;
 	}
 
 	h3 {
@@ -1960,6 +1959,9 @@ h2 {
 		/*font-weight: bold;*/
 		text-decoration: underline;
 	}
+
+/*	.phraseScale {
+	}*/
 
 	.phraseSize1 {
 		font-size: 2.5em;

@@ -114,7 +114,8 @@ function checkMobile(){
 
 function animatePhrase() {
     console.log("animate phrase");
-    // $(".sectionText .phrase").animate({fontSize: "38pt"}).animate({fontSize: "34pt"});
+    // $(".sectionText .phrase").animate({fontSize: "18pt"}).animate({fontSize: "14pt"});
+    $(".sectionText .phrase").toggleClass("blurText");
 };
 
 function animate() {
@@ -827,6 +828,11 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
     });
 
     $(".smallTitle").click(function() {
+        // deactivateOverlay();
+        // if (isMobile == false) {
+        //     clearInterval(peekTimer);
+        // }
+
         titleClicked = false;
         $(".intro-container").toggleClass("clickedTitle");
         $(".intro-bg").toggleClass("clickedTitleImg");
