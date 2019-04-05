@@ -153,6 +153,9 @@ function animate() {
     if (tempNum == 4) {
         $(".title4").toggleClass("cleartext");
     }
+    // if (tempNum == 5) {
+    //     $(".title5").toggleClass("cleartext");
+    // }
     // console.log(tempNum);
     prevNum = tempNum;
 }

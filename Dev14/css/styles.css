@@ -275,7 +275,7 @@ h3 {
 	position: absolute;
 	width: 30vw;
 	height: 30vh;
-	background-color: blue;
+	background-color: white;
 /*	opacity: 0;*/
 	top: 0%;
 	left: 0%;
@@ -744,6 +744,10 @@ h1 {
 	left: 20%;
 }
 
+/*.title5 {
+	font-size: 15vh;
+}
+*/
 .titleGrow {
 	transform: scale(1.5,1.5);
 	transition: 2s;
