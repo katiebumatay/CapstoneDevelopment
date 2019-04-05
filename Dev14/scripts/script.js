@@ -30,6 +30,7 @@
 
     var sec; var phraseNum;
     var v; var numOptions;
+    var i;
     var articleLink;
     var captionLink;
     var imageLink;
@@ -597,7 +598,8 @@ function chooseStory() {
     $(".articleText").load(articleLink);
     captionLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev14/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html p:first-child";
     $(".caption").load(captionLink);
-    loadImage.style.setProperty('--myImg-background-image', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image-small.jpg");
+    i = Math.floor(Math.random() * 2) + 1;
+    loadImage.style.setProperty('--myImg-background-image', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image" + i + "-small.jpg");
     // $(".imgContainer").addClass("loadImage");
 }
 
@@ -989,7 +991,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             // v = Math.floor(Math.random() * 2) + 1;
             sec = "1-pledge";
             phraseNum = "1";
-            numOptions = 4;
+            numOptions = 5;
             chooseStory();
         });
 
@@ -997,7 +999,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             // v = Math.floor(Math.random() * 2) + 1;
             sec = "1-pledge";
             phraseNum = "2";
-            numOptions = 4;
+            numOptions = 5;
             chooseStory();
         });
 

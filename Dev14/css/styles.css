@@ -37,7 +37,7 @@ html, body{
 
 .bar {
 	width: calc(100% - 80px);
-	height: 10px;
+	height: 5px;
 	position: fixed;
 	/*background-color: yellow;*/
 	left: 40px;
