@@ -53,6 +53,7 @@
     var in2 = false;
 
     var peekTimer;
+    var peekTimerOn = false;
 
     var isMobile = false;
 
@@ -909,7 +910,12 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
         clicked = true;
         activateOverlay();
         if (isMobile == false) {
-            peekTimer = setInterval('articlePeekAnimate()', 1000);
+            if (peekTimerOn == false) {
+                console.log("activate peekTimer");
+                peekTimer = setInterval('articlePeekAnimate()', 1000);
+                peekTimerOn = true;
+            }
+            
         }
 
     });
@@ -920,7 +926,11 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
         removeVariables();
         deactivateOverlay();
         if (isMobile == false) {
-            clearInterval(peekTimer);
+            if (peekTimerOn == true) {
+                console.log("clear peekTimer");
+                clearInterval(peekTimer);
+                peekTimerOn = false;
+            }
         }
         // $('html,body').animate({
         // scrollTop: $(".variables-container").offset().top},
@@ -935,15 +945,19 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
 
     $(".articleBox").click(function(){
         if (isMobile == false) {
-            if (articleOpen == false) {
-                articleOpen = true;
-                if (isMobile == false) {
+            // if (articleOpen == false) {
+            //     articleOpen = true;
+            if(peekTimerOn == true) {
+                    console.log("clear peekTimer");
                     clearInterval(peekTimer);
-                }
+                    peekTimerOn = false;
             }
-            else if (articleOpen == true) {
-                articleOpen = false;
+            // else if (articleOpen == true) {
+            else if (peekTimerOn == false) {
+                // articleOpen = false;
+                console.log("activate peekTimer");
                 peekTimer = setInterval('articlePeekAnimate()', 1000);
+                peekTimerOn = true;
             }
         }
         $(".articleBox").toggleClass("articleBoxExpand");
