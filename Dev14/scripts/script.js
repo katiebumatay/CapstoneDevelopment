@@ -1016,7 +1016,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             // v = Math.floor(Math.random() * 2) + 1;
             sec = "1-pledge";
             phraseNum = "2";
-            numOptions = 5;
+            numOptions = 7;
             chooseStory();
         });
 
@@ -1024,7 +1024,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             // v = Math.floor(Math.random() * 2) + 1;
             sec = "1-pledge";
             phraseNum = "3";
-            numOptions = 2;
+            numOptions = 5;
             chooseStory();
         });
 
