@@ -1032,7 +1032,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             // v = Math.floor(Math.random() * 2) + 1;
             sec = "1-pledge";
             phraseNum = "4";
-            numOptions = 2;
+            numOptions = 3;
             chooseStory();
         });
 
