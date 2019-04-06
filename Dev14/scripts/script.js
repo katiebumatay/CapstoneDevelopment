@@ -1040,7 +1040,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             // v = Math.floor(Math.random() * 2) + 1;
             sec = "1-pledge";
             phraseNum = "5";
-            numOptions = 2;
+            numOptions = 7;
             chooseStory();
         });
 
@@ -1048,7 +1048,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             // v = Math.floor(Math.random() * 2) + 1;
             sec = "1-pledge";
             phraseNum = "6";
-            numOptions = 2;
+            numOptions = 6;
             chooseStory();
         });
 
@@ -1056,7 +1056,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             // v = Math.floor(Math.random() * 2) + 1;
             sec = "1-pledge";
             phraseNum = "7";
-            numOptions = 1;
+            numOptions = 4;
             chooseStory();
         });
 
@@ -1064,7 +1064,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             // v = Math.floor(Math.random() * 2) + 1;
             sec = "1-pledge";
             phraseNum = "8";
-            numOptions = 2;
+            numOptions = 6;
             chooseStory();
         });
 
