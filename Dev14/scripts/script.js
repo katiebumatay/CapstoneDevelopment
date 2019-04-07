@@ -1070,7 +1070,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
 
         $(".dec1").mouseenter(function(){
             // v = Math.floor(Math.random() * 2) + 1;
-            sec = "2-pledge";
+            sec = "2-declaration";
             phraseNum = "1";
             numOptions = 5;
             chooseStory();
@@ -1078,7 +1078,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
 
         $(".dec2").mouseenter(function(){
             // v = Math.floor(Math.random() * 2) + 1;
-            sec = "2-pledge";
+            sec = "2-declaration";
             phraseNum = "2";
             numOptions = 5;
             chooseStory();
