@@ -1068,6 +1068,22 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             chooseStory();
         });
 
+        $(".dec1").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "2-pledge";
+            phraseNum = "1";
+            numOptions = 5;
+            chooseStory();
+        });
+
+        $(".dec2").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "2-pledge";
+            phraseNum = "2";
+            numOptions = 5;
+            chooseStory();
+        });
+
 
 
 
