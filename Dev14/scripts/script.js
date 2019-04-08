@@ -1116,6 +1116,34 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             chooseStory();
         });
 
+        $(".const1").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "3-constitution";
+            phraseNum = "1";
+            numOptions = 4;
+            chooseStory();
+        });
+
+
+        $(".const2").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "3-constitution";
+            phraseNum = "2";
+            numOptions = 4;
+            chooseStory();
+        });
+
+
+        $(".const3").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "3-constitution";
+            phraseNum = "3";
+            numOptions = 6;
+            chooseStory();
+        });
+
+
+
 
 
 
