@@ -1084,6 +1084,37 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             chooseStory();
         });
 
+        $(".dec3").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "2-declaration";
+            phraseNum = "3";
+            numOptions = 8;
+            chooseStory();
+        });
+
+        $(".dec4").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "2-declaration";
+            phraseNum = "4";
+            numOptions = 6;
+            chooseStory();
+        });
+
+        $(".dec5").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "2-declaration";
+            phraseNum = "5";
+            numOptions = 5;
+            chooseStory();
+        });
+
+        $(".dec6").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "2-declaration";
+            phraseNum = "6";
+            numOptions = 6;
+            chooseStory();
+        });
 
 
 
