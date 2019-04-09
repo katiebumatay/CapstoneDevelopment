@@ -1150,6 +1150,15 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             chooseStory();
         });
 
+        $(".const5").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "3-constitution";
+            phraseNum = "5";
+            numOptions = 5
+            ;
+            chooseStory();
+        });
+
 
 
 
