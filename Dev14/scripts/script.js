@@ -577,6 +577,9 @@ function deactivateOverlay() {
      $(".variablesOverlay").removeClass("readArticle");
      // $(".imgContainer, .imgOverlay").removeClass(imgWidthTempClass);
      $(".imgContainer").removeClass(imgWidthTempClass);
+     $(".phraseHeading").removeClass("phraseTemp");
+    /////////$(".phraseHeading").toggleClass(phraseSizeTempClass);
+    $(".phraseHeadingContainer").removeClass("phrasePlaceTemp");
      //////////$(".phraseHeading").removeClass(phraseSizeTempClass);
      ///////////$(".phraseHeadingContainer").removeClass(phrasePlaceTempClass);
      // $(".articleText").animate({
@@ -590,9 +593,9 @@ function deactivateOverlay() {
 function tempToggleVariables() {
     $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgHeightClass).toggleClass(imgPlaceClass).toggleClass(bgColorClass).toggleClass(imgWidthTempClass);
     $(".caption").toggleClass(captionColorClass).toggleClass(captionPlaceClass);
-    // $(".phraseHeading").toggleClass(phraseSizeClass);
+    $(".phraseHeading").toggleClass(phraseSizeClass).toggleClass("phraseTemp");
     /////////$(".phraseHeading").toggleClass(phraseSizeTempClass);
-    ///////////$(".phraseHeadingContainer").toggleClass(phrasePlaceTempClass);
+    $(".phraseHeadingContainer").toggleClass(phrasePlaceClass).toggleClass("phrasePlaceTemp");
     // $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
 }
 
