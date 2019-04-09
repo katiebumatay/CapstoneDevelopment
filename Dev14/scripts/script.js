@@ -1154,8 +1154,15 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             // v = Math.floor(Math.random() * 2) + 1;
             sec = "3-constitution";
             phraseNum = "5";
-            numOptions = 5
-            ;
+            numOptions = 5;
+            chooseStory();
+        });
+
+        $(".const6").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "3-constitution";
+            phraseNum = "6";
+            numOptions = 6;
             chooseStory();
         });
 
