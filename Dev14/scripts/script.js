@@ -1175,6 +1175,15 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
         });
 
 
+        $(".const9").mouseenter(function(){
+            // v = Math.floor(Math.random() * 2) + 1;
+            sec = "3-constitution";
+            phraseNum = "9";
+            numOptions = 4;
+            chooseStory();
+        });
+
+
 
 
 
