@@ -13,6 +13,32 @@ html, body{
 /*	min-width: 880px;*/
 }
 
+a {
+	text-decoration: none;
+	color: black;
+}
+
+
+.smallTitle {
+	position: fixed;
+	top: 14px;
+	left: 20px;
+	margin: 0;
+	/*z-index: 11; ---- stays on clicked overlay ----- */
+	z-index: 12;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+h3 {
+	font-family: Baskerville, serif;
+	font-weight: bold;
+	font-size: 16pt;
+	line-height: 12pt;
+	text-align: left;
+	margin: 0;
+}
+
 .header {
 	z-index: 10;
 	padding-left: 40px;
@@ -205,6 +231,12 @@ li:hover {
 	/*transform: translateX(20px);*/
 	font-style: italic;
 }
+
+/*li: active {
+	font-style: italic;
+}
+*/
+
 
 h2 {
 	font-family: Baskerville, serif;
