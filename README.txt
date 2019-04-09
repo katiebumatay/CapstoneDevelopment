@@ -25,3 +25,5 @@ Dev 11: tried to optimize by using transform translate instead of recalculating 
 Dev12: put imgOverlay div within imgContainer div. slow down fade in of variables on hover. title sequence image fading. animated articleBoxPeek. activate container in area smaller than window.
 
 Dev13: add scroll indication to about section. change the way the read article layout appears/animation to it. Add "Read More" indication. start making archive. add media query css for mobile device. add bounce on read more button.
+
+Dev 14: Fill in all content for all sections. add progress bars/buttons. animate phrase on read more instead of drag.

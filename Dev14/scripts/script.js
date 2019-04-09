@@ -673,17 +673,17 @@ $(document).ready(function() {
     // var titleClicked = false;
     var sectionHeaderClicked = false;
 
-$(".draggable").draggable
-    ({  
-        revert: 'valid',
-        // snap: '#droppable',
-        // snapMode: 'corner',
-        // snapTolerance: '22'
-    });
+// $(".draggable").draggable
+//     ({  
+//         revert: 'valid',
+//         // snap: '#droppable',
+//         // snapMode: 'corner',
+//         // snapTolerance: '22'
+//     });
 
-$(".draggable").data({'originalLeft': $(".draggable").css('left'),
-                      'origionalTop': $(".draggable").css('top')
-                     });
+// $(".draggable").data({'originalLeft': $(".draggable").css('left'),
+//                       'origionalTop': $(".draggable").css('top')
+//                      });
 
 
 //     $("#droppable").droppable
@@ -943,9 +943,9 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
         // 'slow');
         $(".articleContainer").scrollTop(0);
 
-        $(".draggable").css({'left': $(".draggable").data('originalLeft'),
-                             'top': $(".draggable").data('origionalTop')}
-                             );
+        // $(".draggable").css({'left': $(".draggable").data('originalLeft'),
+        //                      'top': $(".draggable").data('origionalTop')}
+        //                      );
 
     });
 
