@@ -1056,7 +1056,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             // v = Math.floor(Math.random() * 2) + 1;
             sec = "1-pledge";
             phraseNum = "7";
-            numOptions = 4;
+            numOptions = 5;
             chooseStory();
         });
 
@@ -1072,7 +1072,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             // v = Math.floor(Math.random() * 2) + 1;
             sec = "2-declaration";
             phraseNum = "1";
-            numOptions = 5;
+            numOptions = 6;
             chooseStory();
         });
 
@@ -1170,7 +1170,7 @@ $(".draggable").data({'originalLeft': $(".draggable").css('left'),
             // v = Math.floor(Math.random() * 2) + 1;
             sec = "3-constitution";
             phraseNum = "7";
-            numOptions = 6;
+            numOptions = 7;
             chooseStory();
         });
 
