@@ -595,7 +595,7 @@ function tempToggleVariables() {
     $(".caption").toggleClass(captionColorClass).toggleClass(captionPlaceClass);
     $(".phraseHeading").toggleClass(phraseSizeClass).toggleClass("phraseTemp");
     /////////$(".phraseHeading").toggleClass(phraseSizeTempClass);
-    $(".phraseHeadingContainer").toggleClass(phrasePlaceClass).toggleClass("phrasePlaceTemp");
+    $(".phraseHeadingContainer").toggleClass(phrasePlaceClass).toggleClass(phraseWidthClass).toggleClass("phrasePlaceTemp");
     // $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
 }
 

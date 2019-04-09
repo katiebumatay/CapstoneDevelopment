@@ -1306,17 +1306,15 @@ h2 {
 }
 
 .phraseTemp {
-	position: absolute;
-	transition: 0.5s;
 	font-size: 4em;
 	line-height: 1.1em;
 	transition: 0.5s;
 }
 
 .phrasePlaceTemp{
-	width: 40%;
+	width: 90%;
 	transform: translate(40px, 40px);
-	transition: 0.8s;
+	transition: 0.5s;
 }
 
 .bgColor1-1 {
@@ -2053,20 +2051,19 @@ h2 {
 		font-size: 4.5em;
 		line-height: 1em;
 	}
-/*
-	.phraseSizeTemp {
-		font-size: 4em;
+
+	.phraseTemp {
+		font-size: 2.5em;
 		line-height: 1.1em;
 		transition: 0.5s;
+		width: 100%;
 	}
 
-	.phrasePlaceTemp {
-		transform: translate(0%,0%);
-		bottom: 0%;
+	.phrasePlaceTemp{
+		width: 90%;
+		transform: translate(20px, 60px);
 		transition: 0.5s;
 	}
-
-*/
 
 
 
