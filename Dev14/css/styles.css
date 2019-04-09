@@ -247,7 +247,7 @@ h3 {
 	/*margin-top: 100vh;*/
 }
 
-.articleText p {
+.articleText p, .articleText ul, .articleText ol {
 	font-family: Heebo, sans-serif;
 	font-size: 11pt;
 }
@@ -504,7 +504,7 @@ h3 {
 	height: 100vw;*/
 	top: 0;
 	left: 0;
-	/*width: 40%;*/
+	/*width: 100%;*/
 /*	opacity: 0;*/
 	pointer-events: none;
 	display: inline-block;
@@ -1072,9 +1072,9 @@ h2 {
 	mix-blend-mode: overlay;
 }
 
-.mix3 {
+/*.mix3 {
 	mix-blend-mode: multiply;
-}
+}*/
 
 .imgWidth1 {
 	width: 35%;
@@ -1312,8 +1312,8 @@ h2 {
 }
 
 .phrasePlaceTemp{
-	width: 90%;
-	transform: translate(40px, 40px);
+	/*width: 90%;*/
+	/*transform: translate(40px, 40px);*/
 	transition: 0.5s;
 }
 
@@ -1869,6 +1869,12 @@ h2 {
 	transition: 0.5s;
 }
 
+.readArticle .phraseHeadingContainer {
+	top: 40px;
+	left: 20px;
+	/*width: 90% !important;*/
+}
+
 
 
 
@@ -2056,12 +2062,12 @@ h2 {
 		font-size: 2.5em;
 		line-height: 1.1em;
 		transition: 0.5s;
-		width: 100%;
+		/*width: 100%;*/
 	}
 
 	.phrasePlaceTemp{
-		width: 90%;
-		transform: translate(20px, 60px);
+		/*width: 90%;
+		transform: translate(20px, 60px);*/
 		transition: 0.5s;
 	}
 

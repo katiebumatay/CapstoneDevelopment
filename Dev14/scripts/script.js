@@ -222,7 +222,7 @@ function imgHeight() {
 };
 
 function imgMix() {
-    iM = Math.floor(Math.random() * 3) + 1;
+    iM = Math.floor(Math.random() * 2) + 1;
     imgMixClass = "mix" + iM;
     return imgMixClass;
 }
@@ -593,9 +593,11 @@ function deactivateOverlay() {
 function tempToggleVariables() {
     $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgHeightClass).toggleClass(imgPlaceClass).toggleClass(bgColorClass).toggleClass(imgWidthTempClass);
     $(".caption").toggleClass(captionColorClass).toggleClass(captionPlaceClass);
-    $(".phraseHeading").toggleClass(phraseSizeClass).toggleClass("phraseTemp");
+    // $(".phraseHeading").toggleClass(phraseSizeClass).toggleClass("phraseTemp");
+    $(".phraseHeading").toggleClass("phraseTemp");
     /////////$(".phraseHeading").toggleClass(phraseSizeTempClass);
-    $(".phraseHeadingContainer").toggleClass(phrasePlaceClass).toggleClass(phraseWidthClass).toggleClass("phrasePlaceTemp");
+    // $(".phraseHeadingContainer").toggleClass(phrasePlaceClass).toggleClass(phraseWidthClass).toggleClass("phrasePlaceTemp");
+    $(".phraseHeadingContainer").toggleClass(phrasePlaceClass).toggleClass("phrasePlaceTemp");
     // $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
 }
 
