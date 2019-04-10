@@ -3,26 +3,50 @@ var checkV1; var checkV2; var checkV3;
 var sec; var phraseNum; var v; 
 var articleLink;
 
+function check1() {
+    checkV1 = $("#myAC").hasClass("view1");
+}
+
+function check2() {
+    checkV2 = $("#myAC").hasClass("view2");
+}
+
+function check3() {
+    checkV3 = $("#myAC").hasClass("view3");
+}
+
+
 function generateArticle() {
-    v = Math.floor(Math.random() * numOptions) + 1;
+    check1(); check2(); check3();
     articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev14/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html";
     $(".articleText").load(articleLink);
-    loadImage.style.setProperty('--myImg-background-image1', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image1-small.jpg");
-    loadImage.style.setProperty('--myImg-background-image2', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image2-small.jpg");
-    
+    if (checkV1 == true) {
+        pledgeImg1.style.setProperty('--pledge-background-image1', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image1-small.jpg");
+        pledgeImg2.style.setProperty('--pledge-background-image2', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image2-small.jpg");
+    }
+
+    else if (checkV2 == true) {
+        declarationImg1.style.setProperty('--declaration-background-image1', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image1-small.jpg");
+        declarationImg2.style.setProperty('--declaration-background-image2', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image2-small.jpg");
+    }
+
     // $(".imgContainer").addClass("loadImage");
 }
 
 
 $(document).ready(function() {
 
+    // checkV1();
+    // checkV2();
+    // checkV3();
+
 
 
 
     $(".next").click(function(){
 
-        checkV1 = $("#myAC").hasClass("view1");
-        checkV2 = $("#myAC").hasClass("view2");
+        check1();
+        check2();
 
         if(checkV1 == true) {
             console.log("in view1");
@@ -44,8 +68,8 @@ $(document).ready(function() {
 
     $(".previous").click(function(){
 
-        checkV2 = $("#myAC").hasClass("view2");
-        checkV3 = $("#myAC").hasClass("view3");
+        check2();
+        check3();
 
 
         if (checkV2 == true) {
@@ -113,12 +137,90 @@ $(document).ready(function() {
 
     // });
 
-    $(".1-pledge-1-1").mouseenter(function(){
-        // v = Math.floor(Math.random() * 2) + 1;
-        sec = "1-pledge";
-        phraseNum = "1";
-        v = 1;
-        generateArticle();
-    });
+    $(".1-pledge-1-1").mouseenter(function(){ sec = "1-pledge"; phraseNum = "1"; v = 1; generateArticle();});
+    $(".1-pledge-1-2").mouseenter(function(){ sec = "1-pledge"; phraseNum = "1"; v = 2; generateArticle();});
+    $(".1-pledge-1-3").mouseenter(function(){ sec = "1-pledge"; phraseNum = "1"; v = 3; generateArticle();});
+    $(".1-pledge-1-4").mouseenter(function(){ sec = "1-pledge"; phraseNum = "1"; v = 4; generateArticle();});
+    $(".1-pledge-1-5").mouseenter(function(){ sec = "1-pledge"; phraseNum = "1"; v = 5; generateArticle();});
+    $(".1-pledge-2-1").mouseenter(function(){ sec = "1-pledge"; phraseNum = "2"; v = 1; generateArticle();});
+    $(".1-pledge-2-2").mouseenter(function(){ sec = "1-pledge"; phraseNum = "2"; v = 2; generateArticle();});
+    $(".1-pledge-2-3").mouseenter(function(){ sec = "1-pledge"; phraseNum = "2"; v = 3; generateArticle();});
+    $(".1-pledge-2-4").mouseenter(function(){ sec = "1-pledge"; phraseNum = "2"; v = 4; generateArticle();});
+    $(".1-pledge-2-5").mouseenter(function(){ sec = "1-pledge"; phraseNum = "2"; v = 5; generateArticle();});
+    $(".1-pledge-2-6").mouseenter(function(){ sec = "1-pledge"; phraseNum = "2"; v = 6; generateArticle();});
+    $(".1-pledge-2-7").mouseenter(function(){ sec = "1-pledge"; phraseNum = "2"; v = 7; generateArticle();});
+    $(".1-pledge-3-1").mouseenter(function(){ sec = "1-pledge"; phraseNum = "3"; v = 1; generateArticle();});
+    $(".1-pledge-3-2").mouseenter(function(){ sec = "1-pledge"; phraseNum = "3"; v = 2; generateArticle();});
+    $(".1-pledge-3-3").mouseenter(function(){ sec = "1-pledge"; phraseNum = "3"; v = 3; generateArticle();});
+    $(".1-pledge-3-4").mouseenter(function(){ sec = "1-pledge"; phraseNum = "3"; v = 4; generateArticle();});
+    $(".1-pledge-3-5").mouseenter(function(){ sec = "1-pledge"; phraseNum = "3"; v = 5; generateArticle();});
+    $(".1-pledge-4-1").mouseenter(function(){ sec = "1-pledge"; phraseNum = "4"; v = 1; generateArticle();});
+    $(".1-pledge-4-2").mouseenter(function(){ sec = "1-pledge"; phraseNum = "4"; v = 2; generateArticle();});
+    $(".1-pledge-4-3").mouseenter(function(){ sec = "1-pledge"; phraseNum = "4"; v = 3; generateArticle();});
+    $(".1-pledge-5-1").mouseenter(function(){ sec = "1-pledge"; phraseNum = "5"; v = 1; generateArticle();});
+    $(".1-pledge-5-2").mouseenter(function(){ sec = "1-pledge"; phraseNum = "5"; v = 2; generateArticle();});
+    $(".1-pledge-5-3").mouseenter(function(){ sec = "1-pledge"; phraseNum = "5"; v = 3; generateArticle();});
+    $(".1-pledge-5-4").mouseenter(function(){ sec = "1-pledge"; phraseNum = "5"; v = 4; generateArticle();});
+    $(".1-pledge-5-5").mouseenter(function(){ sec = "1-pledge"; phraseNum = "5"; v = 5; generateArticle();});
+    $(".1-pledge-5-6").mouseenter(function(){ sec = "1-pledge"; phraseNum = "5"; v = 6; generateArticle();});
+    $(".1-pledge-5-7").mouseenter(function(){ sec = "1-pledge"; phraseNum = "5"; v = 7; generateArticle();});
+    $(".1-pledge-6-1").mouseenter(function(){ sec = "1-pledge"; phraseNum = "6"; v = 1; generateArticle();});
+    $(".1-pledge-6-2").mouseenter(function(){ sec = "1-pledge"; phraseNum = "6"; v = 2; generateArticle();});
+    $(".1-pledge-6-3").mouseenter(function(){ sec = "1-pledge"; phraseNum = "6"; v = 3; generateArticle();});
+    $(".1-pledge-6-4").mouseenter(function(){ sec = "1-pledge"; phraseNum = "6"; v = 4; generateArticle();});
+    $(".1-pledge-6-5").mouseenter(function(){ sec = "1-pledge"; phraseNum = "6"; v = 5; generateArticle();});
+    $(".1-pledge-6-6").mouseenter(function(){ sec = "1-pledge"; phraseNum = "6"; v = 6; generateArticle();});
+    $(".1-pledge-7-1").mouseenter(function(){ sec = "1-pledge"; phraseNum = "7"; v = 1; generateArticle();});
+    $(".1-pledge-7-2").mouseenter(function(){ sec = "1-pledge"; phraseNum = "7"; v = 2; generateArticle();});
+    $(".1-pledge-7-3").mouseenter(function(){ sec = "1-pledge"; phraseNum = "7"; v = 3; generateArticle();});
+    $(".1-pledge-7-4").mouseenter(function(){ sec = "1-pledge"; phraseNum = "7"; v = 4; generateArticle();});
+    $(".1-pledge-7-5").mouseenter(function(){ sec = "1-pledge"; phraseNum = "7"; v = 5; generateArticle();});
+    $(".1-pledge-8-1").mouseenter(function(){ sec = "1-pledge"; phraseNum = "8"; v = 1; generateArticle();});
+    $(".1-pledge-8-2").mouseenter(function(){ sec = "1-pledge"; phraseNum = "8"; v = 2; generateArticle();});
+    $(".1-pledge-8-3").mouseenter(function(){ sec = "1-pledge"; phraseNum = "8"; v = 3; generateArticle();});
+    $(".1-pledge-8-4").mouseenter(function(){ sec = "1-pledge"; phraseNum = "8"; v = 4; generateArticle();});
+    $(".1-pledge-8-5").mouseenter(function(){ sec = "1-pledge"; phraseNum = "8"; v = 5; generateArticle();});
+    $(".1-pledge-8-6").mouseenter(function(){ sec = "1-pledge"; phraseNum = "8"; v = 6; generateArticle();});
+
+    $(".2-declaration-1-1").mouseenter(function(){ sec = "2-declaration"; phraseNum = "1"; v = 1; generateArticle();});
+    $(".2-declaration-1-2").mouseenter(function(){ sec = "2-declaration"; phraseNum = "1"; v = 2; generateArticle();});
+    $(".2-declaration-1-3").mouseenter(function(){ sec = "2-declaration"; phraseNum = "1"; v = 3; generateArticle();});
+    $(".2-declaration-1-4").mouseenter(function(){ sec = "2-declaration"; phraseNum = "1"; v = 4; generateArticle();});
+    $(".2-declaration-1-5").mouseenter(function(){ sec = "2-declaration"; phraseNum = "1"; v = 5; generateArticle();});
+    $(".2-declaration-1-6").mouseenter(function(){ sec = "2-declaration"; phraseNum = "1"; v = 6; generateArticle();});
+    $(".2-declaration-2-1").mouseenter(function(){ sec = "2-declaration"; phraseNum = "2"; v = 1; generateArticle();});
+    $(".2-declaration-2-2").mouseenter(function(){ sec = "2-declaration"; phraseNum = "2"; v = 2; generateArticle();});
+    $(".2-declaration-2-3").mouseenter(function(){ sec = "2-declaration"; phraseNum = "2"; v = 3; generateArticle();});
+    $(".2-declaration-2-4").mouseenter(function(){ sec = "2-declaration"; phraseNum = "2"; v = 4; generateArticle();});
+    $(".2-declaration-2-5").mouseenter(function(){ sec = "2-declaration"; phraseNum = "2"; v = 5; generateArticle();});
+    $(".2-declaration-3-1").mouseenter(function(){ sec = "2-declaration"; phraseNum = "3"; v = 1; generateArticle();});
+    $(".2-declaration-3-2").mouseenter(function(){ sec = "2-declaration"; phraseNum = "3"; v = 2; generateArticle();});
+    $(".2-declaration-3-3").mouseenter(function(){ sec = "2-declaration"; phraseNum = "3"; v = 3; generateArticle();});
+    $(".2-declaration-3-4").mouseenter(function(){ sec = "2-declaration"; phraseNum = "3"; v = 4; generateArticle();});
+    $(".2-declaration-3-5").mouseenter(function(){ sec = "2-declaration"; phraseNum = "3"; v = 5; generateArticle();});
+    $(".2-declaration-3-6").mouseenter(function(){ sec = "2-declaration"; phraseNum = "3"; v = 6; generateArticle();});
+    $(".2-declaration-3-7").mouseenter(function(){ sec = "2-declaration"; phraseNum = "3"; v = 7; generateArticle();});
+    $(".2-declaration-3-8").mouseenter(function(){ sec = "2-declaration"; phraseNum = "3"; v = 8; generateArticle();});
+    $(".2-declaration-4-1").mouseenter(function(){ sec = "2-declaration"; phraseNum = "4"; v = 1; generateArticle();});
+    $(".2-declaration-4-2").mouseenter(function(){ sec = "2-declaration"; phraseNum = "4"; v = 2; generateArticle();});
+    $(".2-declaration-4-3").mouseenter(function(){ sec = "2-declaration"; phraseNum = "4"; v = 3; generateArticle();});
+    $(".2-declaration-4-4").mouseenter(function(){ sec = "2-declaration"; phraseNum = "4"; v = 4; generateArticle();});
+    $(".2-declaration-4-5").mouseenter(function(){ sec = "2-declaration"; phraseNum = "4"; v = 5; generateArticle();});
+    $(".2-declaration-4-6").mouseenter(function(){ sec = "2-declaration"; phraseNum = "4"; v = 6; generateArticle();});
+    $(".2-declaration-5-1").mouseenter(function(){ sec = "2-declaration"; phraseNum = "5"; v = 1; generateArticle();});
+    $(".2-declaration-5-2").mouseenter(function(){ sec = "2-declaration"; phraseNum = "5"; v = 2; generateArticle();});
+    $(".2-declaration-5-3").mouseenter(function(){ sec = "2-declaration"; phraseNum = "5"; v = 3; generateArticle();});
+    $(".2-declaration-5-4").mouseenter(function(){ sec = "2-declaration"; phraseNum = "5"; v = 4; generateArticle();});
+    $(".2-declaration-5-5").mouseenter(function(){ sec = "2-declaration"; phraseNum = "5"; v = 5; generateArticle();});
+    $(".2-declaration-6-1").mouseenter(function(){ sec = "2-declaration"; phraseNum = "6"; v = 1; generateArticle();});
+    $(".2-declaration-6-2").mouseenter(function(){ sec = "2-declaration"; phraseNum = "6"; v = 2; generateArticle();});
+    $(".2-declaration-6-3").mouseenter(function(){ sec = "2-declaration"; phraseNum = "6"; v = 3; generateArticle();});
+    $(".2-declaration-6-4").mouseenter(function(){ sec = "2-declaration"; phraseNum = "6"; v = 4; generateArticle();});
+    $(".2-declaration-6-5").mouseenter(function(){ sec = "2-declaration"; phraseNum = "6"; v = 5; generateArticle();});
+    $(".2-declaration-6-6").mouseenter(function(){ sec = "2-declaration"; phraseNum = "6"; v = 6; generateArticle();});
+
+
+
+
 
 });

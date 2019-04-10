@@ -1,6 +1,8 @@
 :root {
-	--myImg-background-image1: url(../variables/1-pledge/1/1/image1-small.jpg);
-	--myImg-background-image2: url(../variables/1-pledge/1/1/image2-small.jpg);
+	--pledge-background-image1: url(../variables/1-pledge/1/1/image1-small.jpg);
+	--pledge-background-image2: url(../variables/1-pledge/1/1/image2-small.jpg);
+	--declaration-background-image1: url(../variables/2-declaration/1/1/image1-small.jpg);
+	--declaration-background-image2: url(../variables/2-declaration/1/1/image2-small.jpg);
 }
 
 html, body{
@@ -145,37 +147,55 @@ h1 {
 .images-container {
 	/*position: absolute;*/
 	width: 100%;
-	background-color: blue;
+	background-color: #bbbbbb;
 	height: 50%;
 }
 
 .imgHere {
 	width: 50%;
 	height: 100%;
+	transform: scale(0.95, 0.95);
 	float: left;
-	background-color: yellow;
+	background-color: transparent;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 50%;
 }
 
 #pledgeImg1{
-	background-image: var(--myImg-background-image1);
+	background-image: var(--pledge-background-image1);
 }
 
 #pledgeImg2{
-	background-image: var(--myImg-background-image2);
+	background-image: var(--pledge-background-image2);
+}
+
+#declarationImg1{
+	background-image: var(--declaration-background-image1);
+}
+
+#declarationImg2{
+	background-image: var(--declaration-background-image2);
 }
 
 .articleContainer {
 	/*position: absolute;*/
 	box-sizing: border-box;
 	display: inline-block;
-	background-color: red;
+	background-color: #bbbbbb;
 	width: 100%;
 	height: 50%;
+	overflow: scroll;
 }
 
+.articleText {
+	margin: 20px;
+}
+
+.articleText p, .articleText ul, .articleText ol {
+	font-family: Heebo, sans-serif;
+	font-size: 11pt;
+}
 .list-container {
 	min-width: 311px;
 	position: relative;
