@@ -170,7 +170,7 @@ h3 {
 .otherMenuItems {
 	opacity: 0;
 	pointer-events: none;
-	transition: 0.8s;
+	transition: 0.5s;
 	/*margin-top: -10px;
 	padding: 0;
 	transition: 0.8s;*/
@@ -183,7 +183,7 @@ h3 {
 	padding: auto;*/
 	opacity: 1;
 	pointer-events: auto;
-	transition: 0.8s;
+	transition: 0.5s;
 }
 
 .menuItem {
