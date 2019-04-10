@@ -1,5 +1,17 @@
 var checkV1; var checkV2; var checkV3;
 
+var sec; var phraseNum; var v; 
+var articleLink;
+
+function generateArticle() {
+    v = Math.floor(Math.random() * numOptions) + 1;
+    articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev14/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html";
+    $(".articleText").load(articleLink);
+    loadImage.style.setProperty('--myImg-background-image1', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image1-small.jpg");
+    loadImage.style.setProperty('--myImg-background-image2', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image2-small.jpg");
+    
+    // $(".imgContainer").addClass("loadImage");
+}
 
 
 $(document).ready(function() {
@@ -77,6 +89,8 @@ $(document).ready(function() {
         $(".next").addClass("hideArrow");
     });
 
+
+
     $(".goToPledge").click(function() {
         // $('html,body').animate({
         // scrollTop: $("#pledge").offset().top},
@@ -98,5 +112,13 @@ $(document).ready(function() {
     //     $(".list-container").toggleClass("showArticle");
 
     // });
+
+    $(".1-pledge-1-1").mouseenter(function(){
+        // v = Math.floor(Math.random() * 2) + 1;
+        sec = "1-pledge";
+        phraseNum = "1";
+        v = 1;
+        generateArticle();
+    });
 
 });
