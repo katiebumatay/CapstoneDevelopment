@@ -1,3 +1,8 @@
+:root {
+	--myImg-background-image1: url(../variables/1-pledge/1/1/image1-small.jpg);
+	--myImg-background-image2: url(../variables/1-pledge/1/1/image2-small.jpg);
+}
+
 html, body{
 	width: 100%;
 	height:100%;
@@ -56,6 +61,29 @@ h1 {
 	margin-right: 1em;
 }
 
+/*.itemsBox {
+	z-index: 50;
+	position: fixed;
+	right: 70px;
+	top: 70px;
+	width: 55vw;
+}
+
+.images-container {
+	position: absolute;
+	width: 100%;
+	background-color: blue;
+	height: 40vh;
+}
+
+.articleContainer {
+	box-sizing: border-box;
+	background-color: red;
+	position: absolute;
+	width: 100%;
+}*/
+
+
 .archive-container {
 	position: absolute;
 	z-index: 2;
@@ -84,20 +112,6 @@ h1 {
 	transform: translateX(-200vw);
 }
 
-.list-container {
-	width: 90%;
-	min-width: 311px;
-	position: relative;
-	/*margin-left: 50px;*/
-	/*transition: 0.8s;*/
-}
-
-.showArticle{
-	width: 30%;
-	min-width: 311px;
-	/*transition: 0.8s;*/
-}
-
 .group {
 	/*width: 100vw;
 	height: 100vh;*/
@@ -115,6 +129,61 @@ h1 {
 	padding: 30px;
 	/*margin-bottom: 100px;*/
 }
+
+.itemsBox {
+	z-index: 50;
+	position: fixed;
+	float: right;
+	margin-left: 350px;
+	margin-top: 0px;
+	/*width: inherit;*/
+	width: calc(100vw - 490px);
+	/*width: 100%;*/
+	height: calc(100vh - 170px);
+}
+
+.images-container {
+	/*position: absolute;*/
+	width: 100%;
+	background-color: blue;
+	height: 50%;
+}
+
+.imgHere {
+	width: 50%;
+	height: 100%;
+	float: left;
+	background-color: yellow;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+#pledgeImg1{
+	background-image: var(--myImg-background-image1);
+}
+
+#pledgeImg2{
+	background-image: var(--myImg-background-image2);
+}
+
+.articleContainer {
+	/*position: absolute;*/
+	box-sizing: border-box;
+	display: inline-block;
+	background-color: red;
+	width: 100%;
+	height: 50%;
+}
+
+.list-container {
+	min-width: 311px;
+	position: relative;
+	width: 30%;
+	/*margin-left: 50px;*/
+	/*transition: 0.8s;*/
+}
+
 
 .next {
 	position: fixed;

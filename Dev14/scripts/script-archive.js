@@ -93,10 +93,10 @@ $(document).ready(function() {
 
     });
 
-    $("li").click(function() {
-        // console.log("clicked list item");
-        $(".list-container").toggleClass("showArticle");
+    // $("li").click(function() {
+    //     // console.log("clicked list item");
+    //     $(".list-container").toggleClass("showArticle");
 
-    });
+    // });
 
 });
