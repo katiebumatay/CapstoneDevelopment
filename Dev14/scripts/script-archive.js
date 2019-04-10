@@ -19,15 +19,22 @@ function check3() {
 function generateArticle() {
     check1(); check2(); check3();
     articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev14/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html";
-    $(".articleText").load(articleLink);
     if (checkV1 == true) {
         pledgeImg1.style.setProperty('--pledge-background-image1', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image1-small.jpg");
         pledgeImg2.style.setProperty('--pledge-background-image2', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image2-small.jpg");
+        $("#pledgeText").load(articleLink);
     }
 
     else if (checkV2 == true) {
         declarationImg1.style.setProperty('--declaration-background-image1', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image1-small.jpg");
         declarationImg2.style.setProperty('--declaration-background-image2', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image2-small.jpg");
+        $("#declarationText").load(articleLink);
+    }
+
+    else if (checkV3 == true) {
+        constitutionImg1.style.setProperty('--constitution-background-image1', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image1-small.jpg");
+        constitutionImg2.style.setProperty('--constitution-background-image2', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image2-small.jpg");
+        $("#constitutionText").load(articleLink);
     }
 
     // $(".imgContainer").addClass("loadImage");
@@ -218,6 +225,56 @@ $(document).ready(function() {
     $(".2-declaration-6-4").mouseenter(function(){ sec = "2-declaration"; phraseNum = "6"; v = 4; generateArticle();});
     $(".2-declaration-6-5").mouseenter(function(){ sec = "2-declaration"; phraseNum = "6"; v = 5; generateArticle();});
     $(".2-declaration-6-6").mouseenter(function(){ sec = "2-declaration"; phraseNum = "6"; v = 6; generateArticle();});
+
+    $(".3-constitution-1-1").mouseenter(function(){ sec = "3-constitution"; phraseNum = "1"; v = 1; generateArticle();});
+    $(".3-constitution-1-2").mouseenter(function(){ sec = "3-constitution"; phraseNum = "1"; v = 2; generateArticle();});
+    $(".3-constitution-1-3").mouseenter(function(){ sec = "3-constitution"; phraseNum = "1"; v = 3; generateArticle();});
+    $(".3-constitution-1-4").mouseenter(function(){ sec = "3-constitution"; phraseNum = "1"; v = 4; generateArticle();});
+    $(".3-constitution-1-5").mouseenter(function(){ sec = "3-constitution"; phraseNum = "1"; v = 5; generateArticle();});
+    $(".3-constitution-2-1").mouseenter(function(){ sec = "3-constitution"; phraseNum = "2"; v = 1; generateArticle();});
+    $(".3-constitution-2-2").mouseenter(function(){ sec = "3-constitution"; phraseNum = "2"; v = 2; generateArticle();});
+    $(".3-constitution-2-3").mouseenter(function(){ sec = "3-constitution"; phraseNum = "2"; v = 3; generateArticle();});
+    $(".3-constitution-2-4").mouseenter(function(){ sec = "3-constitution"; phraseNum = "2"; v = 4; generateArticle();});
+    $(".3-constitution-3-1").mouseenter(function(){ sec = "3-constitution"; phraseNum = "3"; v = 1; generateArticle();});
+    $(".3-constitution-3-2").mouseenter(function(){ sec = "3-constitution"; phraseNum = "3"; v = 2; generateArticle();});
+    $(".3-constitution-3-3").mouseenter(function(){ sec = "3-constitution"; phraseNum = "3"; v = 3; generateArticle();});
+    $(".3-constitution-3-4").mouseenter(function(){ sec = "3-constitution"; phraseNum = "3"; v = 4; generateArticle();});
+    $(".3-constitution-3-5").mouseenter(function(){ sec = "3-constitution"; phraseNum = "3"; v = 5; generateArticle();});
+    $(".3-constitution-3-6").mouseenter(function(){ sec = "3-constitution"; phraseNum = "3"; v = 6; generateArticle();});
+    $(".3-constitution-3-7").mouseenter(function(){ sec = "3-constitution"; phraseNum = "3"; v = 7; generateArticle();});
+    $(".3-constitution-4-1").mouseenter(function(){ sec = "3-constitution"; phraseNum = "4"; v = 1; generateArticle();});
+    $(".3-constitution-4-2").mouseenter(function(){ sec = "3-constitution"; phraseNum = "4"; v = 2; generateArticle();});
+    $(".3-constitution-4-3").mouseenter(function(){ sec = "3-constitution"; phraseNum = "4"; v = 3; generateArticle();});
+    $(".3-constitution-4-4").mouseenter(function(){ sec = "3-constitution"; phraseNum = "4"; v = 4; generateArticle();});
+    $(".3-constitution-4-5").mouseenter(function(){ sec = "3-constitution"; phraseNum = "4"; v = 5; generateArticle();});
+    $(".3-constitution-4-6").mouseenter(function(){ sec = "3-constitution"; phraseNum = "4"; v = 6; generateArticle();});
+    $(".3-constitution-4-7").mouseenter(function(){ sec = "3-constitution"; phraseNum = "4"; v = 7; generateArticle();});  
+    $(".3-constitution-5-1").mouseenter(function(){ sec = "3-constitution"; phraseNum = "5"; v = 1; generateArticle();});
+    $(".3-constitution-5-2").mouseenter(function(){ sec = "3-constitution"; phraseNum = "5"; v = 2; generateArticle();});
+    $(".3-constitution-5-3").mouseenter(function(){ sec = "3-constitution"; phraseNum = "5"; v = 3; generateArticle();});
+    $(".3-constitution-5-4").mouseenter(function(){ sec = "3-constitution"; phraseNum = "5"; v = 4; generateArticle();});
+    $(".3-constitution-5-5").mouseenter(function(){ sec = "3-constitution"; phraseNum = "5"; v = 5; generateArticle();});
+    $(".3-constitution-6-1").mouseenter(function(){ sec = "3-constitution"; phraseNum = "6"; v = 1; generateArticle();});
+    $(".3-constitution-6-2").mouseenter(function(){ sec = "3-constitution"; phraseNum = "6"; v = 2; generateArticle();});
+    $(".3-constitution-6-3").mouseenter(function(){ sec = "3-constitution"; phraseNum = "6"; v = 3; generateArticle();});
+    $(".3-constitution-6-4").mouseenter(function(){ sec = "3-constitution"; phraseNum = "6"; v = 4; generateArticle();});
+    $(".3-constitution-6-5").mouseenter(function(){ sec = "3-constitution"; phraseNum = "6"; v = 5; generateArticle();});
+    $(".3-constitution-6-6").mouseenter(function(){ sec = "3-constitution"; phraseNum = "6"; v = 6; generateArticle();});
+    $(".3-constitution-7-1").mouseenter(function(){ sec = "3-constitution"; phraseNum = "7"; v = 1; generateArticle();});
+    $(".3-constitution-7-2").mouseenter(function(){ sec = "3-constitution"; phraseNum = "7"; v = 2; generateArticle();});
+    $(".3-constitution-7-3").mouseenter(function(){ sec = "3-constitution"; phraseNum = "7"; v = 3; generateArticle();});
+    $(".3-constitution-7-4").mouseenter(function(){ sec = "3-constitution"; phraseNum = "7"; v = 4; generateArticle();});
+    $(".3-constitution-7-5").mouseenter(function(){ sec = "3-constitution"; phraseNum = "7"; v = 5; generateArticle();});
+    $(".3-constitution-7-6").mouseenter(function(){ sec = "3-constitution"; phraseNum = "7"; v = 6; generateArticle();});
+    $(".3-constitution-7-7").mouseenter(function(){ sec = "3-constitution"; phraseNum = "7"; v = 7; generateArticle();});  
+    $(".3-constitution-8-1").mouseenter(function(){ sec = "3-constitution"; phraseNum = "8"; v = 1; generateArticle();});
+    $(".3-constitution-8-2").mouseenter(function(){ sec = "3-constitution"; phraseNum = "8"; v = 2; generateArticle();});
+    $(".3-constitution-8-3").mouseenter(function(){ sec = "3-constitution"; phraseNum = "8"; v = 3; generateArticle();});
+    $(".3-constitution-8-4").mouseenter(function(){ sec = "3-constitution"; phraseNum = "8"; v = 4; generateArticle();});
+    $(".3-constitution-9-1").mouseenter(function(){ sec = "3-constitution"; phraseNum = "9"; v = 1; generateArticle();});
+    $(".3-constitution-9-2").mouseenter(function(){ sec = "3-constitution"; phraseNum = "9"; v = 2; generateArticle();});
+    $(".3-constitution-9-3").mouseenter(function(){ sec = "3-constitution"; phraseNum = "9"; v = 3; generateArticle();});
+    $(".3-constitution-9-4").mouseenter(function(){ sec = "3-constitution"; phraseNum = "9"; v = 4; generateArticle();});
 
 
 

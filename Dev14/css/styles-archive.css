@@ -1,8 +1,10 @@
 :root {
-	--pledge-background-image1: url(../variables/1-pledge/1/1/image1-small.jpg);
-	--pledge-background-image2: url(../variables/1-pledge/1/1/image2-small.jpg);
-	--declaration-background-image1: url(../variables/2-declaration/1/1/image1-small.jpg);
-	--declaration-background-image2: url(../variables/2-declaration/1/1/image2-small.jpg);
+	--pledge-background-image1: url();
+	--pledge-background-image2: url();
+	--declaration-background-image1: url();
+	--declaration-background-image2: url();
+	--constitution-background-image1: url();
+	--constitution-background-image2: url();
 }
 
 html, body{
@@ -133,28 +135,31 @@ h1 {
 }
 
 .itemsBox {
+	background-color: #dddddd;
 	z-index: 50;
 	position: fixed;
 	float: right;
 	margin-left: 350px;
-	margin-top: 0px;
+	margin-top: -30px;
 	/*width: inherit;*/
-	width: calc(100vw - 490px);
+	width: calc(100vw - 460px);
 	/*width: 100%;*/
-	height: calc(100vh - 170px);
+	height: calc(100vh - 100px);
 }
 
 .images-container {
 	/*position: absolute;*/
 	width: 100%;
-	background-color: #bbbbbb;
+	/*background-color: #bbbbbb;*/
 	height: 50%;
 }
 
 .imgHere {
-	width: 50%;
-	height: 100%;
-	transform: scale(0.95, 0.95);
+	width: calc(50% - 15px);
+	height: calc(100% - 10px);
+	margin-left: 10px;
+	margin-top: 10px;
+	/*transform: scale(0.95, 0.95);*/
 	float: left;
 	background-color: transparent;
 	background-repeat: no-repeat;
@@ -178,11 +183,19 @@ h1 {
 	background-image: var(--declaration-background-image2);
 }
 
+#constitutionImg1{
+	background-image: var(--constitution-background-image1);
+}
+
+#constitutionImg2{
+	background-image: var(--constitution-background-image2);
+}
+
 .articleContainer {
 	/*position: absolute;*/
 	box-sizing: border-box;
 	display: inline-block;
-	background-color: #bbbbbb;
+	/*background-color: #bbbbbb;*/
 	width: 100%;
 	height: 50%;
 	overflow: scroll;
