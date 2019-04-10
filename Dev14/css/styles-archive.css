@@ -14,7 +14,7 @@ html, body{
 	padding: 0;
 	background-color: transparent;
 	font-family: Heebo, sans-serif;
-	font-size: 12pt;
+	font-size: 11pt;
 	color: #161616;
 	line-height: 1.3em;
 	background-color: #f9f9f9;
@@ -152,6 +152,8 @@ h1 {
 	width: 100%;
 	/*background-color: #bbbbbb;*/
 	height: 50%;
+	opacity: 0;
+	transition: 0.5s;
 }
 
 .imgHere {
@@ -165,6 +167,7 @@ h1 {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 50%;
+
 }
 
 #pledgeImg1{
@@ -199,6 +202,8 @@ h1 {
 	width: 100%;
 	height: 50%;
 	overflow: scroll;
+	opacity: 0;
+	transition: 0.5s;
 }
 
 .articleText {
@@ -209,6 +214,12 @@ h1 {
 	font-family: Heebo, sans-serif;
 	font-size: 11pt;
 }
+
+.showImgArticle {
+	opacity: 1;
+	transition: 0.5s;
+}
+
 .list-container {
 	min-width: 311px;
 	position: relative;
@@ -322,16 +333,25 @@ ul {
 }
 
 li {
+	color: #aaaaaa;
 	margin-bottom: 1em;
-	cursor: pointer;
+	cursor: default;
 }
 
-li:hover {
+.thisLiHover {
 	/*font-weight: bold;*/
+	color: black;
+	cursor: pointer;
 	/*border-left: 2px solid;*/
 	/*padding-left: 20px;*/
 	/*transform: translateX(20px);*/
-	font-style: italic;
+	/*font-style: italic;*/
+}
+
+.thisLiClicked {
+	font-weight: bold;
+	color: black;
+	cursor: pointer;
 }
 
 /*li: active {

@@ -3,6 +3,9 @@ var checkV1; var checkV2; var checkV3;
 var sec; var phraseNum; var v; 
 var articleLink;
 
+var listItemClicked;
+var prevClicked;
+
 function check1() {
     checkV1 = $("#myAC").hasClass("view1");
 }
@@ -17,27 +20,39 @@ function check3() {
 
 
 function generateArticle() {
-    check1(); check2(); check3();
-    articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev14/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html";
-    if (checkV1 == true) {
-        pledgeImg1.style.setProperty('--pledge-background-image1', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image1-small.jpg");
-        pledgeImg2.style.setProperty('--pledge-background-image2', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image2-small.jpg");
-        $("#pledgeText").load(articleLink);
-    }
 
-    else if (checkV2 == true) {
-        declarationImg1.style.setProperty('--declaration-background-image1', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image1-small.jpg");
-        declarationImg2.style.setProperty('--declaration-background-image2', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image2-small.jpg");
-        $("#declarationText").load(articleLink);
-    }
+    if (listItemClicked == false) {
+        check1(); check2(); check3();
+        articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev14/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html";
+        if (checkV1 == true) {
+            pledgeImg1.style.setProperty('--pledge-background-image1', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image1-small.jpg");
+            pledgeImg2.style.setProperty('--pledge-background-image2', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image2-small.jpg");
+            $("#pledgeText").load(articleLink);
+        }
 
-    else if (checkV3 == true) {
-        constitutionImg1.style.setProperty('--constitution-background-image1', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image1-small.jpg");
-        constitutionImg2.style.setProperty('--constitution-background-image2', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image2-small.jpg");
-        $("#constitutionText").load(articleLink);
+        else if (checkV2 == true) {
+            declarationImg1.style.setProperty('--declaration-background-image1', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image1-small.jpg");
+            declarationImg2.style.setProperty('--declaration-background-image2', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image2-small.jpg");
+            $("#declarationText").load(articleLink);
+        }
+
+        else if (checkV3 == true) {
+            constitutionImg1.style.setProperty('--constitution-background-image1', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image1-small.jpg");
+            constitutionImg2.style.setProperty('--constitution-background-image2', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image2-small.jpg");
+            $("#constitutionText").load(articleLink);
+        }
+
     }
 
     // $(".imgContainer").addClass("loadImage");
+}
+
+function showStuff() {
+    $(".articleContainer, .images-container").addClass("showImgArticle");
+}
+
+function hideStuff() {
+    $(".articleContainer, .images-container").removeClass("showImgArticle");
 }
 
 
@@ -48,7 +63,7 @@ $(document).ready(function() {
     // checkV3();
 
 
-
+    listItemClicked = false;
 
     $(".next").click(function(){
 
@@ -120,6 +135,35 @@ $(document).ready(function() {
         $(".next").addClass("hideArrow");
     });
 
+     $("li").mouseover(function() {
+        if (listItemClicked == false) {
+            showStuff();
+            $(this).addClass("thisLiHover");
+        }
+     });
+
+     $("li").mouseout(function() {
+        if (listItemClicked == false) {
+            hideStuff();
+            $(this).removeClass("thisLiHover");
+        } 
+     });
+
+     $("li").click(function() {
+        if (listItemClicked == false) {
+            listItemClicked = true;
+            $(this).addClass("thisLiClicked");
+            // showStuff();
+        }
+        else if (listItemClicked == true) {
+            listItemClicked = false;
+            $(this).removeClass("thisLiClicked");
+            // hideStuff();
+        }
+        prevClicked = document.getElementsByClassName(this).className;
+        console.log(prevClicked);
+     });
+
 
 
     $(".goToPledge").click(function() {
@@ -143,6 +187,7 @@ $(document).ready(function() {
     //     $(".list-container").toggleClass("showArticle");
 
     // });
+
 
     $(".1-pledge-1-1").mouseenter(function(){ sec = "1-pledge"; phraseNum = "1"; v = 1; generateArticle();});
     $(".1-pledge-1-2").mouseenter(function(){ sec = "1-pledge"; phraseNum = "1"; v = 2; generateArticle();});
@@ -275,8 +320,6 @@ $(document).ready(function() {
     $(".3-constitution-9-2").mouseenter(function(){ sec = "3-constitution"; phraseNum = "9"; v = 2; generateArticle();});
     $(".3-constitution-9-3").mouseenter(function(){ sec = "3-constitution"; phraseNum = "9"; v = 3; generateArticle();});
     $(".3-constitution-9-4").mouseenter(function(){ sec = "3-constitution"; phraseNum = "9"; v = 4; generateArticle();});
-
-
 
 
 
