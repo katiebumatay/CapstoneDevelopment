@@ -605,6 +605,10 @@ h3 {
 	left: 0;
 }
 
+.view1 {
+	transform: translateX(0vw);
+}
+
 .view2 {
 	transform: translateX(-100vw);
 }

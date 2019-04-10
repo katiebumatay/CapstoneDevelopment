@@ -1,63 +1,68 @@
-    var thisPhrase;
+    // var thisPhrase;
     
-    var iW; var imgWidthClass; 
-    var imgWidthTempClass = "imgWidthTemp";
-    var iH; var imgHeightClass;
-    var iT; var imgTopClass;
-    var iL; var imgLeftClass;
-    var imgPlaceClass;
+    // var iW; var imgWidthClass; 
+    // var imgWidthTempClass = "imgWidthTemp";
+    // var iH; var imgHeightClass;
+    // var iT; var imgTopClass;
+    // var iL; var imgLeftClass;
+    // var imgPlaceClass;
 
-    var pT; var phraseTopClass;
-    var pL; var phraseLeftClass;
-    var pW; var phraseWidthClass;
-    var phrasePlaceClass;
-    var pS; var phraseSizeClass;
-    var phraseSizeTempClass = "phraseSizeTemp";
-    var phrasePlaceTempClass = "phrasePlaceTemp";
-    var pC; var phraseColorClass;
-    var pF; var phraseFontClass;
-    var fW; var fontWeightClass;
+    // var pT; var phraseTopClass;
+    // var pL; var phraseLeftClass;
+    // var pW; var phraseWidthClass;
+    // var phrasePlaceClass;
+    // var pS; var phraseSizeClass;
+    // var phraseSizeTempClass = "phraseSizeTemp";
+    // var phrasePlaceTempClass = "phrasePlaceTemp";
+    // var pC; var phraseColorClass;
+    // var pF; var phraseFontClass;
+    // var fW; var fontWeightClass;
 
-    var cT; var captionTopClass;
-    var cL; var captionLeftClass;
+    // var cT; var captionTopClass;
+    // var cL; var captionLeftClass;
 
-    var captionPlaceClass;
-    var articleBoxPlaceClass;
+    // var captionPlaceClass;
+    // var articleBoxPlaceClass;
 
-    var c; var ld; var bgColorClass; var textColorClass; var captionColorClass; var captionBgColorClass;
+    // var c; var ld; var bgColorClass; var textColorClass; var captionColorClass; var captionBgColorClass;
 
-    var wordCount;
+    // var wordCount;
 
-    var sec; var phraseNum;
-    var v; var numOptions;
-    var i;
-    var articleLink;
-    var captionLink;
-    var imageLink;
+    // var sec; var phraseNum;
+    // var v; var numOptions;
+    // var i;
+    // var articleLink;
+    // var captionLink;
+    // var imageLink;
 
-    var prevNum = 1;
-    var tempNum;
-    var titleNum;
+    // var prevNum = 1;
+    // var tempNum;
+    // var titleNum;
 
-    var didScroll;
-    var lastScrollTop = 0;
-    var delta = 5;
+    // var didScroll;
+    // var lastScrollTop = 0;
+    // var delta = 5;
 
-    var titleHover = false;
-    var titleClicked = false;
+    // var titleHover = false;
+    // var titleClicked = false;
 
-    var introImgNum;
-    var img1Num = 1;
-    var img2Num = 2;
-    var in1 = true;
-    var in2 = false;
+    // var introImgNum;
+    // var img1Num = 1;
+    // var img2Num = 2;
+    // var in1 = true;
+    // var in2 = false;
 
-    var peekTimer;
-    var peekTimerOn = false;
+    // var peekTimer;
+    // var peekTimerOn = false;
 
-    var isMobile = false;
+    // var isMobile = false;
 
-    var articleOpen = false;
+    // var articleOpen = false;
+
+    // var currentView = "view1";
+
+
+
 
     // var navbarHeight = $('header').outerHeight();
 
@@ -772,6 +777,8 @@ $(document).ready(function() {
         scrollTop: $("#pledgeSection").offset().top}, 'slow');
         $(".bar").addClass("barShow");
         $("#pledgeBar").addClass("selected");
+        currentView = "view1";
+        console.log(currentView);
         // $("#pledgeSection").scrollTop(0);
     });
 
@@ -800,42 +807,56 @@ $(document).ready(function() {
         $(".page-container").addClass("view2").removeClass("view1");
         $("#pledgeBar").removeClass("selected");
         $("#declarationBar").addClass("selected");
+        currentView = "view2";
+        console.log(currentView);
     });
 
     $("#declarationSection .next").click(function(){
         $(".page-container").addClass("view3").removeClass("view2");
         $("#declarationBar").removeClass("selected");
         $("#constitutionBar").addClass("selected");
+        currentView = "view3";
+        console.log(currentView);
     });
 
     $("#declarationSection .previous").click(function(){
         $(".page-container").addClass("view1").removeClass("view2");
         $("#declarationBar").removeClass("selected");
         $("#pledgeBar").addClass("selected");
+        currentView = "view1";
+        console.log(currentView);
     });
 
     $("#constitutionSection .previous").click(function(){
         $(".page-container").addClass("view2").removeClass("view3");
         $("#constitutionBar").removeClass("selected");
         $("#declarationBar").addClass("selected");
+        currentView = "view2";
+        console.log(currentView);
     });
 
     $("#pledgeBar").click(function(){
         $(".page-container").addClass("view1").removeClass("view2").removeClass("view3");
         $("#pledgeBar").addClass("selected");
         $("#declarationBar, #constitutionBar").removeClass("selected");
+        currentView = "view1";
+        console.log(currentView);
     });
 
     $("#declarationBar").click(function(){
         $(".page-container").addClass("view2").removeClass("view1").removeClass("view3");
         $("#declarationBar").addClass("selected");
         $("#pledgeBar, #constitutionBar").removeClass("selected");
+        currentView = "view2";
+        console.log(currentView);
     });
 
      $("#constitutionBar").click(function(){
         $(".page-container").addClass("view3").removeClass("view1").removeClass("view2");
         $("#constitutionBar").addClass("selected");
         $("#pledgeBar, #declarationBar").removeClass("selected");
+        currentView = "view3";
+        console.log(currentView);
     });
 
     $(".smallTitle").click(function() {
