@@ -6,6 +6,8 @@ var articleLink;
 var listItemClicked;
 var prevClicked;
 
+var originalArticle;
+
 function check1() {
     checkV1 = $("#myAC").hasClass("view1");
 }
@@ -45,6 +47,10 @@ function generateArticle() {
     }
 
     // $(".imgContainer").addClass("loadImage");
+}
+
+function goToOriginalArticle() {
+    window.open(originalArticle);
 }
 
 function showStuff() {
@@ -159,6 +165,7 @@ $(document).ready(function() {
             listItemClicked = false;
             $(this).removeClass("thisLiClicked");
             // hideStuff();
+            $(".articleContainer").scrollTop(0);
         }
         prevClicked = document.getElementsByClassName(this).className;
         console.log(prevClicked);
