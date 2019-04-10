@@ -1,6 +1,10 @@
 var checkV1; var checkV2; var checkV3;
 
+
+
 $(document).ready(function() {
+
+
 
 
     $(".next").click(function(){

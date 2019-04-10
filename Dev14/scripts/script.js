@@ -1,65 +1,67 @@
-    // var thisPhrase;
+    var thisPhrase;
     
-    // var iW; var imgWidthClass; 
-    // var imgWidthTempClass = "imgWidthTemp";
-    // var iH; var imgHeightClass;
-    // var iT; var imgTopClass;
-    // var iL; var imgLeftClass;
-    // var imgPlaceClass;
+    var iW; var imgWidthClass; 
+    var imgWidthTempClass = "imgWidthTemp";
+    var iH; var imgHeightClass;
+    var iT; var imgTopClass;
+    var iL; var imgLeftClass;
+    var imgPlaceClass;
 
-    // var pT; var phraseTopClass;
-    // var pL; var phraseLeftClass;
-    // var pW; var phraseWidthClass;
-    // var phrasePlaceClass;
-    // var pS; var phraseSizeClass;
-    // var phraseSizeTempClass = "phraseSizeTemp";
-    // var phrasePlaceTempClass = "phrasePlaceTemp";
-    // var pC; var phraseColorClass;
-    // var pF; var phraseFontClass;
-    // var fW; var fontWeightClass;
+    var pT; var phraseTopClass;
+    var pL; var phraseLeftClass;
+    var pW; var phraseWidthClass;
+    var phrasePlaceClass;
+    var pS; var phraseSizeClass;
+    var phraseSizeTempClass = "phraseSizeTemp";
+    var phrasePlaceTempClass = "phrasePlaceTemp";
+    var pC; var phraseColorClass;
+    var pF; var phraseFontClass;
+    var fW; var fontWeightClass;
 
-    // var cT; var captionTopClass;
-    // var cL; var captionLeftClass;
+    var cT; var captionTopClass;
+    var cL; var captionLeftClass;
 
-    // var captionPlaceClass;
-    // var articleBoxPlaceClass;
+    var captionPlaceClass;
+    var articleBoxPlaceClass;
 
-    // var c; var ld; var bgColorClass; var textColorClass; var captionColorClass; var captionBgColorClass;
+    var c; var ld; var bgColorClass; var textColorClass; var captionColorClass; var captionBgColorClass;
 
-    // var wordCount;
+    var wordCount;
 
-    // var sec; var phraseNum;
-    // var v; var numOptions;
-    // var i;
-    // var articleLink;
-    // var captionLink;
-    // var imageLink;
+    var sec; var phraseNum;
+    var v; var numOptions;
+    var i;
+    var articleLink;
+    var captionLink;
+    var imageLink;
 
-    // var prevNum = 1;
-    // var tempNum;
-    // var titleNum;
+    var prevNum = 1;
+    var tempNum;
+    var titleNum;
 
-    // var didScroll;
-    // var lastScrollTop = 0;
-    // var delta = 5;
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
 
-    // var titleHover = false;
-    // var titleClicked = false;
+    var titleHover = false;
+    var titleClicked = false;
 
-    // var introImgNum;
-    // var img1Num = 1;
-    // var img2Num = 2;
-    // var in1 = true;
-    // var in2 = false;
+    var introImgNum;
+    var img1Num = 1;
+    var img2Num = 2;
+    var in1 = true;
+    var in2 = false;
 
-    // var peekTimer;
-    // var peekTimerOn = false;
+    var peekTimer;
+    var peekTimerOn = false;
 
-    // var isMobile = false;
+    var isMobile = false;
 
-    // var articleOpen = false;
+    var articleOpen = false;
 
-    // var currentView = "view1";
+    var currentView;
+
+    var firstTime = true;
 
 
 
@@ -774,11 +776,12 @@ $(document).ready(function() {
 
     $(".tellScroll").click(function(){
         $('html,body').animate({
-        scrollTop: $("#pledgeSection").offset().top}, 'slow');
-        $(".bar").addClass("barShow");
-        $("#pledgeBar").addClass("selected");
-        currentView = "view1";
-        console.log(currentView);
+        scrollTop: $("#myPC").offset().top}, 'slow');
+        if (firstTime == true) {
+            $(".bar").addClass("barShow");
+            $("#pledgeBar").addClass("selected");
+        }
+        firstTime = false;
         // $("#pledgeSection").scrollTop(0);
     });
 
@@ -808,7 +811,6 @@ $(document).ready(function() {
         $("#pledgeBar").removeClass("selected");
         $("#declarationBar").addClass("selected");
         currentView = "view2";
-        console.log(currentView);
     });
 
     $("#declarationSection .next").click(function(){
@@ -816,7 +818,6 @@ $(document).ready(function() {
         $("#declarationBar").removeClass("selected");
         $("#constitutionBar").addClass("selected");
         currentView = "view3";
-        console.log(currentView);
     });
 
     $("#declarationSection .previous").click(function(){
@@ -824,7 +825,6 @@ $(document).ready(function() {
         $("#declarationBar").removeClass("selected");
         $("#pledgeBar").addClass("selected");
         currentView = "view1";
-        console.log(currentView);
     });
 
     $("#constitutionSection .previous").click(function(){
@@ -832,7 +832,6 @@ $(document).ready(function() {
         $("#constitutionBar").removeClass("selected");
         $("#declarationBar").addClass("selected");
         currentView = "view2";
-        console.log(currentView);
     });
 
     $("#pledgeBar").click(function(){
@@ -840,7 +839,6 @@ $(document).ready(function() {
         $("#pledgeBar").addClass("selected");
         $("#declarationBar, #constitutionBar").removeClass("selected");
         currentView = "view1";
-        console.log(currentView);
     });
 
     $("#declarationBar").click(function(){
@@ -848,7 +846,6 @@ $(document).ready(function() {
         $("#declarationBar").addClass("selected");
         $("#pledgeBar, #constitutionBar").removeClass("selected");
         currentView = "view2";
-        console.log(currentView);
     });
 
      $("#constitutionBar").click(function(){
@@ -856,7 +853,10 @@ $(document).ready(function() {
         $("#constitutionBar").addClass("selected");
         $("#pledgeBar, #declarationBar").removeClass("selected");
         currentView = "view3";
-        console.log(currentView);
+    });
+
+    $(".menu").hover(function() {
+        $(".otherMenuItems").toggleClass("showMenuItems");
     });
 
     $(".smallTitle").click(function() {
@@ -873,6 +873,14 @@ $(document).ready(function() {
         $("body").toggleClass("stopScroll");
         $("#img1").addClass("fadeInImg");
         $("#img2").addClass("fadeOutImg");
+
+        $('html,body').animate({
+        scrollTop: $("body").offset().top});
+        $('html,body').animate({
+        scrollLeft: $("body").offset().left});
+    });
+
+    $("#goToAbout").click(function() {
 
         $('html,body').animate({
         scrollTop: $("body").offset().top});
@@ -999,6 +1007,16 @@ $(document).ready(function() {
         //     $( "#draggable" ).draggable();
         //  } );
     });
+
+    // $(".archiveLink").click(function(){
+    //     // module.exports.currentView = currentView;
+    //     module.exports.articleLink = articleLink;
+    //     module.exports.sec = sec;
+    //     module.exports.phraseNum = phraseNum;
+    //     module.exports.v = v;
+        
+    // });
+
 
     // $(".pledge1").click(function(){
     //     $.ajax({

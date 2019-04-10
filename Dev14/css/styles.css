@@ -136,15 +136,27 @@ h4 {
     top: -50px;
 }*/
 
-.smallTitle {
+.menu {
 	position: fixed;
-	top: 14px;
-	left: 20px;
+	/*width: 20%;*/
+	background-color: transparent;
+	z-index: 12;
+	top:0;
+	left: 0;
+	box-sizing: border-box;
+	padding: 14px 20px 20px 20px;
+
+}
+
+.smallTitle {
+	/*position: absolute;*/
+	/*top: 14px;
+	left: 20px;*/
 	margin: 0;
 	/*z-index: 11; ---- stays on clicked overlay ----- */
-	z-index: 12;
+	/*z-index: 12;*/
 	cursor: pointer;
-	background-color: transparent;
+	margin-bottom: 14px;
 }
 
 h3 {
@@ -153,6 +165,47 @@ h3 {
 	line-height: 12pt;
 	text-align: left;
 	margin: 0;
+}
+
+.otherMenuItems {
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.8s;
+	/*margin-top: -10px;
+	padding: 0;
+	transition: 0.8s;*/
+	/*position: absolute;*/
+
+}
+
+.showMenuItems {
+	/*margin: auto;
+	padding: auto;*/
+	opacity: 1;
+	pointer-events: auto;
+	transition: 0.8s;
+}
+
+.menuItem {
+	/*position: absolute;*/
+	color: black;
+	/*margin: inherit;
+	padding: inherit;*/
+	/*text-decoration: none;
+	margin-bottom: 5px;*/
+	font-family: Heebo, sans-serif;
+	font-size: 9pt;
+	/*font-weight: bold;*/
+	cursor: pointer;
+}
+
+.menuItem:hover {
+	font-weight: bold;
+}
+
+#archiveLink {
+	text-decoration: none;
+	color: black;
 }
 
 .stopScroll {
