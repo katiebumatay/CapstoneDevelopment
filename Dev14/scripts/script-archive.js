@@ -159,16 +159,15 @@ $(document).ready(function() {
         if (listItemClicked == false) {
             listItemClicked = true;
             $(this).addClass("thisLiClicked");
+            prevClicked = this;
             // showStuff();
         }
-        else if (listItemClicked == true) {
+        else if (listItemClicked == true && prevClicked == this) {
             listItemClicked = false;
             $(this).removeClass("thisLiClicked");
             // hideStuff();
             $(".articleContainer").scrollTop(0);
         }
-        prevClicked = document.getElementsByClassName(this).className;
-        console.log(prevClicked);
      });
 
 
