@@ -8,6 +8,7 @@
 }
 
 html, body{
+	/*direction: ltr;*/
 	width: 100%;
 	height:100%;
 	margin: 0;
@@ -102,6 +103,7 @@ h1 {
 	left: 0;
 	overflow: hidden;
 	padding: 0;
+	/*direction: rtl;*/
 }
 
 .view1 {
@@ -117,8 +119,6 @@ h1 {
 }
 
 .group {
-	/*width: 100vw;
-	height: 100vh;*/
 	display: inline-block;
 	position: relative;
 	float: left;
@@ -130,17 +130,16 @@ h1 {
 	left: 0;
 	margin: 40px 40px 70px 40px;
 	box-sizing: border-box;
-	padding: 30px;
-	/*margin-bottom: 100px;*/
 }
 
 .itemsBox {
+	/*direction: ltr;*/
 	background-color: #dddddd;
 	z-index: 50;
 	position: fixed;
 	float: right;
 	margin-left: 350px;
-	margin-top: -30px;
+	margin-top: 0px;
 	/*width: inherit;*/
 	width: calc(100vw - 460px);
 	/*width: 100%;*/
@@ -204,6 +203,7 @@ h1 {
 	overflow: scroll;
 	opacity: 0;
 	transition: 0.5s;
+	/*padding-top: 30px;*/
 }
 
 .articleText {
@@ -232,10 +232,27 @@ h1 {
 	transition: 0.5s;
 }
 
+/*.lcTop {
+	z-index: 10;
+	width: 28%;
+	position: fixed;
+	margin-top: -30px;
+	margin-left: 30px;
+	padding-top: 30px;
+	background-color: #eeeeee;
+
+}*/
+
 .list-container {
+	/*direction: ltr;*/
 	min-width: 311px;
 	position: relative;
+	float: left;
 	width: 28%;
+	text-align: left;
+	padding: 30px;
+
+	/*top:30px;*/
 	/*margin-left: 50px;*/
 	/*transition: 0.8s;*/
 }
