@@ -540,6 +540,14 @@ $(document).ready(function() {
         scrollLeft: $("body").offset().left});
     });
 
+    $(".aboutButtonMobile").click(function() {
+
+        $('html,body').animate({
+        scrollTop: $("body").offset().top});
+        $('html,body').animate({
+        scrollLeft: $("body").offset().left});
+    });
+
 
     $(".sectionTextContainer").hover(function(){
             $(".sectionHeader, .extra").toggleClass("blurtext2");

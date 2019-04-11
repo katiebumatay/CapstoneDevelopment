@@ -327,6 +327,4 @@ $(document).ready(function() {
     $(".3-constitution-9-3").mouseenter(function(){ sec = "3-constitution"; phraseNum = "9"; v = 3; generateArticle();});
     $(".3-constitution-9-4").mouseenter(function(){ sec = "3-constitution"; phraseNum = "9"; v = 4; generateArticle();});
 
-
-
 });
