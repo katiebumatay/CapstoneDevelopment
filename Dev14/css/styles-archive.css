@@ -215,6 +215,18 @@ h1 {
 	font-size: 11pt;
 }
 
+.articleText a {
+	display: block;
+	margin: 10px;
+	text-align: right;
+	font-family: Heebo, sans-serif;
+	font-size: 10pt;
+	font-style: italic;
+	color: black;
+	text-decoration: underline;
+
+}
+
 .showImgArticle {
 	opacity: 1;
 	transition: 0.5s;

@@ -86,6 +86,8 @@ html, body{
 
 .menuMobile {
 	visibility: hidden;
+	width: 0;
+	height: 0;
 }
 
 /*.page-container {
@@ -1982,6 +1984,7 @@ h2 {
 		right: 30px;
 		/*bottom: 80px;*/
 		width: 40%;
+		height: auto;
 		font-size: 11pt;
 		font-family: Heebo, sans-serif;
 		margin-left: 30%;
