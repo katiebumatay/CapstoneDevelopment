@@ -610,9 +610,9 @@ function tempToggleVariables() {
 
 function chooseStory() {
     v = Math.floor(Math.random() * numOptions) + 1;
-    articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev14/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html";
+    articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev15/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html";
     $(".articleText").load(articleLink);
-    captionLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev14/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html p:first-child";
+    captionLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev15/variables/" + sec + "/" + phraseNum + "/" + v + "/text.html p:first-child";
     $(".caption").load(captionLink);
     i = Math.floor(Math.random() * 2) + 1;
     loadImage.style.setProperty('--myImg-background-image', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image" + i + "-small.jpg");
