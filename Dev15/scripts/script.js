@@ -598,7 +598,7 @@ $(document).ready(function() {
         }
 
         $(".articleContainer").scrollTop(0);
-});
+    });
 
     $(".articleBox").click(function(){
         if (isMobile == false) {
