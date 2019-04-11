@@ -122,7 +122,8 @@ h1 {
 	display: inline-block;
 	position: relative;
 	float: left;
-	overflow-y: scroll;
+	/*overflow-y: scroll;*/
+	overflow: hidden;
 	width: calc(100vw - 80px);
 	height: calc(100vh - 100px);
 	background-color: #eeeeee;
@@ -138,10 +139,10 @@ h1 {
 	z-index: 50;
 	position: fixed;
 	float: right;
-	margin-left: 400px;
+	margin-left: 380px;
 	margin-top: 0px;
 	/*width: inherit;*/
-	width: calc(100vw - 480px);
+	width: calc(100vw - 460px);
 	/*width: 100%;*/
 	height: calc(100vh - 100px);
 }
@@ -243,15 +244,22 @@ h1 {
 
 }*/
 
+.lcWrapper {
+	height: 100%;
+	width: 31%;
+	overflow: scroll;
+}
+
 .list-container {
 	/*direction: ltr;*/
 	min-width: 311px;
 	position: relative;
 	float: left;
-	width: 28%;
+	width: 85%;
 	text-align: left;
 	padding: 30px;
-
+	padding-right: 0px;
+	overflow: scroll;
 	/*top:30px;*/
 	/*margin-left: 50px;*/
 	/*transition: 0.8s;*/

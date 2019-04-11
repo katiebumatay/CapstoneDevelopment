@@ -215,7 +215,7 @@ function imgPlace() {
 
 
 function phraseSize() {
-    if (wordCount >= 7) {
+    if (wordCount >= 4) {
         pS = Math.floor(Math.random() * 2) + 1;
         phraseSizeClass = "phraseSize" + pS;
     }
