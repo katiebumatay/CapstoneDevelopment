@@ -26,4 +26,4 @@ Dev12: put imgOverlay div within imgContainer div. slow down fade in of variable
 
 Dev13: add scroll indication to about section. change the way the read article layout appears/animation to it. Add "Read More" indication. start making archive. add media query css for mobile device. add bounce on read more button.
 
-Dev 14: Fill in all content for all sections. add progress bars/buttons. animate phrase on read more instead of drag.
+Dev 14: Fill in all content for all sections. add progress bars/buttons. animate phrase on read more instead of drag. flesh out archive. add source links to all articles. do menu instead of view in archive button. allow to go to about page from anywhere and go back to the section it was on.
