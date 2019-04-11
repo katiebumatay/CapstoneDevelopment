@@ -64,56 +64,6 @@
     var firstTime = true;
 
 
-
-
-    // var navbarHeight = $('header').outerHeight();
-
-// function animateTitle() {
-//     console.log("animation happening");
-//     var elem = document.getElementById("myTitle");   
-//     var blur = 30;
-//     var id = setInterval(frame(), 5);
-//     function frame() {
-//         console.log("frame function");
-//         if (blur == 0) {
-//             clearInterval(id);
-//         } else {
-//             blur--; 
-//             elem.style.textShadow = "0px 0px " + blur + "px #ffffff";
-//         }
-//     }
-// }
-
-// function animateTitle() {
-//     console.log("animation happening");
-//     var elem = document.getElementById("myTitle");
-//     setInterval(frame(), 2000);
-//     function frame() {
-//         $(elem).toggleClass("clearText");
-//     }
-// }
-
-// function animate() {
-//     var titleNum = Math.floor(Math.random() * 4) + 1;
-//     if (titleNum == 1) {
-//         $(".title1").toggleClass("cleartext");
-//         console.log("affect title1");
-//     }
-//     if (titleNum == 2) {
-//         $(".title2").toggleClass("cleartext");
-//         console.log("affect title2");
-//     }
-//     if (titleNum == 3) {
-//         $(".title3").toggleClass("cleartext");
-//         console.log("affect title3");
-//     }
-//     if (titleNum == 4) {
-//         $(".title4").toggleClass("cleartext");
-//         console.log("affect title4");
-//     }
-// };
-
-
 function checkMobile(){
     if ($(".variablesOverlay").css("top") == "30px" ){
         isMobile = true;
@@ -123,7 +73,6 @@ function checkMobile(){
 
 function animatePhrase() {
     console.log("animate phrase");
-    // $(".sectionText .phrase").animate({fontSize: "18pt"}).animate({fontSize: "14pt"});
     $(".sectionText .phrase").toggleClass("blurText");
 };
 
@@ -131,9 +80,6 @@ function animate() {
     if (titleHover == true) {
         return;
     }
-    // if (titleClicked == true) {
-    //     return;
-    // }
     else if (titleClicked == false) {
     titleNum = Math.floor(Math.random() * 4) + 1;
     if (titleNum == prevNum) {
@@ -160,10 +106,6 @@ function animate() {
     if (tempNum == 4) {
         $(".title4").toggleClass("cleartext");
     }
-    // if (tempNum == 5) {
-    //     $(".title5").toggleClass("cleartext");
-    // }
-    // console.log(tempNum);
     prevNum = tempNum;
 }
 };
@@ -199,22 +141,8 @@ function imgFade2() {
 }
 
 function articlePeekAnimate() {
-    // console.log("bounce");
     $(".articleBox").toggleClass("articleBoxBounce");
-
-    // $(".articleBox").animate({width: "20px"}, 500).animate({width: "0px"}, 500);
-    // console.log("run article box animation");
 }
-
-// function articlePeekAnimate2() {
-//     // $(".articleBoxPeek").animate({height: "30px"}, 500);
-//     // $(".articleBoxPeek").animate({height: "20px"}, 500);
-//     $(".articleBoxPeek").animate({height: "50px",}, 500).animate({height: "20px",}, 500);
-// }
-
-// function animate() {
-//     $(".title1, .title2, .title3, .title4").toggleClass("cleartext");
-// };
 
 function imgWidth() {
     iW = Math.floor(Math.random() * 3) + 1;
@@ -234,40 +162,6 @@ function imgMix() {
     return imgMixClass;
 }
 
-// function imgTop() {
-
-//     if (iH == 3) {
-//         iT = Math.floor(Math.random() * 2) + 1;
-//         imgTopClass = "imgTop" + iT;
-//         if (iT == 1) {
-//             captionPlaceClass = "captionPlaceBelow";
-//         }
-//         if (iT == 2) {
-//             captionPlaceClass = "captionPlaceAbove";
-//         }
-//     }
-//     if (iH == 2) {
-//         iT = Math.floor(Math.random() * 3) + 1;
-//         imgTopClass = "imgTop" + iT;
-//         if (iT == 1) {
-//             captionPlaceClass = "captionPlaceBelow";
-//         }
-//         if (iT > 1) {
-//             captionPlaceClass = "captionPlaceAbove";
-//         }
-//     }
-//     else if (iH == 1) {
-//         iT = Math.floor(Math.random() * 4) + 1;
-//         imgTopClass = "imgTop" + iT;
-//         if (iT < 3) {
-//             captionPlaceClass = "captionPlaceBelow";
-//         }
-//         if (iT >= 3) {
-//             captionPlaceClass = "captionPlaceAbove";
-//         }
-//     }
-//     return imgTopClass;
-// };
 
 function imgTop() {
 
@@ -303,30 +197,12 @@ function imgTop() {
 function imgLeft() {
     if (iW == 3) {
         iL = Math.floor(Math.random() * 2) + 1;
-        // if (iL == 1) {
-        //     articleBoxPlaceClass = "articleBoxPlaceRight";
-        // }
-        // if (iL == 2) {
-        //     articleBoxPlaceClass = "articleBoxPlaceLeft";
-        // }
     }
     if (iW == 2) {
         iL = Math.floor(Math.random() * 3) + 1;
-        // if (iL < 3) {
-        //     articleBoxPlaceClass = "articleBoxPlaceRight";
-        // }
-        // if (iL == 3) {
-        //     articleBoxPlaceClass = "articleBoxPlaceLeft";
-        // }
     }
     else if (iW == 1) {
         iL = Math.floor(Math.random() * 4) + 1;
-        // if (iL < 3) {
-        //     articleBoxPlaceClass = "articleBoxPlaceRight";
-        // }
-        // if (iL >= 3) {
-        //     articleBoxPlaceClass = "articleBoxPlaceLeft";
-        // }
     }
 }
 
@@ -334,23 +210,6 @@ function imgPlace() {
     imgPlaceClass = "imgPlace-" + iT + "-" + iL;
     return imgPlaceClass;
 }
-
-// function imgLeft() {
-
-//     if (iW == 3) {
-//         iL = Math.floor(Math.random() * 2) + 1;
-//         imgLeftClass = "imgLeft" + iL;
-//     }
-//     if (iW == 2) {
-//         iL = Math.floor(Math.random() * 3) + 1;
-//         imgLeftClass = "imgLeft" + iL;
-//     }
-//     else if (iW == 1) {
-//         iL = Math.floor(Math.random() * 4) + 1;
-//         imgLeftClass = "imgLeft" + iL;
-//     }
-//     return imgLeftClass;
-// };
 
 
 function phraseSize() {
@@ -471,34 +330,8 @@ function captionLeft() {
 };
 
 function captionPlace() {
-    // if (iT < 3) {
-    //     captionPlaceClass = "captionPlaceBelow";
-    // }
-    // else if (iT >= 3) {
-    //     captionPlaceClass = "captionPlaceAbove";
-    // }
     return captionPlaceClass;
 }
-
-// function articleBoxPlace() {
-//     // if (iT < 3) {
-//     //     captionPlaceClass = "captionPlaceBelow";
-//     // }
-//     // else if (iT >= 3) {
-//     //     captionPlaceClass = "captionPlaceAbove";
-//     // }
-//     return articleBoxPlaceClass;
-// }
-
-// function hideVariables(callback) {
-//     $(".variables-container").removeClass("show");
-//     setTimeout(function(){
-//         callback();
-//     }, 500); 
-// }
-
-
-
 
 
 function addVariables() {
@@ -507,40 +340,26 @@ function addVariables() {
     phraseSize(); textColor(); phraseFont(); fontWeight();
     phraseTop(); phraseLeft(); phrasePlace(); phraseWidth();
     captionColor(); captionPlace();
-    // articleBoxPlace();
-    // $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgTopClass).addClass(imgLeftClass).addClass(bgColorClass).addClass("loadImage");
+    
     $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass);
-    // $(".imgOverlay").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass).addClass(imgMixClass);
     $(".imgOverlay").addClass(bgColorClass).addClass(imgMixClass);
     $(".articleBox").addClass(bgColorClass);
     $(".phraseHeading").text(thisPhrase).addClass(phraseSizeClass).addClass(textColorClass).addClass(phraseFontClass).addClass(fontWeightClass);
     $(".phraseHeadingContainer").addClass(phrasePlaceClass).addClass(phraseWidthClass);
-    // $("h5").addClass(captionColor()).addClass(phraseFontClass).addClass(captionBgColor());
-    // $("h5").addClass(captionColor()).addClass(phraseFontClass).addClass(captionTop()).addClass(captionLeft());
-    // $("h5").addClass(captionColor()).addClass(phraseFontClass);
     $(".caption").addClass(captionColorClass).addClass(captionPlaceClass);
-    // $(".articleBox").addClass(articleBoxPlaceClass);
     $(".fa-sort-up").addClass(textColorClass);
     $(".readMore, .articleText a").addClass(textColorClass);
-    // $("h5").addClass(phraseFontClass);
 }
 
 function removeVariables() {
-        // $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgTopClass).removeClass(imgLeftClass).removeClass(bgColorClass).removeClass("loadImage");
         $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgPlaceClass).removeClass(bgColorClass);
-        // $(".imgOverlay").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgPlaceClass).removeClass(bgColorClass).removeClass(imgMixClass);
         $(".imgOverlay").removeClass(bgColorClass).removeClass(imgMixClass);
         $(".articleBox").removeClass(bgColorClass);
         $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass).removeClass(fontWeightClass);
         $(".phraseHeadingContainer").removeClass(phrasePlaceClass).removeClass(phraseWidthClass);;
-        // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass).removeClass(captionBgColorClass);
-        // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass).removeClass(captionTopClass).removeClass(captionLeftClass);
-        // $("h5").removeClass(captionColorClass).removeClass(phraseFontClass);
         $(".caption").removeClass(captionColorClass).removeClass(captionPlaceClass);
-        // $(".articleBox").removeClass(articleBoxPlaceClass);
-         $(".fa-sort-up").removeClass(textColorClass);
-         $(".readMore, .articleText a").removeClass(textColorClass);
-        // $("h5").removeClass(phraseFontClass);
+        $(".fa-sort-up").removeClass(textColorClass);
+        $(".readMore, .articleText a").removeClass(textColorClass);
 
 
 }
@@ -549,50 +368,24 @@ function activateOverlay() {
         $(".variablesOverlay.variablesToFront").addClass(bgColorClass);
         $(".section, .sectionTextContainer, .sectionHeader, .sectionText").addClass("hideSectionText");
         $(".exitOverlay").addClass("show");
-        // $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
-        // $(".variables-container, .imgContainer, .phraseHeadingContainer").addClass("show variablesToFront");
         $(".variables-container, .variablesOverlay").addClass("show variablesToFront");
         $("body").addClass("stopScroll");
-        /////////// $(".variablesOverlay.variablesToFront").addClass(bgColorClass);
-        // $(".imgOverlay, .phraseHeading").addClass("resizeElement");
-        // $(".variablesOverlay").removeClass("stopScroll");
-        // $(".variablesOverlayLength").addClass("variablesOverlayVisible").removeClass("stopScroll");
-        // $(".articleContainer").addClass("articleOverlayVisible");
-
-        // $(".articleBox").animate({width: "(10px)"}, 100);
-        //////// $(".articleBox").addClass("articleBoxPeek");
         $(".articleBox").addClass("articleBoxPeek");
-        // $(".phraseHeadingContainer").addClass("dragMe");
-
 }
 
 
 
 function deactivateOverlay() {
-    /////////////////// $(".variablesOverlay.variablesToFront").removeClass(bgColorClass);
     $(".section, .sectionTextContainer, .sectionHeader, .sectionText").removeClass("hideSectionText");
     $(".exitOverlay").removeClass("show");
-    // $(".variables-container, .imgOverlay, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
-    // $(".variables-container, .imgContainer, .phraseHeadingContainer").removeClass("show variablesToFront");
     $(".variables-container, .variablesOverlay").removeClass("show variablesToFront");
     $("body").removeClass("stopScroll");
-    // $(".imgOverlay, .phraseHeading").removeClass("resizeElement");
-    // $(".variablesOverlayLength").removeClass("variablesOverlayVisible").addClass("stopScroll");
-    // $(".articleContainer").removeClass("articleOverlayVisible");
-
     $(".articleBox").removeClass("articleBoxPeek").removeClass("articleBoxExpand").removeClass("articleBoxBounce");
-     $(".variablesOverlay").removeClass("readArticle");
-     // $(".imgContainer, .imgOverlay").removeClass(imgWidthTempClass);
-     $(".imgContainer").removeClass(imgWidthTempClass);
-     $(".phraseHeading").removeClass("phraseTemp");
-    /////////$(".phraseHeading").toggleClass(phraseSizeTempClass);
+    $(".variablesOverlay").removeClass("readArticle");
+    $(".imgContainer").removeClass(imgWidthTempClass);
+    $(".phraseHeading").removeClass("phraseTemp");
     $(".phraseHeadingContainer").removeClass("phrasePlaceTemp");
-     //////////$(".phraseHeading").removeClass(phraseSizeTempClass);
-     ///////////$(".phraseHeadingContainer").removeClass(phrasePlaceTempClass);
-     // $(".articleText").animate({
-     //    scrollTop: $(".articleText").offset().top});
-     $(".articleBox").scrollTop(0);
-     // $(".phraseHeadingContainer").removeClass("dragMe");
+    $(".articleBox").scrollTop(0);
 
 }
 
@@ -600,12 +393,8 @@ function deactivateOverlay() {
 function tempToggleVariables() {
     $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgHeightClass).toggleClass(imgPlaceClass).toggleClass(bgColorClass).toggleClass(imgWidthTempClass);
     $(".caption").toggleClass(captionColorClass).toggleClass(captionPlaceClass);
-    // $(".phraseHeading").toggleClass(phraseSizeClass).toggleClass("phraseTemp");
     $(".phraseHeading").toggleClass("phraseTemp");
-    /////////$(".phraseHeading").toggleClass(phraseSizeTempClass);
-    // $(".phraseHeadingContainer").toggleClass(phrasePlaceClass).toggleClass(phraseWidthClass).toggleClass("phrasePlaceTemp");
     $(".phraseHeadingContainer").toggleClass(phrasePlaceClass).toggleClass("phrasePlaceTemp");
-    // $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
 }
 
 function chooseStory() {
@@ -616,43 +405,7 @@ function chooseStory() {
     $(".caption").load(captionLink);
     i = Math.floor(Math.random() * 2) + 1;
     loadImage.style.setProperty('--myImg-background-image', "url(../variables/" + sec + "/" + phraseNum + "/" + v + "/image" + i + "-small.jpg");
-    // $(".imgContainer").addClass("loadImage");
 }
-
-
-
-
-function hasScrolled() {
-    var navbarHeight = $('header').outerHeight();
-        // console.log("in hasScrolled func");
-        var st = $(this).scrollTop();
-    
-        // Make sure they scroll more than delta
-        if(Math.abs(lastScrollTop - st) <= delta) {
-            return;
-        }
-    
-        // If they scrolled down and are past the navbar, add class .nav-up.
-        // This is necessary so you never see what is "behind" the navbar.
-        // console.log("st = " +st);
-        // console.log("lastScrollTop = " + lastScrollTop);
-        // console.log("navbarHeight = " + navbarHeight);
-
-
-        if (st > lastScrollTop && st > navbarHeight){
-            // Scroll Down
-            // console.log("scrolled down");
-            $('header').addClass('nav-up');
-        } else {
-            // Scroll Up
-            if(st + $(window).height() < $(document).height()) {
-                // console.log("scrolled up");
-                $('header').removeClass('nav-up');
-            }
-        }
-    
-        lastScrollTop = st;
-    }
 
 
 
@@ -661,86 +414,19 @@ $(document).ready(function() {
 
     checkMobile();
 
-    // if (isMobile == true) {
-    //     setInterval('animatePhrase()', 1000);
-    // }
 
     $('html,body').animate({
         scrollTop: $("body").offset().top});
     $('html,body').animate({
         scrollLeft: $("body").offset().left});
 
-    // $("#myTitle").toggleClass("cleartext");
 
     setInterval('animate()', 800);
-
     setInterval('imgFade1()', 5000);
     setInterval('imgFade2()', 5000);
 
     var clicked = false;
 
-    // var titleClicked = false;
-    // var sectionHeaderClicked = false;
-
-// $(".draggable").draggable
-//     ({  
-//         revert: 'valid',
-//         // snap: '#droppable',
-//         // snapMode: 'corner',
-//         // snapTolerance: '22'
-//     });
-
-// $(".draggable").data({'originalLeft': $(".draggable").css('left'),
-//                       'origionalTop': $(".draggable").css('top')
-//                      });
-
-
-//     $("#droppable").droppable
-//     ({
-//         accept: '#draggable', 
-//         drop: function(event, ui) 
-//         {
-//             $(this).find("#draggable").html();
-//         }
-// });
-    // $( "#selector" ).draggable({
-    //     revert: true
-    // });
-
-    // $("h1").hover(function(){
-    //     if (titleClicked == false) {
-    //         $(this).toggleClass("blurtext");
-    //     }
-        
-    // });
-
-
-    // $("h1").hover(function(){
-    //     animateTitle();
-        
-    // });
-
-    // $(".title").mouseover(function(){
-    //     setInterval('animate()', 1500);
-    // });
-
-    $("#goToPledge").click(function() {
-        $('html,body').animate({
-        scrollTop: $("#pledgeSection").offset().top},
-        'slow');
-    });
-
-    $("#goToDeclaration").click(function() {
-        $('html,body').animate({
-        scrollTop: $("#declarationSection").offset().top},
-        'slow');
-    });
-
-    $("#goToConstitution").click(function() {
-        $('html,body').animate({
-        scrollTop: $("#constitutionSection").offset().top},
-        'slow');
-    });
 
     $("h1").mouseenter(function(){
         titleHover = true;
@@ -763,15 +449,6 @@ $(document).ready(function() {
             $("#img1, #img2").removeClass("fadeInImg").removeClass("fadeOutImg");
             
         }
-        // $(".title, h1").toggleClass("clickedTitle");
-        // $(".page-container").toggleClass("pageContainerHide");
-        // $("h1").addClass("cleartext");
-        // $(".page-container, .circle, .smallTitle").toggleClass("darker");
-
-        // $("body").toggleClass("stopScroll");
-        // $(".aboutSection").toggleClass("showAbout");
-        // $(".intro-container").toggleClass("clickedTitle");
-        // $(".title").toggleClass("titleGrow");
     });
 
     $(".tellScroll").click(function(){
@@ -782,29 +459,8 @@ $(document).ready(function() {
             $("#pledgeBar").addClass("selected");
         }
         firstTime = false;
-        // $("#pledgeSection").scrollTop(0);
     });
 
-    // $("#pledgeSection .next").click(function(){
-    //     $('html,body').animate({
-    //     scrollLeft: $("#declarationSection").offset().left}, 'slow');
-    // });
-
-    // $("#declarationSection .next").click(function(){
-    //     console.log("declaration next click");
-    //     $('html,body').animate({
-    //     scrollLeft: $("#constitutionSection").offset().left}, 'slow');
-    // });
-
-    // $("#declarationSection .previous").click(function(){
-    //     $('html,body').animate({
-    //     scrollLeft: $("#pledgeSection").offset().left}, 'slow');
-    // });
-
-    // $("#constitutionSection .previous").click(function(){
-    //     $('html,body').animate({
-    //     scrollLeft: $("#declarationSection").offset().left}, 'slow');
-    // });
 
     $("#pledgeSection .next").click(function(){
         $(".page-container").addClass("view2").removeClass("view1");
@@ -860,10 +516,6 @@ $(document).ready(function() {
     });
 
     $(".smallTitle").click(function() {
-        // deactivateOverlay();
-        // if (isMobile == false) {
-        //     clearInterval(peekTimer);
-        // }
 
         titleClicked = false;
         $(".intro-container").toggleClass("clickedTitle");
@@ -890,33 +542,14 @@ $(document).ready(function() {
 
 
     $(".sectionTextContainer").hover(function(){
-        // if (sectionHeaderClicked == false) {
             $(".sectionHeader, .extra").toggleClass("blurtext2");
             $(".phrase").toggleClass("blurtext3");
-            // $("body").toggleClass("stopScroll");
-        // }
     });
 
-    // $(".sectionHeader, .phrase").hover(function(){
     $(".phrase").hover(function(){
-        // if (sectionHeaderClicked == false) {
             $(this).toggleClass("blurtext3");
-        // }
         
     });
-
-    // $(".sectionHeader").click(function() {
-    //     if (sectionHeaderClicked == true) {
-    //         sectionHeaderClicked = false;
-    //     }
-    //     else if (sectionHeaderClicked == false) {
-    //         sectionHeaderClicked = true;
-    //     }
-    //     // $(".line").toggleClass("lineExpand");
-    //     $(".rect").toggleClass("rectExpand");
-    //     $(".sectionExplanation").toggleClass("showExplanation");
-    //     $("body").toggleClass("stopScroll");
-    // });
 
 
     $(".phrase").mouseenter(function(){
@@ -925,7 +558,6 @@ $(document).ready(function() {
         wordCount = thisPhrase.split(" ").length;
 
         addVariables();
-        // $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
         $(".variables-container").toggleClass("show");
         $("body").toggleClass("stopScroll");
     });
@@ -933,16 +565,10 @@ $(document).ready(function() {
 
     $(".phrase").mouseleave(function(){
         if (clicked == false) {
-            // $(".variables-container, .imgContainer, .phraseHeadingContainer").toggleClass("show");
             $(".variables-container").toggleClass("show");
             $("body").toggleClass("stopScroll");
-            // setTimeout(function() {
-            //     $(".variables-container").removeClass("show");
-            // }, 500);
             removeVariables();
-            // hideVariables(removeVariables());
         }
-
     });
 
     $(".phrase").click(function(){
@@ -959,7 +585,6 @@ $(document).ready(function() {
 
     });
 
-    // $(".variables-container").click(function(){
     $(".exitOverlay").click(function(){
         clicked = false;
         removeVariables();
@@ -971,29 +596,18 @@ $(document).ready(function() {
                 peekTimerOn = false;
             }
         }
-        // $('html,body').animate({
-        // scrollTop: $(".variables-container").offset().top},
-        // 'slow');
+
         $(".articleContainer").scrollTop(0);
-
-        // $(".draggable").css({'left': $(".draggable").data('originalLeft'),
-        //                      'top': $(".draggable").data('origionalTop')}
-        //                      );
-
-    });
+});
 
     $(".articleBox").click(function(){
         if (isMobile == false) {
-            // if (articleOpen == false) {
-            //     articleOpen = true;
             if(peekTimerOn == true) {
                     console.log("clear peekTimer");
                     clearInterval(peekTimer);
                     peekTimerOn = false;
             }
-            // else if (articleOpen == true) {
             else if (peekTimerOn == false) {
-                // articleOpen = false;
                 console.log("activate peekTimer");
                 peekTimer = setInterval('articlePeekAnimate()', 1000);
                 peekTimerOn = true;
@@ -1002,56 +616,11 @@ $(document).ready(function() {
         $(".articleBox").toggleClass("articleBoxExpand");
         $(".variablesOverlay").toggleClass("readArticle");
         tempToggleVariables();
-        // $(".imgContainer, .imgOverlay").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
-        // $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgWidthTempClass);
         $(".articleBox").scrollTop(0);
-        // $( function() {
-        //     $( "#draggable" ).draggable();
-        //  } );
+
     });
 
-    // $(".archiveLink").click(function(){
-    //     // module.exports.currentView = currentView;
-    //     module.exports.articleLink = articleLink;
-    //     module.exports.sec = sec;
-    //     module.exports.phraseNum = phraseNum;
-    //     module.exports.v = v;
-        
-    // });
-
-
-    // $(".pledge1").click(function(){
-    //     $.ajax({
-    //         url : "variables/1-pledge/1/1/text.txt",
-    //         dataType: "text",
-    //         success : function (data) {
-    //             $(".articleText").html(data);
-    //         }
-    //     });
-    //     // $(".articleText").load("../variables/1-pledge/1/1/text.txt");
-    //     // $(".articleText").load("text.txt");
-    // });
-
-
-        // $(".pledge1").click(function(){
-        //     v = Math.floor(Math.random() * 2) + 1;
-        //     // imageLink = "../variables/1-pledge/1/" + v + "/image.jpg";
-        //     // // $("loadImage").style.setProperty('--myImgURL', imageLink);
-        //     // loadImage.style.setProperty('--myImg-background-image', url(imageLink));
-
-
-        //     articleLink = "https://katiebumatay.github.io/CapstoneDevelopment/Dev7/variables/1-pledge/1/" + v + "/text.html";
-        //     $(".articleText").load(articleLink);
-        // });
-        // // $(".articleText").load("../variables/1-pledge/1/1/text.txt");
-        // // $(".articleText").load("text.txt");
-
-        // $(".pledge2").click(function(){
-        //     $(".articleText").load("https://katiebumatay.github.io/CapstoneDevelopment/Dev7/variables/1-pledge/2/1/text.html");
-        // });
-
         $(".pledge1").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
             sec = "1-pledge";
             phraseNum = "1";
             numOptions = 5;
@@ -1059,7 +628,6 @@ $(document).ready(function() {
         });
 
         $(".pledge2").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
             sec = "1-pledge";
             phraseNum = "2";
             numOptions = 7;
@@ -1067,7 +635,6 @@ $(document).ready(function() {
         });
 
         $(".pledge3").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
             sec = "1-pledge";
             phraseNum = "3";
             numOptions = 5;
@@ -1075,7 +642,7 @@ $(document).ready(function() {
         });
 
         $(".pledge4").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "1-pledge";
             phraseNum = "4";
             numOptions = 3;
@@ -1083,7 +650,7 @@ $(document).ready(function() {
         });
 
         $(".pledge5").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "1-pledge";
             phraseNum = "5";
             numOptions = 7;
@@ -1091,7 +658,7 @@ $(document).ready(function() {
         });
 
         $(".pledge6").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "1-pledge";
             phraseNum = "6";
             numOptions = 6;
@@ -1099,7 +666,7 @@ $(document).ready(function() {
         });
 
         $(".pledge7").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "1-pledge";
             phraseNum = "7";
             numOptions = 5;
@@ -1107,7 +674,7 @@ $(document).ready(function() {
         });
 
         $(".pledge8").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "1-pledge";
             phraseNum = "8";
             numOptions = 6;
@@ -1115,7 +682,7 @@ $(document).ready(function() {
         });
 
         $(".dec1").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "2-declaration";
             phraseNum = "1";
             numOptions = 6;
@@ -1123,7 +690,7 @@ $(document).ready(function() {
         });
 
         $(".dec2").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "2-declaration";
             phraseNum = "2";
             numOptions = 5;
@@ -1131,7 +698,7 @@ $(document).ready(function() {
         });
 
         $(".dec3").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "2-declaration";
             phraseNum = "3";
             numOptions = 8;
@@ -1139,7 +706,7 @@ $(document).ready(function() {
         });
 
         $(".dec4").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "2-declaration";
             phraseNum = "4";
             numOptions = 6;
@@ -1147,7 +714,7 @@ $(document).ready(function() {
         });
 
         $(".dec5").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "2-declaration";
             phraseNum = "5";
             numOptions = 5;
@@ -1155,7 +722,7 @@ $(document).ready(function() {
         });
 
         $(".dec6").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "2-declaration";
             phraseNum = "6";
             numOptions = 6;
@@ -1163,7 +730,7 @@ $(document).ready(function() {
         });
 
         $(".const1").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "3-constitution";
             phraseNum = "1";
             numOptions = 5;
@@ -1172,7 +739,7 @@ $(document).ready(function() {
 
 
         $(".const2").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "3-constitution";
             phraseNum = "2";
             numOptions = 4;
@@ -1181,7 +748,7 @@ $(document).ready(function() {
 
 
         $(".const3").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "3-constitution";
             phraseNum = "3";
             numOptions = 7;
@@ -1189,7 +756,7 @@ $(document).ready(function() {
         });
 
         $(".const4").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "3-constitution";
             phraseNum = "4";
             numOptions = 7;
@@ -1197,7 +764,7 @@ $(document).ready(function() {
         });
 
         $(".const5").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "3-constitution";
             phraseNum = "5";
             numOptions = 5;
@@ -1205,7 +772,7 @@ $(document).ready(function() {
         });
 
         $(".const6").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "3-constitution";
             phraseNum = "6";
             numOptions = 6;
@@ -1213,7 +780,7 @@ $(document).ready(function() {
         });
 
         $(".const7").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "3-constitution";
             phraseNum = "7";
             numOptions = 7;
@@ -1221,7 +788,7 @@ $(document).ready(function() {
         });
 
         $(".const8").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "3-constitution";
             phraseNum = "8";
             numOptions = 4;
@@ -1230,73 +797,12 @@ $(document).ready(function() {
 
 
         $(".const9").mouseenter(function(){
-            // v = Math.floor(Math.random() * 2) + 1;
+            
             sec = "3-constitution";
             phraseNum = "9";
             numOptions = 4;
             chooseStory();
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // setInterval(function() {
-    //     var abc = $("#declarationSection").scrollTop();
-    //     console.log(abc);
-    //     // if ($(".pledgeText").scrollTop() == 30) {
-    //     //     console.log("pledge");
-    //     // }
-    //     // else {
-    //     //     console.log("didScroll is false");
-    //     // }
-    // }, 250);
-
-
-    // $(window).scroll(function(event){
-    //     didScroll = true;
-    //     // console.log("user scrolled");
-    // });
-
-    // setInterval(function() {
-    //     if (didScroll) {
-    //         hasScrolled();
-    //         didScroll = false;
-    //     }
-    //     // else {
-    //     //     console.log("didScroll is false");
-    //     // }
-    // }, 250);
-
-    // function hasScrolled() {
-    //     var st = $(this).scrollTop();
-    
-    //     // Make sure they scroll more than delta
-    //     if(Math.abs(lastScrollTop - st) <= delta)
-    //         return;
-    
-    //     // If they scrolled down and are past the navbar, add class .nav-up.
-    //     // This is necessary so you never see what is "behind" the navbar.
-    //     if (st > lastScrollTop && st > navbarHeight){
-    //         // Scroll Down
-    //         $('header').removeClass('nav-down').addClass('nav-up');
-    //     } else {
-    //         // Scroll Up
-    //         if(st + $(window).height() < $(document).height()) {
-    //             $('header').removeClass('nav-up').addClass('nav-down');
-    //         }
-    //     }
-    
-    //     lastScrollTop = st;
-    // }
 
 
 
