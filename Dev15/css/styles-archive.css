@@ -138,10 +138,10 @@ h1 {
 	z-index: 50;
 	position: fixed;
 	float: right;
-	margin-left: 350px;
+	margin-left: 400px;
 	margin-top: 0px;
 	/*width: inherit;*/
-	width: calc(100vw - 460px);
+	width: calc(100vw - 480px);
 	/*width: 100%;*/
 	height: calc(100vh - 100px);
 }
