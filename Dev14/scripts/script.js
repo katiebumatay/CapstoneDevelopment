@@ -1164,7 +1164,7 @@ $(document).ready(function() {
             // v = Math.floor(Math.random() * 2) + 1;
             sec = "3-constitution";
             phraseNum = "1";
-            numOptions = 4;
+            numOptions = 5;
             chooseStory();
         });
 
