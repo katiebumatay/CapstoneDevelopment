@@ -12,7 +12,7 @@ html, body{
 	padding: 0;
 	background-color: transparent;
 	font-family: Baskerville, serif;
-	font-size: 14pt;
+	font-size: 16pt;
 	color: #161616;
 	line-height: 1.3em;
 	overflow: hidden;
@@ -320,6 +320,21 @@ h3 {
 	font-family: Heebo, sans-serif;
 	font-size: 10pt;
 	font-style: italic;
+
+}
+
+.articleText a {
+	/*position: absolute;*/
+	/*margin-top: 100px;*/
+	display: block;
+	/*bottom: 0;*/
+	margin: 10px;
+	text-align: right;
+	font-family: Heebo, sans-serif;
+	font-size: 10pt;
+	font-style: italic;
+	color: black;
+	text-decoration: underline;
 
 }
 
@@ -1077,7 +1092,13 @@ h2 {
 
 .blurtext2 {
 	color: transparent;
-	text-shadow: #282828 0 0 10px;
+	text-shadow: #282828 0 0 13px;
+	transition: 0.3s;
+}
+
+.blurtext3 {
+	color: transparent;
+	text-shadow: #282828 0 0 7px;
 	transition: 0.3s;
 }
 

@@ -521,7 +521,7 @@ function addVariables() {
     $(".caption").addClass(captionColorClass).addClass(captionPlaceClass);
     // $(".articleBox").addClass(articleBoxPlaceClass);
     $(".fa-sort-up").addClass(textColorClass);
-    $(".readMore, a").addClass(textColorClass);
+    $(".readMore, .articleText a").addClass(textColorClass);
     // $("h5").addClass(phraseFontClass);
 }
 
@@ -539,7 +539,7 @@ function removeVariables() {
         $(".caption").removeClass(captionColorClass).removeClass(captionPlaceClass);
         // $(".articleBox").removeClass(articleBoxPlaceClass);
          $(".fa-sort-up").removeClass(textColorClass);
-         $(".readMore, a").removeClass(textColorClass);
+         $(".readMore, .articleText a").removeClass(textColorClass);
         // $("h5").removeClass(phraseFontClass);
 
 
@@ -891,14 +891,16 @@ $(document).ready(function() {
 
     $(".sectionTextContainer").hover(function(){
         if (sectionHeaderClicked == false) {
-            $(".sectionHeader, .phrase, .extra").toggleClass("blurtext2");
+            $(".sectionHeader, .extra").toggleClass("blurtext2");
+            $(".phrase").toggleClass("blurtext3");
             // $("body").toggleClass("stopScroll");
         }
     });
 
-    $(".sectionHeader, .phrase").hover(function(){
+    // $(".sectionHeader, .phrase").hover(function(){
+    $(".phrase").hover(function(){
         if (sectionHeaderClicked == false) {
-            $(this).toggleClass("blurtext2");
+            $(this).toggleClass("blurtext3");
         }
         
     });
