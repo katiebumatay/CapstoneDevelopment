@@ -24,7 +24,7 @@
     var captionPlaceClass;
     var articleBoxPlaceClass;
 
-    var c; var ld; var bgColorClass; var textColorClass; var captionColorClass; var captionBgColorClass;
+    var c; var ld; var lightColorBg; var darkColorText; var bgColorClass; var textColorClass; var captionColorClass; var captionBgColorClass;
 
     var wordCount;
 
@@ -284,6 +284,16 @@ function bgColor() {
     return bgColorClass;
 };
 
+function lightColor() {
+    lightColorBg = "bgColor" + c + "-1";
+    return lightColorBg;
+}
+
+function darkColor() {
+    darkColorText = "textColor" + c + "-2";
+    return darkColorText;
+}
+
 function textColor() {
     if (ld == 1) {
         textColorClass = "textColor" + c + "-" + 2;
@@ -336,30 +346,30 @@ function captionPlace() {
 
 function addVariables() {
 
-    imgMix(); imgWidth(); imgHeight(); imgTop(); imgLeft(); imgPlace(); bgColor();
+    imgMix(); imgWidth(); imgHeight(); imgTop(); imgLeft(); imgPlace(); bgColor(); lightColor(); darkColor();
     phraseSize(); textColor(); phraseFont(); fontWeight();
     phraseTop(); phraseLeft(); phrasePlace(); phraseWidth();
     captionColor(); captionPlace();
     
     $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass);
     $(".imgOverlay").addClass(bgColorClass).addClass(imgMixClass);
-    $(".articleBox").addClass(bgColorClass);
+    $(".articleBox").addClass(lightColorBg);
     $(".phraseHeading").text(thisPhrase).addClass(phraseSizeClass).addClass(textColorClass).addClass(phraseFontClass).addClass(fontWeightClass);
     $(".phraseHeadingContainer").addClass(phrasePlaceClass).addClass(phraseWidthClass);
     $(".caption").addClass(captionColorClass).addClass(captionPlaceClass);
     $(".fa-sort-up").addClass(textColorClass);
-    $(".readMore, .articleText a").addClass(textColorClass);
+    $(".readMore, .articleText a").addClass(darkColorText);
 }
 
 function removeVariables() {
         $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgPlaceClass).removeClass(bgColorClass);
         $(".imgOverlay").removeClass(bgColorClass).removeClass(imgMixClass);
-        $(".articleBox").removeClass(bgColorClass);
+        $(".articleBox").removeClass(lightColorBg);
         $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass).removeClass(fontWeightClass);
         $(".phraseHeadingContainer").removeClass(phrasePlaceClass).removeClass(phraseWidthClass);;
         $(".caption").removeClass(captionColorClass).removeClass(captionPlaceClass);
         $(".fa-sort-up").removeClass(textColorClass);
-        $(".readMore, .articleText a").removeClass(textColorClass);
+        $(".readMore, .articleText a").removeClass(darkColorText);
 
 
 }
@@ -449,6 +459,32 @@ $(document).ready(function() {
             $("#img1, #img2").removeClass("fadeInImg").removeClass("fadeOutImg");
             
         }
+    });
+
+    // $("#cw").click(function(){
+    //     if ($("#cw").hasClass("warningButtonOn")) {
+    //         $("#cw").removeClass("warningButtonOn");
+    //         document.getElementById("warningText").innerHTML = "";
+    //     }
+    //     else {
+    //         document.getElementById("warningText").innerHTML = "racism, immigration, abortion, slavery, mass incarceration";
+    //         $("#cw").addClass("warningButtonOn");
+    //         $("#tw").removeClass("warningButtonOn");
+    //     }
+        
+    // });
+
+    $("#tw").click(function(){
+        if ($("#tw").hasClass("warningButtonOn")) {
+            $("#tw").removeClass("warningButtonOn");
+            document.getElementById("warningText").innerHTML = "";
+        }
+        else {
+            document.getElementById("warningText").innerHTML = "racism, systemic racism, sexual assault, police brutality, war, mass shootings, intergenerational trauma, LGBTQIA* discrimination, domestic violence";
+            $("#tw").addClass("warningButtonOn");
+            // $("#cw").removeClass("warningButtonOn");
+        }
+        
     });
 
     $(".tellScroll").click(function(){
