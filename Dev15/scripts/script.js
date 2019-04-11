@@ -35,7 +35,7 @@
     var captionLink;
     var imageLink;
 
-    var prevNum = 1;
+    var prevNum = 1; var prevprevNum = 3;
     var tempNum;
     var titleNum;
 
@@ -81,33 +81,35 @@ function animate() {
         return;
     }
     else if (titleClicked == false) {
-    titleNum = Math.floor(Math.random() * 4) + 1;
-    if (titleNum == prevNum) {
-        if (titleNum == 4) {
-            tempNum = 1;
+        titleNum = Math.floor(Math.random() * 4) + 1;
+        if (titleNum == prevNum || titleNum == prevprevNum) {
+            animate();
+            // if (titleNum == 4) {
+            //     tempNum = 1;
+            // }
+            // else {
+            //     tempNum = titleNum + 1;
+            // }    
         }
         else {
-            tempNum = titleNum + 1;
-        }    
-    }
-    if (titleNum != prevNum) {
-        tempNum = titleNum;
-    }
+            tempNum = titleNum;
+        }
 
-    if (tempNum == 1) {
-        $(".title1").toggleClass("cleartext");
+        if (tempNum == 1) {
+            $(".title1").toggleClass("cleartext");
+        }
+        if (tempNum == 2) {
+            $(".title2").toggleClass("cleartext");
+        }
+        if (tempNum == 3) {
+            $(".title3").toggleClass("cleartext");
+        }
+        if (tempNum == 4) {
+            $(".title4").toggleClass("cleartext");
+        }
+        prevprevNum = prevNum
+        prevNum = tempNum;
     }
-    if (tempNum == 2) {
-        $(".title2").toggleClass("cleartext");
-    }
-    if (tempNum == 3) {
-        $(".title3").toggleClass("cleartext");
-    }
-    if (tempNum == 4) {
-        $(".title4").toggleClass("cleartext");
-    }
-    prevNum = tempNum;
-}
 };
 
 function imgFade1() {
@@ -430,10 +432,12 @@ $(document).ready(function() {
     $('html,body').animate({
         scrollLeft: $("body").offset().left});
 
+    animate();
 
-    setInterval('animate()', 800);
-    setInterval('imgFade1()', 5000);
-    setInterval('imgFade2()', 5000);
+
+    setInterval('animate()', 500);
+    // setInterval('imgFade1()', 5000);
+    // setInterval('imgFade2()', 5000);
 
     var clicked = false;
 
@@ -454,9 +458,10 @@ $(document).ready(function() {
             $("body").toggleClass("stopScroll");
             $(".aboutSection").toggleClass("showAbout");
             $(".intro-container").toggleClass("clickedTitle");
-            $(".intro-bg").toggleClass("clickedTitleImg");
+            $(".intro-bg").toggleClass("clickedTitleBg");
+            $(".intro-img").toggleClass("clickedTitleImg");
             $(".title").toggleClass("titleGrow");
-            $("#img1, #img2").removeClass("fadeInImg").removeClass("fadeOutImg");
+            // $("#img1, #img2").removeClass("fadeInImg").removeClass("fadeOutImg");
             
         }
     });
@@ -551,24 +556,24 @@ $(document).ready(function() {
         $(".otherMenuItems").toggleClass("showMenuItems");
     });
 
-    $(".smallTitle").click(function() {
+    // $(".smallTitle").click(function() {
 
-        titleClicked = false;
-        $(".intro-container").toggleClass("clickedTitle");
-        $(".intro-bg").toggleClass("clickedTitleImg");
-        $(".title").toggleClass("titleGrow");
-        $(".aboutSection").toggleClass("showAbout");
-        $("body").toggleClass("stopScroll");
-        $("#img1").addClass("fadeInImg");
-        $("#img2").addClass("fadeOutImg");
+    //     titleClicked = false;
+    //     $(".intro-container").toggleClass("clickedTitle");
+    //     $(".intro-bg").toggleClass("clickedTitleImg");
+    //     $(".title").toggleClass("titleGrow");
+    //     $(".aboutSection").toggleClass("showAbout");
+    //     $("body").toggleClass("stopScroll");
+    //     $("#img1").addClass("fadeInImg");
+    //     $("#img2").addClass("fadeOutImg");
 
-        $('html,body').animate({
-        scrollTop: $("body").offset().top});
-        $('html,body').animate({
-        scrollLeft: $("body").offset().left});
-    });
+    //     $('html,body').animate({
+    //     scrollTop: $("body").offset().top});
+    //     $('html,body').animate({
+    //     scrollLeft: $("body").offset().left});
+    // });
 
-    $("#goToAbout").click(function() {
+    $(".smallTitle, #goToAbout").click(function() {
 
         $('html,body').animate({
         scrollTop: $("body").offset().top});
