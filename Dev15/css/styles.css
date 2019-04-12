@@ -347,7 +347,7 @@ h3 {
 	width: calc(45vw - 60px);
 	/*position: absolute;*/
 	/*visibility: hidden;*/
-	margin: 50px 30px 30px 30px;
+	margin: 30px 30px 30px 30px;
 	/*line-height: 1.3em;*/
 	/*margin-top: 100vh;*/
 }
@@ -360,6 +360,8 @@ h3 {
 
 .readArticle .articleBox {
 	/*transition-delay: 0.5s;*/
+	/*transition: background-color 0s;*/
+	background-color: transparent;
 	overflow: scroll;
 	/*padding-top: 50%;*/
 }
@@ -439,6 +441,8 @@ h3 {
 
 .articleBox {
 	/*z-index: -50 !important;*/
+	/*background-color: #dddddd;*/
+	background-color: transparent;
 	position: absolute;
 	/*top: 0;*/
 	/*left: calc(100% - 20px);*/
@@ -520,8 +524,10 @@ h3 {
 	height: 100%;
 	/*height: 95%;*/
 	/*bottom: 0%;*/
-	transition: 0.5s;
+	transition: 0.7s;
 	overflow-y: scroll;
+	background-color: transparent;
+	/*transition: background-color 0s linear;*/
 }
 
 /*.variablesOverlay .articleBoxExpand {
@@ -553,7 +559,7 @@ h3 {
 
 .readMore {
 /*	z-index: 20;*/
-	margin-right: 10px;
+	padding-right: 10px;
 	text-align: right;
 	font-family: Heebo, sans-serif;
 	font-size: 10pt;
@@ -564,14 +570,25 @@ h3 {
 	/*color: black;*/
 	/*background-color: yellow;*/
 	opacity: 1;
-	transition: 0.5s;
+	/*transition-delay: 1s;*/
+	transition-timing-function: ease-in;
+	transition: 1.6s;
+	background-color: #cccccc;
+	width: calc(100%-10px);
+	height: 26px;
+
 }
 
 .readArticle .readMore {
+	/*background-color: transparent;*/
 	opacity: 0;
-	transition: 0.5s;
+	transition: 0.3s;
 }
-
+/*
+.readArticle .articleBox {
+	background-color: transparent;
+}
+*/
 .caption {
 /*	z-index: 20;*/
 	/*position: fixed;*/
@@ -626,7 +643,7 @@ h3 {
 	height: 100vw;*/
 	top: 0;
 	left: 0;
-	/*width: 100%;*/
+	width: 45%;
 /*	opacity: 0;*/
 	pointer-events: none;
 	display: inline-block;
@@ -770,7 +787,7 @@ h3 {
 }
 
 .intro-container {
-	z-index: 50;
+	z-index: 100;
 	height: 100%;
 	width: 100%;
 	/*position: relative;*/
@@ -941,6 +958,7 @@ h1 {
 	cursor: default;
 	margin-left: 0;
 	overflow-x: hidden;
+	pointer-events: none;
 	/*width: 30%;*/
 	/*transition: 2s;*/
 }
@@ -1036,8 +1054,13 @@ h2 {
 	cursor: pointer;
 	left: 55%;
 	color: #bbbbbb;
+	/*z-index: 10;*/
 	/*padding: 30px;*/
 	/*color: #dddddd;*/
+}
+
+.aboutPointerOn {
+	pointer-events: auto;
 }
 
 .colophon {
@@ -1526,11 +1549,11 @@ h1:hover .cleartext {
 }
 
 .phraseWidth1 {
-	max-width: 100%;
+	width: 100%;
 }
 
 .phraseWidth2 {
-	max-width: 60%;
+	width: 60%;
 }
 
 .phraseTemp {
@@ -2024,73 +2047,75 @@ h1:hover .cleartext {
 
 
 .variablesToFront .phraseSize1 {
-	transition: 0.5s;
+	transition: 0.6s;
 }
 
 .variablesToFront .phraseSize2 {
-	transition: 0.5s;
+	transition: 0.6s;
 }
 
 .variablesToFront .phraseSize3 {
-	transition: 0.5s;
+	transition: 0.6s;
 }
 
-.variablesToFront .phraseWidth1 {
-	transition: 0.5s;
-	/*transition-delay: width 0.5s;*/
+/*.variablesToFront .phraseWidth1 {
+	transition: 5s;
 }
 
 .variablesToFront .phraseWidth2 {
-	transition: 0.5s;
-	/*transition-delay: width 0.5s;*/
-}
+	transition: 5s;
+}*/
+
+/*.variablesToFront .phraseHeadingContainer {
+	transition: 5s;
+}*/
 
 .variablesToFront .phrasePlace-1-1 {
-	transition: 0.5s;
+	transition: 0.6s;
 }
 
 .variablesToFront .phrasePlace-1-2 {
-	transition: 0.5s;
+	transition: 0.6s;
 }
 
 .variablesToFront .phrasePlace-1-3 {
-	transition: 0.5s;
+	transition: 0.6s;
 }
 
 .variablesToFront .phrasePlace-2-1 {
-	transition: 0.5s;
+	transition: 0.6s;
 }
 
 .variablesToFront .phrasePlace-2-2 {
-	transition: 0.5s;
+	transition: 0.6s;
 }
 
 .variablesToFront .phrasePlace-2-3 {
-	transition: 0.5s;
+	transition: 0.6s;
 }
 
 .variablesToFront .phrasePlace-3-1 {
-	transition: 0.5s;
+	transition: 0.6s;
 }
 
 .variablesToFront .phrasePlace-3-2 {
-	transition: 0.5s;
+	transition: 0.6s;
 }
 
 .variablesToFront .phrasePlace-3-3 {
-	transition: 0.5s;
+	transition: 0.6s;
 }
 
 .variablesToFront .phrasePlace-4-1 {
-	transition: 0.5s;
+	transition: 0.6s;
 }
 
 .variablesToFront .phrasePlace-4-2 {
-	transition: 0.5s;
+	transition: 0.6s;
 }
 
 .variablesToFront .phrasePlace-4-3 {
-	transition: 0.5s;
+	transition: 0.6s;
 }
 
 .readArticle .phraseHeadingContainer {
@@ -2108,7 +2133,7 @@ h1:hover .cleartext {
 
 	html, body{
 		position: relative;
-		font-size: 15pt;
+		font-size: 16pt;
 		line-height: 1.3em;
 	}
 
@@ -2162,7 +2187,7 @@ h1:hover .cleartext {
 
 	.articleText {
 		width: calc(100% - 30px);
-		margin: 20px 15px 15px 15px;
+		margin: 0px 15px 15px 15px;
 		/*padding-top: 40px;*/
 	}
 
@@ -2180,11 +2205,11 @@ h1:hover .cleartext {
 	}
 
 	.articleBoxPeek {
-		height: 30px;
+		height: 25px;
 	}
 
 	.articleBoxBounce {
-		height: 35px;
+		height: 30px;
 	}
 
 	.articleBoxExpand {
@@ -2192,8 +2217,10 @@ h1:hover .cleartext {
 	}
 
 	.readMore {
-		margin-right: 10px;
+		line-height: 20pt;
+		padding-right: 10px;
 		font-size: 12pt;
+		height: 30px;
 	}
 
 	.caption {
@@ -2234,15 +2261,31 @@ h1:hover .cleartext {
 	}
 
 	.aboutTextContainer {
-		margin-top: 20%;
+		margin-top: 15vh;
 		left: 10%;
 		width: 80%;
+	}
+
+	.aboutHeader {
+		font-size: 14pt;
 	}
 
 	.aboutText {
 		margin-top: 10px;
 		font-size: 12pt;
 		line-height: 1.5em;
+	}
+
+	#warningText{
+		margin-top: 10px;
+		display: inline-block;
+		width: 80%;
+		height: 50px;
+		font-size: 10pt;
+		font-family: Heebo, sans-serif;
+		color: #bbbbbb;
+		font-style: italic;
+		line-height: 1.25em;
 	}
 
 	.tellScroll {
@@ -2254,7 +2297,7 @@ h1:hover .cleartext {
 	.sectionTextContainer {
 		left: 10%;
 		width: 80%;
-		top: 30%;
+		top: 20%;
 		transition: 1s;
 		max-width: 80%;
 		min-width: 80%;

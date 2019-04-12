@@ -369,23 +369,26 @@ function addVariables() {
     
     $(".imgContainer").addClass(imgWidthClass).addClass(imgHeightClass).addClass(imgPlaceClass).addClass(bgColorClass);
     $(".imgOverlay").addClass(bgColorClass).addClass(imgMixClass);
-    $(".articleBox").addClass(lightColorBg);
+    // $(".articleBox").addClass(lightColorBg);
     $(".phraseHeading").text(thisPhrase).addClass(phraseSizeClass).addClass(textColorClass).addClass(phraseFontClass).addClass(fontWeightClass);
     $(".phraseHeadingContainer").addClass(phrasePlaceClass).addClass(phraseWidthClass);
     $(".caption").addClass(captionColorClass).addClass(captionPlaceClass);
     $(".fa-sort-up").addClass(textColorClass);
-    $(".readMore, .articleText a").addClass(darkColorText);
+    // $(".readMore, .articleText a").addClass(darkColorText);
+    // $(".readMore").addClass(textColorClass).addClass(bgColorClass);
+
 }
 
 function removeVariables() {
         $(".imgContainer").removeClass(imgWidthClass).removeClass(imgHeightClass).removeClass(imgPlaceClass).removeClass(bgColorClass);
         $(".imgOverlay").removeClass(bgColorClass).removeClass(imgMixClass);
-        $(".articleBox").removeClass(lightColorBg);
+        // $(".articleBox").removeClass(lightColorBg);
         $(".phraseHeading").removeClass(phraseSizeClass).removeClass(textColorClass).removeClass(phraseFontClass).removeClass(fontWeightClass);
         $(".phraseHeadingContainer").removeClass(phrasePlaceClass).removeClass(phraseWidthClass);;
         $(".caption").removeClass(captionColorClass).removeClass(captionPlaceClass);
         $(".fa-sort-up").removeClass(textColorClass);
-        $(".readMore, .articleText a").removeClass(darkColorText);
+        // $(".readMore, .articleText a").removeClass(darkColorText);
+        // $(".readMore").removeClass(textColorClass).removeClass(bgColorClass);
 
 
 }
@@ -420,7 +423,7 @@ function tempToggleVariables() {
     $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgHeightClass).toggleClass(imgPlaceClass).toggleClass(bgColorClass).toggleClass(imgWidthTempClass);
     $(".caption").toggleClass(captionColorClass).toggleClass(captionPlaceClass);
     $(".phraseHeading").toggleClass("phraseTemp");
-    $(".phraseHeadingContainer").toggleClass("phrasePlaceTemp");
+    $(".phraseHeadingContainer").toggleClass(phraseWidthClass);
 }
 
 function chooseStory() {
@@ -470,7 +473,7 @@ $(document).ready(function() {
         if (titleClicked == false) {
             titleClicked = true;
             $("body").toggleClass("stopScroll");
-            $(".aboutSection").toggleClass("showAbout");
+            $(".aboutSection").toggleClass("showAbout").toggleClass("aboutPointerOn");
             $(".intro-container").toggleClass("clickedTitle");
             $(".intro-bg").toggleClass("clickedTitleBg");
             $(".intro-img").toggleClass("clickedTitleImg");
@@ -637,14 +640,14 @@ $(document).ready(function() {
     $(".phrase").click(function(){
         clicked = true;
         activateOverlay();
-        if (isMobile == false) {
+        // if (isMobile == false) {
             if (peekTimerOn == false) {
                 console.log("activate peekTimer");
                 peekTimer = setInterval('articlePeekAnimate()', 1000);
                 peekTimerOn = true;
             }
             
-        }
+        // }
 
     });
 
@@ -652,19 +655,19 @@ $(document).ready(function() {
         clicked = false;
         removeVariables();
         deactivateOverlay();
-        if (isMobile == false) {
+        // if (isMobile == false) {
             if (peekTimerOn == true) {
                 console.log("clear peekTimer");
                 clearInterval(peekTimer);
                 peekTimerOn = false;
             }
-        }
+        // }
 
         $(".articleContainer").scrollTop(0);
     });
 
     $(".articleBox").click(function(){
-        if (isMobile == false) {
+        // if (isMobile == false) {
             if(peekTimerOn == true) {
                     console.log("clear peekTimer");
                     clearInterval(peekTimer);
@@ -675,7 +678,7 @@ $(document).ready(function() {
                 peekTimer = setInterval('articlePeekAnimate()', 1000);
                 peekTimerOn = true;
             }
-        }
+        // }
         $(".articleBox").toggleClass("articleBoxExpand");
         $(".variablesOverlay").toggleClass("readArticle");
         tempToggleVariables();
