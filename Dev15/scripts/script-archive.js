@@ -181,6 +181,7 @@ $(document).ready(function() {
             $(this).addClass("thisLiClicked");
             prevClicked = this;
             if (isMobile) {
+                $(".next, .previous").addClass("noArrow");
                 $(".itemsBox").addClass("itemsBoxShow");
                 $(".exitOverlay").addClass("exitOverlayShow");
             }
@@ -199,6 +200,7 @@ $(document).ready(function() {
             $(prevClicked).removeClass("thisLiClicked").removeClass("thisLiHover");
             // hideStuff();
             $(".articleContainer").scrollTop(0);
+            $(".next, .previous").removeClass("noArrow");
             $(".itemsBox").removeClass("itemsBoxShow");
             $(".exitOverlay").removeClass("exitOverlayShow");
      });
