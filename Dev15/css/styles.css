@@ -191,7 +191,7 @@ h4 {
 	top:0;
 	left: 0;
 	box-sizing: border-box;
-	padding: 14px 20px 20px 20px;
+	padding: 15px 30px 30px 25px;
 
 }
 
@@ -2368,10 +2368,6 @@ h1:hover .cleartext {
 		transition: 0.5s;
 		/*width: 100%;*/
 	}
-
-
-
-
 
 
 }
