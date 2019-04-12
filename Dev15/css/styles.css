@@ -187,7 +187,7 @@ h4 {
 	position: fixed;
 	/*width: 20%;*/
 	background-color: transparent;
-	z-index: 40;
+	z-index: 90;
 	top:0;
 	left: 0;
 	box-sizing: border-box;
@@ -196,6 +196,7 @@ h4 {
 }
 
 .smallTitle {
+	/*z-index: 200;*/
 	/*position: absolute;*/
 	/*top: 14px;
 	left: 20px;*/
@@ -914,12 +915,12 @@ h1 {
 }
 
 .clickedTitle {
-	/*z-index: -5;*/
+	z-index: 50;
 	/*position: fixed;*/
 	position: relative;
 	color: #161616;
-	background-color: transparent;
-	/*background-color: #f9f9f9;*/
+	/*background-color: transparent;*/
+	background-color: #f9f9f9;
 	/*opacity: 0;*/
 	transition: 1s;
 	/*pointer-events: none;*/
@@ -949,7 +950,7 @@ h1 {
 }*/
 
 .aboutSection {
-	/*z-index: 10;*/
+	z-index: 10 !important;
 	opacity: 0;
 	position: relative;
 	width: 100%;
@@ -1071,6 +1072,7 @@ h2 {
 
 .showAbout {
 	/*z-index: 100;*/
+	/*background-color: #f9f9f9;*/
 	opacity: 1;
 	transition: 2s;
 	/*visibility: visible;*/
@@ -2261,7 +2263,7 @@ h1:hover .cleartext {
 	}
 
 	.aboutTextContainer {
-		margin-top: 15vh;
+		margin-top: 25vh;
 		left: 10%;
 		width: 80%;
 	}
@@ -2272,7 +2274,7 @@ h1:hover .cleartext {
 
 	.aboutText {
 		margin-top: 10px;
-		font-size: 12pt;
+		font-size: 11pt;
 		line-height: 1.5em;
 	}
 
@@ -2297,7 +2299,7 @@ h1:hover .cleartext {
 	.sectionTextContainer {
 		left: 10%;
 		width: 80%;
-		top: 20%;
+		top: 25%;
 		transition: 1s;
 		max-width: 80%;
 		min-width: 80%;
