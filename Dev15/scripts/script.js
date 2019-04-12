@@ -215,6 +215,7 @@ function imgPlace() {
 
 
 function phraseSize() {
+    console.log(wordCount);
     if (wordCount >= 4) {
         pS = Math.floor(Math.random() * 2) + 1;
         phraseSizeClass = "phraseSize" + pS;
@@ -227,26 +228,39 @@ function phraseSize() {
         pS = Math.floor(Math.random() * 3) + 1;
         phraseSizeClass = "phraseSize" + pS;
     }
-    
+
+    console.log("phrase size" + pS);
     return phraseSizeClass;
 };
 
 function phraseTop() {
-    if (pS == 3) {
+    if ((wordCount > 3) && (pS == 3)) {
+        pT = 1;
+    }
+    else if (pS == 3) {
+        pT = Math.floor(Math.random() * 2) + 1;
+    }
+    else if ((wordCount > 2) && (pS > 1)) {
         pT = Math.floor(Math.random() * 2) + 1;
     }
     else {
         pT = Math.floor(Math.random() * 4) + 1;
     }
+    console.log("phrase Top " + pT);
 };
 
 function phraseLeft() {
-    if (pS == 3 || pT > 2) {
+    if (pS == 3) {
+        pL = Math.floor(Math.random() * 2) + 1;
+    }
+    else if ((wordCount > 2) && (pS > 1 || pT > 2)) {
         pL = Math.floor(Math.random() * 2) + 1;
     }
     else {
         pL = Math.floor(Math.random() * 3) + 1;
     }
+    console.log("phrase Left " + pL);
+
 };
 
 function phrasePlace() {
@@ -406,7 +420,7 @@ function tempToggleVariables() {
     $(".imgContainer").toggleClass(imgWidthClass).toggleClass(imgHeightClass).toggleClass(imgPlaceClass).toggleClass(bgColorClass).toggleClass(imgWidthTempClass);
     $(".caption").toggleClass(captionColorClass).toggleClass(captionPlaceClass);
     $(".phraseHeading").toggleClass("phraseTemp");
-    $(".phraseHeadingContainer").toggleClass(phrasePlaceClass).toggleClass("phrasePlaceTemp");
+    $(".phraseHeadingContainer").toggleClass("phrasePlaceTemp");
 }
 
 function chooseStory() {
