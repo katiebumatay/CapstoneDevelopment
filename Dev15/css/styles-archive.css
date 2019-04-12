@@ -480,8 +480,8 @@ h2 {
 	}
 
 	.articleText p, .articleText ul, .articleText ol {
-		font-size: 10pt;
-		line-height: 14pt;
+		font-size: 12pt;
+		line-height: 16pt;
 	}
 
 	/*.lcWrapper {
@@ -507,6 +507,15 @@ h2 {
 		padding-right: 20px;
 		overflow: scroll;
 	}
+
+	.images-container {
+		height: 45%;
+	}
+
+	.articleContainer {
+		height: 55%;
+	}
+
 
 
 	.next {
@@ -556,11 +565,11 @@ h2 {
 
 	ul {
 		list-style: none;
-		padding-left: 0;
+		padding-left: 15px;
 	}
 
 	li {
-		color: #aaaaaa;
+		color: #212121;
 		font-size: 12pt;
 		cursor: default;
 	}

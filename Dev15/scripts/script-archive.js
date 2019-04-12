@@ -196,7 +196,7 @@ $(document).ready(function() {
 
      $(".exitOverlay").click(function() {
             listItemClicked = false;
-            $(prevClicked).removeClass("thisLiClicked");
+            $(prevClicked).removeClass("thisLiClicked").removeClass("thisLiHover");
             // hideStuff();
             $(".articleContainer").scrollTop(0);
             $(".itemsBox").removeClass("itemsBoxShow");
