@@ -186,7 +186,7 @@ h4 {
 	position: fixed;
 	/*width: 20%;*/
 	background-color: transparent;
-	z-index: 80;
+	z-index: 40;
 	top:0;
 	left: 0;
 	box-sizing: border-box;
@@ -207,8 +207,8 @@ h4 {
 
 h3 {
 	font-weight: bold;
-	font-size: 16pt;
-	line-height: 12pt;
+	font-size: 18pt;
+	line-height: 14.5pt;
 	text-align: left;
 	margin: 0;
 }
@@ -898,15 +898,18 @@ h1 {
 	/*position: fixed;*/
 	position: relative;
 	color: #161616;
-	/*background-color: transparent;*/
-	background-color: #f9f9f9;
+	background-color: transparent;
+	/*background-color: #f9f9f9;*/
 	/*opacity: 0;*/
 	transition: 1s;
+	/*pointer-events: none;*/
 }
 
 .clickedTitleBg {
-	background-color: #f9f9f9;
+	background-color: transparent;
+	/*background-color: #f9f9f9;*/
 	transition: 1s;
+	/*pointer-events: none;*/
 }
 
 .clickedTitleImg {
@@ -926,6 +929,7 @@ h1 {
 }*/
 
 .aboutSection {
+	/*z-index: 10;*/
 	opacity: 0;
 	position: relative;
 	width: 100%;
@@ -1018,6 +1022,7 @@ h2 {
 
 .tellScroll {
 	/*font-family: Heebo, sans-serif;*/
+	padding: 30px;
 	font-size: 14pt;
 	/*font-style: italic;*/
 	position: absolute;
@@ -1036,6 +1041,7 @@ h2 {
 }
 
 .showAbout {
+	/*z-index: 100;*/
 	opacity: 1;
 	transition: 2s;
 	/*visibility: visible;*/
@@ -1216,7 +1222,7 @@ h1:hover .cleartext {
 
 .blurtext3 {
 	color: transparent;
-	text-shadow: #282828 0 0 8px;
+	text-shadow: #282828 0 0 7.5px;
 	transition: 0.3s;
 }
 
