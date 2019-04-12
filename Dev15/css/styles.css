@@ -1106,19 +1106,6 @@ h1:hover .cleartext {
 	pointer-events: none;
 }
 
-/*#pledgeSection {
-	background-color: blue;
-}
-
-#declarationSection {
-	background-color: red;
-}
-
-
-#constitutionSection {
-	background-color: yellow;
-}*/
-
 .next {
 	position: absolute;
 	right: 0;
@@ -1567,9 +1554,6 @@ h1:hover .cleartext {
 }
 
 .phrasePlaceTemp{
-	/*width: 90%;*/
-	/*transform: translate(40px, 40px);*/
-	/*transition-delay: width 0.5s;*/
 	width: 45%;
 	transition: 0.5s;
 }
