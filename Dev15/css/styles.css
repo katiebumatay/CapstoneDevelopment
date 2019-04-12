@@ -2144,6 +2144,7 @@ h1:hover .cleartext {
 	}
 
 	.menuMobile {
+		z-index: 60;
 		color: #bbbbbb;
 		visibility: visible;
 		position: fixed;
@@ -2155,6 +2156,11 @@ h1:hover .cleartext {
 		font-size: 11pt;
 		font-family: Heebo, sans-serif;
 		margin-left: 30%;
+	}
+
+	.menuMobileBack {
+		transition-delay: 0.8s;
+		z-index: 5;
 	}
 
 	.aboutButtonMobile {
@@ -2178,6 +2184,10 @@ h1:hover .cleartext {
 		line-height: 16pt;
 		text-align: left;
 		margin: 0;
+	}
+
+	.otherMenuItems {
+		visibility: hidden;
 	}
 
 	.variablesOverlay {
@@ -2334,7 +2344,9 @@ h1:hover .cleartext {
 
 	.phrase {
 		/*font-weight: bold;*/
-		text-decoration: underline;
+		/*text-decoration: underline;*/
+		border-bottom: #cccccc solid 2px;
+		padding: 0;
 	}
 
 /*	.phraseScale {
@@ -2368,6 +2380,5 @@ h1:hover .cleartext {
 		transition: 0.5s;
 		/*width: 100%;*/
 	}
-
 
 }

@@ -517,6 +517,7 @@ $(document).ready(function() {
             $("#pledgeBar").addClass("selected");
         }
         firstTime = false;
+        $(".menuMobile").addClass("menuMobileBack");
     });
 
 
@@ -590,12 +591,14 @@ $(document).ready(function() {
     //     scrollLeft: $("body").offset().left});
     // });
 
-    $(".smallTitle, #goToAbout").click(function() {
+    $(".smallTitle, #goToAbout, .aboutButtonMobile").click(function() {
 
         $('html,body').animate({
         scrollTop: $("body").offset().top});
         $('html,body').animate({
         scrollLeft: $("body").offset().left});
+
+        $(".menuMobile").removeClass("menuMobileBack");
     });
 
     $(".aboutButtonMobile").click(function() {
