@@ -293,7 +293,7 @@ function fontWeight() {
 };
 
 function bgColor() {
-    c = Math.floor(Math.random() * 8) + 1;
+    c = Math.floor(Math.random() * 9) + 1;
     bgColorClass = "bgColor" + c;
     ld = Math.floor(Math.random() * 2) + 1;
     bgColorClass = bgColorClass + "-" + ld;
@@ -502,7 +502,7 @@ $(document).ready(function() {
             document.getElementById("warningText").innerHTML = "";
         }
         else {
-            document.getElementById("warningText").innerHTML = "racism, systemic racism, sexual assault, police brutality, war, mass shootings, intergenerational trauma, LGBTQIA* discrimination, domestic violence";
+            document.getElementById("warningText").innerHTML = "racism, systemic racism, police brutality, sexual assault, mass shootings, LGBTQIA* discrimination, domestic violence, war, intergenerational trauma";
             $("#tw").addClass("warningButtonOn");
             // $("#cw").removeClass("warningButtonOn");
         }

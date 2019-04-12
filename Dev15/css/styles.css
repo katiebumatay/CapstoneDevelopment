@@ -1024,15 +1024,16 @@ h2 {
 }
 
 #warningText{
-	margin-top: 10px;
+	margin-top: 8px;
+	margin-left: 10px;
 	display: inline-block;
-	width: 100%;
+	width: 80%;
 	height: 50px;
 	font-size: 10pt;
 	font-family: Heebo, sans-serif;
 	color: #bbbbbb;
 	font-style: italic;
-	line-height: 1.25em;
+	line-height: 1.3em;
 }
 
 .warningButtonOn {
@@ -1715,6 +1716,24 @@ h1:hover .cleartext {
 .textColor8-2 {
 	color: #ad7600;
 	border-color: #ad7600;
+}
+
+.bgColor9-1 {
+	background-color: #ffe68e;
+}
+
+.textColor9-1 {
+	color: #ffe68e;
+	border-color: #ffe68e;
+}
+
+.bgColor9-2 {
+	background-color: #c9ac44;
+}
+
+.textColor9-2 {
+	color: #c9ac44;
+	border-color: #c9ac44;
 }
 
 

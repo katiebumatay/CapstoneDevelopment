@@ -8,6 +8,16 @@ var prevClicked;
 
 var originalArticle;
 
+var isMobile = false;
+
+
+function checkMobile(){
+    if ($(".itemsBox").css("opacity") == "0" ){
+        isMobile = true;
+    }
+    console.log(isMobile);
+};
+
 function check1() {
     checkV1 = $("#myAC").hasClass("view1");
 }
@@ -68,6 +78,8 @@ $(document).ready(function() {
     // checkV2();
     // checkV3();
 
+    checkMobile();
+
 
     listItemClicked = false;
 
@@ -92,6 +104,10 @@ $(document).ready(function() {
                 $(".next").addClass("hideArrow");
 
         }
+        listItemClicked = false;
+        $(prevClicked).removeClass("thisLiClicked").removeClass("thisLiHover");
+        hideStuff();
+        $(".articleContainer").scrollTop(0);
     });
 
     $(".previous").click(function(){
@@ -114,6 +130,10 @@ $(document).ready(function() {
             $(".next").removeClass("hideArrow");
 
         }
+        listItemClicked = false;
+        $(prevClicked).removeClass("thisLiClicked").removeClass("thisLiHover");
+        hideStuff();
+        $(".articleContainer").scrollTop(0);
     });
 
     $("#pledgeBar").click(function(){
@@ -160,6 +180,10 @@ $(document).ready(function() {
             listItemClicked = true;
             $(this).addClass("thisLiClicked");
             prevClicked = this;
+            if (isMobile) {
+                $(".itemsBox").addClass("itemsBoxShow");
+                $(".exitOverlay").addClass("exitOverlayShow");
+            }
             // showStuff();
         }
         else if (listItemClicked == true && prevClicked == this) {
@@ -169,6 +193,24 @@ $(document).ready(function() {
             $(".articleContainer").scrollTop(0);
         }
      });
+
+     $(".exitOverlay").click(function() {
+            listItemClicked = false;
+            $(prevClicked).removeClass("thisLiClicked");
+            // hideStuff();
+            $(".articleContainer").scrollTop(0);
+            $(".itemsBox").removeClass("itemsBoxShow");
+            $(".exitOverlay").removeClass("exitOverlayShow");
+     });
+
+     // $(".fas").click(function() {
+     //    // if (listItemClicked == true) {
+     //        listItemClicked = false;
+     //        $(prevClicked).removeClass("thisLiClicked").removeClass("thisLiHover");
+     //        hideStuff();
+     //        $(".articleContainer").scrollTop(0);
+     //    // }
+     // });
 
 
 

@@ -147,6 +147,10 @@ h1 {
 	height: calc(100vh - 100px);
 }
 
+.exitOverlay {
+	visibility: hidden;
+}
+
 .images-container {
 	/*position: absolute;*/
 	width: 100%;
@@ -245,6 +249,7 @@ h1 {
 }*/
 
 .lcWrapper {
+	margin-top: 35px;
 	height: 100%;
 	width: 360px;
 	overflow: scroll;
@@ -259,6 +264,7 @@ h1 {
 	text-align: left;
 	padding: 30px;
 	padding-right: 0px;
+	padding-top: 0;
 	overflow: scroll;
 	/*top:30px;*/
 	/*margin-left: 50px;*/
@@ -430,13 +436,47 @@ h2 {
 		margin: 30px 30px 70px 30px;
 	}
 
-	.itemsBox {
+	/*.itemsBox {
 		margin-left: 0;
 		margin-right: 0;
 		margin-top: 0;
 		width: calc(100vw - 60px);
 		height: calc(60vh);
 		border-bottom: #212121 solid 3px;
+	}*/
+	.itemsBox {
+		position: absolute;
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 0;
+		width: 100%;
+		height: calc(100% + 1px);
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.itemsBoxShow {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+
+	.exitOverlay {
+		opacity: 0;
+		position: fixed;
+		z-index: 12;
+		padding: 20px;
+		top: 20px;
+		right: 20px;
+		background-image: url("../images/exit.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.exitOverlayShow {
+		opacity: 1;
+		visibility: visible;
+		transition: 0.5s;
 	}
 
 	.articleText p, .articleText ul, .articleText ol {
@@ -444,11 +484,19 @@ h2 {
 		line-height: 14pt;
 	}
 
-	.lcWrapper {
+	/*.lcWrapper {
 		position: relative;
 		margin-top: 60vh;
 		height: calc(30vh - 10px);
 		width: calc(100vw - 60px);
+		overflow: scroll;
+	}*/
+
+	.lcWrapper {
+		position: relative;
+		margin-top: 60px;
+		height: 100%;
+		width: 100%;
 		overflow: scroll;
 	}
 
