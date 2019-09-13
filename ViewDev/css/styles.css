@@ -103,21 +103,40 @@ a:visited {
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
-  background-color: black;
+  width: 200px;
+  background-color: #3186d6;
   color: #fff;
-  text-align: center;
-  padding: 5px 0;
+  text-align: left;
+  padding: 8px;
   border-radius: 6px;
+  font-family: Heebo, sans-serif;
+  font-size: 10pt;
+  line-height: 12pt;
  
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
+  /*width: 120px;*/
+  bottom: 100%;
+  left: 50%;
+  margin-left: -100px;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  /*background-color: #3186d6;*/
+  border-color: #3186d6 transparent transparent transparent;
 }
 
 
