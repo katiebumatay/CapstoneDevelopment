@@ -1,5 +1,7 @@
 # CapstoneDevelopment
 
+Charette (0): Testing the formulation of text, color, size, and image variables
+
 Dev1: stopped at bug of trying to get variables to stay on click, make it show/hide properly, and trying to get the variable classes not to pile up
 
 Dev2: duplicated to Dev 3 right before trying to get rid of skrollr. Bugs from dev1 were all fixed and more variables like color and font were added.

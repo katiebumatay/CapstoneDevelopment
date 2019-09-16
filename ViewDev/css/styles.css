@@ -66,10 +66,16 @@ a:visited {
 	color: #777;
 }
 
-#notes {
-	margin-top: 24px;
+.button-lg {
 	margin-left: 108px;
 	width: 215px;
+}
+
+#final {
+		margin-top: 24px;
+}
+
+#notes {
 	background-color: white;
 	border: 1.5px #ccc solid;
 }
