@@ -5,7 +5,7 @@ html, body {
 
 .heading-container {
 	/*margin-top: 100px;*/
-	margin-bottom: 36px;
+	margin-bottom: 24px;
 	text-align: center;
 	color: #222;
 }
@@ -31,7 +31,7 @@ h2 {
 	/*display: inline-block;*/
 	width: 436px;
 	margin: auto;
-	margin-top: 100px;
+	margin-top: 80px;
 }
 
 .button {
